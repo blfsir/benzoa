@@ -1,0 +1,83 @@
+.Text {  font-size: 9pt}
+.InputCss { font-family: "Tahoma", "宋体"; font-size: 11px; color: #5E5E5E; border: 1px solid; background-color: #CCCCCC; border-color: #FFFFFB #FFFFFF #FFFFFF ; font-style: normal}
+.ButtonCss { font-family: "Tahoma", "宋体"; font-size: 12px; color: #5E5E5E; border: 1px #CCCCCC solid; background-color: #FFFFFF; font-style: normal ; width: 60px}
+.NomButtonCss { font-family: "Tahoma", "宋体"; font-size: 12px; color: #5E5E5E; border: 1px #CCCCCC solid; background-color: #FFFFFF; font-style: normal}
+.InputSta {
+	font-family: "Tahoma", "宋体";
+	font-size: 9pt;
+	color: #5E5E5E;
+	border: 1px solid;
+	background-color: White;
+	border-color: #CCCCCC #CCCCCC #CCCCCC;
+	font-style: normal
+}
+.SelectSta {
+	font-family: "Tahoma", "宋体";
+	font-size: 9pt;
+	color: #5E5E5E;
+	border: 1px #F1F1E4 solid;
+	background-color:  #F1F1E4;
+	font-style: normal
+}
+.ButtonSta { font-family: "Tahoma", "宋体"; font-size: 9pt; color: #CCCCCC; border: 1px #CCCCCC solid; background-color: #FFFFFF; font-style: normal ; width: 60px}
+.GbText {  font-size: 9pt}
+.CurText { font-size: 12px }
+
+.SplitHRCss { color: #5E5E5E; background-color: #5E5E5E; border: 1px #5E5E5E solid; }
+
+.SecText {
+	font-size: 9pt;
+	color : Gray;
+}
+.BGbText {
+	font-size: 9pt;
+	font : oblique;
+}
+.SchFinishText {
+	font-size: 9pt;
+	color : Gray;
+}
+.FinishText{
+	text-decoration : line-through;
+	color: Gray;
+}
+A {
+	font-size : 9pt;
+	color : #006699;	
+	text-decoration : none;
+}
+A:ACTIVE {
+
+	color : #006699;	
+	text-decoration : none;
+}
+A:FOCUS {
+
+	color : Black;
+	text-decoration : none;
+}
+A:HOVER {
+	color : #FF4500;
+	text-decoration : underline;
+}
+A:LINK {
+	color : #006699;
+	text-decoration : none;
+}
+
+.InputSta_page { font-family: "Tahoma", "宋体"; font-size: 11px; color: #5E5E5E; border: 1px #FFFFFF solid; background-color: #CCCCCC; font-style: normal }
+.tbbaord {  border: #CCCCCC; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.leftboard {  border-color: black #D7D7AE #D7D7AE; border-style: solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-family: "宋体"; font-size: 12px; color: #333333}
+.StaText {  font-size: 9px; font-style: normal}
+.noRepeatTd {  background-repeat: no-repeat}
+.money {  font-family: "宋体"; font-size: xx-small; font-weight: 100; text-transform: capitalize}
+.td {font-family: "Tahoma", "宋体";font-size: 9px;}
+body
+{
+	SCROLLBAR-HIGHLIGHT-COLOR: #bababa;
+	SCROLLBAR-SHADOW-COLOR: #a0a0a0;
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+	SCROLLBAR-TRACK-COLOR: #eeeeee;
+	SCROLLBAR-DARKSHADOW-COLOR: buttonshadow;
+	font-size : 9pt;
+}

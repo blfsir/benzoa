@@ -1,0 +1,11 @@
+.GBtxt {  font-size: 9pt}
+.gbtxt {  font-size: 9pt}
+body
+{
+	SCROLLBAR-HIGHLIGHT-COLOR: #bababa;
+	SCROLLBAR-SHADOW-COLOR: #a0a0a0;
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+	SCROLLBAR-TRACK-COLOR: #eeeeee;
+	SCROLLBAR-DARKSHADOW-COLOR: buttonshadow;
+	font-size : 9pt;
+}

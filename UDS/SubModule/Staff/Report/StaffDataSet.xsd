@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="StaffDataSet" targetNamespace="http://tempuri.org/StaffDataSet.xsd" elementFormDefault="qualified"
+	xmlns="http://tempuri.org/StaffDataSet.xsd" xmlns:mstns="http://tempuri.org/StaffDataSet.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="StaffView">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Staff_Name" type="xs:string" />
+				<xs:element name="RealName" type="xs:string" minOccurs="0" />
+				<xs:element name="Email" type="xs:string" minOccurs="0" />
+				<xs:element name="Mobile" type="xs:string" minOccurs="0" />
+				<xs:element name="SexName" type="xs:string" />
+				<xs:element name="Position_Name" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

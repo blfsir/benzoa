@@ -1,0 +1,41 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDS", "UDS.csproj", "{08CF551E-9A86-410C-9893-2F9A3FA11412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{CFCF35C6-3474-4189-9DAA-2352C911B153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "..\BLL\BLL.csproj", "{07F5B297-9903-41A0-832A-3532DDF3C17E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveRecordLayer", "..\ActiveRecord\ActiveRecordLayer.csproj", "{CF897827-1A20-4DBC-8362-CD3DF53EE4A2}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08CF551E-9A86-410C-9893-2F9A3FA11412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08CF551E-9A86-410C-9893-2F9A3FA11412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08CF551E-9A86-410C-9893-2F9A3FA11412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08CF551E-9A86-410C-9893-2F9A3FA11412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFCF35C6-3474-4189-9DAA-2352C911B153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFCF35C6-3474-4189-9DAA-2352C911B153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFCF35C6-3474-4189-9DAA-2352C911B153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFCF35C6-3474-4189-9DAA-2352C911B153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07F5B297-9903-41A0-832A-3532DDF3C17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F5B297-9903-41A0-832A-3532DDF3C17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F5B297-9903-41A0-832A-3532DDF3C17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F5B297-9903-41A0-832A-3532DDF3C17E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF897827-1A20-4DBC-8362-CD3DF53EE4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF897827-1A20-4DBC-8362-CD3DF53EE4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF897827-1A20-4DBC-8362-CD3DF53EE4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF897827-1A20-4DBC-8362-CD3DF53EE4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DetailDuty" targetNamespace="http://tempuri.org/DetailDuty.xsd" elementFormDefault="qualified"
+	xmlns="http://tempuri.org/DetailDuty.xsd" xmlns:mstns="http://tempuri.org/DetailDuty.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DutyDetail">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Date" type="xs:dateTime" minOccurs="0" />
+				<xs:element name="OnDutyTime" type="xs:dateTime" minOccurs="0" />
+				<xs:element name="OffDutyTime" type="xs:dateTime" minOccurs="0" />
+				<xs:element name="OffDutyMemo" type="xs:string" minOccurs="0" />
+				<xs:element name="OnDutyMemo" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
