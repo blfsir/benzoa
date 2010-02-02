@@ -59,7 +59,7 @@ namespace UDS.Components
 				str=my.Replace(str,@"<A HREF=""$2"" TARGET=_blank>$2</A>");
 
 				my= new Regex(@"(\[ATT\])(http:\/\/.[^\[]*)(\[\/ATT\])",RegexOptions.IgnoreCase);
-				str=my.Replace(str,@"上传文件:<A HREF=""$2"" TARGET=_blank>$2</A>");
+                str = my.Replace(str, @"附件:<A HREF=""$2"" TARGET=_blank>点击下载该文件</A>");
 
 				my=new Regex(@"(\[URL\])(.[^\[]*)(\[\/URL\])",RegexOptions.IgnoreCase);
 				str=my.Replace(str,@"<A HREF=""http://$2"" TARGET=_blank>$2</A>");

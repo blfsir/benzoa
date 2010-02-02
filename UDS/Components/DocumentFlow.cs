@@ -1318,6 +1318,34 @@ namespace UDS.Components
             return iReturn;
 
         }
+
+        public int UpdateNews(int BoardID, string title, string content)
+        {
+
+            int iReturn = -1;
+            UDS.Components.Database mySQL = new UDS.Components.Database();
+            SqlParameter[] parameters = {
+											mySQL.MakeInParam("@NewsID",SqlDbType.Int,4,BoardID),
+											 mySQL.MakeInParam("@NewsName",SqlDbType.VarChar,200,title),
+											mySQL.MakeInParam("@NewsContent",SqlDbType.NText,20000,content),
+											
+										};
+            try
+            {
+                iReturn = mySQL.RunProc("sp_Flow_UpdateNews", parameters);
+            }
+            catch (Exception e)
+            {
+                Error.Log(e.ToString());
+            }
+            finally
+            {
+                mySQL.Close();
+                mySQL = null;
+            }
+            return iReturn;
+
+        }
 	
 
         #endregion
@@ -2850,6 +2878,31 @@ namespace UDS.Components
             return iReturn;
         }
 
+
+        public int AddNews(string BoardName, string BoardContent)
+        {
+            int iReturn = -1;
+            UDS.Components.Database mySQL = new UDS.Components.Database();
+            SqlParameter[] parameters = {
+											mySQL.MakeInParam("@NewsName",SqlDbType.VarChar,200,BoardName),
+											mySQL.MakeInParam("@NewsContent",SqlDbType.NText,20000,BoardContent),
+											 
+										};
+            try
+            {
+                iReturn = mySQL.RunProc("sp_Flow_AddNews", parameters);
+            }
+            catch (Exception e)
+            {
+                Error.Log(e.ToString());
+            }
+            finally
+            {
+                mySQL.Close();
+                mySQL = null;
+            }
+            return iReturn;
+        }
         public int DeleteBoard(int boardID)
         {
             int iReturn = -1;
@@ -2860,6 +2913,28 @@ namespace UDS.Components
             try
             {
                 iReturn = mySQL.RunProc("sp_Flow_DeleteBoard", parameters);
+            }
+            catch (Exception e)
+            {
+                Error.Log(e.ToString());
+            }
+            finally
+            {
+                mySQL.Close();
+                mySQL = null;
+            }
+            return iReturn;
+        }
+        public int DeleteNews(int boardID)
+        {
+            int iReturn = -1;
+            UDS.Components.Database mySQL = new UDS.Components.Database();
+            SqlParameter[] parameters = {
+											mySQL.MakeInParam("@NewsID",SqlDbType.Int,4,boardID)
+										};
+            try
+            {
+                iReturn = mySQL.RunProc("sp_Flow_DeleteNews", parameters);
             }
             catch (Exception e)
             {

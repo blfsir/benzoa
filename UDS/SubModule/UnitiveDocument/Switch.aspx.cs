@@ -100,6 +100,9 @@ namespace UDS.SubModule.UnitiveDocument
                         case "50":
                             Response.Redirect("Board/BoardManagement.aspx");
                             break;
+                        case "52":
+                            Response.Redirect("News/NewsManagement.aspx");
+                            break;
                         case "55": //Œƒµµπ‹¿Ì
                             Response.Redirect("Document/ListView.aspx?classID=" + classID);
                             break;

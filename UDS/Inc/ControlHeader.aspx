@@ -225,7 +225,7 @@ function changeuser()
 											</table>
 										</div>
 										<div id="layer4" style="Z-INDEX: 2; LEFT: 256px; WIDTH: 250px; POSITION: absolute; TOP: -33px; HEIGHT: 24px">
-											<table width="100%" bgColor="#0051a5" border="0">
+											<%--<table width="100%" bgColor="#0051a5" border="0">
 												<tr>
 													<td></td>
 													<td align="center" width="63"><A href="../SubModule/Query/Google.aspx" target="MainFrame">全文检索</A></td>
@@ -233,7 +233,7 @@ function changeuser()
 															type="text" size="12" name="txtKey" height="12px"></td>
 													<td align="center" width="43"><A style="CURSOR: hand" onclick="GetLink()" target="Main"><IMG id="IMG1" height="24" src="../images/Udssearchbutton.gif" width="26" border="0"></A></td>
 												</tr>
-											</table>
+											</table>--%>
 										</div>
 										<div id="layer6" style="Z-INDEX: 3; LEFT: 348px;width:160px; POSITION: absolute; TOP: 8px; HEIGHT: 15px"><asp:label id="lbl_year" runat="server" Font-Size="X-Small" ForeColor="white">Label</asp:label><font color="white">年</font><asp:label id="lbl_month" runat="server" Font-Size="X-Small" ForeColor="white">Label</asp:label><font color="white">月</font><asp:label id="lbl_day" runat="server" Font-Size="X-Small" ForeColor="white">Label</asp:label><font color="white">日</font>
 											<asp:label id="lbl_Hour" runat="server" Font-Size="X-Small" ForeColor="White"></asp:label><font color="white">:</font><asp:label id="lbl_Minute" runat="server" Font-Size="X-Small" ForeColor="White"></asp:label><font color="white">:</font><asp:label id="lbl_Second" runat="server" Font-Size="X-Small" ForeColor="White"></asp:label></div>

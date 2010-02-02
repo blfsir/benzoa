@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="DALBase.cs" />
     <Compile Include="FlowFieldDAL.cs" />
+    <Compile Include="NewsDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

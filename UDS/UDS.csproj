@@ -1940,6 +1940,9 @@
     <Content Include="SubModule\UnitiveDocument\NewDoc\Listview.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\UnitiveDocument\News\EditNews.aspx" />
+    <Content Include="SubModule\UnitiveDocument\News\NewsManagement.aspx" />
+    <Content Include="SubModule\UnitiveDocument\News\ViewNews.aspx" />
     <Content Include="SubModule\UnitiveDocument\oClassNode.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -2701,6 +2704,27 @@
     <Compile Include="SubModule\UnitiveDocument\NewDoc\Listview.aspx.cs">
       <DependentUpon>Listview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\UnitiveDocument\News\EditNews.aspx.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\UnitiveDocument\News\EditNews.aspx.designer.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubModule\UnitiveDocument\News\NewsManagement.aspx.cs">
+      <DependentUpon>NewsManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\UnitiveDocument\News\NewsManagement.aspx.designer.cs">
+      <DependentUpon>NewsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubModule\UnitiveDocument\News\ViewNews.aspx.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\UnitiveDocument\News\ViewNews.aspx.designer.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\UnitiveDocument\oClassNode.aspx.cs">
       <DependentUpon>oClassNode.aspx</DependentUpon>
