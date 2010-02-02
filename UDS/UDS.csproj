@@ -1641,6 +1641,12 @@
     <Content Include="SubModule\CM\Stat\sellmanfee.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\Department\ChangeDepartment.aspx" />
+    <Content Include="SubModule\Department\DepartmentTreeView.aspx" />
+    <Content Include="SubModule\Department\Index.htm" />
+    <Content Include="SubModule\Department\ListView.aspx" />
+    <Content Include="SubModule\Department\NewStaff.aspx" />
+    <Content Include="SubModule\Department\ODepartment.aspx" />
     <Content Include="SubModule\Error.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -2247,6 +2253,26 @@
       <DependentUpon>sellmanfee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="SubModule\Department\ChangeDepartment.aspx.cs">
+      <DependentUpon>ChangeDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Department\DepartmentTreeView.aspx.cs">
+      <DependentUpon>DepartmentTreeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Department\ListView.aspx.cs">
+      <DependentUpon>ListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Department\NewStaff.aspx.cs">
+      <DependentUpon>NewStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Department\ODepartment.aspx.cs">
+      <DependentUpon>ODepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="SubModule\Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2803,7 +2829,6 @@
   <ItemGroup>
     <Folder Include="Log\" />
     <Folder Include="Properties\" />
-    <Folder Include="SubModule\Department\" />
     <Folder Include="SubModule\Staff\Report\ReportExportFile\" />
     <Folder Include="SubModule\UnitiveDocument\DocumentFlow\AttachFiles\" />
     <Folder Include="SubModule\UnitiveDocument\DocumentFlow\Template\" />
@@ -2826,7 +2851,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3470</DevelopmentServerPort>
+          <DevelopmentServerPort>4698</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
