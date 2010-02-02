@@ -11,6 +11,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_sql", "db_sql", "{F59EE9AD-8E28-4469-9852-AF90855C0644}"
 	ProjectSection(SolutionItems) = preProject
 		department.sql = department.sql
+		flow.sql = flow.sql
 		news.sql = news.sql
 	EndProjectSection
 EndProject

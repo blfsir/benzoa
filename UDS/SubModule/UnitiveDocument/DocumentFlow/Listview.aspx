@@ -86,17 +86,26 @@
 										<ItemStyle Font-Size="X-Small"></ItemStyle>
 									</asp:HyperLinkColumn>
 										<asp:BoundColumn DataField="Flow_Class" HeaderText="流程类别">
-										<HeaderStyle Width="15%"></HeaderStyle>
+										<HeaderStyle Width="11%"></HeaderStyle>
 									</asp:BoundColumn>
 									<asp:BoundColumn DataField="Remark" HeaderText="流程简介">
 										<HeaderStyle Width="30%"></HeaderStyle>
 									</asp:BoundColumn>
-									<asp:TemplateColumn HeaderText="流程图例">
-										<HeaderStyle HorizontalAlign="Center" Width="5%"></HeaderStyle>
+									<asp:TemplateColumn HeaderText="流程说明">
+										<HeaderStyle HorizontalAlign="Center" Width="7%"></HeaderStyle>
 										<ItemStyle HorizontalAlign="Center">										
 										</ItemStyle>
 										<ItemTemplate>
-										<a href ="DisplayFlow.aspx?FlowID=<%#DataBinder.Eval(Container,"DataItem.Flow_ID")%>">图例</a>
+										<a href ="DisplayFlow.aspx?FlowID=<%#DataBinder.Eval(Container,"DataItem.Flow_ID")%>">说明</a>
+										</ItemTemplate>
+									</asp:TemplateColumn>
+									<asp:TemplateColumn HeaderText="流程图例">
+										<HeaderStyle HorizontalAlign="Center" Width="7%"></HeaderStyle>
+										<ItemStyle HorizontalAlign="Center">										
+										</ItemStyle> 
+										<ItemTemplate>
+										<a   href="###"   onclick="window.open('/SubModule/UnitiveDocument/DocumentFlow/Attachment/<%#DataBinder.Eval(Container,"DataItem.flow_chat")%>',   '',   'scrollbars=no,resizable=yes,toolbar=no')">图例</a>
+										<%--<a href ="/SubModule/UnitiveDocument/DocumentFlow/Attachment/<%#DataBinder.Eval(Container,"DataItem.flow_chat")%>" target="_blank">图例</a>--%>
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									<asp:HyperLinkColumn DataNavigateUrlField="Style_ID" DataNavigateUrlFormatString="DisplayStyle.aspx?StyleID={0}"
