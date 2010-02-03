@@ -10,6 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveRecordLayer", "..\Act
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_sql", "db_sql", "{F59EE9AD-8E28-4469-9852-AF90855C0644}"
 	ProjectSection(SolutionItems) = preProject
+		DailyNotes.txt = DailyNotes.txt
 		department.sql = department.sql
 		flow.sql = flow.sql
 		news.sql = news.sql
