@@ -10,6 +10,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using UDS.Components;
 using System.Data.SqlClient;
+using ActiveRecord;
+using ActiveRecord.Service;
+
 
 namespace UDS.SubModule.Department
 {
@@ -41,7 +44,15 @@ namespace UDS.SubModule.Department
             try
             {
                 if (DeptID == 0)
-                    DeptID = df.AddDept(txtDeptName.Text, txtRemark.Text);
+                {
+                   // DeptID = df.AddDept(txtDeptName.Text, txtRemark.Text);
+                  
+                    Dept dept = new Dept();
+                    dept.Dept_Name = txtDeptName.Text;
+                    dept.Dept_Remark = txtRemark.Text;
+                    dept.Save();
+                    
+                }
                 else
                 {
                     df.UpdateDept(DeptID, txtDeptName.Text, txtRemark.Text);

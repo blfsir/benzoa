@@ -86,6 +86,22 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.ActiveRecord, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AR 2.1.1\Castle.ActiveRecord.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Validator, Version=1.1.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AR 2.1.1\Castle.Components.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AR 2.1.1\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AR 2.1.1\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
     <Reference Include="CRVsPackageLib">
       <Name>CRVsPackageLib</Name>
       <HintPath>..\..\..\Program Files\Common Files\Crystal Decisions\1.1\Managed\CRVsPackageLib.dll</HintPath>
@@ -97,10 +113,22 @@
     <Reference Include="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.22451, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL" />
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AR 2.1.1\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="Interop.jmail, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AR 2.1.1\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.UI.WebControls">
       <Name>microsoft.web.ui.webcontrols</Name>
       <HintPath>c:\program files\ie web controls\build\microsoft.web.ui.webcontrols.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AR 2.1.1\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -129,14 +157,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\ActiveRecord.dll" />
+    <Content Include="bin\ActiveRecord.pdb" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AscendComm.dll" />
     <Content Include="bin\AscendSMS.dll" />
     <Content Include="bin\BLL.dll" />
     <Content Include="bin\BLL.pdb" />
+    <Content Include="bin\Castle.ActiveRecord.dll" />
+    <Content Include="bin\Castle.ActiveRecord.xml" />
+    <Content Include="bin\Castle.Components.Validator.dll" />
+    <Content Include="bin\Castle.Core.dll" />
+    <Content Include="bin\Castle.DynamicProxy2.dll" />
     <Content Include="bin\DAL.dll" />
     <Content Include="bin\DAL.pdb" />
+    <Content Include="bin\Iesi.Collections.dll" />
     <Content Include="bin\jmail.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\Lucene.Net.dll" />
     <Content Include="bin\microsoft.web.ui.webcontrols.dll" />
+    <Content Include="bin\NHibernate.ByteCode.Castle.dll" />
+    <Content Include="bin\NHibernate.dll" />
+    <Content Include="bin\NHibernate.Search.dll" />
     <Content Include="bin\UDS.dll" />
     <Content Include="bin\UDS.pdb" />
     <Content Include="Css\BasicLayout.css" />
@@ -2861,6 +2903,10 @@
     <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ActiveRecord\ActiveRecordLayer.csproj">
+      <Project>{CF897827-1A20-4DBC-8362-CD3DF53EE4A2}</Project>
+      <Name>ActiveRecordLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{07F5B297-9903-41A0-832A-3532DDF3C17E}</Project>
       <Name>BLL</Name>
