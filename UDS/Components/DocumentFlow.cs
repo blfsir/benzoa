@@ -1319,6 +1319,34 @@ namespace UDS.Components
 
         }
 
+        public int UpdateDept(int BoardID, string title, string content)
+        {
+
+            int iReturn = -1;
+            UDS.Components.Database mySQL = new UDS.Components.Database();
+            SqlParameter[] parameters = {
+											mySQL.MakeInParam("@DeptID",SqlDbType.Int,4,BoardID),
+												mySQL.MakeInParam("@DeptName",SqlDbType.VarChar,200,title),
+											mySQL.MakeInParam("@Remark",SqlDbType.VarChar,1000,content),
+											
+										};
+            try
+            {
+                iReturn = mySQL.RunProc("sp_Flow_UpdateDept", parameters);
+            }
+            catch (Exception e)
+            {
+                Error.Log(e.ToString());
+            }
+            finally
+            {
+                mySQL.Close();
+                mySQL = null;
+            }
+            return iReturn;
+
+        }
+
         public int UpdateNews(int BoardID, string title, string content)
         {
 
@@ -2878,6 +2906,31 @@ namespace UDS.Components
             return iReturn;
         }
 
+        public int AddDept(string DeptName, string DeptRemark)
+        {
+            int iReturn = -1;
+            UDS.Components.Database mySQL = new UDS.Components.Database();
+            SqlParameter[] parameters = {
+											mySQL.MakeInParam("@DeptName",SqlDbType.VarChar,200,DeptName),
+											mySQL.MakeInParam("@DeptRemark",SqlDbType.VarChar,1000,DeptRemark),
+											 
+										};
+            try
+            {
+                iReturn = mySQL.RunProc("sp_Flow_AddDept", parameters);
+            }
+            catch (Exception e)
+            {
+                Error.Log(e.ToString());
+            }
+            finally
+            {
+                mySQL.Close();
+                mySQL = null;
+            }
+            return iReturn;
+        }
+
 
         public int AddNews(string BoardName, string BoardContent)
         {
@@ -2925,6 +2978,31 @@ namespace UDS.Components
             }
             return iReturn;
         }
+
+        public int DeleteDept(int boardID)
+        {
+            int iReturn = -1;
+            UDS.Components.Database mySQL = new UDS.Components.Database();
+            SqlParameter[] parameters = {
+											mySQL.MakeInParam("@DeptID",SqlDbType.Int,4,boardID)
+										};
+            try
+            {
+                iReturn = mySQL.RunProc("sp_Flow_DeleteDept", parameters);
+            }
+            catch (Exception e)
+            {
+                Error.Log(e.ToString());
+            }
+            finally
+            {
+                mySQL.Close();
+                mySQL = null;
+            }
+            return iReturn;
+        }
+
+
         public int DeleteNews(int boardID)
         {
             int iReturn = -1;

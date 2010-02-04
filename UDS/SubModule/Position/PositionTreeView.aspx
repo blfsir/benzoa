@@ -21,7 +21,7 @@
 					<TD vAlign="center" height="30"><FONT face="宋体">
 							<TABLE id="Table1" height="30" cellSpacing="0" cellPadding="0" width="100%" border="0" class="gbtext">
 								<TR>
-									<TD background="../../Images/treetopbg.jpg">职位管理</TD>
+									<TD background="../../Images/treetopbg.jpg"><A class="linkMenu" href="../UnitiveDocument/Setup/Setup.aspx?classID=77" target="MainFrame">系统设置</A> -> 职位管理</TD>
 									<TD width="1"></TD>
 								</TR>
 							</TABLE>

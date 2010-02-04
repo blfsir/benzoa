@@ -33,7 +33,7 @@
 							<TR>
 								<TD style="BACKGROUND-POSITION: left 50%; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-REPEAT: no-repeat" vAlign="bottom" background="../../../Images/admin_1bg.gif"><BR>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG height="16" src="../../../Images/admin_ico1.gif" width="16" border="0"><SPAN id="SPAN3" runat="server" style="RIGHT: 1in; WIDTH: 458px; BOTTOM: 1in; HEIGHT: 20px" class="gbtext">&nbsp;&nbsp;
-										<A href="../../Department/index.htm" target="main">部门设置</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;添加,删除,修改部门
+										<A href="../../Department/DepartmentManagement.aspx" target="main">部门设置</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;添加,删除,修改部门
 									</SPAN>
 								</TD>
 							</TR>

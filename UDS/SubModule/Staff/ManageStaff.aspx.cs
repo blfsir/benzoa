@@ -106,6 +106,7 @@ namespace UDS.SubModule.Staff
 
                 dbStaffList.DataSource = dt.DefaultView;
                 dbStaffList.DataBind();
+                //dbStaffList.Columns[1].Visible=cbRemind.Checked;
                 if (DisplayType == 0)
                 {
                     //				lbOnline.BackColor = Color.FromArgb(0xCCCCCC);

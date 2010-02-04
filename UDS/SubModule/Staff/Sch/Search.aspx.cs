@@ -76,7 +76,14 @@ namespace UDS.SubModule.Staff.Sch
 				return ddl_Gender.SelectedValue;
 			}
 		}
-
+        //部门
+        public string Dept
+        {
+            get
+            {
+                return ddl_Dept.SelectedValue;
+            }
+        }
 		//手机选项
 		public bool MobileSwitch
 		{
@@ -103,6 +110,15 @@ namespace UDS.SubModule.Staff.Sch
 				return cbx_Gender.Checked;
 			}
 		}
+
+        //部门选项
+        public bool DeptSwitch
+        {
+            get
+            {
+                return cbx_Dept.Checked;
+            }
+        }
 
 		//查询选项
 		public string SearchBound
@@ -148,7 +164,41 @@ namespace UDS.SubModule.Staff.Sch
 																 new ListItem("性别","3"),
 																 new ListItem("Email","4"),
 																 new ListItem("职位","5"),
+                                                                 new ListItem("部门","6"),
+                                                                 
 		};
+
+        private ListItem[] WantFields = { 
+                                                               new ListItem("现住址","7"),
+                                                                 
+	                                                            new ListItem("注册日期","8"), 	 
+	                                                            new ListItem("公司电话","9"), 
+	                                                            new ListItem("移动电话","10"),
+	                                                            new ListItem("出生日期","11"),   
+	                                                            new ListItem("合同首签日期","12"), 
+	                                                            new ListItem("保险状况","13"), 
+	                                                            new ListItem("公积金状况","14"),
+	                                                            new ListItem("身份证号码","15"), 
+	                                                            new ListItem("婚姻状况","16"),	                                                            
+	                                                            new ListItem("户口所在地","17"), 
+	                                                            new ListItem("学历","18"),
+	                                                            new ListItem("特长","19"), 
+	                                                            new ListItem("备注","20"), 
+	                                                            new ListItem("社保基数","21"),
+	                                                            new ListItem("养老保险公司(20%)","22"),
+	                                                            new ListItem("养老保险个人(8%)","23"),
+	                                                            new ListItem("失业保险公司(1%)","24"),
+	                                                            new ListItem("失业保险个人(0.2%)","25"),
+	                                                            new ListItem("工伤保险公司(0.8%)","26"),
+	                                                            new ListItem("生育保险公司(0.8%)","27"),
+	                                                            new ListItem("医疗保险公司(10%)","28"),
+	                                                            new ListItem("医疗保险个人(2%+3)","29"),
+	                                                            new ListItem("社保公司合计","30"),
+	                                                            new ListItem("社保个人合计","31"),
+	                                                            new ListItem("公积金缴费基数","32"),
+	                                                            new ListItem("公积金公司(12%)","33"),
+	                                                            new ListItem("公积金个人(12%)","34"),
+                                        };
 		protected System.Web.UI.HtmlControls.HtmlTable table_Other;
 		protected System.Web.UI.WebControls.DropDownList ddl_Gender;
 		protected System.Web.UI.WebControls.CheckBox cbx_Gender;
@@ -158,18 +208,59 @@ namespace UDS.SubModule.Staff.Sch
 		protected System.Web.UI.WebControls.CheckBox cbx_Mobile;
 		protected System.Web.UI.WebControls.DropDownList ddl_SearchBound;
 
-		private string[] FieldsName = {"StaffName","RealName","Mobile","Gender","Email","PositionName"};
+        protected System.Web.UI.WebControls.DropDownList ddl_Dept;
+        protected System.Web.UI.WebControls.CheckBox cbx_Dept;
+
+        private string[] FieldsName = { "StaffName"
+                                          , "RealName"
+                                          , "Mobile"
+                                          , "Gender"
+                                          , "Email"
+                                          , "PositionName"
+                                          , "DeptName"
+                                          , "Address"
+
+                                          ,"RegistedDate" 
+                                          ,"Phone"  
+	                                    ,"Mobile" 
+	                                    ,"Birthday"   
+	                                    ,"ContractDate"  
+	                                    ,"InsuranceStatus"  
+	                                    ,"AccumulationStatus" 
+	                                    ,"IDNumber"  
+	                                    ,"Marriage"  
+	                                    ,"BirthPlace"  
+	                                    ,"Education" 
+	                                    ,"Features"  
+	                                    ,"Remark"  
+	                                    ,"InsuranceBase" 
+	                                    ,"EndowmentCompany" 
+	                                    ,"EndowmentPersonal" 
+	                                    ,"UnemploymentCompany" 
+	                                    ,"UnemploymentPersonal" 
+	                                    ,"Injury" 
+	                                    ,"Maternity" 
+	                                    ,"MedicalCompany" 
+	                                    ,"MedicalPersonal" 
+	                                    ,"InsuranceCompanyTotal" 
+	                                    ,"InsurancePersonalTotal" 
+	                                    ,"AccumulationBase" 
+	                                    ,"AccumulationCompany" 
+	                                    ,"AccumulationPersonal" 
+                                      };
 
 		private void Page_Load(object sender, System.EventArgs e)
 		{
 			cbx_Mobile.Attributes["onclick"] = "document.getElementById('tbx_Mobile').disabled = !document.getElementById('tbx_Mobile').disabled";
 			cbx_Email.Attributes["onclick"] = "document.getElementById('tbx_Email').disabled = !document.getElementById('tbx_Email').disabled";
 			cbx_Gender.Attributes["onclick"] = "document.getElementById('ddl_Gender').disabled = !document.getElementById('ddl_Gender').disabled";
+            cbx_Dept.Attributes["onclick"] = "document.getElementById('ddl_Dept').disabled = !document.getElementById('ddl_Dept').disabled";
 			if(!Page.IsPostBack)
 			{
 				table_Other.Visible = false;
 				table_Field.Visible = false;
 				BindPosition();
+                BindDepartment();
 
 				BindDefaultField();
 				ViewState["TopTable"] = TopTable;
@@ -232,12 +323,42 @@ namespace UDS.SubModule.Staff.Sch
             }
 		}
 
+        private void BindDepartment()
+        {
+            Database db = new Database();
+            SqlDataReader dr = null;
+            try
+            {
+                db.RunProc("SP_Ext_GetDept", out dr);
+                ddl_Dept.DataSource = dr;
+                ddl_Dept.DataTextField = "Dept_Name";
+                ddl_Dept.DataValueField = "Dept_Name";
+                ddl_Dept.DataBind();
+                ddl_Dept.Items.Insert(0, new ListItem("全部部门", "0"));
+            }
+            finally
+            {
+                if (db != null)
+                { db.Close(); }
+                if (dr != null)
+                {
+
+                    dr.Close();
+                }
+            }
+        }
+
 		private void BindDefaultField()
 		{
 			foreach(ListItem li in Fields)
 			{
 				lbx_SelectedFields.Items.Add(li);
 			}
+
+            foreach (ListItem li in WantFields)
+            {
+                lbx_Fields.Items.Add(li);
+            }
 
 		}
 		private void lbtn_Others_Click(object sender, System.EventArgs e)

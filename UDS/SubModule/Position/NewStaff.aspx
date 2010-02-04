@@ -154,6 +154,17 @@
                                 ValidationExpression="\d*"></asp:RegularExpressionValidator></font>
                 </td>
             </tr>
+               <tr id="Tr1" runat="server">
+                <td align="right" width="20%" height="30">
+                    所属部门:
+                </td>
+                <td height="30">
+                    <font face="宋体">&nbsp;<asp:DropDownList ID="dplDept" runat="server" Width="383px">
+                    </asp:DropDownList>
+                    </font>
+                </td>
+            </tr>
+            
             <tr id="myposition" runat="server">
                 <td align="right" width="20%" height="30">
                     所属职位:

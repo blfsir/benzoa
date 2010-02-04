@@ -64,6 +64,14 @@
 										</asp:dropdownlist></TD>
 								</TR>
 								<TR>
+									<TD height="24" style="WIDTH: 91px">
+										<asp:checkbox id="cbx_Dept" runat="server" Text="≤ø√≈"></asp:checkbox></TD>
+									<TD height="24">
+										<asp:dropdownlist id="ddl_Dept" runat="server" Width="130px" Enabled="False">
+											 
+										</asp:dropdownlist></TD>
+								</TR>
+								<TR>
 									<TD style="WIDTH: 91px" height="24">≤È—Ø∑∂Œß</TD>
 									<TD height="24">
 										<asp:DropDownList id="ddl_SearchBound" runat="server">
@@ -76,11 +84,11 @@
 							<TABLE class="GbText" id="table_Field" borderColor="#93bee2" cellSpacing="0" cellPadding="0" width="100%" border="1" runat="server">
 								<TR>
 									<TD vAlign="top" align="center" rowSpan="3">
-										<asp:listbox id="lbx_Fields" runat="server" Width="200px" Height="130px"></asp:listbox></TD>
+										<asp:listbox id="lbx_Fields" runat="server" Width="200px" Height="430px"></asp:listbox></TD>
 									<TD align="center">
 										<asp:button id="btn_In" runat="server" CssClass="buttoncss" Text=">>>"></asp:button></TD>
 									<TD vAlign="top" align="center" rowSpan="3">
-										<asp:listbox id="lbx_SelectedFields" runat="server" Width="200px" Height="130px"></asp:listbox></TD>
+										<asp:listbox id="lbx_SelectedFields" runat="server" Width="200px" Height="430px"></asp:listbox></TD>
 								</TR>
 								<TR>
 									<TD style="WIDTH: 61px" align="center"></TD>

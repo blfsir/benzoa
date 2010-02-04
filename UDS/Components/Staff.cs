@@ -530,7 +530,8 @@ namespace UDS.Components
 , string InsurancePersonalTotal
 , string AccumulationBase
 , string AccumulationCompany
-, string AccumulationPersonal) 
+, string AccumulationPersonal
+, string staff_dept) 
 		{
 			UDS.Components.Database db = new UDS.Components.Database();						
 
@@ -570,7 +571,8 @@ namespace UDS.Components
                                         db.MakeInParam("@InsurancePersonalTotal",SqlDbType.Money,21, decimal.Parse(InsurancePersonalTotal)),
                                         db.MakeInParam("@AccumulationBase",SqlDbType.Money,21, decimal.Parse(AccumulationBase)),
                                         db.MakeInParam("@AccumulationCompany ",SqlDbType.Money,21, decimal.Parse(AccumulationCompany )),
-                                        db.MakeInParam("@AccumulationPersonal",SqlDbType.Money,21, decimal.Parse(AccumulationPersonal))
+                                        db.MakeInParam("@AccumulationPersonal",SqlDbType.Money,21, decimal.Parse(AccumulationPersonal)),
+                                        db.MakeInParam("@staff_dept",SqlDbType.VarChar,200,staff_dept)
 									
 									};
 			return db.RunProc("sp_UpdateStaffInfo",prams);			
@@ -916,7 +918,7 @@ namespace UDS.Components
 		/// <param name="email">email</param>
 		/// <param name="gender">ÐÔ±ð</param>
 		/// <returns></returns>
-		public SqlDataReader Find(string staffname,int positionid,string mobile,string email,string gender,string searchbound)
+        public SqlDataReader Find(string staffname, int positionid, string mobile, string email, string gender, string dept, string searchbound)
 		{
 			Database db = new Database();
 			SqlDataReader dr;
@@ -930,6 +932,7 @@ namespace UDS.Components
 										   db.MakeInParam("@Gender",SqlDbType.VarChar,100,gender),
 										   db.MakeInParam("@PositionID",SqlDbType.Int,4,positionid),
 										   db.MakeInParam("@SearchBound",SqlDbType.VarChar,50,searchbound),
+                                            db.MakeInParam("@Dept",SqlDbType.VarChar,100,dept),
 									   };
 				db.RunProc("UDS_StaffSearch",prams,out dr);
 				return dr;

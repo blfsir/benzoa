@@ -18,7 +18,7 @@ namespace UDS.SubModule.Staff.Sch
 	public class ResultList : System.Web.UI.Page
 	{
 		protected System.Web.UI.WebControls.DataGrid dgrd_StaffList;
-		private string staffname,mobile,gender,email,bound;
+		private string staffname,mobile,gender,email,bound,dept;
 		private int positionid;
 		private int[] displayfieldsid;
 		private string[] displayfieldsname;
@@ -45,6 +45,7 @@ namespace UDS.SubModule.Staff.Sch
 				mobile = (searchform.MobileSwitch==true)?searchform.Mobile:"";
 				email = (searchform.EmailSwitch==true)?searchform.Email:"";
 				gender = (searchform.GenderSwitch==true)?searchform.Gender:"";
+                dept = (searchform.DeptSwitch == true) ? searchform.Dept : "";
 				bound = searchform.SearchBound;
 				displayfieldsid = searchform.SelectedFields;
 				displayfieldsname = searchform.SelectedFieldsName;
@@ -54,6 +55,7 @@ namespace UDS.SubModule.Staff.Sch
 				ViewState["mobile"] = mobile.ToString();
 				ViewState["email"] = email.ToString();
 				ViewState["gender"] = gender.ToString();
+                ViewState["dept"] = dept.ToString();
 				ViewState["bound"] = bound.ToString();
 				ViewState["displayfiledsid"] = displayfieldsid;
 
@@ -62,10 +64,11 @@ namespace UDS.SubModule.Staff.Sch
 				Session["mobile"] = mobile;
 				Session["email"] = email.ToString();
 				Session["gender"] = gender.ToString();
+                Session["dept"] = dept.ToString();
 				Session["bound"] = bound.ToString();
 				Session["displayfieldsname"] = displayfieldsname;
 
-				BindGrid(staffname,positionid,mobile,email,gender,displayfieldsid);
+				BindGrid(staffname,positionid,mobile,email,gender,dept,displayfieldsid);
 				
 			}
 			else
@@ -75,6 +78,7 @@ namespace UDS.SubModule.Staff.Sch
 				mobile = ViewState["mobile"].ToString();
 				email = ViewState["email"].ToString();
 				gender = ViewState["gender"].ToString();
+                dept = ViewState["dept"].ToString();
 				bound = ViewState["bound"].ToString();
 				displayfieldsid = (int[])ViewState["displayfiledsid"];
 
@@ -87,11 +91,11 @@ namespace UDS.SubModule.Staff.Sch
 			}
 		}
 
-		private void BindGrid(string staffname,int positionid,string mobile,string email,string gender,int[] displayfiledsid)
+        private void BindGrid(string staffname, int positionid, string mobile, string email, string gender, string dept, int[] displayfiledsid)
 		{
 			SqlDataReader dr;
 			UDS.Components.Staff staff = new UDS.Components.Staff();
-			dr = staff.Find(staffname,positionid,mobile,email,gender,bound);
+			dr = staff.Find(staffname,positionid,mobile,email,gender,dept,bound);
 			DataTable dt = UDS.Components.Tools.ConvertDataReaderToDataTable(dr);
 			if(ViewState["sortfield"]!=null)
 				dt.DefaultView.Sort = ViewState["sortfield"] + " " + ViewState["sortdirect"];
@@ -135,7 +139,7 @@ namespace UDS.SubModule.Staff.Sch
 		private void dgrd_StaffList_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
 			((DataGrid)source).CurrentPageIndex = e.NewPageIndex;
-			BindGrid(staffname,positionid,mobile,email,gender,displayfieldsid);
+            BindGrid(staffname, positionid, mobile, email, gender, dept,displayfieldsid);
 		}
 
 		private void dgrd_StaffList_SortCommand(object source, System.Web.UI.WebControls.DataGridSortCommandEventArgs e)
@@ -169,7 +173,7 @@ namespace UDS.SubModule.Staff.Sch
 				}
 			}
 
-			BindGrid(staffname,positionid,mobile,email,gender,displayfieldsid);
+            BindGrid(staffname, positionid, mobile, email, gender, dept, displayfieldsid);
 
 
 		}

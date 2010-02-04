@@ -111,9 +111,12 @@
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									<asp:HyperLinkColumn Text="真实姓名" DataNavigateUrlField="staff_id" DataNavigateUrlFormatString="../position/NewStaff.aspx?StaffID={0}&amp;ReturnPage=1"
-										DataTextField="RealName" HeaderText="真实姓名">
+										DataTextField="RealName" HeaderText="真实姓名"  >
 										<HeaderStyle Width="100px"></HeaderStyle>
 									</asp:HyperLinkColumn>
+									
+								 
+									
 									<asp:BoundColumn DataField="Mobile" HeaderText="手机">
 										<HeaderStyle Width="60px"></HeaderStyle>
 									</asp:BoundColumn>

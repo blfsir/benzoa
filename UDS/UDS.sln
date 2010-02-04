@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_sql", "db_sql", "{F59EE9
 		department.sql = department.sql
 		flow.sql = flow.sql
 		news.sql = news.sql
+		staffSearch.sql = staffSearch.sql
 	EndProjectSection
 EndProject
 Global

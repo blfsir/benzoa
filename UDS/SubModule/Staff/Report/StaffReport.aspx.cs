@@ -25,7 +25,7 @@ namespace UDS.SubModule.Staff.Report
 		private StaffDataSet ds;
 		private StaffList stafflistreport;
 
-		private string staffname,mobile,gender,email,bound;
+		private string staffname,mobile,gender,email,bound,dept;
 		private int positionid;
 		private string[] displayfields;
 
@@ -40,6 +40,7 @@ namespace UDS.SubModule.Staff.Report
 				mobile = Session["mobile"].ToString();
 				email = Session["email"].ToString();
 				gender = Session["gender"].ToString();
+                dept = Session["dept"].ToString();
 				bound = Session["bound"].ToString();
 				displayfields = (string[])Session["displayfieldsname"];
 
@@ -48,6 +49,7 @@ namespace UDS.SubModule.Staff.Report
 				ViewState["mobile"] = mobile.ToString();
 				ViewState["email"] = email.ToString();
 				ViewState["gender"] = gender.ToString();
+                ViewState["dept"] = dept.ToString();
 				ViewState["bound"] = bound.ToString();
 				ViewState["displayfields"] = displayfields;
 
@@ -55,6 +57,7 @@ namespace UDS.SubModule.Staff.Report
 				Session["positionid"] = null;
 				Session["mobile"] = null;
 				Session["gender"] = null;
+                Session["dept"] = null;
 				Session["displayfieldsname"] = null;
 				Session["bound"] = null;
 			}
@@ -65,6 +68,7 @@ namespace UDS.SubModule.Staff.Report
 				mobile = ViewState["mobile"].ToString();
 				email = ViewState["email"].ToString();
 				gender = ViewState["gender"].ToString();
+                dept = ViewState["dept"].ToString();
 				bound = ViewState["bound"].ToString();
 				displayfields = (string[])ViewState["displayfields"];
 			}
@@ -74,7 +78,7 @@ namespace UDS.SubModule.Staff.Report
 				//得不到缓存的内容，重新获取
 				SqlDataReader dr;
 				UDS.Components.Staff staff = new UDS.Components.Staff();
-				dr = staff.Find(staffname,positionid,mobile,email,gender,bound);
+                dr = staff.Find(staffname, positionid, mobile, email, gender, dept,bound);
 				dt = UDS.Components.Tools.ConvertDataReaderToDataTable(dr);
 
 				Cache["StaffList"] = dt;

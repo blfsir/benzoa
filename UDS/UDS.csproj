@@ -1642,7 +1642,9 @@
       <SubType>Form</SubType>
     </Content>
     <Content Include="SubModule\Department\ChangeDepartment.aspx" />
+    <Content Include="SubModule\Department\DepartmentManagement.aspx" />
     <Content Include="SubModule\Department\DepartmentTreeView.aspx" />
+    <Content Include="SubModule\Department\EditDepartment.aspx" />
     <Content Include="SubModule\Department\Index.htm" />
     <Content Include="SubModule\Department\ListView.aspx" />
     <Content Include="SubModule\Department\NewStaff.aspx" />
@@ -2260,9 +2262,23 @@
       <DependentUpon>ChangeDepartment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="SubModule\Department\DepartmentManagement.aspx.cs">
+      <DependentUpon>DepartmentManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Department\DepartmentManagement.aspx.designer.cs">
+      <DependentUpon>DepartmentManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SubModule\Department\DepartmentTreeView.aspx.cs">
       <DependentUpon>DepartmentTreeView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Department\EditDepartment.aspx.cs">
+      <DependentUpon>EditDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Department\EditDepartment.aspx.designer.cs">
+      <DependentUpon>EditDepartment.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\Department\ListView.aspx.cs">
       <DependentUpon>ListView.aspx</DependentUpon>

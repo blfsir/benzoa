@@ -39,6 +39,9 @@ namespace UDS.SubModule.Position
 		protected System.Web.UI.WebControls.RegularExpressionValidator checkmobile;
 		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 		protected System.Web.UI.WebControls.DropDownList cboPosition;
+        
+        protected System.Web.UI.WebControls.DropDownList dplDept;
+
 		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 		protected System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1; //记录所属部门
 		protected System.Web.UI.HtmlControls.HtmlTableRow myposition;
@@ -87,7 +90,8 @@ namespace UDS.SubModule.Position
 				HttpCookie UserCookie = Request.Cookies["Username"];
                 Username = Server.UrlDecode(Request.Cookies["UserName"].Value);
 				//绑定部门
-				BindPosition();				
+				BindPosition();
+                BindDept();
 				//修改于2003-10-8日 目的：改正生日103岁问题
 				//txtBirthday.Text = DateTime.Now.ToShortDateString();
 				if(Request.QueryString["PositionID"]!=null)
@@ -107,6 +111,7 @@ namespace UDS.SubModule.Position
 					cbRemind.Visible =false;
 					//cboPosition.Visible =false;
 					cboPosition.Enabled =false;
+                    dplDept.Enabled = false;
 				
 				}				
 				else
@@ -167,6 +172,26 @@ namespace UDS.SubModule.Position
                 dr_position.Close();
             }
 		}
+
+        private void BindDept()
+        {
+            UDS.Components.Database db = new UDS.Components.Database();
+            SqlDataReader dr_department = null;
+            try
+            {
+                db.RunProc("sp_GetAllDept", out dr_department);
+                dplDept.DataSource = dr_department;
+                //cboPosition.DataSource = dr_position;
+                dplDept.DataTextField = "Dept_Name";
+                dplDept.DataValueField = "Dept_Name";
+                dplDept.DataBind();
+            }
+            finally
+            {
+                db.Close();
+                dr_department.Close();
+            }
+        }
 		private void GetStaffInfo(long StaffID)
 		{
 			SqlDataReader dr;
@@ -237,6 +262,7 @@ namespace UDS.SubModule.Position
                     txtAccumulationBase.Text = dr["AccumulationBase"].ToString();
                     txtAccumulationCompany.Text = dr["AccumulationCompany"].ToString();
                     txtAccumulationPersonal.Text = dr["AccumulationPersonal"].ToString();
+                    dplDept.SelectedValue = dr["staff_dept"].ToString();
 
 
                 }
@@ -321,7 +347,8 @@ namespace UDS.SubModule.Position
                                         db.MakeInParam("@InsurancePersonalTotal",SqlDbType.Money,21, decimal.Parse(txtInsurancePersonalTotal.Text==""?"0":txtInsurancePersonalTotal.Text)),
                                         db.MakeInParam("@AccumulationBase",SqlDbType.Money,21, decimal.Parse(txtAccumulationBase.Text==""?"0":txtAccumulationBase.Text)),
                                         db.MakeInParam("@AccumulationCompany ",SqlDbType.Money,21, decimal.Parse(txtAccumulationCompany.Text==""?"0":txtAccumulationCompany.Text)),
-                                        db.MakeInParam("@AccumulationPersonal",SqlDbType.Money,21, decimal.Parse(txtAccumulationPersonal.Text == "" ? "0" : txtAccumulationPersonal.Text))
+                                        db.MakeInParam("@AccumulationPersonal",SqlDbType.Money,21, decimal.Parse(txtAccumulationPersonal.Text == "" ? "0" : txtAccumulationPersonal.Text)),
+                                        db.MakeInParam("@staff_dept",SqlDbType.VarChar,200,dplDept.Items[dplDept.SelectedIndex].Value.ToString())
                                          
 									   };
                     db.RunProc("sp_AddStaff", prams, out dr);
@@ -398,7 +425,9 @@ namespace UDS.SubModule.Position
 , txtInsurancePersonalTotal.Text==""?"0":txtInsurancePersonalTotal.Text
 , txtAccumulationBase.Text==""?"0":txtAccumulationBase.Text
 , txtAccumulationCompany.Text==""?"0":txtAccumulationCompany.Text
-, txtAccumulationPersonal.Text == "" ? "0" : txtAccumulationPersonal.Text))
+, txtAccumulationPersonal.Text == "" ? "0" : txtAccumulationPersonal.Text
+, dplDept.Items[dplDept.SelectedIndex].Value.ToString()
+))
 				{
 					case 0:
 						PositionID = Int32.Parse(cboPosition.Items[cboPosition.SelectedIndex].Value ).ToString();
