@@ -231,7 +231,7 @@ namespace UDS.SubModule.UnitiveDocument.DocumentFlow
                         else
                         {
                             txt.Text = getAutoNumber(dr["Field_Type"].ToString());
-                            txt.Text = txt.Text+DateTime.Now.Year.ToString()+DateTime.Now.Month.ToString() + this.flowNumber.PadLeft(4,'0').ToString();
+                            txt.Text = txt.Text+DateTime.Now.Year.ToString()+DateTime.Now.Month.ToString().PadLeft(2,'0').ToString() + this.flowNumber.PadLeft(4,'0').ToString();
                             
                             txt.ReadOnly = true;
                             if (DocID > 0)
