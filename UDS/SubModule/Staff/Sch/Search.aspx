@@ -31,48 +31,75 @@
 						<TD height="24"><asp:textbox id="tbx_Name" runat="server" CssClass="inputcss"></asp:textbox></TD>
 						<TD height="24">所在职位</TD>
 						<TD height="24"><asp:dropdownlist id="ddl_Position" runat="server" Width="130px"></asp:dropdownlist></TD>
+						<TD height="24" style="WIDTH: 91px">
+										<%--<asp:checkbox id="cbx_Dept" runat="server" Text="部门"  ></asp:checkbox>--%>部门</TD>
+									<TD height="24">
+										<asp:dropdownlist id="ddl_Dept" runat="server" Width="130px"  >
+											 
+										</asp:dropdownlist></TD>
 					</TR>
+					<tr>
+					<td colspan="6">
+					 
+					<table id="tableMobile"  runat="server"  class="GbText"  borderColor="#93bee2" cellSpacing="0" cellPadding="0"
+								width="100%" border="1" runat="server" style="BORDER-COLLAPSE: collapse" visible="false">
+					<tr>
+						<TD height="24" style="WIDTH: 102px">手机</TD>
+					<td colspan="3"><asp:textbox id="tbx_Mobile" runat="server" CssClass="inputcss" Enabled="True"></asp:textbox></td></tr>
+					</table> 
+					
+					<table id="tableEmail"  runat="server"  class="GbText"  borderColor="#93bee2" cellSpacing="0" cellPadding="0"
+								width="100%" border="1" runat="server" style="BORDER-COLLAPSE: collapse" visible="false">
+					<tr>
+						<TD height="24" style="WIDTH: 102px">Email</TD>
+					<td colspan="3"><asp:textbox id="tbx_Email" runat="server" CssClass="inputcss"  ></asp:textbox></td></tr>
+					</table> 
+					
+					<table id="tableGender"  runat="server"  class="GbText"  borderColor="#93bee2" cellSpacing="0" cellPadding="0"
+								width="100%" border="1" runat="server" style="BORDER-COLLAPSE: collapse" visible="false">
+					<tr>
+						<TD height="24" style="WIDTH: 102px">性别</TD>
+					<td colspan="3"><asp:dropdownlist id="ddl_Gender" runat="server" Width="130px" >
+											<asp:ListItem Value="male">男</asp:ListItem>
+											<asp:ListItem Value="female">女</asp:ListItem>
+										</asp:dropdownlist></td></tr>
+					</table> 
+					
+					</td>
+					</tr>
 					<TR>
 						<TD style="WIDTH: 104px" height="24"><INPUT class="buttoncss" type="button" value="返  回" onclick="javascript:location.href='../ManageStaff.aspx'"></TD>
 						<TD height="24"><asp:button id="btn_Search" runat="server" Text="查  询" CssClass="buttoncss"></asp:button></TD>
 						<TD height="24"><asp:linkbutton id="lbtn_Others" runat="server">其它查询选项>>></asp:linkbutton></TD>
-						<TD height="24"><asp:linkbutton id="lbtn_SelectField" runat="server">选择显示字段>>></asp:linkbutton></TD>
+						<TD height="24" colspan="3"><asp:linkbutton id="lbtn_SelectField" runat="server">选择显示字段>>></asp:linkbutton></TD>
 					</TR>
 					<TR>
-						<TD colSpan="4" height="24">&nbsp;
+						<TD colSpan="6" height="24">&nbsp;
 							<TABLE class="GbText" id="table_Other" borderColor="#93bee2" cellSpacing="0" cellPadding="0"
 								width="100%" border="1" runat="server" style="BORDER-COLLAPSE: collapse">
 								<TR>
 									<TD height="24" style="WIDTH: 91px">
-										<asp:checkbox id="cbx_Mobile" runat="server" Text="手机"></asp:checkbox></TD>
+										<asp:checkbox id="cbx_Mobile" runat="server" Text="手机" 
+                                            oncheckedchanged="cbx_Mobile_CheckedChanged" AutoPostBack="true"></asp:checkbox></TD>
 									<TD height="24">
-										<asp:textbox id="tbx_Mobile" runat="server" CssClass="inputcss" Enabled="False"></asp:textbox></TD>
+										</TD>
 								</TR>
 								<TR>
 									<TD height="24" style="WIDTH: 91px">
-										<asp:checkbox id="cbx_Email" runat="server" Text="Email"></asp:checkbox></TD>
+										<asp:checkbox id="cbx_Email" runat="server" Text="Email" AutoPostBack="true" 
+                                            oncheckedchanged="cbx_Email_CheckedChanged" ></asp:checkbox></TD>
 									<TD height="24">
-										<asp:textbox id="tbx_Email" runat="server" CssClass="inputcss" Enabled="False"></asp:textbox></TD>
+										</TD>
 								</TR>
 								<TR>
 									<TD height="24" style="WIDTH: 91px">
-										<asp:checkbox id="cbx_Gender" runat="server" Text="性别"></asp:checkbox></TD>
+										<asp:checkbox id="cbx_Gender" runat="server" Text="性别" AutoPostBack="true" 
+                                            oncheckedchanged="cbx_Gender_CheckedChanged"></asp:checkbox></TD>
 									<TD height="24">
-										<asp:dropdownlist id="ddl_Gender" runat="server" Width="130px" Enabled="False">
-											<asp:ListItem Value="male">男</asp:ListItem>
-											<asp:ListItem Value="female">女</asp:ListItem>
-										</asp:dropdownlist></TD>
+										</TD>
 								</TR>
 								<TR>
-									<TD height="24" style="WIDTH: 91px">
-										<asp:checkbox id="cbx_Dept" runat="server" Text="部门"></asp:checkbox></TD>
-									<TD height="24">
-										<asp:dropdownlist id="ddl_Dept" runat="server" Width="130px" Enabled="False">
-											 
-										</asp:dropdownlist></TD>
-								</TR>
-								<TR>
-									<TD style="WIDTH: 91px" height="24">查询范围</TD>
+									<TD style="WIDTH: 91px" height="24">查询范围<TD style="WIDTH: 91px" height="24">查询范围</TD>
 									<TD height="24">
 										<asp:DropDownList id="ddl_SearchBound" runat="server">
 											<asp:ListItem Value="all">所有员工</asp:ListItem>

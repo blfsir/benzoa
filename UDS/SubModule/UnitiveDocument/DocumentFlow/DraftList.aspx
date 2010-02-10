@@ -78,10 +78,21 @@
 												<HeaderStyle Width="10%"></HeaderStyle>
 											</asp:BoundColumn>
 											<asp:HyperLinkColumn DataNavigateUrlField="FLOW_ID" DataNavigateUrlFormatString="DisplayFlow.aspx?FlowID={0}"
-												DataTextField="FlowName" HeaderText="流程图例">
+												DataTextField="FlowName" HeaderText="流程说明">
 												<HeaderStyle HorizontalAlign="Center" Width="20%"></HeaderStyle>
 												<ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
 											</asp:HyperLinkColumn>
+											
+									<asp:TemplateColumn HeaderText="流程图例">
+										<HeaderStyle HorizontalAlign="Center" Width="7%"></HeaderStyle>
+										<ItemStyle HorizontalAlign="Center">										
+										</ItemStyle> 
+										<ItemTemplate>
+										<a   href="###"   onclick="window.open('/SubModule/UnitiveDocument/DocumentFlow/Attachment/<%#DataBinder.Eval(Container,"DataItem.flow_chat")%>',   '',   'scrollbars=no,resizable=yes,toolbar=no')">图例</a>
+										<%--<a href ="/SubModule/UnitiveDocument/DocumentFlow/Attachment/<%#DataBinder.Eval(Container,"DataItem.flow_chat")%>" target="_blank">图例</a>--%>
+										</ItemTemplate>
+									</asp:TemplateColumn>
+									
 											<asp:TemplateColumn HeaderText="当前步骤">
 												<HeaderStyle Width="10%"></HeaderStyle>
 												<ItemTemplate>

@@ -10,10 +10,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveRecordLayer", "..\Act
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_sql", "db_sql", "{F59EE9AD-8E28-4469-9852-AF90855C0644}"
 	ProjectSection(SolutionItems) = preProject
+		20100209modify.sql = 20100209modify.sql
+		20100210modify.sql = 20100210modify.sql
 		DailyNotes.txt = DailyNotes.txt
 		department.sql = department.sql
 		flow.sql = flow.sql
+		flow20100205.sql = flow20100205.sql
 		news.sql = news.sql
+		sp_Flow_PostDocument.sql = sp_Flow_PostDocument.sql
 		staffSearch.sql = staffSearch.sql
 	EndProjectSection
 EndProject

@@ -186,6 +186,36 @@
 									<asp:label id="lblManagePermission" runat="server" Font-Size="X-Small"> 权限管理</asp:label></A></FONT></td>
 					</tr>
 				</table>
+				<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<tr>
+				<td>&nbsp;</td></tr>
+				<tr>
+				<td>&nbsp;</td></tr>
+				<tr>
+				<td><input type="button" value="返回" onclick="javascript:history.go(-1)" class="redButtonCss"></td>
+				</tr>
+				<tr>
+				<td>
+				
+				<table cellspacing="0" cellpadding="3" rules="all" bordercolor="#93BEE2" border="1" id="Table1" style="border-color:#93BEE2;border-width:1px;border-style:solid;width:100%;border-collapse:collapse;">
+	<tr align="center" valign="top" style="color:White;background-color:#337FB2;font-size:X-Small;height:10px;">
+		<td colspan="7">文档管理</td> 
+	</tr>
+	
+				    <asp:Repeater ID="rptChildDocList" runat="server">
+				    <ItemTemplate>
+				   <tr align="left" valign="top" style="font-size:X-Small;height:10px;">
+		                <td colspan="7"><a href="../Switch.aspx?Action=1&ClassID=<%# DataBinder.Eval(Container.DataItem, "ClassID")%>"><%# DataBinder.Eval(Container.DataItem, "ClassName")%></a></td> 
+	                </tr>
+				    </ItemTemplate>
+				    
+                    </asp:Repeater>
+	
+	</table>
+				
+				</td>
+				</tr>
+				</table>
 			</FONT>
 		</form>
 	</body>

@@ -111,7 +111,7 @@ namespace UDS.SubModule.Position
 					cbRemind.Visible =false;
 					//cboPosition.Visible =false;
 					cboPosition.Enabled =false;
-                    dplDept.Enabled = false;
+                  //  dplDept.Enabled = false; //部门字段在员工信息修改时可重新设置
 				
 				}				
 				else

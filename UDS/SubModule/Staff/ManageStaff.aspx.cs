@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using UDS.Components;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace UDS.SubModule.Staff
 {
@@ -29,6 +30,11 @@ namespace UDS.SubModule.Staff
 		protected System.Web.UI.WebControls.Button btn_Search;
 		public int DisplayType;
 		protected System.Web.UI.WebControls.CheckBox cbRemind;
+
+        protected System.Web.UI.WebControls.CheckBoxList cblDisplayColumn;
+        protected System.Web.UI.WebControls.LinkButton lbtn_SelectField;
+
+        protected string selectColumnID = "";
 		protected static string Username;
 	
 		private void Page_Load(object sender, System.EventArgs e)
@@ -43,6 +49,25 @@ namespace UDS.SubModule.Staff
 			}
 			else
 				DisplayType = 0;
+
+            if (Request.QueryString["dc"] != null)
+            {
+                if (Request.QueryString["dc"].ToString() != "")
+                {
+                    ViewState["displayColumn"] = Request.QueryString["dc"].ToString();
+
+                    for (int i = 0; i < cblDisplayColumn.Items.Count; i++)
+                    {
+                        cblDisplayColumn.Items[i].Selected = false;
+                    }
+                    string[] dc = ViewState["displayColumn"].ToString().TrimEnd(',').Split(',');
+                    for (int i = 0; i < dc.Length; i++)
+                    {
+                        cblDisplayColumn.Items[int.Parse(dc[i])].Selected = true;
+                    }
+
+                }
+            }
 
 			if(!Page.IsPostBack)
 			{
@@ -104,8 +129,37 @@ namespace UDS.SubModule.Staff
                 db.RunProc("sp_GetAllStaff", prams, out dr);
                 DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
 
+                if (ViewState["sortfield"] != null)
+                    dt.DefaultView.Sort = ViewState["sortfield"] + " " + ViewState["sortdirect"];
+
                 dbStaffList.DataSource = dt.DefaultView;
+                for (int j = 1; j < dbStaffList.Columns.Count; j++)
+                {
+                    dbStaffList.Columns[j].Visible = false;
+                }
+                if (ViewState["displayColumn"] != null)
+                {
+                    string[] dc = ViewState["displayColumn"].ToString().TrimEnd(',').Split(',');
+                    for (int i = 0; i < dc.Length; i++)
+                    {
+                        dbStaffList.Columns[int.Parse(dc[i])+1].Visible = true;
+                    }
+
+                }
+                else
+                {
+                    for (int i = 0; i < cblDisplayColumn.Items.Count; i++)
+                    {
+                         dbStaffList.Columns[i+1].Visible = cblDisplayColumn.Items[i].Selected;
+                    }
+                }
+                //for (int i = 0; i < cblDisplayColumn.Items.Count; i++)
+                //{
+                //    dbStaffList.Columns[i+1].Visible = cblDisplayColumn.Items[i].Selected;
+                //}
+               
                 dbStaffList.DataBind();
+                //cblDisplayColumn.SelectedValue 
                 //dbStaffList.Columns[1].Visible=cbRemind.Checked;
                 if (DisplayType == 0)
                 {
@@ -146,12 +200,28 @@ namespace UDS.SubModule.Staff
 		#endregion
 		private void lbOnline_Click(object sender, System.EventArgs e)
 		{
-			Server.Transfer("ManageStaff.aspx?DisplayType=0");
+            if (ViewState["displayColumn"] != null)
+            {
+                Server.Transfer("ManageStaff.aspx?DisplayType=0&dc=" + ViewState["displayColumn"].ToString());
+            }
+            else
+            {
+                Server.Transfer("ManageStaff.aspx?DisplayType=0");
+            }
 		}
 
 		private void lbOffLine_Click(object sender, System.EventArgs e)
 		{
-			Server.Transfer("ManageStaff.aspx?DisplayType=1");
+            if (ViewState["displayColumn"] != null)
+            {
+                Server.Transfer("ManageStaff.aspx?DisplayType=1&dc=" + ViewState["displayColumn"].ToString());
+            }
+            else
+            {
+                Server.Transfer("ManageStaff.aspx?DisplayType=1");
+            }
+
+           
 		}
 
 		private void dbStaffList_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -279,5 +349,79 @@ namespace UDS.SubModule.Staff
 		{
 			Response.Redirect("Sch/Search.aspx");
 		}
+
+        protected void lbtn_SelectField_Click(object sender, EventArgs e)
+        {
+            cblDisplayColumn.Visible = !cblDisplayColumn.Visible;
+            if (cblDisplayColumn.Visible == true)
+            {
+                lbtn_SelectField.Text = "Ñ¡ÔñÏÔÊ¾×Ö¶Î<<<";
+            }
+            else
+            {
+                lbtn_SelectField.Text = "Ñ¡ÔñÏÔÊ¾×Ö¶Î>>>";
+            }
+        }
+
+        protected void cblDisplayColumn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (ListItem li in cblDisplayColumn.Items)
+            {
+                if (li.Selected == true)
+                { 
+                    sb.Append(li.Value).Append(',');
+                }
+            }
+            ViewState["displayColumn"] = sb.ToString();
+            BindGrid();
+        }
+
+        protected void dbStaffList_SortCommand(object source, DataGridSortCommandEventArgs e)
+        {
+            if (ViewState["sortfield"] == null)
+            {
+                ViewState["sortfield"] = e.SortExpression;
+                ViewState["sortdirect"] = "ASC";
+            }
+            else
+            {
+                if (ViewState["sortfield"].ToString() == e.SortExpression)
+                {
+                    ViewState["sortdirect"] = (ViewState["sortdirect"].ToString() == "ASC" ? "DESC" : "ASC");
+                }
+                else
+                {
+                    ViewState["sortfield"] = e.SortExpression;
+                    ViewState["sortdirect"] = "ASC";
+                }
+            }
+
+            foreach (DataGridColumn col in dbStaffList.Columns)
+            {
+                if (col.SortExpression.ToString() == ViewState["sortfield"].ToString())
+                {
+                    if (ViewState["sortdirect"].ToString() == "ASC")
+                    {
+                        col.HeaderText += "<img src='../../images/asc.gif' border=0/>";
+                        col.HeaderText = col.HeaderText.Remove(col.HeaderText.IndexOf('<'));
+                        col.HeaderText += "<img src='../../images/asc.gif' border=0/>";
+                    }
+                    else
+                    {
+                        col.HeaderText += "<img src='../../images/desc.gif' border=0/>";
+                        col.HeaderText = col.HeaderText.Remove(col.HeaderText.IndexOf('<'));
+                        col.HeaderText += "<img src='../../images/desc.gif' border=0/>";
+                    }
+                }
+                else
+                {
+                    col.HeaderText += "<img src='../../images/desc.gif' border=0/>";
+                    col.HeaderText = col.HeaderText.Remove(col.HeaderText.IndexOf('<'));
+                    
+                }
+            }
+            BindGrid();
+        }
 	}
 }

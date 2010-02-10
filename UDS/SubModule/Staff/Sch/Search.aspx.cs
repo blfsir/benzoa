@@ -116,7 +116,9 @@ namespace UDS.SubModule.Staff.Sch
         {
             get
             {
-                return cbx_Dept.Checked;
+                //return cbx_Dept.Checked; 
+                return true;
+
             }
         }
 
@@ -211,6 +213,10 @@ namespace UDS.SubModule.Staff.Sch
         protected System.Web.UI.WebControls.DropDownList ddl_Dept;
         protected System.Web.UI.WebControls.CheckBox cbx_Dept;
 
+        protected System.Web.UI.HtmlControls.HtmlTable tableMobile;
+        protected System.Web.UI.HtmlControls.HtmlTable tableGender;
+        protected System.Web.UI.HtmlControls.HtmlTable tableEmail;
+
         private string[] FieldsName = { "StaffName"
                                           , "RealName"
                                           , "Mobile"
@@ -251,10 +257,10 @@ namespace UDS.SubModule.Staff.Sch
 
 		private void Page_Load(object sender, System.EventArgs e)
 		{
-			cbx_Mobile.Attributes["onclick"] = "document.getElementById('tbx_Mobile').disabled = !document.getElementById('tbx_Mobile').disabled";
-			cbx_Email.Attributes["onclick"] = "document.getElementById('tbx_Email').disabled = !document.getElementById('tbx_Email').disabled";
-			cbx_Gender.Attributes["onclick"] = "document.getElementById('ddl_Gender').disabled = !document.getElementById('ddl_Gender').disabled";
-            cbx_Dept.Attributes["onclick"] = "document.getElementById('ddl_Dept').disabled = !document.getElementById('ddl_Dept').disabled";
+           // cbx_Mobile.Attributes["onclick"] = "document.getElementById('tableMobile').visible = !document.getElementById('tableMobile').visible";
+			//cbx_Email.Attributes["onclick"] = "document.getElementById('tbx_Email').disabled = !document.getElementById('tbx_Email').disabled";
+			//cbx_Gender.Attributes["onclick"] = "document.getElementById('ddl_Gender').disabled = !document.getElementById('ddl_Gender').disabled";
+            //cbx_Dept.Attributes["onclick"] = "document.getElementById('ddl_Dept').disabled = !document.getElementById('ddl_Dept').disabled";
 			if(!Page.IsPostBack)
 			{
 				table_Other.Visible = false;
@@ -293,6 +299,7 @@ namespace UDS.SubModule.Staff.Sch
 			this.btn_Out.Click += new System.EventHandler(this.btn_Out_Click);
 			this.lbx_Fields.SelectedIndexChanged += new System.EventHandler(this.lbx_Fields_SelectedIndexChanged);
 			this.btn_In.Click += new System.EventHandler(this.btn_In_Click);
+            this.cbx_Mobile.CheckedChanged += new System.EventHandler(this.cbx_Mobile_CheckedChanged);
 			this.Load += new System.EventHandler(this.Page_Load);
 
 		}
@@ -374,11 +381,7 @@ namespace UDS.SubModule.Staff.Sch
 			}
 		}
 
-		private void cbx_Gender_CheckedChanged(object sender, System.EventArgs e)
-		{
-		
-		}
-
+		 
 		private void btn_Search_Click(object sender, System.EventArgs e)
 		{
 			Server.Transfer("ResultList.aspx");
@@ -428,6 +431,21 @@ namespace UDS.SubModule.Staff.Sch
 		{
 		
 		}
+
+        protected void cbx_Mobile_CheckedChanged(object sender, EventArgs e)
+        {
+            tableMobile.Visible = cbx_Mobile.Checked;
+        }
+
+        protected void cbx_Email_CheckedChanged(object sender, EventArgs e)
+        {
+            tableEmail.Visible = cbx_Email.Checked;
+        }
+
+        protected void cbx_Gender_CheckedChanged(object sender, EventArgs e)
+        {
+            tableGender.Visible = cbx_Gender.Checked;
+        }
 
 		
 	}

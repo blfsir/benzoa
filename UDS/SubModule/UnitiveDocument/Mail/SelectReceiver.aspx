@@ -1,15 +1,18 @@
-<%@ Page language="c#" Codebehind="SelectReceiver.aspx.cs" AutoEventWireup="false" Inherits="MaiSystem.SelectReceiver" %>
+<%@ Page Language="c#" CodeBehind="SelectReceiver.aspx.cs" AutoEventWireup="false"
+    Inherits="MaiSystem.SelectReceiver" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
-<HTML>
-	<HEAD>
-		<title>选择收件人 </title>
-		<meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
-		<meta content="C#" name="CODE_LANGUAGE">
-		<meta content="JavaScript" name="vs_defaultClientScript">
-		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../../css/BasicLayout.css" type="text/css" rel="stylesheet">
-		<base target="_self">
-		<script language="javascript">
+<html>
+<head>
+    <title>选择收件人 </title>
+    <meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
+    <meta content="C#" name="CODE_LANGUAGE">
+    <meta content="JavaScript" name="vs_defaultClientScript">
+    <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+    <link href="../../../css/BasicLayout.css" type="text/css" rel="stylesheet">
+    <base target="_self">
+
+    <script language="javascript">
 		function RemoveItem(ControlName)
 	    { 
 		Control = null;
@@ -220,14 +223,60 @@ function SaveValue()
 	
 	}
 			
-		</script>
-	</HEAD>
-	<body onload="PopulateData()" MS_POSITIONING="GridLayout" background="../../../Images/mailuserbg.gif">
-		<form id="SelectReceiver" method="post" runat="server">
-			<SELECT id="listBccTo" style="Z-INDEX: 110; LEFT: 376px; WIDTH: 181px; POSITION: absolute; TOP: 293px; HEIGHT: 105px" multiple size="6" name="listBccTo">
-			</SELECT><INPUT class="buttoncss" style="Z-INDEX: 109; LEFT: 258px; WIDTH: 81px; POSITION: absolute; TOP: 300px; HEIGHT: 24px" onclick="AddItem(this.name)" type="button" value=">>>>" name="btnBccSendToRight"><INPUT class="buttoncss" style="Z-INDEX: 108; LEFT: 257px; WIDTH: 81px; POSITION: absolute; TOP: 324px; HEIGHT: 24px" onclick="RemoveItem(this.name)" type="button" value="<<<<" name="btnBccSendToLeft"><SELECT id="listCcTo" style="Z-INDEX: 107; LEFT: 375px; WIDTH: 181px; POSITION: absolute; TOP: 168px; HEIGHT: 92px" multiple size="5" name="listCcTo"></SELECT><INPUT class="buttoncss" style="Z-INDEX: 106; LEFT: 256px; WIDTH: 81px; POSITION: absolute; TOP: 185px; HEIGHT: 24px" onclick="AddItem(this.name)" type="button" value=">>>>" name="btnCcSendToRight"><INPUT class="buttoncss" style="Z-INDEX: 105; LEFT: 256px; WIDTH: 81px; POSITION: absolute; TOP: 209px; HEIGHT: 24px" onclick="RemoveItem(this.name)" type="button" value="<<<<" name="btnCcSendToLeft"><SELECT id="listSendTo" style="Z-INDEX: 104; LEFT: 374px; WIDTH: 182px; POSITION: absolute; TOP: 43px; HEIGHT: 90px;" multiple size="5" name="listSendTo"></SELECT><INPUT class="buttoncss" style="Z-INDEX: 103; LEFT: 256px; WIDTH: 81px; POSITION: absolute; TOP: 59px; HEIGHT: 24px" onclick="AddItem(this.name)" type="button" value=">>>>" name="btnReceSendToRight"><INPUT class="buttoncss" style="Z-INDEX: 102; LEFT: 256px; WIDTH: 81px; POSITION: absolute; TOP: 83px; HEIGHT: 24px" onclick="RemoveItem(this.name)" type="button" value="<<<<" name="btnReceSendToLeft"><asp:dropdownlist id="listAccount" ondblclick="AddItem('btnReceSendToRight')" style="Z-INDEX: 101; LEFT: 73px; POSITION: absolute; TOP: 43px" runat="server" Width="148px" Height="356px" multiple onchange="setStatusright()"></asp:dropdownlist>
-			<asp:label id="lblReceiver" style="Z-INDEX: 111; LEFT: 375px; POSITION: absolute; TOP: 18px" runat="server" Font-Size="X-Small">收件人</asp:label><asp:label id="lblCc" style="Z-INDEX: 112; LEFT: 376px; POSITION: absolute; TOP: 143px" runat="server" Font-Size="X-Small">抄送人</asp:label><asp:label id="lblBcc" style="Z-INDEX: 113; LEFT: 380px; POSITION: absolute; TOP: 272px" runat="server" Font-Size="X-Small">秘抄人</asp:label><asp:dropdownlist id="listAddressBook" style="Z-INDEX: 114; LEFT: 93px; POSITION: absolute; TOP: 430px" runat="server" Visible="False"></asp:dropdownlist><asp:label id="lblAddressBook" style="Z-INDEX: 115; LEFT: 41px; POSITION: absolute; TOP: 434px" runat="server" Font-Size="X-Small" Visible="False">地址薄</asp:label><input class="buttoncss" style="Z-INDEX: 116; LEFT: 221px; WIDTH: 61px; POSITION: absolute; TOP: 421px; HEIGHT: 24px" onclick="ReturnValue()" type="button" value="确定">
-			<input class="buttoncss" style="Z-INDEX: 117; LEFT: 356px; WIDTH: 61px; POSITION: absolute; TOP: 421px; HEIGHT: 24px" onclick="window.close()" type="button" value="取消">
-			<asp:DropDownList id="listDept" style="Z-INDEX: 118; LEFT: 76px; POSITION: absolute; TOP: 16px" runat="server" OnSelectedIndexChanged="DeptListChange" AutoPostBack="True"></asp:DropDownList></form>
-	</body>
-</HTML>
+    </script>
+
+</head>
+<body onload="PopulateData()" ms_positioning="GridLayout" background="../../../Images/mailuserbg.gif">
+    <form id="SelectReceiver" method="post" runat="server">
+    <select id="listBccTo" style="z-index: 110; left: 376px; width: 181px; position: absolute;
+        top: 293px; height: 105px" multiple size="6" name="listBccTo">
+    </select>
+    <input class="buttoncss" style="z-index: 109; left: 258px; width: 81px; position: absolute;
+        top: 300px; height: 24px" onclick="AddItem(this.name)" type="button" value=">>>>"
+        name="btnBccSendToRight">
+    <input class="buttoncss" style="z-index: 108; left: 257px; width: 81px; position: absolute;
+        top: 324px; height: 24px" onclick="RemoveItem(this.name)" type="button" value="<<<<"
+        name="btnBccSendToLeft">
+    <select id="listCcTo" style="z-index: 107; left: 375px; width: 181px; position: absolute;
+        top: 168px; height: 92px" multiple size="5" name="listCcTo">
+    </select>
+    <input class="buttoncss" style="z-index: 106; left: 256px; width: 81px; position: absolute;
+        top: 185px; height: 24px" onclick="AddItem(this.name)" type="button" value=">>>>"
+        name="btnCcSendToRight">
+    <input class="buttoncss" style="z-index: 105; left: 256px; width: 81px; position: absolute;
+        top: 209px; height: 24px" onclick="RemoveItem(this.name)" type="button" value="<<<<"
+        name="btnCcSendToLeft">
+    <select id="listSendTo" style="z-index: 104; left: 374px; width: 182px; position: absolute;
+        top: 43px; height: 90px;" multiple size="5" name="listSendTo">
+    </select>
+    <input class="buttoncss" style="z-index: 103; left: 256px; width: 81px; position: absolute;
+        top: 59px; height: 24px" onclick="AddItem(this.name)" type="button" value=">>>>"
+        name="btnReceSendToRight">
+    <input class="buttoncss" style="z-index: 102; left: 256px; width: 81px; position: absolute;
+        top: 83px; height: 24px" onclick="RemoveItem(this.name)" type="button" value="<<<<"
+        name="btnReceSendToLeft">
+    <asp:DropDownList ID="listAccount" ondblclick="AddItem('btnReceSendToRight')" Style="z-index: 101;
+        left: 73px; position: absolute; top: 43px" runat="server" Width="148px" Height="356px"
+        multiple onchange="setStatusright()">
+    </asp:DropDownList>
+    <asp:Label ID="lblReceiver" Style="z-index: 111; left: 375px; position: absolute;
+        top: 18px" runat="server" Font-Size="X-Small">收件人</asp:Label>
+    <asp:Label ID="lblCc" Style="z-index: 112; left: 376px; position: absolute; top: 143px"
+        runat="server" Font-Size="X-Small">抄送人</asp:Label>
+    <asp:Label ID="lblBcc" Style="z-index: 113; left: 380px; position: absolute; top: 272px"
+        runat="server" Font-Size="X-Small">秘抄人</asp:Label>
+    <asp:DropDownList ID="listAddressBook" Style="z-index: 114; left: 93px; position: absolute;
+        top: 430px" runat="server" Visible="False">
+    </asp:DropDownList>
+    <asp:Label ID="lblAddressBook" Style="z-index: 115; left: 41px; position: absolute;
+        top: 434px" runat="server" Font-Size="X-Small" Visible="False">地址薄</asp:Label>
+    <input class="buttoncss" style="z-index: 116; left: 221px; width: 61px; position: absolute;
+        top: 421px; height: 24px" onclick="ReturnValue()" type="button" value="确定">
+    <input class="buttoncss" style="z-index: 117; left: 356px; width: 61px; position: absolute;
+        top: 421px; height: 24px" onclick="window.close()" type="button" value="取消">
+    <asp:DropDownList ID="listDept" Style="z-index: 118; left: 76px; position: absolute;
+        top: 16px" runat="server" OnSelectedIndexChanged="DeptListChange" AutoPostBack="True">
+    </asp:DropDownList>
+    </form>
+</body>
+</html>

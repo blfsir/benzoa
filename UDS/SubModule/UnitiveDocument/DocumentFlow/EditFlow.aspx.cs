@@ -238,6 +238,10 @@ namespace UDS.SubModule.UnitiveDocument.DocumentFlow
                    // return (TotalSavedName);
                 }
                 UDS.Components.DocumentFlow df = new UDS.Components.DocumentFlow();
+                if (TotalSavedName.Length <= 0)
+                {
+                    TotalSavedName = "noimg.jpg";
+                }
                 if (0 != df.UpdateAttatchFile(FlowID, TotalSavedName))
                 {
                     Server.Transfer("../../Error.aspx");

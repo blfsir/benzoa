@@ -32,6 +32,11 @@ namespace UDS.SubModule.UnitiveDocument.Document
 		protected System.Web.UI.WebControls.Label lblRemove;
 		protected System.Web.UI.WebControls.Label lblCopy;
 		protected System.Web.UI.WebControls.LinkButton lnkbtnDelete;
+
+
+        protected System.Web.UI.WebControls.Repeater rptChildDocList;
+
+
 	
 		private void Page_Load(object sender, System.EventArgs e)
 		{
@@ -43,9 +48,34 @@ namespace UDS.SubModule.UnitiveDocument.Document
 			if(!IsPostBack)
 			{	
 				BindGrid();
+                BindChildDoc();
 			    ShowAvailable();
 			}
 		}
+
+        private void BindChildDoc()
+        {
+            Database data = new Database();
+            SqlDataReader dataReader = null;
+            SqlParameter[] prams = {
+									   data.MakeInParam("@Class_id",      SqlDbType.Int  , 20, ClassID)
+								   };
+            try
+            {
+                data.RunProc("sp_GetChildClass", prams, out dataReader);
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+                //UDS.Components.Error.Log(ex.ToString());
+            }
+          DataTable   dataTbl2 = UDS.Components.Tools.ConvertDataReaderToDataTable(dataReader);
+            dataReader.Close();
+            rptChildDocList.DataSource = dataTbl2.DefaultView;
+            rptChildDocList.DataBind();
+            
+
+        }
 
 		#region 数据绑定至DataGrid
 		/// <summary>

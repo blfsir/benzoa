@@ -78,14 +78,25 @@
 										<HeaderStyle Font-Size="X-Small" HorizontalAlign="Left" Width="10%"></HeaderStyle>
 										<ItemStyle Font-Size="X-Small" HorizontalAlign="Left"></ItemStyle>
 									</asp:HyperLinkColumn>
-									<asp:TemplateColumn HeaderText="流程图例">
-										<HeaderStyle HorizontalAlign="Center" Width="5%"></HeaderStyle>
+									<asp:TemplateColumn HeaderText="流程说明">
+										<HeaderStyle HorizontalAlign="Center" Width="7%"></HeaderStyle>
 										<ItemStyle HorizontalAlign="Center"></ItemStyle>
 										<ItemTemplate >
-										<a href ="DisplayFlow.aspx?FlowID=<%#DataBinder.Eval(Container,"DataItem.Flow_ID")%>">图例</a>
+										<a href ="DisplayFlow.aspx?FlowID=<%#DataBinder.Eval(Container,"DataItem.Flow_ID")%>">说明</a>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="发起步骤">
+
+									<asp:TemplateColumn HeaderText="流程图例">
+										<HeaderStyle HorizontalAlign="Center" Width="7%"></HeaderStyle>
+										<ItemStyle HorizontalAlign="Center">										
+										</ItemStyle> 
+										<ItemTemplate>
+										<a   href="###"   onclick="window.open('/SubModule/UnitiveDocument/DocumentFlow/Attachment/<%#DataBinder.Eval(Container,"DataItem.flow_chat")%>',   '',   'scrollbars=no,resizable=yes,toolbar=no')">图例</a>
+										<%--<a href ="/SubModule/UnitiveDocument/DocumentFlow/Attachment/<%#DataBinder.Eval(Container,"DataItem.flow_chat")%>" target="_blank">图例</a>--%>
+										</ItemTemplate>
+									</asp:TemplateColumn>
+
+									<asp:TemplateColumn HeaderText="发起步骤" ItemStyle-Height ="13%">
 										<ItemTemplate>
 											<a href ='DisplayTacheMember.aspx?StepID=<%#DataBinder.Eval(Container, "DataItem.Step_ID")%>&FlowID=<%#DataBinder.Eval(Container, "DataItem.Flow_ID")%>&ReturnPage=4'>
 												<%# DataBinder.Eval(Container, "DataItem.StepName") %>
@@ -94,14 +105,14 @@
 									</asp:TemplateColumn>
 									<asp:HyperLinkColumn DataNavigateUrlField="Style_ID" DataNavigateUrlFormatString="DisplayStyle.aspx?StyleID={0}"
 										DataTextField="Style_Name" HeaderText="表格/附件">
-										<HeaderStyle HorizontalAlign="Center" Width="15%"></HeaderStyle>
+										<HeaderStyle HorizontalAlign="Center" Width="14%"></HeaderStyle>
 										<ItemStyle HorizontalAlign="Center"></ItemStyle>
 									</asp:HyperLinkColumn>
 									<asp:BoundColumn DataField="LastUseDate" HeaderText="最后使用日期">
-										<HeaderStyle Width="15%"></HeaderStyle>
+										<HeaderStyle Width="8%"></HeaderStyle>
 									</asp:BoundColumn>
 									<asp:BoundColumn DataField="UsedTimes" HeaderText="使用次数">
-										<HeaderStyle Width="10%"></HeaderStyle>
+										<HeaderStyle Width="8%"></HeaderStyle>
 									</asp:BoundColumn>
 								</Columns>
 								<PagerStyle NextPageText="" HorizontalAlign="Right" ForeColor="#003399" BackColor="#E8F4FF"
