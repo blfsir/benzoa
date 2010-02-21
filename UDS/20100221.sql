@@ -1,4 +1,4 @@
-     CREATE                   PROC sp_Flow_GetMyDraft  
+ alter                   PROC sp_Flow_GetMyDraft  
  @StaffName varchar(300)  
 AS  
   
@@ -19,8 +19,10 @@ SELECT  a.Doc_ID,
  b.Step_ID,  
  c.realname  AS DocBuilder,  
  d.flow_name  AS FlowName,  
+ d.flow_chat,
  '²Ý¸å'   AS status,  
  e.step_name  AS StepName  
+ 
  FROM   
   uds_flow_Style_Data a,  
   uds_flow_document b,  
@@ -36,13 +38,4 @@ SELECT  a.Doc_ID,
   and b.isrunning = 0  
   
  ORDER BY b.doc_added_date DESC  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
