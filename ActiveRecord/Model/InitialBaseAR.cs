@@ -13,7 +13,7 @@ namespace ActiveRecord.Model
         {
             Castle.ActiveRecord.Framework.IConfigurationSource config = Castle.ActiveRecord.Framework.Config.ActiveRecordSectionHandler.Instance;
 
-            Castle.ActiveRecord.ActiveRecordStarter.Initialize(config, typeof(Dept));
+            Castle.ActiveRecord.ActiveRecordStarter.Initialize(config, typeof(Dept),typeof(Plan));
         }
 
         public static InitialBaseAR Instance

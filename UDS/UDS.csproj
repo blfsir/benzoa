@@ -1722,6 +1722,7 @@
     <Content Include="SubModule\Login\VerifySignIn.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\Plan\EditPlan.aspx" />
     <Content Include="SubModule\Position\ChangePosition.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -2377,6 +2378,13 @@
     <Compile Include="SubModule\Login\VerifySignIn.aspx.cs">
       <DependentUpon>VerifySignIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Plan\EditPlan.aspx.cs">
+      <DependentUpon>EditPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Plan\EditPlan.aspx.designer.cs">
+      <DependentUpon>EditPlan.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\Position\ChangePosition.aspx.cs">
       <DependentUpon>ChangePosition.aspx</DependentUpon>
