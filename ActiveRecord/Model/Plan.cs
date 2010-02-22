@@ -31,6 +31,9 @@ namespace ActiveRecord.Model
         private DateTime plan_begin_date;//开始时间
         private DateTime plan_end_date;//结束时间
 
+        private string plan_current_year;//当前年份
+        private string plan_current_period;//当前期间：周，月，年，季
+
         public Plan()
         {
             InitialBaseAR ib = InitialBaseAR.Instance;

@@ -106,6 +106,10 @@ namespace UDS.SubModule.UnitiveDocument
                         case "55": //文档管理
                             Response.Redirect("Document/ListView.aspx?classID=" + classID);
                             break;
+
+                        case "57": //办公环境监控
+                            Response.Redirect("Document/OfficeMonitor.htm?classID=" + classID);
+                            break;
 						default:
 							break;
 					}

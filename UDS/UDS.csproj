@@ -1941,6 +1941,7 @@
     <Content Include="SubModule\UnitiveDocument\Document\ListView.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\UnitiveDocument\Document\OfficeMonitor.htm" />
     <Content Include="SubModule\UnitiveDocument\Index.aspx">
       <SubType>Form</SubType>
     </Content>
