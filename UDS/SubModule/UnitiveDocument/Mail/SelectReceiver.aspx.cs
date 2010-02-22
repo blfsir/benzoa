@@ -24,6 +24,9 @@ namespace MaiSystem
 		protected System.Web.UI.WebControls.DropDownList listAccount;
 		public string ClassID,DispType;
 		protected System.Web.UI.WebControls.DropDownList listDept;
+
+        protected System.Web.UI.WebControls.TextBox txtSearchName;
+        protected System.Web.UI.WebControls.Button btnSearch;
 	
 		private void Page_Load(object sender, System.EventArgs e)
 		{
@@ -98,5 +101,18 @@ namespace MaiSystem
 
 		}
 		#endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            Staff staff = new Staff();
+            DataTable datatable = UDS.Components.Tools.ConvertDataReaderToDataTable(staff.FindStaffByName(this.txtSearchName.Text));
+            listAccount.DataSource = datatable;
+            listAccount.DataTextField = "RealName";
+            listAccount.DataValueField = "Staff_Name";
+            listAccount.DataBind();
+            this.txtSearchName.Text = "";
+            staff = null;
+        }
 	}
 }

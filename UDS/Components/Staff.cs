@@ -944,6 +944,28 @@ namespace UDS.Components
 			}
 
 		}
+
+
+        public SqlDataReader FindStaffByName(string staffName)
+        {
+            Database db = new Database();
+            SqlDataReader dr;
+            try
+            {
+                // run the stored procedure
+                SqlParameter[] prams = {
+										   db.MakeInParam("@Name",SqlDbType.VarChar,200,staffName), 
+									   };
+                db.RunProc("UDS_StaffSearchByName", prams, out dr);
+                return dr;
+            }
+            catch (Exception ex)
+            {
+                Error.Log(ex.ToString());
+                throw new Exception("人员查询出错!", ex);
+            }
+
+        }
 		#endregion
 
 		#region 设置用户是否需要硬件KEY验证

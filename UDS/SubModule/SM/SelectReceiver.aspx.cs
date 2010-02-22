@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using UDS.Components;
 
+
 namespace UDS.SubModule.SM
 {
 	/// <summary>
@@ -21,7 +22,10 @@ namespace UDS.SubModule.SM
 		protected System.Web.UI.WebControls.Label lblReceiver;
 		protected System.Web.UI.WebControls.Label lblMReceiver;
 		protected System.Web.UI.WebControls.DropDownList listDept;
-		
+
+        protected System.Web.UI.WebControls.TextBox txtSearchName;
+        protected System.Web.UI.WebControls.Button btnSearch;
+
 		private void Page_Load(object sender, System.EventArgs e)
 		{
 			if(!Page.IsPostBack )
@@ -74,6 +78,8 @@ namespace UDS.SubModule.SM
 			listAccount.DataBind ();
 			staff = null;
 		}
+
+      
 		#endregion
 
 
@@ -97,5 +103,18 @@ namespace UDS.SubModule.SM
 
 		}
 		#endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            UDS.Components.Staff staff = new UDS.Components.Staff();
+            DataTable datatable = UDS.Components.Tools.ConvertDataReaderToDataTable(staff.FindStaffByName(this.txtSearchName.Text));
+            listAccount.DataSource = datatable;
+            listAccount.DataTextField = "RealName";
+            listAccount.DataValueField = "Staff_Name";
+            listAccount.DataBind();
+            this.txtSearchName.Text = "";
+            staff = null;
+        }
 	}
 }

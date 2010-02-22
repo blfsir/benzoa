@@ -81,7 +81,10 @@ namespace UDS.SubModule.UnitiveDocument
 			default:
 				break;
 			}
-		
+
+            if (ViewState["sortfield"] != null)
+                datatable.DefaultView.Sort = ViewState["sortfield"] + " " + ViewState["sortdirect"];
+
 			dgMemberList.DataSource	  = datatable.DefaultView;
 			dgMemberList.DataBind(); 
 		
@@ -374,5 +377,52 @@ namespace UDS.SubModule.UnitiveDocument
 			team=null;
 		
 		}
+
+        protected void dgMemberList_SortCommand(object source, DataGridSortCommandEventArgs e)
+        {
+            if (ViewState["sortfield"] == null)
+            {
+                ViewState["sortfield"] = e.SortExpression;
+                ViewState["sortdirect"] = "ASC";
+            }
+            else
+            {
+                if (ViewState["sortfield"].ToString() == e.SortExpression)
+                {
+                    ViewState["sortdirect"] = (ViewState["sortdirect"].ToString() == "ASC" ? "DESC" : "ASC");
+                }
+                else
+                {
+                    ViewState["sortfield"] = e.SortExpression;
+                    ViewState["sortdirect"] = "ASC";
+                }
+            }
+
+            //foreach (DataGridColumn col in dbStaffList.Columns)
+            //{
+            //    if (col.SortExpression.ToString() == ViewState["sortfield"].ToString())
+            //    {
+            //        if (ViewState["sortdirect"].ToString() == "ASC")
+            //        {
+            //            col.HeaderText += "<img src='../../images/asc.gif' border=0/>";
+            //            col.HeaderText = col.HeaderText.Remove(col.HeaderText.IndexOf('<'));
+            //            col.HeaderText += "<img src='../../images/asc.gif' border=0/>";
+            //        }
+            //        else
+            //        {
+            //            col.HeaderText += "<img src='../../images/desc.gif' border=0/>";
+            //            col.HeaderText = col.HeaderText.Remove(col.HeaderText.IndexOf('<'));
+            //            col.HeaderText += "<img src='../../images/desc.gif' border=0/>";
+            //        }
+            //    }
+            //    else
+            //    {
+            //        col.HeaderText += "<img src='../../images/desc.gif' border=0/>";
+            //        col.HeaderText = col.HeaderText.Remove(col.HeaderText.IndexOf('<'));
+
+            //    }
+            //}
+            BindGrid();
+        }
 	}
 }

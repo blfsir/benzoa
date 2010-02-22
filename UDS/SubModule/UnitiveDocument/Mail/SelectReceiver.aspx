@@ -277,6 +277,19 @@ function SaveValue()
     <asp:DropDownList ID="listDept" Style="z-index: 118; left: 76px; position: absolute;
         top: 16px" runat="server" OnSelectedIndexChanged="DeptListChange" AutoPostBack="True">
     </asp:DropDownList>
+    <p>
+    <asp:Label ID="Label1" runat="server" Text="ÐÕÃû:" Style="z-index: 118; left: 226px; position: absolute;
+        top: 16px"  ></asp:Label>
+    </p>
+    <asp:TextBox ID="txtSearchName" runat="server" Style="z-index: 118; left: 266px; position: absolute;
+        top: 16px; width: 66px; right: 916px;" ></asp:TextBox>
+    <%--
+    <input class="buttoncss" style="z-index: 118; position: absolute;left: 336px;
+        top: 16px"  type="button" value="²éÑ¯" runat="server" >--%>
+        <asp:Button ID="btnSearch" style="z-index: 118; position: absolute;left: 336px;
+        top: 16px" runat="server" class="buttoncss" Text="²éÑ¯" 
+        onclick="btnSearch_Click"/>
+    
     </form>
 </body>
 </html>

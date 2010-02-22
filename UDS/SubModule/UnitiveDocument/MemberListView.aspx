@@ -43,7 +43,8 @@
 						<td>
 							<asp:datagrid id="dgMemberList" runat="server" DataKeyField="staff_id" OnPageIndexChanged="DataGrid_PageChanged"
 								PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages" AllowPaging="True" AutoGenerateColumns="False"
-								AllowSorting="True" Width="100%" BorderWidth="1px" CellPadding="3" PageSize="15" BorderColor="#93BEE2">
+								AllowSorting="True" Width="100%" BorderWidth="1px" CellPadding="3" PageSize="15" 
+                                BorderColor="#93BEE2" onsortcommand="dgMemberList_SortCommand">
 								<AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
 								<HeaderStyle Font-Size="X-Small" HorizontalAlign="Center" Height="10px" ForeColor="White" VerticalAlign="Top"
 									BackColor="#337FB2"></HeaderStyle>
@@ -55,7 +56,7 @@
 											<asp:CheckBox id="grpMailID" Checked="False" Runat="server"></asp:CheckBox>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="ID">
+									<asp:TemplateColumn HeaderText="ID" SortExpression="Staff_Name">
 										<ItemStyle Font-Size="X-Small"></ItemStyle>
 										<ItemTemplate>
 											<a href='DisplayStaffInfo.aspx?StaffID=<%# DataBinder.Eval(Container.DataItem,"staff_id") %>'>
@@ -63,7 +64,7 @@
 											</a>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:BoundColumn DataField="RealName" HeaderText="真实姓名">
+									<asp:BoundColumn DataField="RealName" HeaderText="真实姓名" SortExpression="RealName" >
 										<ItemStyle Font-Size="X-Small"></ItemStyle>
 									</asp:BoundColumn>
 									<asp:TemplateColumn HeaderText="身份">
@@ -74,7 +75,7 @@
 											</asp:Label>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:BoundColumn DataField="position_name" HeaderText="所任职位">
+									<asp:BoundColumn DataField="position_name" HeaderText="所任职位" SortExpression="position_name" >
 										<ItemStyle Font-Size="X-Small" HorizontalAlign="Right"></ItemStyle>
 										<FooterStyle Font-Size="X-Small"></FooterStyle>
 									</asp:BoundColumn>
