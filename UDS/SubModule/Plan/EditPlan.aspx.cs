@@ -223,5 +223,55 @@ namespace UDS.SubModule.Plan
                 this.FCKeditor2.Value = "";
             }
         }
+
+        protected void ddlSeason_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void ddlYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DateTime beginDate = new DateTime(int.Parse(ddlYear.SelectedValue), 1, 1);
+            DateTime endDate = new DateTime(beginDate.AddYears(1).Year, 1, 1);
+
+            DateTime pastDate = new DateTime(beginDate.AddYears(-1).Year, 1, 1);
+
+
+            this.lblTime.Text = "年" + "[" + beginDate.ToShortDateString() + " - " + endDate.AddDays(-1).ToShortDateString() + "]";
+
+            this.lblPastPlanYear.Text = pastDate.Year.ToString();
+            lblPastPlanPeriod.Text = "12";
+            this.lblPastPlanPeriod.Visible = false;
+            this.lblPastPlanPeroidType.Text = "全年";
+
+
+            this.lblCurrentPlanYear.Text = beginDate.Year.ToString();
+            this.lblCurrentPlanPeroid.Text = "12";
+            this.lblCurrentPlanPeroid.Visible = false;
+            this.lblCurrentPlanPeroidType.Text = "全年";
+
+            this.lblConclusion.Text = pastDate.Year.ToString() + "年全年总结";
+
+            ActiveRecord.Model.Plan plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblCurrentPlanYear.Text, lblCurrentPlanPeroid.Text, Server.UrlDecode(Request.Cookies["UserName"].Value));
+            if (plan != null)//本月计划
+            {
+                this.FCKeditor3.Value = plan.PlanContent;
+            }
+            else
+            {
+                this.FCKeditor3.Value = "";
+            }
+            //上月总结
+            plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblPastPlanYear.Text, int.Parse(lblPastPlanPeriod.Text).ToString(), Server.UrlDecode(Request.Cookies["UserName"].Value));
+            if (plan != null)//上月总结
+            {
+                this.FCKeditor2.Value = plan.PlanConclusion;
+                this.past_plan_content.InnerHtml = plan.PlanContent;//上月计划
+            }
+            else
+            {
+                this.FCKeditor2.Value = "";
+            }
+        }
     }
 }

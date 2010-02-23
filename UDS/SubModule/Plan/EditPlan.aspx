@@ -124,13 +124,15 @@
                   <asp:DropDownList ID="ddlMonth" runat="server" 
                     onselectedindexchanged="ddlMonth_SelectedIndexChanged"  AutoPostBack="true">
                 </asp:DropDownList>
-                  <asp:DropDownList ID="ddlSeason" runat="server">
+                  <asp:DropDownList ID="ddlSeason" runat="server" 
+                    onselectedindexchanged="ddlSeason_SelectedIndexChanged" AutoPostBack="true">
                 </asp:DropDownList>
                 
-                  <asp:DropDownList ID="ddlHalfYear" runat="server">
+                  <asp:DropDownList ID="ddlHalfYear" runat="server"  AutoPostBack="true">
                 </asp:DropDownList>
                 
-                  <asp:DropDownList ID="ddlYear" runat="server">
+                  <asp:DropDownList ID="ddlYear" runat="server" 
+                    onselectedindexchanged="ddlYear_SelectedIndexChanged"  AutoPostBack="true">
                 </asp:DropDownList>
                  <asp:Label ID="lblTime" runat="server" Text="Label"></asp:Label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
