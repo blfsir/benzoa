@@ -117,18 +117,33 @@ namespace UDS.SubModule.Staff
         private string ReadFromXml()
         {
             string columns = "";
+
+              
+            string userName = Server.UrlDecode(Request.Cookies["UserName"].Value);
+            string xmlFile = Server.MapPath("XML_DisplayColumns.xml");
+
             try
             {
-                XmlTextReader textReader = new XmlTextReader(Server.MapPath("XML_DisplayColumns.xml"));
-                XmlDocument doc = new XmlDocument();
-                doc.Load(Server.MapPath("XML_DisplayColumns.xml"));
-                XmlNode node = doc.DocumentElement.SelectSingleNode("/SetDisplayColumns/Columns");// doc.docmentelement.selectsinglenode("/Patients/Patients_virtue/Last_Name");
-                columns = node.InnerText;
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(xmlFile);
+                XmlNode root = xmlDoc.SelectSingleNode("SetDisplayColumns");//查找<bookstore>
+
+                //1.查找是否有相同节点，如有，则更新。并设定flag
+
+                XmlNodeList nodeList = root.ChildNodes;//获取bookstore节点的所有子节点
+                foreach (XmlNode xn in nodeList)//遍历所有子节点
+                {
+                    XmlElement xe = (XmlElement)xn;//将子节点类型转换为XmlElement类型
+                    if (xe.GetAttribute("name") == userName)//如果genre属性值为“李赞红”
+                    {
+                        columns = xe.GetAttribute("columns");
+                        break;
+                    }
+                }
             }
             catch (Exception ex)
-            { 
-            }
-            
+            { }
+           
             return columns;
         }
 
@@ -431,30 +446,73 @@ namespace UDS.SubModule.Staff
 
         private void WriteToXml(string p)
         {
+            //XmlDocument xmlDoc = new XmlDocument();
+            //xmlDoc.Load("bookstore.xml");
+            //XmlNode root = xmlDoc.SelectSingleNode("bookstore");//查找<bookstore>
+            //XmlElement xe1 = xmlDoc.CreateElement("book");//创建一个<book>节点
+            //xe1.SetAttribute("genre", "李赞红");//设置该节点genre属性
+            //xe1.SetAttribute("ISBN", "2-3631-4");//设置该节点ISBN属性
+            //root.AppendChild(xe1);//添加到<bookstore>节点中
+            //xmlDoc.Save("bookstore.xml");
+
+            bool flag = true;
+            string userName = Server.UrlDecode(Request.Cookies["UserName"].Value);
+            string xmlFile = Server.MapPath("XML_DisplayColumns.xml");
+
             try
-            {
-                // 创建XmlTextWriter类的实例对象
-                XmlTextWriter textWriter = new XmlTextWriter(Server.MapPath("XML_DisplayColumns.xml"), null);
-                textWriter.Formatting = Formatting.Indented;
+            { 
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load( xmlFile);
+                XmlNode root = xmlDoc.SelectSingleNode("SetDisplayColumns");//查找<bookstore>
 
-                // 开始写过程，调用WriteStartDocument方法
-                textWriter.WriteStartDocument();
+                //1.查找是否有相同节点，如有，则更新。并设定flag
+               
+                XmlNodeList nodeList = root.ChildNodes;//获取bookstore节点的所有子节点
+                foreach (XmlNode xn in nodeList)//遍历所有子节点
+                {
+                    XmlElement xe = (XmlElement)xn;//将子节点类型转换为XmlElement类型
+                    if (xe.GetAttribute("name") == userName)//如果genre属性值为“李赞红”
+                    {
+                        xe.SetAttribute("columns", p);//则修改该属性为“update李赞红”
+                         
+                        flag = false;
+                        break;
+                    }
+                }
+                //2.如果flag=false,则新增节点
+                xmlDoc.Save(xmlFile); //xmlDoc.Save("bookstore.xml");//保存。
 
-                // 写入说明
-                textWriter.WriteComment("First Comment XmlTextWriter Sample Example");
-                textWriter.WriteComment("w3sky.xml in root dir");
+                if (flag)
+                {
+                    XmlElement xe1 = xmlDoc.CreateElement("Staff");//创建一个<book>节点
+                    xe1.SetAttribute("name", userName);//设置该节点genre属性
+                    xe1.SetAttribute("columns", p);//设置该节点ISBN属性
+                    root.AppendChild(xe1);//添加到<bookstore>节点中
+                    xmlDoc.Save(xmlFile);
+                }
 
-                //创建一个节点
-                textWriter.WriteStartElement("SetDisplayColumns");
-                textWriter.WriteElementString("Name", Server.UrlDecode(Request.Cookies["UserName"].Value));
-                textWriter.WriteElementString("Columns", p);
-                textWriter.WriteEndElement();
+                //// 创建XmlTextWriter类的实例对象
+                //XmlTextWriter textWriter = new XmlTextWriter(Server.MapPath("XML_DisplayColumns.xml"),null);
+                //textWriter.Formatting = Formatting.Indented;
 
-                // 写文档结束，调用WriteEndDocument方法
-                textWriter.WriteEndDocument();
+                //// 开始写过程，调用WriteStartDocument方法
+                //textWriter.WriteStartDocument();
 
-                // 关闭textWriter
-                textWriter.Close();
+                //// 写入说明
+                //textWriter.WriteComment("First Comment XmlTextWriter Sample Example");
+                //textWriter.WriteComment("w3sky.xml in root dir");
+
+                ////创建一个节点
+                //textWriter.WriteStartElement("SetDisplayColumns");
+                //textWriter.WriteElementString("Name", Server.UrlDecode(Request.Cookies["UserName"].Value));
+                //textWriter.WriteElementString("Columns", Server.UrlDecode(Request.Cookies["UserName"].Value));
+                //textWriter.WriteEndElement();
+
+                //// 写文档结束，调用WriteEndDocument方法
+                //textWriter.WriteEndDocument();
+
+                //// 关闭textWriter
+                //textWriter.Close();
             }
             catch (System.Exception e)
             {
