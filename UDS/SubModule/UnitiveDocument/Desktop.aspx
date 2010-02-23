@@ -8,7 +8,8 @@
     <meta content="C#" name="CODE_LANGUAGE">
     <meta content="JavaScript" name="vs_defaultClientScript">
     <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-    <link href="../../Css/BasicLayout.css" type="text/css" rel="stylesheet">
+   <%-- <link href="../../Css/BasicLayout.css" type="text/css" rel="stylesheet">--%>
+      <link href="../../Css/oa.css" type="text/css" rel="stylesheet">
 
     <script language="javascript">
 		function dialwinprocess(CurrDate,CurrTime,whichPg,TaskID)
@@ -25,6 +26,294 @@
 </head>
 <body leftmargin="0" topmargin="0" rightmargin="5">
     <form id="Desktop" method="post" runat="server">
+    
+    <%--<div class="header"> 
+<table width="400" border="0" align="right" cellpadding="0" cellspacing="0" class="nav"> 
+  <tr> 
+    <td height="65">&nbsp;</td> 
+  </tr> 
+  <tr> 
+    <td valign="top"><table width="446" border="0" cellspacing="0" cellpadding="0" class="navtxt"> 
+      <tr> 
+        <td width="25">&nbsp;</td> 
+        <td width="30" align="center"><a href="#">桌面</a></td> 
+        <td width="44" align="center"><a href="#">考勤</a></td> 
+        <td width="35" align="center"><a href="#">便签</a></td> 
+        <td width="44" align="center"><a href="#">日记</a></td> 
+        <td width="47" align="center"><a href="#">通讯录</a></td> 
+        <td width="35" align="center"><a href="#">设置</a></td> 
+        <td width="46" align="center"><a href="#">帮助</a></td> 
+        <td width="47" align="center"><a href="#">重登录</a></td> 
+        <td width="40" align="center"><a href="#">退出</a></td> 
+        <td width="53">&nbsp;</td> 
+      </tr> 
+    </table></td> 
+  </tr> 
+</table> 
+</div> 
+<div class="blank1"></div> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td width="200" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="left1"> 
+      <tr> 
+        <td class="tit4">我的日历</td> 
+        <td align="right" class="tit4"><img src="images/tag01.gif" width="22" height="16" /></td> 
+      </tr> 
+      <tr> 
+        <td colspan="2" class="rili">&nbsp;</td> 
+      </tr> 
+      </table> 
+      <div class="blank1"></div> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="left1"> 
+        <tr> 
+          <td class="tit4">快捷流程</td> 
+          <td align="right" class="tit4"><img src="images/tag01.gif" width="22" height="16" /></td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit2"><a href="#">快捷流程标题1</a></td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit2"><a href="#">快捷流程标题2</a></td> 
+        </tr> 
+                <tr> 
+          <td colspan="2" class="tit2"><a href="#">快捷流程标题3</a></td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit2"><a href="#">快捷流程标题4</a></td> 
+        </tr> 
+                <tr> 
+          <td colspan="2" class="tit2"><a href="#">快捷流程标题5</a></td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit2">&nbsp;</td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit2">&nbsp;</td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit2">&nbsp;</td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit2">&nbsp;</td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit2">&nbsp;</td> 
+        </tr> 
+        <tr> 
+          <td colspan="2" class="tit3">&nbsp;</td> 
+        </tr> 
+    </table></td> 
+    <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0"> 
+      <tr> 
+        <td width="49%" valign="top"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+          <tr> 
+            <td class="tit1">新闻中心</td> 
+            <td align="right" class="tit1"><img src="images/tag01.gif" width="22" height="16" /></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题1</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题2</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题3</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题4</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题5</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" align="right" class="tit3"><a href="#"><img src="images/tag02.gif" width="40" height="17" class="maor1" /></a></td> 
+          </tr> 
+        </table></td> 
+        <td></td> 
+        <td width="49%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+          <tr> 
+            <td class="tit1">我的任务</td> 
+            <td align="right" class="tit1"><img src="images/tag01.gif" width="22" height="16" /></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题1</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题2</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题3</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题4</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题5</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" align="right" class="tit3"><a href="#"><img src="images/tag02.gif" width="40" height="17" class="maor1" /></a></td> 
+          </tr> 
+        </table></td> 
+      </tr> 
+      <tr> 
+        <td valign="top">&nbsp;</td> 
+        <td></td> 
+        <td valign="top">&nbsp;</td> 
+      </tr> 
+      <tr> 
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+          <tr> 
+            <td class="tit1">通知公告</td> 
+            <td align="right" class="tit1"><img src="images/tag01.gif" width="22" height="16" /></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><asp:DataGrid ID="dgBoard" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
+                                GridLines="Horizontal" PageSize="5" DataKeyField="Board_ID" Width="100%" PagerStyle-HorizontalAlign="center"
+                                PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
+                                CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
+                                OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound">
+                                <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
+                                <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
+                                    ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
+                                <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">
+                                </FooterStyle>
+                                <Columns>
+                                    <asp:TemplateColumn HeaderText="公告标题" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
+                                        <ItemTemplate>
+                                            <a href="Board/ViewBoard.aspx?BoardID=<%# Eval("Board_ID") %> "  target="_blank">
+                                                <%# Eval("Board_Name")%></a>
+                                        </ItemTemplate>
+                                        <HeaderStyle Font-Size="14px" />
+                                        <HeaderStyle Font-Size="14px" />
+                                    </asp:TemplateColumn>
+                                    
+                                   
+                                    <asp:TemplateColumn HeaderText="发布日期">
+                                        <HeaderStyle HorizontalAlign="Center" Width="80px"></HeaderStyle>
+                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"add_date") %>'>
+                                            </asp:Label>
+                                        </ItemTemplate>
+                                        <FooterStyle Font-Size="X-Small"></FooterStyle>
+                                    </asp:TemplateColumn>
+                                </Columns>
+                                <PagerStyle Visible="False" HorizontalAlign="Right" ForeColor="White" BackColor="#93BEE2"
+                                    Mode="NumericPages"></PagerStyle>
+                            </asp:DataGrid></td> 
+          </tr> 
+           
+          <tr> 
+            <td colspan="2" align="right" class="tit3"><a href="#"><img src="images/tag02.gif" width="40" height="17" class="maor1" /></a></td> 
+          </tr> 
+        </table></td> 
+        <td></td> 
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+          <tr> 
+            <td class="tit1">我的待签</td> 
+            <td align="right" class="tit1"><img src="images/tag01.gif" width="22" height="16" /></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题1</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题2</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题3</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题4</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题5</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" align="right" class="tit3"><a href="#"><img src="images/tag02.gif" width="40" height="17" class="maor1" /></a></td> 
+          </tr> 
+        </table></td> 
+      </tr> 
+      <tr> 
+        <td valign="top">&nbsp;</td> 
+        <td></td> 
+        <td valign="top">&nbsp;</td> 
+      </tr> 
+      <tr> 
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+          <tr> 
+            <td class="tit1">公司论坛</td> 
+            <td align="right" class="tit1"><img src="images/tag01.gif" width="22" height="16" /></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题1</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题2</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题3</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题4</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"><a href="#">项目信息标题5</a></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" align="right" class="tit3"><a href="#"><img src="images/tag02.gif" width="40" height="17" class="maor1" /></a></td> 
+          </tr> 
+        </table></td> 
+        <td></td> 
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+          <tr> 
+            <td class="tit1">我的邮箱</td> 
+            <td align="right" class="tit1"><img src="images/tag01.gif" width="22" height="16" /></td> 
+          </tr> 
+          <tr> 
+            <td colspan="2" class="tit2"> <asp:DataGrid ID="dgMailList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
+                                GridLines="Horizontal" PageSize="5" DataKeyField="MailID" Width="100%" PagerStyle-HorizontalAlign="center"
+                                PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
+                                CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
+                                OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound">
+                                <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
+                                </ItemStyle>
+                                <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
+                                    ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
+                                <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">
+                                </FooterStyle>
+                                <Columns>
+                                    <asp:TemplateColumn HeaderText="邮件主题">
+                                        <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
+                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Left" VerticalAlign="Middle"></ItemStyle>
+                                        <ItemTemplate>
+                                            <a href='Mail/ReadMail.aspx?FolderType=1&MailId=<%# DataBinder.Eval(Container.DataItem,"MailID") %>'>
+                                                <%# (DataBinder.Eval(Container.DataItem,"MailSubject").ToString().Length>30)?DataBinder.Eval(Container.DataItem,"MailSubject").ToString().Substring(0,30)+"...":DataBinder.Eval(Container.DataItem,"MailSubject").ToString() %>
+                                            </a>
+                                            <%# DataBinder.Eval(Container.DataItem,"attnumber").ToString()==""?"":(DataBinder.Eval(Container.DataItem,"attnumber").ToString()=="0"?"":"<img src='../../DataImages/attach.gif' border='0'>") %>
+                                        </ItemTemplate>
+                                    </asp:TemplateColumn>
+                                    <asp:BoundColumn DataField="MailSender" HeaderText="发送者">
+                                        <HeaderStyle HorizontalAlign="Center" Width="80px"></HeaderStyle>
+                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
+                                    </asp:BoundColumn>
+                                </Columns>
+                                <PagerStyle Visible="False" Font-Size="12px" BorderColor="#E0E0E0" BorderStyle="Dotted"
+                                    HorizontalAlign="Right" PageButtonCount="5" Mode="NumericPages"></PagerStyle>
+                            </asp:DataGrid></td> 
+          </tr> 
+          
+          <tr> 
+            <td colspan="2" align="right" class="tit3"><a href="#"><img src="images/tag02.gif" width="40" height="17" class="maor1" /></a></td> 
+          </tr> 
+        </table></td> 
+      </tr> 
+    </table></td> 
+  </tr> 
+</table> 
+ 
+<div class="footer"></div> --%>
+ 
     <table cellspacing="10" cellpadding="0" align="center" border="0" width="100%" style="table-layout: fixed;
         height: 100%">
         <tr>
@@ -49,7 +338,7 @@
                             &nbsp;&nbsp; &nbsp;
                             <%}%>
                         </td>
-                        <%--<td vAlign="bottom" align="right" width="40"><A href="Board/EditBoard.aspx" target="_self"><IMG alt="" src="../../Images/new.gif" border="0"></A></td>--%>
+                        
                     </tr>
                     <tr>
                         <td colspan="3" height="40">
@@ -73,11 +362,7 @@
                                         <HeaderStyle Font-Size="14px" />
                                     </asp:TemplateColumn>
                                     
-                                   <%-- <asp:HyperLinkColumn DataNavigateUrlField="Board_ID" DataNavigateUrlFormatString="Board/ViewBoard.aspx?BoardID={0}"
-                                        DataTextField="Board_Name" HeaderText="公告标题">
-                                        <HeaderStyle Font-Size="X-Small" HorizontalAlign="Left"></HeaderStyle>
-                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Left" VerticalAlign="Middle"></ItemStyle>
-                                    </asp:HyperLinkColumn>--%>
+                                   
                                     <asp:TemplateColumn HeaderText="发布日期">
                                         <HeaderStyle HorizontalAlign="Center" Width="80px"></HeaderStyle>
                                         <ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
@@ -146,12 +431,7 @@
                 </table>
             </td>
         </tr>
-        <%--<tr>
-            <td height="2">
-            </td>
-            <td>
-            </td>
-        </tr>--%>
+       
         <tr>
             <td valign="top">
                 <table id="Table1" cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
@@ -160,9 +440,7 @@
                             <img id="IMG1" src="../../Images/desktop1.jpg" border="0" runat="server">
                         </td>
                         <td valign="bottom" align="right">
-                            <%--
-                            <a href="../Schedule/TaskList.aspx" target="_self">
-                                <img alt="" src="../../Images/more.gif" border="0"></a>--%>
+                           
                         </td>
                         <td valign="bottom" align="right">
                             <a href="../Schedule/TaskList.aspx" target="_self">
@@ -262,16 +540,11 @@
                 </table>
             </td>
         </tr>
-        <%-- <tr>
-            <td height="2">
-            </td>
-            <td>
-            </td>
-        </tr>--%>
+        
         <tr>
             <td valign="top">
                 <table id="Table3" cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
-                    <%-- <tr style="color:#006699;background-color:#024289;font-size:X-Big;font-weight:bold;height:20px;">--%>
+                  
                     <tr>
                         <td valign="top">
                             <img id="IMG2" src="../../Images/desktop3.jpg" border="0" runat="server">
@@ -373,7 +646,7 @@
                 </table>
             </td>
         </tr>
-    </table>
+    </table> 
     </form>
 </body>
 </html>

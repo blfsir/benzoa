@@ -82,7 +82,7 @@
 			</TD></TR></TBODY></TABLE></TD></TR>
 						<tr><TD>
 							<TABLE class="gbtext" id="Table2" cellSpacing="0" cellPadding="0" width="100%" border="0">
-								<tr>
+								<%--<tr>
 								<td colspan="3">
 							        <div id="DisplayColumn" runat="server"> 
 							            <asp:CheckBoxList ID="cblDisplayColumn" runat="server" 
@@ -130,17 +130,17 @@
                                         </asp:CheckBoxList>
 							        </div>
 								</td>
-								</tr>
+								</tr>--%>
 								<TR>
 									<TD align="center" width="90" background='../../images/maillistbutton<%Response.Write(GetSelectImage("1","2",DisplayType,0));%>.gif' height="24"><asp:linkbutton id="lbOnline" runat="server" CssClass="Newbutton">在职员工</asp:linkbutton></TD>
 									<TD align="center" width="90" background='../../images/maillistbutton<%Response.Write(GetSelectImage("1","2",DisplayType,1));%>.gif' height="24"><asp:linkbutton id="lbOffLine" runat="server" CssClass="Newbutton">离职员工</asp:linkbutton></TD>
-									<TD align="right">
+									<TD align="left">&nbsp;&nbsp;
 									<asp:linkbutton id="lbtn_SelectField" runat="server" 
                                             onclick="lbtn_SelectField_Click">选择显示字段>>></asp:linkbutton>
-										<asp:CheckBox id="cbRemind" runat="server" Text="提醒公司全体员工" Width="240px" Font-Size="X-Small" Height="16px"></asp:CheckBox>&nbsp;&nbsp;&nbsp;<asp:button id="cmdNewStaff" runat="server" Text="新员工" CssClass="redbuttoncss"></asp:button>
+										<asp:button id="cmdNewStaff" runat="server" Text="新员工" CssClass="redbuttoncss"></asp:button>
 										<asp:button id="cmdDimission" runat="server" Text="离职" CssClass="redbuttoncss"></asp:button><asp:button id="cmdRehab" runat="server" Text="复职" CssClass="redbuttoncss"></asp:button>
 										<asp:button id="cmdChangePosition" runat="server" Text="调职" CssClass="redbuttoncss"></asp:button>
-										<asp:Button id="btn_Search" runat="server" CssClass="redbuttoncss" Text="查询"></asp:Button></TD>
+										<asp:Button id="btn_Search" runat="server" CssClass="redbuttoncss" Text="查询"></asp:Button><asp:CheckBox id="cbRemind" runat="server" Text="提醒公司全体员工" Width="240px" Font-Size="X-Small" Height="16px"></asp:CheckBox>&nbsp;</TD>
 								</TR>
 								
 							</TABLE>
@@ -267,6 +267,56 @@
 					<TR>
 						<TD></TD>
 					</TR>
+					
+					<tr>
+								<td colspan="3">
+							        <div id="DisplayColumn" runat="server"> 
+							            <asp:CheckBoxList ID="cblDisplayColumn" runat="server" 
+                                            onselectedindexchanged="cblDisplayColumn_SelectedIndexChanged" Visible="False">
+							            <asp:ListItem Value="0" Text="真实姓名" Selected="True"></asp:ListItem>
+							            <asp:ListItem Value="1" Text="手机" Selected="True"></asp:ListItem>
+							            <asp:ListItem Value="2" Text="年龄" Selected="True"></asp:ListItem>
+<asp:ListItem Value="3" Text="性别" Selected="True"></asp:ListItem>
+<asp:ListItem Value="4" Text="EMAIL" Selected="True"></asp:ListItem>
+<asp:ListItem Value="5" Text="职位" Selected="True"></asp:ListItem>
+
+<asp:ListItem Value="6" Text="部门" Selected="True"></asp:ListItem>
+<asp:ListItem Value="7" Text="现住址" Selected="True"></asp:ListItem>
+
+
+<asp:ListItem Value="8" Text="注册日期" Selected="True"></asp:ListItem>
+<asp:ListItem Value="9" Text="公司电话" Selected="True"></asp:ListItem>
+<asp:ListItem Value="10" Text="移动电话" Selected="True"></asp:ListItem>
+<asp:ListItem Value="11" Text="出生日期" Selected="True"></asp:ListItem>
+<asp:ListItem Value="12" Text="合同首签日期" Selected="True"></asp:ListItem>
+<asp:ListItem Value="13" Text="保险状况" Selected="True"></asp:ListItem>
+<asp:ListItem Value="14" Text="公积金状况" Selected="True"></asp:ListItem>
+<asp:ListItem Value="15" Text="身份证号码" Selected="True"></asp:ListItem>
+<asp:ListItem Value="16" Text="婚姻状况" Selected="True"></asp:ListItem>
+<asp:ListItem Value="17" Text="户口所在地" Selected="True"></asp:ListItem>
+<asp:ListItem Value="18" Text="学历" Selected="True"></asp:ListItem>
+<asp:ListItem Value="19" Text="特长" Selected="True"></asp:ListItem>
+<asp:ListItem Value="20" Text="备注" Selected="True"></asp:ListItem>
+<asp:ListItem Value="21" Text="社保基数" Selected="True"></asp:ListItem>
+<asp:ListItem Value="22" Text="养老保险公司(20%) " Selected="True"></asp:ListItem>
+<asp:ListItem Value="23" Text="养老保险个人(8%)" Selected="True"></asp:ListItem>
+<asp:ListItem Value="24" Text="失业保险公司(1%)" Selected="True"></asp:ListItem>
+<asp:ListItem Value="25" Text="失业保险个人(0.2% " Selected="True"></asp:ListItem>
+<asp:ListItem Value="26" Text="工伤保险公司(0.8%)" Selected="True"></asp:ListItem>
+<asp:ListItem Value="27" Text="生育保险公司(0.8%)" Selected="True"></asp:ListItem>
+<asp:ListItem Value="28" Text="医疗保险公司(10%) " Selected="True"></asp:ListItem>
+<asp:ListItem Value="29" Text="医疗保险个人(2%+3)" Selected="True"></asp:ListItem>
+<asp:ListItem Value="30" Text="社保公司合计" Selected="True"></asp:ListItem>
+<asp:ListItem Value="31" Text="社保个人合计" Selected="True"></asp:ListItem>
+<asp:ListItem Value="32" Text="公积金缴费基数" Selected="True"></asp:ListItem>
+<asp:ListItem Value="33" Text="公积金公司(12%) " Selected="True"></asp:ListItem>
+<asp:ListItem Value="34" Text="公积金个人(12%) " Selected="True"></asp:ListItem>
+
+
+                                        </asp:CheckBoxList>
+							        </div>
+								</td>
+								</tr>
 				</TABLE>
 			</FONT>
 		</form>

@@ -11,6 +11,7 @@ using System.Web.UI.HtmlControls;
 using UDS.Components;
 using System.Data.SqlClient;
 using System.Text;
+using System.Xml;
 
 namespace UDS.SubModule.Staff
 {
@@ -68,12 +69,42 @@ namespace UDS.SubModule.Staff
 
                 }
             }
+            //else
+            //{
+            //    ViewState["displayColumn"] = ReadFromXml();
+
+            //    for (int i = 0; i < cblDisplayColumn.Items.Count; i++)
+            //    {
+            //        cblDisplayColumn.Items[i].Selected = false;
+            //    }
+            //    string[] dc = ViewState["displayColumn"].ToString().TrimEnd(',').Split(',');
+            //    for (int i = 0; i < dc.Length; i++)
+            //    {
+            //        cblDisplayColumn.Items[int.Parse(dc[i])].Selected = true;
+            //    }
+            //}
 
 			if(!Page.IsPostBack)
 			{
 				//操作者登录名
 				HttpCookie UserCookie = Request.Cookies["Username"];
                 Username = Server.UrlDecode(Request.Cookies["UserName"].Value);
+
+                string displayColumns = ReadFromXml();
+                if (displayColumns.Length > 0)
+                {
+                    ViewState["displayColumn"] = displayColumns;
+
+                    for (int i = 0; i < cblDisplayColumn.Items.Count; i++)
+                    {
+                        cblDisplayColumn.Items[i].Selected = false;
+                    }
+                    string[] dc = ViewState["displayColumn"].ToString().TrimEnd(',').Split(',');
+                    for (int i = 0; i < dc.Length; i++)
+                    {
+                        cblDisplayColumn.Items[int.Parse(dc[i])].Selected = true;
+                    }
+                }
 
 				BindGrid();
 			}
@@ -82,6 +113,24 @@ namespace UDS.SubModule.Staff
 			cmdDimission.Attributes.Add("OnClick","return confirm('是否离职？');");
 			cmdChangePosition.Attributes.Add("OnClick","return confirm('是否调职？');");
 		}
+
+        private string ReadFromXml()
+        {
+            string columns = "";
+            try
+            {
+                XmlTextReader textReader = new XmlTextReader(Server.MapPath("XML_DisplayColumns.xml"));
+                XmlDocument doc = new XmlDocument();
+                doc.Load(Server.MapPath("XML_DisplayColumns.xml"));
+                XmlNode node = doc.DocumentElement.SelectSingleNode("/SetDisplayColumns/Columns");// doc.docmentelement.selectsinglenode("/Patients/Patients_virtue/Last_Name");
+                columns = node.InnerText;
+            }
+            catch (Exception ex)
+            { 
+            }
+            
+            return columns;
+        }
 
 		#region Web Form Designer generated code
 		override protected void OnInit(EventArgs e)
@@ -356,10 +405,12 @@ namespace UDS.SubModule.Staff
             if (cblDisplayColumn.Visible == true)
             {
                 lbtn_SelectField.Text = "选择显示字段<<<";
+                this.dbStaffList.Visible = false;
             }
             else
             {
                 lbtn_SelectField.Text = "选择显示字段>>>";
+                this.dbStaffList.Visible = true;
             }
         }
 
@@ -374,7 +425,41 @@ namespace UDS.SubModule.Staff
                 }
             }
             ViewState["displayColumn"] = sb.ToString();
+            WriteToXml(sb.ToString());//将当前用用户设置的列存入xml文件中
             BindGrid();
+        }
+
+        private void WriteToXml(string p)
+        {
+            try
+            {
+                // 创建XmlTextWriter类的实例对象
+                XmlTextWriter textWriter = new XmlTextWriter(Server.MapPath("XML_DisplayColumns.xml"), null);
+                textWriter.Formatting = Formatting.Indented;
+
+                // 开始写过程，调用WriteStartDocument方法
+                textWriter.WriteStartDocument();
+
+                // 写入说明
+                textWriter.WriteComment("First Comment XmlTextWriter Sample Example");
+                textWriter.WriteComment("w3sky.xml in root dir");
+
+                //创建一个节点
+                textWriter.WriteStartElement("SetDisplayColumns");
+                textWriter.WriteElementString("Name", Server.UrlDecode(Request.Cookies["UserName"].Value));
+                textWriter.WriteElementString("Columns", p);
+                textWriter.WriteEndElement();
+
+                // 写文档结束，调用WriteEndDocument方法
+                textWriter.WriteEndDocument();
+
+                // 关闭textWriter
+                textWriter.Close();
+            }
+            catch (System.Exception e)
+            {
+                Response.Write("<script language=javascript>alert('写入xml文件出错，请重试！');</script>"); //Console.WriteLine(e.ToString());
+            }
         }
 
         protected void dbStaffList_SortCommand(object source, DataGridSortCommandEventArgs e)
