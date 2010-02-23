@@ -14,6 +14,25 @@
     <link href="../../../Css/BasicLayout.css" type="text/css" rel="stylesheet">
 
     <script type="text/javascript">
+    function FCKeditor_OnComplete(FCKeditor3)
+    {
+         
+        FCKeditor3.ToolbarSet.Collapse();  //隐藏工具栏
+    }
+    
+    function hidePastPlan()
+    {
+       var display=document.getElementById("past_plan_content").style.display;
+       if(display =="none")
+       {
+       document.getElementById("past_plan_content").style.display=""
+       }
+       else
+       {
+        document.getElementById("past_plan_content").style.display="none"
+       }
+    }
+
     function TextValidate() 
 { 
     var code; 
@@ -47,8 +66,8 @@
     </script>
 
 </head>
-<body leftmargin="0" topmargin="0" ms_positioning="GridLayout">
-    <form id="EditField" method="post" enctype="multipart/form-data" runat="server">
+<body leftmargin="0" topmargin="0" ms_positioning="GridLayout" ForeColor="#006699" >
+    <form id="EditField" method="post" enctype="multipart/form-data" runat="server"  >
     <div>
         <table class="gbtext" id="Table1" cellspacing="0" cellpadding="0" width="100%" border="0">
             <tr>
@@ -75,6 +94,13 @@
                     </table>
                 </td>
             </tr>
+             <tr>
+                           
+                             <td   align="center">
+                              
+                            </td>
+                      
+                        </tr>
             <tr>
             <td><asp:DropDownList ID="ddlPlanObjectType" runat="server">
             <asp:ListItem Text="个人计划" Value="个人计划"></asp:ListItem>
@@ -89,47 +115,78 @@
                 <asp:ListItem Text="年计划" Value="年计划"></asp:ListItem>
                 </asp:DropDownList>
                 
-                    <asp:Label ID="lblTime" runat="server" Text="Label"></asp:Label>
+                   
                 
+                    <asp:TextBox ID="txtYear" runat="server" Width="65px"></asp:TextBox>年
+                <asp:DropDownList ID="ddlWeek" runat="server">
+                </asp:DropDownList>
+                
+                  <asp:DropDownList ID="ddlMonth" runat="server" 
+                    onselectedindexchanged="ddlMonth_SelectedIndexChanged"  AutoPostBack="true">
+                </asp:DropDownList>
+                  <asp:DropDownList ID="ddlSeason" runat="server">
+                </asp:DropDownList>
+                
+                  <asp:DropDownList ID="ddlHalfYear" runat="server">
+                </asp:DropDownList>
+                
+                  <asp:DropDownList ID="ddlYear" runat="server">
+                </asp:DropDownList>
+                 <asp:Label ID="lblTime" runat="server" Text="Label"></asp:Label>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                     <asp:Button ID="cmdOK" runat="server" Width="60px" CssClass="buttoncss" Text="确定"
+                                    OnClick="cmdOK_Click"></asp:Button><font face="宋体">&nbsp; </font>
+                                <input class="buttoncss" style="width: 60px" onclick="javascript:location.href='BoardManagement.aspx'"
+                                    type="button" value="返回">
+                    
                     </td>
             </tr>
             <tr>
-            <td>过期计划查看其内容及附件，不可修改</td>
+            <td><a href="#" onclick="hidePastPlan()"><%--过期计划查看其内容及附件，不可修改--%><asp:Label ID="lblPastPlanYear" runat="server" Text="Label"></asp:Label>年<asp:Label ID="lblPastPlanPeriod" runat="server" Text="Label"></asp:Label><asp:Label ID="lblPastPlanPeroidType" runat="server" Text="Label"></asp:Label>计划
+                    </a></td>
             </tr>
             <tr>
             <td>
-            本期总结，可录入修改删除
+             <div id="past_plan_content" style="word-break: break-all; float: left; height: 100%; width: 100%; padding-top: 10px; padding-bottom:20px; display:none; border:1px;" runat="server"  >
+                                </div>
+            </td></tr>
+            <tr><td></td></tr>
+            <tr>
+            <td>
+            <%--本期总结，可录入修改删除--%>
             
                                 <input id="Hidden1" type="hidden" name="SDCDoc" runat="server">
-                                <fckeditorv2:fckeditor id="FCKeditor2" runat="server" width="100%" height="250px">
+                                <asp:Label ID="lblConclusion" runat="server" Text="Label"></asp:Label>
+                                <fckeditorv2:fckeditor id="FCKeditor2" runat="server" width="100%" height="200px">
                                                         </fckeditorv2:fckeditor> 
             </td></tr>
             <tr>
             <td>
-            总结附件,可上传录入修改删除</td></tr>
+           <%-- 总结附件,可上传录入修改删除--%></td></tr>
             <tr>
-            <td>下期计划,可录入修改删除
+            <td><%--下期计划,可录入修改删除--%>
             
                                 <input id="Hidden2" type="hidden" name="SDCDoc" runat="server">
-                                <fckeditorv2:fckeditor id="FCKeditor3" runat="server" width="100%" height="250px">
+                                <asp:Label ID="lblCurrentPlanYear" runat="server" Text="Label"></asp:Label>年<asp:Label ID="lblCurrentPlanPeroid" runat="server" Text="Label"></asp:Label><asp:Label ID="lblCurrentPlanPeroidType" runat="server" Text="Label"></asp:Label>计划
+                                <fckeditorv2:fckeditor id="FCKeditor3" runat="server" width="100%" height="200px">
                                                         </fckeditorv2:fckeditor> 
             </td></tr>
             
             <tr>
             <td>
-            计划附件,可上传录入修改删除
+           <%-- 计划附件,可上传录入修改删除--%>
             </td></tr>
             <tr>
                 <td>
-                       <table border="1" cellpadding="0" cellspacing="0" style="BORDER-COLLAPSE: collapse" bordercolor="#cccccc"
+                      <%-- <table border="1" cellpadding="0" cellspacing="0" style="BORDER-COLLAPSE: collapse" bordercolor="#cccccc"
 							width="100%" id="AutoNumber2" height="1" class="GbText" align="left">
                         <tr >
                             <font face="宋体"></font>
                             <td align="left" width="10%">
                                 &nbsp;</td>
                             <td   valign="bottom">
-                            <%--    <asp:RequiredFieldValidator
-                                    ID="RequiredFieldValidator1" runat="server" ErrorMessage="(*)" ControlToValidate="txtBoardName"></asp:RequiredFieldValidator>--%>
+                              <asp:RequiredFieldValidator
+                                    ID="RequiredFieldValidator1" runat="server" ErrorMessage="(*)" ControlToValidate="txtBoardName"></asp:RequiredFieldValidator> 
                             </td>
                         </tr>
                          <tr>
@@ -150,8 +207,8 @@
                                     type="button" value="返回">
                             </td>
                       
-                        </tr>
-                    </table>
+                        </tr> 
+                    </table>--%>
                 </td>
             </tr>
             <tr>
@@ -161,5 +218,18 @@
         </table>
     </div>
     </form>
+    <%--<script type="text/javascript">
+    function Op()
+        {
+          var d=document.getElementById("ddlPlanPeriodType");
+          
+          d.selectedIndex=2;
+          d.selectedIndex =1;
+         
+          
+          alert(v);//输出值,这里可以改为根据值执行需要的代码
+        }
+        Op();
+    </script> --%>
 </body>
 </html>

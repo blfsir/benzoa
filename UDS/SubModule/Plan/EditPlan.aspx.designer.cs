@@ -59,6 +59,60 @@ namespace UDS.SubModule.Plan {
         protected global::System.Web.UI.WebControls.DropDownList ddlPlanPeriodType;
         
         /// <summary>
+        /// txtYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtYear;
+        
+        /// <summary>
+        /// ddlWeek control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlWeek;
+        
+        /// <summary>
+        /// ddlMonth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlMonth;
+        
+        /// <summary>
+        /// ddlSeason control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSeason;
+        
+        /// <summary>
+        /// ddlHalfYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlHalfYear;
+        
+        /// <summary>
+        /// ddlYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlYear;
+        
+        /// <summary>
         /// lblTime control.
         /// </summary>
         /// <remarks>
@@ -68,6 +122,51 @@ namespace UDS.SubModule.Plan {
         protected global::System.Web.UI.WebControls.Label lblTime;
         
         /// <summary>
+        /// cmdOK control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cmdOK;
+        
+        /// <summary>
+        /// lblPastPlanYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPastPlanYear;
+        
+        /// <summary>
+        /// lblPastPlanPeriod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPastPlanPeriod;
+        
+        /// <summary>
+        /// lblPastPlanPeroidType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPastPlanPeroidType;
+        
+        /// <summary>
+        /// past_plan_content control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl past_plan_content;
+        
+        /// <summary>
         /// Hidden1 control.
         /// </summary>
         /// <remarks>
@@ -75,6 +174,15 @@ namespace UDS.SubModule.Plan {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden Hidden1;
+        
+        /// <summary>
+        /// lblConclusion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConclusion;
         
         /// <summary>
         /// FCKeditor2 control.
@@ -95,6 +203,33 @@ namespace UDS.SubModule.Plan {
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden Hidden2;
         
         /// <summary>
+        /// lblCurrentPlanYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCurrentPlanYear;
+        
+        /// <summary>
+        /// lblCurrentPlanPeroid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCurrentPlanPeroid;
+        
+        /// <summary>
+        /// lblCurrentPlanPeroidType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCurrentPlanPeroidType;
+        
+        /// <summary>
         /// FCKeditor3 control.
         /// </summary>
         /// <remarks>
@@ -102,23 +237,5 @@ namespace UDS.SubModule.Plan {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::FredCK.FCKeditorV2.FCKeditor FCKeditor3;
-        
-        /// <summary>
-        /// SDCDoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden SDCDoc;
-        
-        /// <summary>
-        /// cmdOK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cmdOK;
     }
 }

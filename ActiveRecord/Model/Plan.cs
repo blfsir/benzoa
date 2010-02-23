@@ -28,11 +28,11 @@ namespace ActiveRecord.Model
         private DateTime plan_create_date;//计划创建日期
 
 
-        private DateTime plan_begin_date;//开始时间
-        private DateTime plan_end_date;//结束时间
+        //private DateTime plan_begin_date;//开始时间
+        //private DateTime plan_end_date;//结束时间
 
-        private string plan_current_year;//当前年份
-        private string plan_current_period;//当前期间：周，月，年，季
+        private string plan_year;//当前年份
+        private string plan_period;//当前期间：周，月，年，季
 
         public Plan()
         {
@@ -106,16 +106,49 @@ namespace ActiveRecord.Model
             set { plan_create_date = value; }
         }
 
+        [Property]
+        public string PlanYear
+        {
+            get { return plan_year; }
+            set { plan_year = value; }
+        }
+
+        [Property]
+        public string PlanPeriod
+        {
+            get { return plan_period; }
+            set { plan_period = value; }
+        }
+
         public static Plan Find(int id)
         {
             return (Plan)ActiveRecordBase.FindByPrimaryKey(typeof(Plan), id);
         }
 
-        public  Plan Find(string planObjectType, string planPeroidType)
+        public  Plan Find(string planObjectType, string planPeroidType,string planYear, string planPeriod,string planCreator)
         {
              
             // Note that we use the property name, _not_ the column name
-            return (Plan)FindOne(typeof(Plan), Expression.Eq("PlanObjectType", planObjectType), Expression.Eq("PlanPeriodType", planPeroidType));
+            return (Plan)FindOne(typeof(Plan), Expression.Eq("PlanObjectType", planObjectType), Expression.Eq("PlanPeriodType", planPeroidType), Expression.Eq("PlanYear", planYear), Expression.Eq("PlanPeriod", planPeriod), Expression.Eq("PlanCreator", planCreator));
+        }
+
+        public void SaveOrUpdate()
+        {
+            Plan plan = new Plan().Find(this.PlanObjectType, this.PlanPeriodType, this.PlanYear, this.PlanPeriod,this.PlanCreator);
+            if (plan != null)
+            {
+                plan.PlanConclusion = this.PlanConclusion;
+                if (this.PlanContent != null)
+                {
+                    plan.PlanContent = this.PlanContent;
+                }
+                plan.Update();
+            }
+            else
+            {
+                this.Save();
+            }
+           
         }
     }
 }
