@@ -36,8 +36,8 @@ namespace UDS.SubModule.Plan
             conclusion.PlanCreator = Server.UrlDecode(Request.Cookies["UserName"].Value); 
 
             conclusion.PlanCreateDate = DateTime.Now;
-            conclusion.PlanYear = lblCurrentPlanYear.Text;
-            conclusion.PlanPeriod = (int.Parse(lblCurrentPlanPeroid.Text)-1).ToString();
+            conclusion.PlanYear = this.lblPastPlanYear.Text;
+            conclusion.PlanPeriod = this.lblPastPlanPeriod.Text;// (int.Parse(lblCurrentPlanPeroid.Text) - 1).ToString();
 
             conclusion.SaveOrUpdate();
 
@@ -60,16 +60,20 @@ namespace UDS.SubModule.Plan
         {
             string planPeroidType = ddlPlanPeriodType.SelectedValue;
             string planObjectType = ddlPlanObjectType.SelectedValue;
+            DateTime beginDate = DateTime.Now;
+            DateTime endDate = DateTime.Now;
+            DateTime pastDate = DateTime.Now;
+            ActiveRecord.Model.Plan plan = null;
 
             switch (planPeroidType)
             {
                 case "月计划":
                     DisableDropdownList();
                     this.ddlMonth.Visible = true;
-                    DateTime beginDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-                    DateTime endDate = new DateTime(beginDate.AddMonths(1).Year, beginDate.AddMonths(1).Month, 1);
+                   beginDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+                    endDate = new DateTime(beginDate.AddMonths(1).Year, beginDate.AddMonths(1).Month, 1);
 
-                    DateTime pastDate = new DateTime(beginDate.AddDays(-1).Year, beginDate.AddDays(-1).Month, 1);
+                     pastDate = new DateTime(beginDate.AddDays(-1).Year, beginDate.AddDays(-1).Month, 1);
 
 
                     this.lblTime.Text = "月" + "[" + beginDate.ToShortDateString() + " - " + endDate.AddDays(-1).ToShortDateString() + "]";
@@ -88,7 +92,7 @@ namespace UDS.SubModule.Plan
                   
                     this.lblConclusion.Text = pastDate.Year.ToString() + "年" + pastDate.Month.ToString() + "月总结";
 
-                    ActiveRecord.Model.Plan plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblCurrentPlanYear.Text, lblCurrentPlanPeroid.Text, Server.UrlDecode(Request.Cookies["UserName"].Value));
+                     plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblCurrentPlanYear.Text, lblCurrentPlanPeroid.Text, Server.UrlDecode(Request.Cookies["UserName"].Value));
                     if (plan != null)//本月计划
                     {
                         this.FCKeditor3.Value = plan.PlanContent;
@@ -108,6 +112,57 @@ namespace UDS.SubModule.Plan
                     {
                         this.FCKeditor2.Value = "";
                     }
+                    break;
+
+                case "年计划":
+                    DisableDropdownList();
+                    this.ddlYear.Visible = true;
+
+                    beginDate = new DateTime(DateTime.Now.Year, 1, 1);
+                    endDate = new DateTime(beginDate.AddYears(1).Year, 1, 1);
+
+                      pastDate = new DateTime(beginDate.AddYears(-1).Year, 1, 1);
+
+
+                    this.lblTime.Text = "年" + "[" + beginDate.ToShortDateString() + " - " + endDate.AddDays(-1).ToShortDateString() + "]";
+                    this.ddlYear.Items.Clear();
+                    this.ddlYear.Items.Add(new ListItem(DateTime.Now.Year.ToString(), DateTime.Now.Year.ToString()));
+                    this.ddlYear.Items.Add(new ListItem(DateTime.Now.AddYears(1).Year.ToString(), DateTime.Now.AddYears(1).Year.ToString()));
+
+                    this.lblPastPlanYear.Text = pastDate.Year.ToString();
+                    lblPastPlanPeriod.Text = "12";
+                    this.lblPastPlanPeriod.Visible = false;
+                    this.lblPastPlanPeroidType.Text = "全年";
+
+
+                    this.lblCurrentPlanYear.Text = beginDate.Year.ToString();
+                    this.lblCurrentPlanPeroid.Text = "12";
+                    this.lblCurrentPlanPeroid.Visible = false;
+                    this.lblCurrentPlanPeroidType.Text = "全年";
+
+                    this.lblConclusion.Text = pastDate.Year.ToString() + "年全年总结";
+
+                    plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblCurrentPlanYear.Text, lblCurrentPlanPeroid.Text, Server.UrlDecode(Request.Cookies["UserName"].Value));
+                    if (plan != null)//本月计划
+                    {
+                        this.FCKeditor3.Value = plan.PlanContent;
+                    }
+                    else
+                    {
+                        this.FCKeditor3.Value = "";
+                    }
+                    //上月总结
+                    plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblPastPlanYear.Text, int.Parse(lblPastPlanPeriod.Text).ToString(), Server.UrlDecode(Request.Cookies["UserName"].Value));
+                    if (plan != null)//上月总结
+                    {
+                        this.FCKeditor2.Value = plan.PlanConclusion;
+                        this.past_plan_content.InnerHtml = plan.PlanContent;//上月计划
+                    }
+                    else
+                    {
+                        this.FCKeditor2.Value = "";
+                    }
+
                     break;
                 default:
                     break;
