@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditPlan.aspx.cs" Inherits="UDS.SubModule.Plan.EditPlan" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditPlan.aspx.cs" Inherits="UDS.SubModule.Plan.EditPlan" ValidateRequest="false" %>
  
  
  <%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>
@@ -111,14 +111,15 @@
                 <asp:ListItem Text="周计划" Value="周计划"></asp:ListItem>
                 <asp:ListItem Text="月计划" Value="月计划"></asp:ListItem>
                 <asp:ListItem Text="季计划" Value="季计划"></asp:ListItem>
-                <asp:ListItem Text="半年计划" Value="半年计划"></asp:ListItem>
+               <%-- <asp:ListItem Text="半年计划" Value="半年计划"></asp:ListItem>--%>
                 <asp:ListItem Text="年计划" Value="年计划"></asp:ListItem>
                 </asp:DropDownList>
                 
                    
                 
-                    <asp:TextBox ID="txtYear" runat="server" Width="65px"></asp:TextBox>年
-                <asp:DropDownList ID="ddlWeek" runat="server">
+                    <asp:TextBox ID="txtYear" runat="server" Width="65px"></asp:TextBox><asp:Label ID="lblYear" Text="年" runat="server"></asp:Label>
+                <asp:DropDownList ID="ddlWeek" runat="server" AutoPostBack="true" 
+                    onselectedindexchanged="ddlWeek_SelectedIndexChanged">
                 </asp:DropDownList>
                 
                   <asp:DropDownList ID="ddlMonth" runat="server" 
@@ -136,10 +137,10 @@
                 </asp:DropDownList>
                  <asp:Label ID="lblTime" runat="server" Text="Label"></asp:Label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                     <asp:Button ID="cmdOK" runat="server" Width="60px" CssClass="buttoncss" Text="确定"
+                     <asp:Button ID="cmdOK" runat="server" Width="60px" CssClass="buttoncss" Text="保存"
                                     OnClick="cmdOK_Click"></asp:Button><font face="宋体">&nbsp; </font>
-                                <input class="buttoncss" style="width: 60px" onclick="javascript:location.href='BoardManagement.aspx'"
-                                    type="button" value="返回">
+                                <%--<input class="buttoncss" style="width: 60px" onclick="javascript:location.replace('../UnitiveDocument/Index.aspx');"
+                                    type="button" value="返回">--%>
                     
                     </td>
             </tr>
