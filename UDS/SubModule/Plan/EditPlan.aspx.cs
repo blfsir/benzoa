@@ -121,6 +121,7 @@ namespace UDS.SubModule.Plan
                     else
                     {
                         this.FCKeditor2.Value = "";
+                        this.past_plan_content.InnerHtml = "";
                     }
 
 
@@ -172,6 +173,7 @@ namespace UDS.SubModule.Plan
                     else
                     {
                         this.FCKeditor2.Value = "";
+                        this.past_plan_content.InnerHtml = "";
                     }
                     break;
 
@@ -229,6 +231,7 @@ namespace UDS.SubModule.Plan
                     else
                     {
                         this.FCKeditor2.Value = "";
+                        this.past_plan_content.InnerHtml = "";
                     }
 
                     break;
@@ -281,6 +284,7 @@ namespace UDS.SubModule.Plan
                     else
                     {
                         this.FCKeditor2.Value = "";
+                        this.past_plan_content.InnerHtml = "";
                     }
 
                     break;
@@ -412,6 +416,7 @@ namespace UDS.SubModule.Plan
             else
             {
                 this.FCKeditor2.Value = "";
+                this.past_plan_content.InnerHtml = "";
             }
         }
 
@@ -470,6 +475,7 @@ namespace UDS.SubModule.Plan
             else
             {
                 this.FCKeditor2.Value = "";
+                this.past_plan_content.InnerHtml = "";
             }
 
         }
@@ -516,6 +522,7 @@ namespace UDS.SubModule.Plan
             else
             {
                 this.FCKeditor2.Value = "";
+                this.past_plan_content.InnerHtml = "";
             }
         }
 
@@ -533,7 +540,10 @@ namespace UDS.SubModule.Plan
                 pastYear = currentYear - 1;
                 pastWeek = gc.GetWeekOfYear(new DateTime(pastYear, 12, 31), CalendarWeekRule.FirstDay, DayOfWeek.Monday);
             }
-
+            else
+            {
+                pastYear = currentYear;
+            }
            
             this.lblTime.Text = "周";
 
@@ -568,6 +578,32 @@ namespace UDS.SubModule.Plan
             else
             {
                 this.FCKeditor2.Value = "";
+                this.past_plan_content.InnerHtml = "";
+            }
+        }
+
+        protected void ddlPlanObjectType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActiveRecord.Model.Plan plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblCurrentPlanYear.Text, lblCurrentPlanPeroid.Text, Server.UrlDecode(Request.Cookies["UserName"].Value));
+            if (plan != null)//本月计划
+            {
+                this.FCKeditor3.Value = plan.PlanContent;
+            }
+            else
+            {
+                this.FCKeditor3.Value = "";
+            }
+            //上月总结
+            plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblPastPlanYear.Text, int.Parse(lblPastPlanPeriod.Text).ToString(), Server.UrlDecode(Request.Cookies["UserName"].Value));
+            if (plan != null)//上月总结
+            {
+                this.FCKeditor2.Value = plan.PlanConclusion;
+                this.past_plan_content.InnerHtml = plan.PlanContent;//上月计划
+            }
+            else
+            {
+                this.FCKeditor2.Value = "";
+                this.past_plan_content.InnerHtml = "";
             }
         }
     }

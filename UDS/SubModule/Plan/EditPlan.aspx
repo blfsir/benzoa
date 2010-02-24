@@ -102,7 +102,8 @@
                       
                         </tr>
             <tr>
-            <td><asp:DropDownList ID="ddlPlanObjectType" runat="server">
+            <td><asp:DropDownList ID="ddlPlanObjectType" runat="server" 
+                    onselectedindexchanged="ddlPlanObjectType_SelectedIndexChanged" AutoPostBack="true">
             <asp:ListItem Text="个人计划" Value="个人计划"></asp:ListItem>
             <asp:ListItem Text="部门计划" Value="部门计划"></asp:ListItem>
                 </asp:DropDownList>
@@ -136,9 +137,8 @@
                     onselectedindexchanged="ddlYear_SelectedIndexChanged"  AutoPostBack="true">
                 </asp:DropDownList>
                  <asp:Label ID="lblTime" runat="server" Text="Label"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                     <asp:Button ID="cmdOK" runat="server" Width="60px" CssClass="buttoncss" Text="保存"
-                                    OnClick="cmdOK_Click"></asp:Button><font face="宋体">&nbsp; </font>
+                         
+                     <asp:Button ID="cmdOK" runat="server" Width="60px" CssClass="buttoncss" style="z-index: 118; position: absolute;right: 10px; top: 36px" Text="保存" OnClick="cmdOK_Click"></asp:Button><font face="宋体">&nbsp; </font>
                                 <%--<input class="buttoncss" style="width: 60px" onclick="javascript:location.replace('../UnitiveDocument/Index.aspx');"
                                     type="button" value="返回">--%>
                     
