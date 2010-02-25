@@ -177,10 +177,10 @@ function changeuser()
         <td width="25">&nbsp;</td> 
         <td width="30" align="center"><a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main">桌面</a></td> 
         <td width="44" align="center"><a href="#">考勤</a></td> 
-        <td width="35" align="center"><a href="../SubModule/Meeting/ApplyMeeting.aspx" target="main">便签</a></td> 
+        <td width="35" align="center"><a href="../SubModule/Note/NoteManage.aspx" target="main">便签</a></td> 
         <td width="44" align="center"><a href="#">日记</a></td> 
-        <td width="47" align="center"><a href="#">通讯录</a></td> 
-        <td width="35" align="center"><a href="#">设置</a></td> 
+        <td width="47" align="center"><a href="#"></a></td> 
+        <td width="35" align="center"><a href="#"></a></td> 
         <td width="46" align="center"><a href="../help/help.htm" target="_blank">帮助</a></td> 
         <td width="47" align="center"><a   onclick="ComfirmExit(2)" href="#" target="_self">重登录</a></td> 
         <td width="40" align="center"><a  onclick="ComfirmExit(1)" href="#" target="_self">退出</a></td> 
