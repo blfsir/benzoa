@@ -231,8 +231,9 @@ function changeuser()
                                         <tr>
                                             <td bgcolor="#0051a5">
                                             </td>
-                                            <td valign="top" width="316" background="../Images/head62.jpg">
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="../SubModule/UnitiveDocument/Index.aspx"
+                                            <td valign="top" width="650" background="../Images/head62.jpg">
+                                                <a href="../SubModule/UnitiveDocument/NewIndex.aspx"
+                                                    target="main">新桌面</a>&nbsp;<a href="../SubModule/UnitiveDocument/Index.aspx"
                                                     target="main">我的桌面</a><font color="white">|</font><a href="../SubModule/WorkAttendance/Default.aspx"
                                                         target="MainFrame">考勤</a><font color="white">|</font><a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx"
                                                             target="MainFrame">密码</a><font color="white">|</font><a href="../help/help.htm" target="_blank">帮助</a><font

@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_sql", "db_sql", "{F59EE9
 		20100221.sql = 20100221.sql
 		20100222Monitor.sql = 20100222Monitor.sql
 		20100223.sql = 20100223.sql
+		20100224.sql = 20100224.sql
 		DailyNotes.txt = DailyNotes.txt
 		department.sql = department.sql
 		flow.sql = flow.sql

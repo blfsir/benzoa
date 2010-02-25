@@ -110,6 +110,10 @@ namespace UDS.SubModule.UnitiveDocument
                         case "57": //办公环境监控
                             Response.Redirect("Document/OfficeMonitor.htm?classID=" + classID);
                             break;
+
+                        case "58": //计划总结
+                            Response.Redirect("../Plan/EditPlan.aspx?classID=" + classID);
+                            break;
 						default:
 							break;
 					}

@@ -12,7 +12,7 @@
 		{	
 			if (parent.frames.length==0)
 			{	
-				var udswin=window.open("../Index.aspx","","toolbar=yes,status=yes,resizable=yes");
+				var udswin=window.open("../NewIndex.aspx","","toolbar=yes,status=yes,resizable=yes");
 				udswin.moveTo(0,0);
 				udswin.resizeTo(window.screen.availWidth,window.screen.availHeight);
 			

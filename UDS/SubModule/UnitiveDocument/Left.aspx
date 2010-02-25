@@ -8,8 +8,8 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 	</head>
-	<frameset rows="95%,26" frameborder="0" border="0" framespacing="0">
-		<frame name="mainFrame" src="ProjectTreeView.aspx" border="0">
+	<frameset rows="95%,26" frameborder="0" border="0" framespacing="0" name="left">
+		<frame name="mainFrame" src="ProjectTreeView.aspx" border="0" cols="0,*">
 		<frame name="onlineShowFrame" scrolling="no" noresize src="Online.aspx" border="0">
 	</frameset>
 	<noframes>

@@ -1102,6 +1102,9 @@
     <Content Include="Images\b82.jpg" />
     <Content Include="Images\bbs.jpg" />
     <Content Include="Images\bbsback.jpg" />
+    <Content Include="Images\bg01.gif" />
+    <Content Include="Images\bg01.jpg" />
+    <Content Include="Images\bg03.gif" />
     <Content Include="Images\bluebuttonbg.gif" />
     <Content Include="Images\blue_button_bg.gif" />
     <Content Include="Images\book.gif" />
@@ -1578,6 +1581,9 @@
     <Content Include="Images\smsremind.gif" />
     <Content Include="Images\spacer.gif" />
     <Content Include="Images\sysbulletin.gif" />
+    <Content Include="Images\tag01.gif" />
+    <Content Include="Images\tag02.gif" />
+    <Content Include="Images\tag03.gif" />
     <Content Include="Images\temp.gif" />
     <Content Include="Images\tend.gif" />
     <Content Include="Images\time.gif" />
@@ -1617,9 +1623,15 @@
     <Content Include="Inc\ControlSellmanContactHistory.ascx">
       <SubType>UserControl</SubType>
     </Content>
+    <Content Include="Inc\NewControlHeader.aspx">
+      <SubType>Form</SubType>
+    </Content>
     <Content Include="Index.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="js\cal2.js" />
+    <Content Include="js\Calendar.js" />
+    <Content Include="js\cal_conf2.js" />
     <Content Include="SubModule\AssignRule\ClassTree.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -1682,6 +1694,9 @@
       <SubType>Form</SubType>
     </Content>
     <Content Include="SubModule\CM\Stat\sellmanfee.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="SubModule\NewIndex.aspx">
       <SubType>Form</SubType>
     </Content>
     <Content Include="SubModule\Department\ChangeDepartment.aspx" />
@@ -1866,6 +1881,9 @@
     <Content Include="SubModule\UnitiveDocument\Board\BoardManagement.aspx" />
     <Content Include="SubModule\UnitiveDocument\Board\EditBoard.aspx" />
     <Content Include="SubModule\UnitiveDocument\Board\ViewBoard.aspx" />
+    <Content Include="SubModule\UnitiveDocument\NewIndex.aspx">
+      <SubType>Form</SubType>
+    </Content>
     <Content Include="SubModule\UnitiveDocument\CopyTeam\TreeView.aspx" />
     <Content Include="SubModule\UnitiveDocument\Desktop.aspx">
       <SubType>Form</SubType>
@@ -1984,6 +2002,7 @@
     <Content Include="SubModule\UnitiveDocument\MoveTeam\TreeView.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\UnitiveDocument\NewDesktop.aspx" />
     <Content Include="SubModule\UnitiveDocument\NewDoc\Listview.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -2203,6 +2222,10 @@
       <DependentUpon>ControlSellmanContactHistory.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Inc\NewControlHeader.aspx.cs">
+      <DependentUpon>NewControlHeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2301,6 +2324,10 @@
     </Compile>
     <Compile Include="SubModule\CM\Stat\sellmanfee.aspx.cs">
       <DependentUpon>sellmanfee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\NewIndex.aspx.cs">
+      <DependentUpon>NewIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SubModule\Department\ChangeDepartment.aspx.cs">
@@ -2768,6 +2795,13 @@
     <Compile Include="SubModule\UnitiveDocument\MoveTeam\TreeView.aspx.cs">
       <DependentUpon>TreeView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\UnitiveDocument\NewDesktop.aspx.cs">
+      <DependentUpon>NewDesktop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\UnitiveDocument\NewDesktop.aspx.designer.cs">
+      <DependentUpon>NewDesktop.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\UnitiveDocument\NewDoc\Listview.aspx.cs">
       <DependentUpon>Listview.aspx</DependentUpon>
