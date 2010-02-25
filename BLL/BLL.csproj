@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="BusinessObjectBase.cs" />
     <Compile Include="FlowFieldObject.cs" />
+    <Compile Include="MeetingObject.cs" />
+    <Compile Include="NoteObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

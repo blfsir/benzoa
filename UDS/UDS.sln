@@ -17,11 +17,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_sql", "db_sql", "{F59EE9
 		20100222Monitor.sql = 20100222Monitor.sql
 		20100223.sql = 20100223.sql
 		20100224.sql = 20100224.sql
+		20100225.sql = 20100225.sql
 		DailyNotes.txt = DailyNotes.txt
 		department.sql = department.sql
 		flow.sql = flow.sql
 		flow20100205.sql = flow20100205.sql
+		C:\Documents and Settings\Administrator\桌面\会议\会议\DB\meeting.sql = C:\Documents and Settings\Administrator\桌面\会议\会议\DB\meeting.sql
 		news.sql = news.sql
+		C:\Documents and Settings\Administrator\桌面\便签\便签\DB\note.sql = C:\Documents and Settings\Administrator\桌面\便签\便签\DB\note.sql
 		sp_Flow_PostDocument.sql = sp_Flow_PostDocument.sql
 		staffSearch.sql = staffSearch.sql
 	EndProjectSection

@@ -112,7 +112,7 @@ namespace UDS.SubModule.UnitiveDocument
                             break;
 
                         case "58": //计划总结
-                            Response.Redirect("../Plan/EditPlan.aspx?classID=" + classID);
+                            Response.Redirect("../Plan/PlanSearch.aspx?classID=" + classID);
                             break;
 						default:
 							break;

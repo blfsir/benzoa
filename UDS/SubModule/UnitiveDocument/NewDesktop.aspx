@@ -89,23 +89,17 @@
 </table> 
 </div> --%>
     <div class="blank1">
-    </div>
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <span onclick="hiddenLeft()" class="navMenu">菜单</span>
+               
+            </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;">
         <tr>
             <td width="20%">
-                &nbsp;&nbsp;&nbsp;&nbsp;<span onclick="hiddenLeft()" class="navMenu">菜单</span>
-                <%--<div id="menu"   style="padding: 2px;BACKGROUND: '#eeeeee'; ">--%>
-                <%--  <frame name="LeftFrame" src="Left.aspx" scrolling="auto" frameborder="0" border="0" framespacing="0" noresize></frame>--%>
-                <%--  <frameset rows="95%,26" frameborder="0" border="0" framespacing="0">
-		<frame name="mainFrame" src="ProjectTreeView.aspx" border="0">
-		 
-	</frameset>--%>
-                <%--  </div>--%>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
-            <td width="200" valign="top">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="left1">
+            <td width="230" valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="left1" style="table-layout:fixed;">
                     <tr>
                         <td class="tit4">
                             我的日历
@@ -122,7 +116,7 @@
                 </table>
                 <div class="blank1">
                 </div>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="left1">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="left1" style="table-layout:fixed;">
                     <tr>
                         <td class="tit4">
                             快捷流程
@@ -189,7 +183,7 @@
                 </table>
             </td>
             <td>
-                <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <table width="95%" border="0" align="left" cellpadding="0" cellspacing="0" style="table-layout:fixed">
                     <tr>
                         <td width="49%" valign="top">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -206,7 +200,7 @@
                                         <asp:DataGrid ID="dgNews" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="News_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" CssClass="top" BorderWidth="1px">
+                                            CellPadding="2" CssClass="top" BorderWidth="1px" ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" ></ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                 ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
@@ -276,7 +270,7 @@
                                 </tr>
                             </table>
                         </td>
-                        <td width="1%">
+                        <td  >
                         </td>
                         <td width="49%" valign="top">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -294,7 +288,7 @@
                                             GridLines="Horizontal" PageSize="5" DataKeyField="ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                             CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
-                                            OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound">
+                                            OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound"  ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                 ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
@@ -361,7 +355,7 @@
                                         <asp:DataGrid ID="dgBoard" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="Board_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" CssClass="top" BorderWidth="1px">
+                                            CellPadding="2" CssClass="top" BorderWidth="1px"  ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                 ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
@@ -416,7 +410,7 @@
                                         <asp:DataGrid ID="dgAppDocList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="DocID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" CssClass="top" BorderWidth="1px">
+                                            CellPadding="2" CssClass="top" BorderWidth="1px"  ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
                                             </ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
@@ -483,7 +477,7 @@
                                         <asp:DataGrid ID="ItemList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="item_id" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" CssClass="top" BorderWidth="1px">
+                                            CellPadding="2" CssClass="top" BorderWidth="1px"  ShowHeader="false">
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                 ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
@@ -571,7 +565,7 @@
                                             GridLines="Horizontal" PageSize="5" DataKeyField="MailID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                             CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
-                                            OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound">
+                                            OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound"  ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
                                             </ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
@@ -594,7 +588,7 @@
                                                     <ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
                                                 </asp:BoundColumn>
                                             </Columns>
-                                            <PagerStyle Visible="False" Font-Size="12px" BorderColor="#E0E0E0" BorderStyle="Dotted"
+                                            <PagerStyle Visible="False" Font-Size="14px" BorderColor="#E0E0E0" BorderStyle="Dotted"
                                                 HorizontalAlign="Right" PageButtonCount="5" Mode="NumericPages"></PagerStyle>
                                         </asp:DataGrid>
                                     </td>

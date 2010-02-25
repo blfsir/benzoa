@@ -166,7 +166,7 @@ function changeuser()
     </script>
 
     <form name="Head"> 
-     <div class="header"> 
+     <div class="header">  <div class="header2"> 
     <table width="400" border="0" align="right" cellpadding="0" cellspacing="0" class="nav" > 
   <tr> 
     <td height="65">&nbsp;</td> 
@@ -177,7 +177,7 @@ function changeuser()
         <td width="25">&nbsp;</td> 
         <td width="30" align="center"><a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main">桌面</a></td> 
         <td width="44" align="center"><a href="#">考勤</a></td> 
-        <td width="35" align="center"><a href="#">便签</a></td> 
+        <td width="35" align="center"><a href="../SubModule/Meeting/ApplyMeeting.aspx" target="main">便签</a></td> 
         <td width="44" align="center"><a href="#">日记</a></td> 
         <td width="47" align="center"><a href="#">通讯录</a></td> 
         <td width="35" align="center"><a href="#">设置</a></td> 
@@ -188,7 +188,7 @@ function changeuser()
       </tr> 
     </table></td> 
   </tr> 
-</table> </div>
+</table> </div></div>
     </form>
 </body>
 </html>

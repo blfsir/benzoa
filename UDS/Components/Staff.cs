@@ -993,5 +993,28 @@ namespace UDS.Components
 
 		#endregion		
 
-   }
+   
+        public SqlDataReader FindPlan(string PlanObjectType, string PlanPeriodType, string Content, string username)
+        {
+            Database db = new Database();
+            SqlDataReader dr;
+            try
+            {
+                // run the stored procedure
+                SqlParameter[] prams = {
+										   db.MakeInParam("@PlanObjectType",SqlDbType.VarChar,200,PlanObjectType), 
+                                           db.MakeInParam("@PlanPeriodType",SqlDbType.VarChar,200,PlanPeriodType), 
+                                           db.MakeInParam("@PlanContent",SqlDbType.VarChar,200,Content), 
+                                           db.MakeInParam("@PlanCreator",SqlDbType.VarChar,200,username), 
+									   };
+                db.RunProc("UDS_StaffSearchPlan", prams, out dr);
+                return dr;
+            }
+            catch (Exception ex)
+            {
+                Error.Log(ex.ToString());
+                throw new Exception("人员查询出错!", ex);
+            }
+        }
+    }
 }

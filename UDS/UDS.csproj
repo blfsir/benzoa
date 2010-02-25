@@ -86,6 +86,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxPro.2, Version=6.5.9.1, Culture=neutral, PublicKeyToken=a7bc0403eb587f97, processorArchitecture=MSIL" />
     <Reference Include="Castle.ActiveRecord, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\AR 2.1.1\Castle.ActiveRecord.dll</HintPath>
@@ -185,6 +186,7 @@
     <Content Include="Css\Calendar.css" />
     <Content Include="Css\calendar.js" />
     <Content Include="Css\meizzDate.js" />
+    <Content Include="Css\meizzDate1.js" />
     <Content Include="Css\mycss.css" />
     <Content Include="Css\mycss1.css" />
     <Content Include="Css\oa.css" />
@@ -1105,6 +1107,7 @@
     <Content Include="Images\bg01.gif" />
     <Content Include="Images\bg01.jpg" />
     <Content Include="Images\bg03.gif" />
+    <Content Include="Images\bg033.gif" />
     <Content Include="Images\bluebuttonbg.gif" />
     <Content Include="Images\blue_button_bg.gif" />
     <Content Include="Images\book.gif" />
@@ -1696,6 +1699,12 @@
     <Content Include="SubModule\CM\Stat\sellmanfee.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\Meeting\ApplyMeeting.aspx" />
+    <Content Include="SubModule\Meeting\MeetingManage.aspx" />
+    <Content Include="SubModule\Meeting\MeetingRoomManage.aspx" />
+    <Content Include="SubModule\Meeting\MeetingTypeManage.aspx" />
+    <Content Include="SubModule\Meeting\NewMeetingRoom.aspx" />
+    <Content Include="SubModule\Meeting\NewMeetingType.aspx" />
     <Content Include="SubModule\NewIndex.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -1738,7 +1747,11 @@
     <Content Include="SubModule\Login\VerifySignIn.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\Note\NewNote.aspx" />
+    <Content Include="SubModule\Note\NoteManage.aspx" />
     <Content Include="SubModule\Plan\EditPlan.aspx" />
+    <Content Include="SubModule\Plan\PlanSearch.aspx" />
+    <Content Include="SubModule\Plan\PlanView.aspx" />
     <Content Include="SubModule\Position\ChangePosition.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -2326,6 +2339,30 @@
       <DependentUpon>sellmanfee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="SubModule\Meeting\ApplyMeeting.aspx.cs">
+      <DependentUpon>ApplyMeeting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Meeting\MeetingManage.aspx.cs">
+      <DependentUpon>MeetingManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Meeting\MeetingRoomManage.aspx.cs">
+      <DependentUpon>MeetingRoomManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Meeting\MeetingTypeManage.aspx.cs">
+      <DependentUpon>MeetingTypeManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Meeting\NewMeetingRoom.aspx.cs">
+      <DependentUpon>NewMeetingRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Meeting\NewMeetingType.aspx.cs">
+      <DependentUpon>NewMeetingType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="SubModule\NewIndex.aspx.cs">
       <DependentUpon>NewIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2408,12 +2445,34 @@
       <DependentUpon>VerifySignIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="SubModule\Note\NewNote.aspx.cs">
+      <DependentUpon>NewNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Note\NoteManage.aspx.cs">
+      <DependentUpon>NoteManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="SubModule\Plan\EditPlan.aspx.cs">
       <DependentUpon>EditPlan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SubModule\Plan\EditPlan.aspx.designer.cs">
       <DependentUpon>EditPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubModule\Plan\PlanSearch.aspx.cs">
+      <DependentUpon>PlanSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Plan\PlanSearch.aspx.designer.cs">
+      <DependentUpon>PlanSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubModule\Plan\PlanView.aspx.cs">
+      <DependentUpon>PlanView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Plan\PlanView.aspx.designer.cs">
+      <DependentUpon>PlanView.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\Position\ChangePosition.aspx.cs">
       <DependentUpon>ChangePosition.aspx</DependentUpon>

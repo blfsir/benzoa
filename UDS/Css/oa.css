@@ -6,6 +6,7 @@ a:link{color:#000;;text-decoration: none;}
 a:visited{color:#000;;text-decoration: none;}
 a:hover,a:active{color:#069; text-decoration: none;}
 .header { background:url(../../images/bg01.gif); height:90px;}
+.header2 { background:url(../../images/bg033.gif) no-repeat; height:90px;}
 .sidebar{ float:left; width:20%;}
 .tit1 { font-size:14px; font-weight:bold; color:#069; line-height:24px; border-bottom:1px #666 solid;}
 .tit2 { font-size:14px; font-weight:normal color: #666; line-height:22px; border-bottom:1px #c9c9c7 dashed; border-left:1px #c9c9c7 solid; border-right:1px #c9c9c7 solid; background:#FFF;height:22px; text-indent:1.8em;}
