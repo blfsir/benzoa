@@ -11,20 +11,16 @@ using System.Web.UI.WebControls.WebParts;
 using System.Data.SqlClient;
 using UDS.Components;
 
-namespace UDS.SubModule.UnitiveDocument.Board
+namespace UDS.SubModule.UnitiveDocument.News
 {
-    public partial class BoardManagement : System.Web.UI.Page
+    public partial class NewsList : System.Web.UI.Page
     {
-        public bool isAdmin = false;	
-
         protected void Page_Load(object sender, EventArgs e)
         {
-         
             if (!Page.IsPostBack)
             {
                 Bangding();
             }
-
         }
 
         private void Bangding()
@@ -34,17 +30,17 @@ namespace UDS.SubModule.UnitiveDocument.Board
             try
             {
                 SqlParameter[] parameters = {
-											mySQL.MakeInParam("@BoardID",SqlDbType.Int ,4,0)
+											mySQL.MakeInParam("@NewsID",SqlDbType.Int ,4,0)
 										};
 
-                mySQL.RunProc("sp_Flow_GetBoard", parameters, out dr);
+                mySQL.RunProc("sp_Flow_GetNews", parameters, out dr);
 
                 DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
-               
 
-                    dgStyleListAdmin.DataSource = dt.DefaultView;
-                    dgStyleListAdmin.DataBind();
-                
+
+                dgStyleListAdmin.DataSource = dt.DefaultView;
+                dgStyleListAdmin.DataBind();
+
             }
             finally
             {
@@ -58,18 +54,6 @@ namespace UDS.SubModule.UnitiveDocument.Board
                 }
             }
         }
-
-        protected void MyDataGrid_Delete(object source, DataGridCommandEventArgs e)
-        {
-
-            string StyleID = dgStyleListAdmin.DataKeys[e.Item.ItemIndex].ToString();
-            UDS.Components.DocumentFlow df = new UDS.Components.DocumentFlow();
-            df.DeleteBoard(Int32.Parse(StyleID));
-            df = null;
-            Bangding();
-        }
-
-        
 
         protected void DataGrid_PageChanged(object source, DataGridPageChangedEventArgs e)
         {

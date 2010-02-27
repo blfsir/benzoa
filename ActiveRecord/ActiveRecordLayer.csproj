@@ -84,6 +84,7 @@
     <Compile Include="Model\Dept.cs" />
     <Compile Include="Model\InitialBaseAR.cs" />
     <Compile Include="Model\Plan.cs" />
+    <Compile Include="Model\QuickFlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\DeptService.cs" />
   </ItemGroup>

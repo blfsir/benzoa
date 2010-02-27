@@ -132,6 +132,13 @@ namespace ActiveRecord.Model
             return (Plan)FindOne(typeof(Plan), Expression.Eq("PlanObjectType", planObjectType), Expression.Eq("PlanPeriodType", planPeroidType), Expression.Eq("PlanYear", planYear), Expression.Eq("PlanPeriod", planPeriod), Expression.Eq("PlanCreator", planCreator));
         }
 
+        public Plan Find(string planObjectType, string planPeroidType, string planYear, string planPeriod)
+        {
+
+            // Note that we use the property name, _not_ the column name
+            return (Plan)FindOne(typeof(Plan), Expression.Eq("PlanObjectType", planObjectType), Expression.Eq("PlanPeriodType", planPeroidType), Expression.Eq("PlanYear", planYear), Expression.Eq("PlanPeriod", planPeriod));
+        }
+
         public void SaveOrUpdate()
         {
             Plan plan = new Plan().Find(this.PlanObjectType, this.PlanPeriodType, this.PlanYear, this.PlanPeriod,this.PlanCreator);

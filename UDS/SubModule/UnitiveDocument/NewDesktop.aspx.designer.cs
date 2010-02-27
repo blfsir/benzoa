@@ -23,13 +23,31 @@ namespace UDS.SubModule.UnitiveDocument {
         protected global::System.Web.UI.HtmlControls.HtmlForm Desktop;
         
         /// <summary>
-        /// Calendar1 control.
+        /// cal1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::DataControls.DataCalendar cal1;
+        
+        /// <summary>
+        /// myCalendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar myCalendar;
+        
+        /// <summary>
+        /// rptQuickFlow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptQuickFlow;
         
         /// <summary>
         /// dgNews control.

@@ -138,5 +138,40 @@ namespace UDS.SubModule.UnitiveDocument.DocumentFlow
 		{
 			Server.Transfer("DraftList.aspx");
 		}
+
+        private string GetSelectedItemID(string controlID)
+        {
+            String selectedID;
+            selectedID = "";
+            //遍历DataGrid获得checked的ID
+            foreach (DataGridItem item in dgFlowList.Items)
+            {
+                if (((CheckBox)item.FindControl(controlID)).Checked == true)
+                    selectedID += dgFlowList.DataKeys[item.ItemIndex] + ",";
+            }
+            if (selectedID.Length > 0)
+                selectedID = selectedID.Substring(0, selectedID.Length - 1);
+            return selectedID;
+        }
+
+        protected void btnSetDesktopFlow_Click(object sender, EventArgs e)
+        {
+            String strIDs = this.GetSelectedItemID("Flow_ID");
+            if (strIDs == "")
+            {
+                Response.Write("<script language='javascript'>window.alert('请选择要设置的流程！');</script>");
+            }
+            else
+            {
+                Response.Write("<script language='javascript'>window.alert('要设置的快捷流程:" + strIDs + "');</script>");
+                string userName = Server.UrlDecode(Request.Cookies["UserName"].Value);
+                ActiveRecord.Model.QuickFlow qf = new ActiveRecord.Model.QuickFlow();
+                qf.StaffName = userName;
+                qf.FlowIDs = strIDs;
+                qf.Save();
+
+                Response.Write("<script language='javascript'>window.alert('设置的快捷流程成功!');</script>");
+            }
+        }
 	}
 }

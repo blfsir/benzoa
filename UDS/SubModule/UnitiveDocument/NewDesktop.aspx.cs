@@ -46,8 +46,86 @@ namespace UDS.SubModule.UnitiveDocument
                 BandNews();
                 //BandFlow();
                 BandBBS();
+                BandQuickFlow();
                 // BandDoc();
                 bindtaskgrid();
+            }
+
+            cal1.DataSource = GetEventData();
+        }
+
+        private void BandQuickFlow()
+        {
+            string userName = Server.UrlDecode(Request.Cookies["UserName"].Value);
+            string flowids = "";
+            ActiveRecord.Model.QuickFlow qf = new ActiveRecord.Model.QuickFlow().Find(userName);
+            if (qf != null)
+            {
+                flowids = qf.FlowIDs;
+            }
+            if (flowids.Length > 0)
+            {
+                SqlDataReader dr = null; //存放人物的数据
+                Database mySQL = new Database();
+                try
+                {
+                    SqlParameter[] parameters = {
+											mySQL.MakeInParam("@flowids",SqlDbType.VarChar ,300,flowids)
+										};
+
+                    mySQL.RunProc("sp_Desktop_GetQuickFlow", parameters, out dr);
+
+                    DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
+                    //AddBlankRowInDataTable(5, ref dt);
+                    //DataView dv = new DataView(dt);
+                    if (dt.Rows.Count < 14)
+                    {
+                        int tmp = 14 - dt.Rows.Count;
+                        for (int i = 0; i < tmp; i++)
+                        {
+                            DataRow myDataRow = dt.NewRow();
+
+                            myDataRow[0] = "-";
+                            dt.Rows.Add(myDataRow);
+
+                        }
+                    }
+                    this.rptQuickFlow.DataSource = dt;
+                    rptQuickFlow.DataBind();
+                }
+                finally
+                {
+                    if (mySQL != null)
+                    {
+                        mySQL.Close();
+                    }
+                    if (dr != null)
+                    {
+                        dr.Close();
+                    }
+                }
+            }
+            else //空白行
+            {
+                DataTable dt = new DataTable();
+                DataColumn dc1 = new DataColumn("Flow_ID");
+                DataColumn dc2 = new DataColumn("Flow_Name");
+                dt.Columns.Add(dc1);
+                dt.Columns.Add(dc2);
+                if (dt.Rows.Count < 14)
+                {
+                    int tmp = 14 - dt.Rows.Count;
+                    for (int i = 0; i < tmp; i++)
+                    {
+                        DataRow myDataRow = dt.NewRow();
+
+                        myDataRow[0] = "-";
+                        dt.Rows.Add(myDataRow);
+
+                    }
+                }
+                this.rptQuickFlow.DataSource = dt;
+                rptQuickFlow.DataBind();
             }
         }
 
@@ -568,5 +646,55 @@ namespace UDS.SubModule.UnitiveDocument
 
 
         }
+
+        DataTable GetEventData()
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("EventTitle", typeof(String));
+            dt.Columns.Add("EventDay", typeof(DateTime));
+            dt.Columns.Add("Color", typeof(System.Drawing.Color));
+
+            DataRow r = dt.NewRow();
+            r["EventTitle"] = "Today's Event";
+            r["EventDay"] = System.DateTime.Today;
+            r["Color"] = System.Drawing.Color.Black;
+            dt.Rows.Add(r);
+
+            r = dt.NewRow();
+            r["EventTitle"] = "Tomorrow's Event";
+            r["EventDay"] = System.DateTime.Today.AddDays(1);
+            r["Color"] = System.Drawing.Color.Red;
+            dt.Rows.Add(r);
+
+            r = dt.NewRow();
+            r["EventTitle"] = "Tomorrow's Event #2";
+            r["EventDay"] = System.DateTime.Today.AddDays(1);
+            r["Color"] = System.Drawing.Color.Blue;
+            dt.Rows.Add(r);
+
+            r = dt.NewRow();
+            r["EventTitle"] = "Next Week's Event";
+            r["EventDay"] = System.DateTime.Today.AddDays(7);
+            r["Color"] = System.Drawing.Color.Green;
+            dt.Rows.Add(r);
+
+            return dt;
+ 
+        }
+
+        protected void myCalendar_DayRender(object sender, DayRenderEventArgs e)
+        {
+            DateTime nextDate;
+           
+                    nextDate = DateTime.Now;
+                    if (nextDate.ToShortDateString() == e.Day.Date.ToShortDateString())
+                    {
+                        e.Cell.BackColor = System.Drawing.Color.Pink;
+                        
+                    }
+                 
+        }
+    
     }
 }
