@@ -1,9 +1,9 @@
-<%@ Page Language="c#" CodeBehind="NewNote.aspx.cs" AutoEventWireup="false" Inherits="UDS.SubModule.Note.NewNote" %>
+<%@ Page Language="c#" CodeBehind="NewCar.aspx.cs" AutoEventWireup="false" Inherits="UDS.SubModule.Vehicle.NewCar" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <html>
 <head>
-    <title>NewStaff</title>
+    <title>NewCar</title>
     <meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
     <meta content="C#" name="CODE_LANGUAGE">
     <meta content="JavaScript" name="vs_defaultClientScript">
@@ -21,7 +21,7 @@
     <script language="javascript">
 		function ReturnBack(ReturnType)
 		{			
-			location.href ="NoteManage.aspx";			
+			location.href ="CarManage.aspx";			
 		}
 		
 		/*
@@ -35,22 +35,29 @@ String.prototype.Trim = function()
 		//提交时验证
     function DoValidate()
     {
-        //便签内容
-        var Contents = document.getElementById("txtContents").value.Trim();
-        if(Contents=="" || Contents ==null)
+        //车型
+        var CarType = document.getElementById("txtCarType").value.Trim();
+        if(CarType=="" || CarType ==null)
         {
-             alert('便签内容不可为空！');
+             alert('车型不可为空！');
+             return false;
+        }
+        
+        //用车人
+        var CarNum = document.getElementById("txtCarNum").value.Trim();
+        if(CarNum=="" || CarNum ==null)
+        {
+             alert('车号不可为空！');
              return false;
         }
         
         return true;
     }
-    
     </script>
 
 </head>
 <body leftmargin="0" topmargin="0">
-    <form id="NewNote" method="post" runat="server">
+    <form id="NewCar" method="post" runat="server">
     <center>
         <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
             width="100%" border="0">
@@ -60,7 +67,7 @@ String.prototype.Trim = function()
                         <img alt="" src="../../DataImages/ClientManage.gif"></font>
                 </td>
                 <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <b><b><b><font face="宋体">新增便签</font></b></b></b>
+                    <b><b><b><font face="宋体">新增车辆</font></b></b></b>
                 </td>
                 <td class="GbText" align="right" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
                 </td>
@@ -68,24 +75,31 @@ String.prototype.Trim = function()
         </table>
         <table class="gbtext" id="AutoNumber1" style="border-collapse: collapse" bordercolor="#93bee2"
             cellspacing="0" cellpadding="0" width="100%" border="1" runat="server">
-           <%-- <tr bgcolor="#e8f4ff">
+            <tr bgcolor="#e8f4ff">
                 <td style="height: 34px" align="right" width="20%" height="34">
-                    用户姓名:
+                    车型:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="txtStaffName" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1"
-                            runat="server" ErrorMessage="请输入姓名" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="message" runat="server" EnableViewState="False"></asp:Literal>
-                </td>--%>
+                    &nbsp;<asp:TextBox ID="txtCarType" CssClass="InputCss" runat="server" Columns="70"
+                        Width="382"></asp:TextBox>
+                </td>
             </tr>
             
             <tr>
                 <td align="right" width="20%" height="30">
-                    内容:
+                    车号:
                 </td>
                 <td height="30">
-                    &nbsp;<asp:TextBox ID="txtContents" CssClass="InputCss" runat="server" Columns="70"
+                    &nbsp;<asp:TextBox ID="txtCarNum" CssClass="InputCss" runat="server" Columns="70"
+                        Width="382"></asp:TextBox>
+                </td>
+            </tr>
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
+                    备注:
+                </td>
+                <td style="height: 34px" height="34">
+                    &nbsp;<asp:TextBox ID="txtMemo" CssClass="InputCss" runat="server" Columns="70"
                         Width="791px" Rows="5" TextMode="MultiLine"></asp:TextBox>
                 </td>
             </tr>

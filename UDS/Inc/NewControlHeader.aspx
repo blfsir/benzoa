@@ -61,40 +61,40 @@ function GetLink()
 }
 
 
-		//获取时间
-function Timer(span)
-{
-	var tmp = new Date();
-	var milsecs=Date.parse(tmp.getMonth()+"-"+tmp.getDay()+"-"+tmp.getFullYear()+" "+document.getElementById('lbl_Hour').innerText+":"+document.getElementById('lbl_Minute').innerText+":"+document.getElementById('lbl_Second').innerText);
-	var timer = new Date(milsecs+span);
-	var seconds,minutes,hours,date;
-	if(timer.getSeconds()<10)
-		seconds = "0"+timer.getSeconds();
-	else
-		seconds = timer.getSeconds();
-	if(timer.getMinutes()<10)
-		minutes = "0"+timer.getMinutes();
-	else
-		minutes = timer.getMinutes();
-	if(timer.getHours()<10)
-		hours = "0"+timer.getHours();
-	else
-		hours = timer.getHours();	
-		date=timer.getDate();
-	document.getElementById('lbl_Second').innerText = seconds;
-	document.getElementById('lbl_Minute').innerText = minutes;
-	document.getElementById('lbl_Hour').innerText = hours;
-	}
-//得到服务器时间每隔updatespan分钟校验一次，每秒更新一次本地时钟
-function GetServerTime(updatespan)
-{	
-	var clientspan = 1*1000;
-	//更新本地时钟
-	setInterval("Timer("+clientspan+")",clientspan);
-	//同步服务器时钟
-	setInterval("window.location.href='ControlHeader.aspx'",updatespan);
-	
-}
+//		//获取时间
+//function Timer(span)
+//{
+//	var tmp = new Date();
+//	var milsecs=Date.parse(tmp.getMonth()+"-"+tmp.getDay()+"-"+tmp.getFullYear()+" "+document.getElementById('lbl_Hour').innerText+":"+document.getElementById('lbl_Minute').innerText+":"+document.getElementById('lbl_Second').innerText);
+//	var timer = new Date(milsecs+span);
+//	var seconds,minutes,hours,date;
+//	if(timer.getSeconds()<10)
+//		seconds = "0"+timer.getSeconds();
+//	else
+//		seconds = timer.getSeconds();
+//	if(timer.getMinutes()<10)
+//		minutes = "0"+timer.getMinutes();
+//	else
+//		minutes = timer.getMinutes();
+//	if(timer.getHours()<10)
+//		hours = "0"+timer.getHours();
+//	else
+//		hours = timer.getHours();	
+//		date=timer.getDate();
+//	document.getElementById('lbl_Second').innerText = seconds;
+//	document.getElementById('lbl_Minute').innerText = minutes;
+//	document.getElementById('lbl_Hour').innerText = hours;
+//	}
+////得到服务器时间每隔updatespan分钟校验一次，每秒更新一次本地时钟
+//function GetServerTime(updatespan)
+//{	
+//	var clientspan = 1*1000;
+//	//更新本地时钟
+//	setInterval("Timer("+clientspan+")",clientspan);
+//	//同步服务器时钟
+//	setInterval("window.location.href='ControlHeader.aspx'",updatespan);
+//	
+//}
 //-->
     </script>
 
@@ -102,7 +102,7 @@ function GetServerTime(updatespan)
     <link href="../Css/mycss1.css" type="text/css" rel="stylesheet">
      <link href="../Css/oa.css" type="text/css" rel="stylesheet">
 </head>
-<body text="#ffffff" leftmargin="0" topmargin="0" onload="GetServerTime(15*60*1000)"
+<body text="#ffffff" leftmargin="0" topmargin="0"  
     marginheight="0" marginwidth="0">
 
     <script language="JavaScript">
@@ -129,16 +129,16 @@ function InfraLeft(c){
 	var w,l;
 	w = parent.parent.main.thisFrame.cols;
 	l = w.substr(0,w.indexOf(","))	
-	if(l==0)
-	{
-		Head.imgTreeStatus.src = "../Images/opentree.gif"		
-		c.innerText = "关闭目录"
-	}
-	else
-	{
-		Head.imgTreeStatus.src = "../Images/closetree.gif"		
-		c.innerText = "打开目录"
-	}
+//	if(l==0)
+//	{
+//		//Head.imgTreeStatus.src = "../Images/opentree.gif"		
+//		c.innerText = "关闭目录"
+//	}
+//	else
+//	{
+//		//Head.imgTreeStatus.src = "../Images/closetree.gif"		
+//		c.innerText = "打开目录"
+//	}
 	parent.parent.main.thisFrame.cols =  (180-l) +",*"
 	
 	
@@ -176,10 +176,10 @@ function changeuser()
       <tr> 
         <td width="25">&nbsp;</td> 
         <td width="30" align="center"><a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main">桌面</a></td> 
-        <td width="44" align="center"><a href="#">考勤</a></td> 
-        <td width="35" align="center"><a href="../SubModule/Note/NoteManage.aspx" target="main">便签</a></td> 
-        <td width="44" align="center"><a href="#">日记</a></td> 
-        <td width="47" align="center"><a href="#"></a></td> 
+        <td width="44" align="center"><a href="#" onclick="InfraLeft()">菜单</a> </td> 
+        <td width="35" align="center"><a href="../SubModule/Note/NoteManage.aspx" target="MainFrame">便签</a></td> 
+        <td width="44" align="center"><a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame">日记</a></td> 
+        <td width="47" align="center"><a href="../SubModule/WorkAttendance/Default.aspx" target="MainFrame">考勤</a></td> 
         <td width="35" align="center"><a href="#"></a></td> 
         <td width="46" align="center"><a href="../help/help.htm" target="_blank">帮助</a></td> 
         <td width="47" align="center"><a   onclick="ComfirmExit(2)" href="#" target="_self">重登录</a></td> 

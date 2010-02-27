@@ -23,6 +23,28 @@
 		{			
 			location.href ="MeetingTypeManage.aspx";			
 		}
+		
+		/*
+去处空格
+*/
+String.prototype.Trim = function()
+{
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+		//提交时验证
+    function DoValidate()
+    {
+        //类型名称
+        var TypeName = document.getElementById("txtTypeName").value.Trim();
+        if(TypeName=="" || TypeName ==null)
+        {
+             alert('类型名称不可为空！');
+             return false;
+        }
+        
+        return true;
+    }
     </script>
 
 </head>
@@ -69,7 +91,7 @@
                 <td align="center" colspan="2" height="35">
                     <font face="宋体">
                         <asp:Button ID="cmdSubmit" runat="server" CssClass="redButtonCss" Width="60px" Text="确定"
-                            Height="20px"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;
+                            Height="20px" OnClientClick="return DoValidate();"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class="redButtonCss" style="width: 60px; height: 20px" onclick="ReturnBack(<%=ReturnPage%>)"
                             type="button" value="返 回" name="cmdReturn">
                     </font>

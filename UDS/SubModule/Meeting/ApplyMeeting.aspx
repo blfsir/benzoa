@@ -32,6 +32,81 @@
 		    var obj=UDS.SubModule.Meeting.ApplyMeeting.GetMeetingInfo(strdate);
 		    document.getElementById("divZhanyong").innerHTML=obj.value;
 		}
+		
+		/*
+去处空格
+*/
+String.prototype.Trim = function()
+{
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+		//提交时验证
+    function DoValidate()
+    {
+        //会议主题
+        var MeetingSubject = document.getElementById("txtMeetingSubject").value.Trim();
+        if(MeetingSubject=="" || MeetingSubject ==null)
+        {
+             alert('会议主题不可为空！');
+             return false;
+        }
+        
+        //主办部门
+        var Department = document.getElementById("txtDepartment").value.Trim();
+        if(Department=="" || Department ==null)
+        {
+             alert('主办部门不可为空！');
+             return false;
+        }
+        
+        //开始时间
+        var BeginTime = document.getElementById("txtBeginTime").value.Trim();
+        if(BeginTime=="" || BeginTime ==null)
+        {
+             alert('开始时间不可为空！');
+             return false;
+        } 
+        
+        //结束时间
+        var EndTime = document.getElementById("txtEndTime").value.Trim();
+        if(EndTime=="" || EndTime ==null)
+        {
+             alert('结束时间不可为空！');
+             return false;
+        }
+        
+        //主持人
+        var Host = document.getElementById("txtHost").value.Trim();
+        if(Host=="" || Host ==null)
+        {
+             alert('主持人不可为空！');
+             return false;
+        }
+        //
+        //纪 要 员
+        var Recorder = document.getElementById("txtRecorder").value.Trim();
+        if(Recorder=="" || Recorder ==null)
+        {
+             alert('纪要员不可为空！');
+             return false;
+        }
+        //参 会 人
+        var EnterPeople = document.getElementById("txtEnterPeople").value.Trim();
+        if(EnterPeople=="" || EnterPeople ==null)
+        {
+             alert('参会人不可为空！');
+             return false;
+        }
+        //会议内容
+        var MeetingContents = document.getElementById("txtMeetingContents").value.Trim();
+        if(MeetingContents=="" || MeetingContents ==null)
+        {
+             alert('会议内容不可为空！');
+             return false;
+        }
+        return true;
+    }
     </script>
 
 </head>
@@ -245,9 +320,7 @@
                 <td align="center" colspan="4" height="35">
                     <font face="宋体">
                         <asp:Button ID="cmdSubmit" runat="server" CssClass="redButtonCss" Width="60px" Text="确定"
-                            Height="20px"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="redButtonCss" style="width: 60px; height: 20px" onclick="ReturnBack(<%=ReturnPage%>)"
-                            type="button" value="返 回" name="cmdReturn">
+                            Height="20px" OnClientClick="return DoValidate();"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;
                     </font>
                 </td>
             </tr>

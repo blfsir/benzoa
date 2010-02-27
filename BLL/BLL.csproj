@@ -54,10 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessObjectBase.cs" />
+    <Compile Include="DiaryObject.cs" />
     <Compile Include="FlowFieldObject.cs" />
     <Compile Include="MeetingObject.cs" />
     <Compile Include="NoteObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

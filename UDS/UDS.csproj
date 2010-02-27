@@ -192,6 +192,7 @@
     <Content Include="Css\calendar.js" />
     <Content Include="Css\meizzDate.js" />
     <Content Include="Css\meizzDate1.js" />
+    <Content Include="Css\meizzDate2.js" />
     <Content Include="Css\mycss.css" />
     <Content Include="Css\mycss1.css" />
     <Content Include="Css\oa.css" />
@@ -1704,6 +1705,8 @@
     <Content Include="SubModule\CM\Stat\sellmanfee.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\Diary\DiaryManage.aspx" />
+    <Content Include="SubModule\Diary\NewDiary.aspx" />
     <Content Include="SubModule\Meeting\ApplyMeeting.aspx" />
     <Content Include="SubModule\Meeting\MeetingManage.aspx" />
     <Content Include="SubModule\Meeting\MeetingRoomManage.aspx" />
@@ -2063,6 +2066,10 @@
     <Content Include="SubModule\USBKey\USBKey_setup.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\Vehicle\ApplyVehicle.aspx" />
+    <Content Include="SubModule\Vehicle\CarManage.aspx" />
+    <Content Include="SubModule\Vehicle\NewCar.aspx" />
+    <Content Include="SubModule\Vehicle\VehicleManage.aspx" />
     <Content Include="SubModule\WorkAttendance\checksucessful.aspx" />
     <Content Include="SubModule\WorkAttendance\Default.aspx">
       <SubType>Form</SubType>
@@ -2345,6 +2352,20 @@
     <Compile Include="SubModule\CM\Stat\sellmanfee.aspx.cs">
       <DependentUpon>sellmanfee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Diary\DiaryManage.aspx.cs">
+      <DependentUpon>DiaryManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Diary\DiaryManage.aspx.designer.cs">
+      <DependentUpon>DiaryManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubModule\Diary\NewDiary.aspx.cs">
+      <DependentUpon>NewDiary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Diary\NewDiary.aspx.designer.cs">
+      <DependentUpon>NewDiary.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\Meeting\ApplyMeeting.aspx.cs">
       <DependentUpon>ApplyMeeting.aspx</DependentUpon>
@@ -2954,6 +2975,22 @@
     </Compile>
     <Compile Include="SubModule\USBKey\USBKey_setup.aspx.cs">
       <DependentUpon>USBKey_setup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Vehicle\ApplyVehicle.aspx.cs">
+      <DependentUpon>ApplyVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Vehicle\CarManage.aspx.cs">
+      <DependentUpon>CarManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Vehicle\NewCar.aspx.cs">
+      <DependentUpon>NewCar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Vehicle\VehicleManage.aspx.cs">
+      <DependentUpon>VehicleManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SubModule\WorkAttendance\Default.aspx.cs">

@@ -26,38 +26,38 @@
 			}
 			 var LEFT_MENU_VIEW=0; 
 			 
-			function hiddenLeft()
-            {
-                
-                 if(LEFT_MENU_VIEW==0) 
-                  { 
-                      parent.thisFrame.cols="180,*"; 
-                      LEFT_MENU_VIEW=1; 
-                      
-                  } 
-                  else 
-                  { 
-                       parent.thisFrame.cols="0,*"; 
-                      LEFT_MENU_VIEW=0; 
-                   
-                  } 
-//            
-//	            var left=document.getElementById("menu");
-//	            var tmpl=10;
-//	            if(left.style.display=="none"){
-//		            left.style.display="block";
-//		            tmpl=200;
-//	            }
-//	            else{
-//		            left.style.display="none";
-//		            tmpl=10;
-//	            }
-//	            leftmargin=tmpl;
+//			function hiddenLeft()
+//            {
+//                
+//                 if(LEFT_MENU_VIEW==0) 
+//                  { 
+//                      parent.thisFrame.cols="180,*"; 
+//                      LEFT_MENU_VIEW=1; 
+//                      
+//                  } 
+//                  else 
+//                  { 
+//                       parent.thisFrame.cols="0,*"; 
+//                      LEFT_MENU_VIEW=0; 
+//                   
+//                  } 
+////            
+////	            var left=document.getElementById("menu");
+////	            var tmpl=10;
+////	            if(left.style.display=="none"){
+////		            left.style.display="block";
+////		            tmpl=200;
+////	            }
+////	            else{
+////		            left.style.display="none";
+////		            tmpl=10;
+////	            }
+////	            leftmargin=tmpl;
 
-//	            layoutZ();
-//	            layoutI();
-            	
-            }
+////	            layoutZ();
+////	            layoutI();
+//            	
+//            }
 
 			 
     </script>
@@ -89,11 +89,11 @@
   </tr> 
 </table> 
 </div> --%>
-    <div class="blank1">
+  <%--  <div class="blank1">
         <span onclick="hiddenLeft()" class="navMenu">菜单</span>
-    </div>
+    </div>--%>
     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
-        <tr>
+    <tr>
             <td width="20%">
                 &nbsp;
             </td>
