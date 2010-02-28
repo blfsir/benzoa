@@ -14,10 +14,16 @@
     <link href="../../../Css/BasicLayout.css" type="text/css" rel="stylesheet">
 
     <script type="text/javascript">
+    var fEitor2, fEditor3;
     function FCKeditor_OnComplete(FCKeditor3)
     {
          
         FCKeditor3.ToolbarSet.Collapse();  //隐藏工具栏
+        
+         
+          fEitor2 = FCKeditorAPI.GetInstance('FCKeditor2') ;
+          
+          fEitor3 = FCKeditorAPI.GetInstance('FCKeditor3') ;
     }
     
     function hidePastPlan()
@@ -32,6 +38,54 @@
         document.getElementById("past_plan_content").style.display="none"
        }
     }
+    
+     function check(){
+     
+        var content = editor.GetXHTML(true); //content就是编辑器的内容的html源码了
+     
+        if( content==""){
+            alert("请输入内容!");
+            return false;
+        }
+    }
+    
+    function setFckEditor2ReadOnly()
+    {
+    e2 = FCKeditorAPI.GetInstance('FCKeditor2') ;
+      alert(e2.Name);
+     setFCKeditorReadOnly(e2);
+    }
+    
+     function setFckEditor3ReadOnly()
+    {
+      e3 = FCKeditorAPI.GetInstance('FCKeditor3') ;
+      alert(e3.Name);
+     setFCKeditorReadOnly(e3);
+    }
+    
+//    function FCKeditor_OnComplete( editorInstance ){ 
+//        editor = editorInstance;
+////        var oEditor = FCKeditorAPI.GetInstance('FCKeditor2') ;
+
+////        alert(oEditor.Name);
+//    }
+		/*设置FCKEDITOR为只读 */
+        function setFCKeditorReadOnly(editor){
+            try{
+                editor.EditorDocument.body.contentEditable = false;
+                editor.EditMode=FCK_EDITMODE_SOURCE;
+                editor.ToolbarSet.RefreshModeState();
+                editor.EditMode=FCK_EDITMODE_WYSIWYG;
+                editor.ToolbarSet.RefreshModeState();
+                editor.EditorWindow.parent.document.getElementById('xExpanded').style.display = 'none';
+                editor.EditorWindow.parent.document.getElementById('xCollapsed').style.display = 'none';
+                editor.EditorWindow.blur();
+            }
+            catch(e){
+            }
+        } 
+        
+        
 
     function TextValidate() 
 { 
@@ -136,7 +190,7 @@
                   <asp:DropDownList ID="ddlYear" runat="server" 
                     onselectedindexchanged="ddlYear_SelectedIndexChanged"  AutoPostBack="true">
                 </asp:DropDownList>
-                 <asp:Label ID="lblTime" runat="server" Text="Label"></asp:Label>
+                 <asp:Label ID="lblTime" runat="server" Text="Label"></asp:Label>  <asp:TextBox ID="txtBeginDate" runat="server" Width="0px"></asp:TextBox><asp:TextBox ID="txtEndDate" runat="server" Width="0px"></asp:TextBox><asp:TextBox ID="txtPastBeginDate" runat="server" Width="0px"></asp:TextBox><asp:TextBox ID="txtPastEndDate" runat="server" Width="0px"></asp:TextBox>
                          
                      <asp:Button ID="cmdOK" runat="server" Width="60px" CssClass="buttoncss" style="z-index: 118; position: absolute;right: 10px; top: 36px" Text="保存" OnClick="cmdOK_Click"></asp:Button><font face="宋体">&nbsp; </font>
                                 <%--<input class="buttoncss" style="width: 60px" onclick="javascript:location.replace('../UnitiveDocument/Index.aspx');"

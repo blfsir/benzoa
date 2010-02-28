@@ -9,5 +9,7 @@ create table UDS_Plan(
 	PlanConclusion text,
 	PlanConclusionAttach varchar(200),
 	PlanCreator varchar(50),
-	PlanCreateDate DateTime
+	PlanCreateDate DateTime,
+	PlanBeginDate DateTime,
+	PlanEndDate DateTime
 )

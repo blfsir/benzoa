@@ -43,6 +43,9 @@
     }
     function FCKeditor_OnComplete( editorInstance ){ 
         editor = editorInstance;
+//        var oEditor = FCKeditorAPI.GetInstance('FCKeditor2') ;
+
+//        alert(oEditor.Name);
     }
 		/*设置FCKEDITOR为只读 */
         function setFCKeditorReadOnly(){

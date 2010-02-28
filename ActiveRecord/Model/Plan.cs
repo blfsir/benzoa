@@ -28,9 +28,13 @@ namespace ActiveRecord.Model
         private DateTime plan_create_date;//计划创建日期
 
 
-        //private DateTime plan_begin_date;//开始时间
-        //private DateTime plan_end_date;//结束时间
+        private DateTime plan_begin_date;//开始时间
+        private DateTime plan_end_date;//结束时间
 
+        //private DateTime conclusion_begin_date;//开始时间
+        //private DateTime conclusion_end_date;//结束时间
+
+        
         private string plan_year;//当前年份
         private string plan_period;//当前期间：周，月，年，季
 
@@ -119,6 +123,36 @@ namespace ActiveRecord.Model
             get { return plan_period; }
             set { plan_period = value; }
         }
+
+        [Property]
+        public DateTime PlanBeginDate
+        {
+            get { return plan_begin_date; }
+            set { plan_begin_date = value; }
+        }
+
+        [Property]
+        public DateTime PlanEndDate
+        {
+            get { return plan_end_date; }
+            set { plan_end_date = value; }
+        }
+
+        //[Property]
+        //public DateTime ConclusionBeginDate
+        //{
+        //    get { return conclusion_begin_date; }
+        //    set { conclusion_begin_date = value; }
+        //}
+
+        //[Property]
+        //public DateTime ConclusionEndDate
+        //{
+        //    get { return conclusion_end_date; }
+        //    set { conclusion_end_date = value; }
+        //}
+
+
 
         public static Plan Find(int id)
         {

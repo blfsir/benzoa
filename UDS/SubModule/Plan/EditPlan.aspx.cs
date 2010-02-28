@@ -34,11 +34,13 @@ namespace UDS.SubModule.Plan
             conclusion.PlanPeriodType = ddlPlanPeriodType.SelectedValue;
             conclusion.PlanConclusion  = FCKeditor2.Value;
 
-            conclusion.PlanCreator = Server.UrlDecode(Request.Cookies["UserName"].Value); 
-
+            conclusion.PlanCreator = Server.UrlDecode(Request.Cookies["UserName"].Value);
+            conclusion.PlanBeginDate = DateTime.Parse(txtPastBeginDate.Text);
+            conclusion.PlanEndDate = DateTime.Parse(txtPastEndDate.Text);
             conclusion.PlanCreateDate = DateTime.Now;
             conclusion.PlanYear = this.lblPastPlanYear.Text;
             conclusion.PlanPeriod = this.lblPastPlanPeriod.Text;// (int.Parse(lblCurrentPlanPeroid.Text) - 1).ToString();
+           
 
             conclusion.SaveOrUpdate();
 
@@ -52,6 +54,9 @@ namespace UDS.SubModule.Plan
             plan.PlanCreateDate = DateTime.Now;
             plan.PlanYear = lblCurrentPlanYear.Text;
             plan.PlanPeriod = lblCurrentPlanPeroid.Text;
+
+            plan.PlanBeginDate = DateTime.Parse(txtBeginDate.Text);
+            plan.PlanEndDate = DateTime.Parse(txtEndDate.Text);
 
             plan.SaveOrUpdate();
             
@@ -88,7 +93,24 @@ namespace UDS.SubModule.Plan
                     {
                         this.ddlWeek.Items.Add(new ListItem(nextWeek.ToString(), nextWeek.ToString()));
                     }
-                    this.lblTime.Text = "周";
+
+                    DateTime weekStartDate = DateTime.Now;
+                    DateTime weekEndDate = DateTime.Now;
+                    GetWeek(DateTime.Now.Year, weekOfYear, out  weekStartDate, out  weekEndDate);
+
+
+                    this.lblTime.Text = "周[" + weekStartDate.ToShortDateString() + " - " + weekEndDate.ToShortDateString() + "]";
+                    txtBeginDate.Text = weekStartDate.ToShortDateString();
+                    txtEndDate.Text = weekEndDate.ToShortDateString();
+
+
+                    #region 上周起始日期
+                    GetWeek(pastYear, pastWeek, out  weekStartDate, out  weekEndDate);
+                    txtPastBeginDate.Text = weekStartDate.ToShortDateString();
+                    txtPastEndDate.Text = weekEndDate.ToShortDateString();
+                    #endregion
+
+                    // this.lblTime.Text = "周";
 
 
                     this.lblPastPlanYear.Text = pastYear.ToString();
@@ -134,8 +156,13 @@ namespace UDS.SubModule.Plan
 
                      pastDate = new DateTime(beginDate.AddDays(-1).Year, beginDate.AddDays(-1).Month, 1);
 
+                
+                     txtBeginDate.Text = beginDate.ToShortDateString();
+                     txtEndDate.Text = endDate.AddDays(-1).ToShortDateString();
+                     txtPastBeginDate.Text = pastDate.ToShortDateString();
+                     txtPastEndDate.Text = pastDate.AddMonths(1).AddDays(-1).ToShortDateString();
 
-                    this.lblTime.Text = "月" + "[" + beginDate.ToShortDateString() + " - " + endDate.AddDays(-1).ToShortDateString() + "]";
+                     this.lblTime.Text = "月" + "[" + beginDate.ToShortDateString() + " - " + endDate.AddDays(-1).ToShortDateString() + "]";
                     this.ddlMonth.Items.Clear();
                     this.ddlMonth.Items.Add(new ListItem(DateTime.Now.Month.ToString(), DateTime.Now.Month.ToString()));
                     if (DateTime.Now.Month.ToString() != "12")
@@ -246,6 +273,12 @@ namespace UDS.SubModule.Plan
 
                       pastDate = new DateTime(beginDate.AddYears(-1).Year, 1, 1);
 
+                      txtBeginDate.Text = beginDate.ToShortDateString();
+                      txtEndDate.Text = endDate.AddDays(-1).ToShortDateString();
+
+                      txtPastBeginDate.Text = pastDate.ToShortDateString();
+                      txtPastEndDate.Text = beginDate.AddDays(-1).ToShortDateString();
+
 
                     this.lblTime.Text = "年" + "[" + beginDate.ToShortDateString() + " - " + endDate.AddDays(-1).ToShortDateString() + "]";
                     this.ddlYear.Items.Clear();
@@ -311,16 +344,39 @@ namespace UDS.SubModule.Plan
             switch (currentSeason)
             {
                 case 1:
-                    seasonPeriod = "[" + FirstSeasonBeginDate.ToShortDateString() + " - " + SecondSeasonBeginDate.AddDays(-1).ToShortDateString() + "]"; 
+                    seasonPeriod = "[" + FirstSeasonBeginDate.ToShortDateString() + " - " + SecondSeasonBeginDate.AddDays(-1).ToShortDateString() + "]";
+                    txtBeginDate.Text = FirstSeasonBeginDate.ToShortDateString();
+                    txtEndDate.Text = SecondSeasonBeginDate.AddDays(-1).ToShortDateString();
+
+                    txtPastBeginDate.Text = FirstSeasonBeginDate.AddMonths(-3).ToShortDateString();
+                    txtPastEndDate.Text = FirstSeasonBeginDate.AddDays(-1).ToShortDateString();
                     break;
                 case 2:
-                    seasonPeriod = "[" + SecondSeasonBeginDate.ToShortDateString() + " - " + ThirdSeasonBeginDate.AddDays(-1).ToShortDateString() + "]"; 
+                    seasonPeriod = "[" + SecondSeasonBeginDate.ToShortDateString() + " - " + ThirdSeasonBeginDate.AddDays(-1).ToShortDateString() + "]";
+                    txtBeginDate.Text = SecondSeasonBeginDate.ToShortDateString();
+                    txtEndDate.Text = ThirdSeasonBeginDate.AddDays(-1).ToShortDateString();
+
+                    txtPastBeginDate.Text = FirstSeasonBeginDate.ToShortDateString();
+                    txtPastEndDate.Text = SecondSeasonBeginDate.AddDays(-1).ToShortDateString();
+                    
                     break;
                 case 3:
-                    seasonPeriod = "[" + ThirdSeasonBeginDate.ToShortDateString() + " - " + FourthSeasonBeginDate.AddDays(-1).ToShortDateString() + "]"; 
+                    seasonPeriod = "[" + ThirdSeasonBeginDate.ToShortDateString() + " - " + FourthSeasonBeginDate.AddDays(-1).ToShortDateString() + "]";
+                    txtBeginDate.Text = ThirdSeasonBeginDate.ToShortDateString();
+                    txtEndDate.Text = FourthSeasonBeginDate.AddDays(-1).ToShortDateString();
+
+                    txtPastBeginDate.Text = SecondSeasonBeginDate.ToShortDateString();
+                    txtPastEndDate.Text = ThirdSeasonBeginDate.AddDays(-1).ToShortDateString();
+
                     break;
                 case 4:
-                    seasonPeriod = "[" + FourthSeasonBeginDate.ToShortDateString() + " - " + FifthSeasonBeginDate.AddDays(-1).ToShortDateString() + "]"; 
+                    seasonPeriod = "[" + FourthSeasonBeginDate.ToShortDateString() + " - " + FifthSeasonBeginDate.AddDays(-1).ToShortDateString() + "]";
+                    txtBeginDate.Text = FourthSeasonBeginDate.ToShortDateString();
+                    txtEndDate.Text = FifthSeasonBeginDate.AddDays(-1).ToShortDateString();
+
+
+                    txtPastBeginDate.Text = ThirdSeasonBeginDate.ToShortDateString();
+                    txtPastEndDate.Text = FourthSeasonBeginDate.AddDays(-1).ToShortDateString();
                     break; 
             }
 
@@ -384,6 +440,12 @@ namespace UDS.SubModule.Plan
             DateTime endDate = new DateTime(beginDate.AddMonths(1).Year, beginDate.AddMonths(1).Month, 1);
             DateTime pastDate = new DateTime(beginDate.AddDays(-1).Year, beginDate.AddDays(-1).Month, 1);
 
+            txtBeginDate.Text = beginDate.ToShortDateString();
+            txtEndDate.Text = endDate.AddDays(-1).ToShortDateString();
+
+            txtPastBeginDate.Text = pastDate.ToShortDateString();
+            txtPastEndDate.Text = pastDate.AddMonths(1).AddDays(-1).ToShortDateString();
+
             this.lblTime.Text = "月" + "[" + beginDate.ToShortDateString() + " - " + endDate.AddDays(-1).ToShortDateString() + "]";
             this.lblPastPlanYear.Text = pastDate.Year.ToString();
             lblPastPlanPeriod.Text = pastDate.Month.ToString();
@@ -406,6 +468,10 @@ namespace UDS.SubModule.Plan
             {
                 this.FCKeditor3.Value = "";
             }
+            //if (plan.PlanBeginDate > DateTime.Now || plan.PlanEndDate < DateTime.Now)
+            //{
+            //    Response.Write("<script laguage='javascript'>setFckEditor3ReadOnly();</script>");
+            //}
             //上月总结
             plan = new ActiveRecord.Model.Plan().Find(ddlPlanObjectType.SelectedValue, ddlPlanPeriodType.SelectedValue, lblPastPlanYear.Text, int.Parse(lblPastPlanPeriod.Text).ToString(), Server.UrlDecode(Request.Cookies["UserName"].Value));
             if (plan != null)//上月总结
@@ -418,6 +484,11 @@ namespace UDS.SubModule.Plan
                 this.FCKeditor2.Value = "";
                 this.past_plan_content.InnerHtml = "";
             }
+
+            //if (plan.PlanBeginDate > DateTime.Now || plan.PlanEndDate < DateTime.Now)
+            //{
+            //    Response.Write("<script laguage='javascript'>setFckEditor2ReadOnly();</script>");
+            //}
         }
 
         protected void ddlSeason_SelectedIndexChanged(object sender, EventArgs e)
@@ -486,7 +557,11 @@ namespace UDS.SubModule.Plan
             DateTime endDate = new DateTime(beginDate.AddYears(1).Year, 1, 1);
 
             DateTime pastDate = new DateTime(beginDate.AddYears(-1).Year, 1, 1);
+            txtBeginDate.Text = beginDate.ToShortDateString();
+            txtEndDate.Text = endDate.AddDays(-1).ToShortDateString();
 
+            txtPastBeginDate.Text = pastDate.ToShortDateString();
+            txtPastEndDate.Text = beginDate.AddDays(-1).ToShortDateString();
 
             this.lblTime.Text = "年" + "[" + beginDate.ToShortDateString() + " - " + endDate.AddDays(-1).ToShortDateString() + "]";
 
@@ -544,8 +619,19 @@ namespace UDS.SubModule.Plan
             {
                 pastYear = currentYear;
             }
+
+            DateTime weekStartDate = DateTime.Now;
+            DateTime weekEndDate = DateTime.Now;
+            GetWeek(currentYear, weekOfYear, out  weekStartDate, out  weekEndDate);
+
            
-            this.lblTime.Text = "周";
+            this.lblTime.Text = "周["+weekStartDate.ToShortDateString()+" - " + weekEndDate.ToShortDateString()+"]";
+            txtBeginDate.Text = weekStartDate.ToShortDateString();
+            txtEndDate.Text = weekEndDate.ToShortDateString();
+
+            GetWeek(pastYear, pastWeek, out  weekStartDate, out  weekEndDate);
+            txtPastBeginDate.Text = weekStartDate.ToShortDateString();
+            txtPastEndDate.Text = weekEndDate.ToShortDateString();
 
 
             this.lblPastPlanYear.Text = pastYear.ToString();
@@ -581,6 +667,27 @@ namespace UDS.SubModule.Plan
                 this.past_plan_content.InnerHtml = "";
             }
         }
+
+        /**/
+        /// <summary>
+        /// 得到一年中的某周的起始日和截止日
+        /// 年 nYear
+        /// 周数 nNumWeek
+        /// 周始 out dtWeekStart
+        /// 周终 out dtWeekeEnd
+        /// </summary>
+        /// <param name="nYear"></param>
+        /// <param name="nNumWeek"></param>
+        /// <param name="dtWeekStart"></param>
+        /// <param name="dtWeekeEnd"></param>
+        protected void GetWeek(int nYear, int nNumWeek, out   DateTime dtWeekStart, out   DateTime dtWeekeEnd)
+        {
+            DateTime dt = new DateTime(nYear, 1, 1);
+            dt = dt + new TimeSpan((nNumWeek - 1) * 7, 0, 0, 0);
+            dtWeekStart = dt.AddDays(-(int)dt.DayOfWeek + (int)DayOfWeek.Monday);
+            dtWeekeEnd = dt.AddDays((int)DayOfWeek.Saturday - (int)dt.DayOfWeek + 1);
+        }
+
 
         protected void ddlPlanObjectType_SelectedIndexChanged(object sender, EventArgs e)
         {

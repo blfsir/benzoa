@@ -180,7 +180,7 @@ function changeuser()
         <td width="35" align="center"><a href="../SubModule/Note/NoteManage.aspx" target="MainFrame">便签</a></td> 
         <td width="44" align="center"><a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame">日记</a></td> 
         <td width="47" align="center"><a href="../SubModule/WorkAttendance/Default.aspx" target="MainFrame">考勤</a></td> 
-        <td width="35" align="center"><a href="#"></a></td> 
+        <td width="35" align="center"><a href="../SubModule/Resources/ResourceApply.aspx" target="MainFrame">资源</a></td> 
         <td width="46" align="center"><a href="../help/help.htm" target="_blank">帮助</a></td> 
         <td width="47" align="center"><a   onclick="ComfirmExit(2)" href="#" target="_self">重登录</a></td> 
         <td width="40" align="center"><a  onclick="ComfirmExit(1)" href="#" target="_self">退出</a></td> 

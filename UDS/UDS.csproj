@@ -1785,6 +1785,8 @@
     <Content Include="SubModule\Query\Listview.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\Resources\ResourceApply.aspx" />
+    <Content Include="SubModule\Resources\ResourceManage.aspx" />
     <Content Include="SubModule\Role\Index.aspx" />
     <Content Include="SubModule\Role\ListView.aspx">
       <SubType>Form</SubType>
@@ -2533,6 +2535,20 @@
     <Compile Include="SubModule\Query\Listview.aspx.cs">
       <DependentUpon>Listview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Resources\ResourceApply.aspx.cs">
+      <DependentUpon>ResourceApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Resources\ResourceApply.aspx.designer.cs">
+      <DependentUpon>ResourceApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubModule\Resources\ResourceManage.aspx.cs">
+      <DependentUpon>ResourceManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Resources\ResourceManage.aspx.designer.cs">
+      <DependentUpon>ResourceManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\Role\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

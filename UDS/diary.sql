@@ -54,23 +54,27 @@ go
 
 
 
+
 alter Procedure Proc_SearchDiary  --'162,163,164,165,166,167,168',null,null,null  
 (    
   @UserID varchar(200),    
-  @BeginDate varchar(20),    
-  @EndDate varchar(20),    
+  @BeginDate varchar(50),    
+  @EndDate varchar(50),    
   @Contents varchar(1000)    
 )    
 AS    
 begin    
     
 declare @SQL varchar(1000)
+set @BeginDate=@BeginDate+' 00:00:00.000'
+set @EndDate =@EndDate+' 23:59:59.000'
 set @SQL='select * from Diary where submitdate between '''+@BeginDate+''' and '''+@EndDate+''''
 	set @SQL= @SQL+' and userid in (' +@UserID +' )'
 if(@Contents <>'')
 begin
 	set @SQL= @SQL+' and contents like ''%'+@Contents+'%'''
 end
+	set @SQL= @SQL+' order by username, submitdate desc'
    print @SQL 
   exec(@SQL)  
 end 
