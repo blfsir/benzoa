@@ -96,7 +96,7 @@ function GetServerTime(updatespan)
 				</TR>
 				<TR>
 					<TD align="center" height="40">
-						<asp:Button id="btnCheckAttendance" CommandArgument="" runat="server" CssClass="buttoncss" Width="80px"></asp:Button></TD>
+						<asp:Button id="btnCheckAttendance" CommandArgument="" runat="server" CssClass="buttoncss" Width="80px" Visible="false"></asp:Button></TD>
 				</TR>
 				<TR>
 					<TD><FONT face="ËÎÌו">

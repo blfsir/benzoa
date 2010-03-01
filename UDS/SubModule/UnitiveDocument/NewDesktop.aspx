@@ -126,15 +126,15 @@
                             </cc1:DataCalendar>
                             
                             <asp:Calendar ID="myCalendar" runat="server" BackColor="#ffffff" Width="100%" Height="200px"
-                                Font-Size="12px" Font-Names="Arial" BorderWidth="2px" 
-                                BorderColor="#000000" NextPrevFormat="shortmonth" 
+                                Font-Size="12px" Font-Names="Arial" BorderWidth="0"
+                                BorderColor="#000000"
                                 ondayrender="myCalendar_DayRender" >
-                                <TodayDayStyle ForeColor="White" BackColor="Black"></TodayDayStyle>
+                                <TodayDayStyle ForeColor="White" BackColor="Green"></TodayDayStyle>
                                 <NextPrevStyle Font-Size="12px" Font-Bold="True" ForeColor="#333333"></NextPrevStyle>
                                 <DayHeaderStyle Font-Size="12px" Font-Bold="True"></DayHeaderStyle>
-                                <TitleStyle Font-Size="14px" Font-Bold="True" BorderWidth="2px" ForeColor="#000055">
+                                <TitleStyle Font-Size="14px" Font-Bold="True" BorderWidth="0px" ForeColor="#ffffff">
                                 </TitleStyle>
-                                <OtherMonthDayStyle ForeColor="#CCCCCC"></OtherMonthDayStyle>
+                                <OtherMonthDayStyle   BackColor="LightGray" ></OtherMonthDayStyle>
                             </asp:Calendar>
                         </td>
                     </tr>
@@ -241,8 +241,7 @@
                                         <asp:DataGrid ID="dgList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
-                                            OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound"
+                                            CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px" 
                                             ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
@@ -250,7 +249,7 @@
                                             <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">
                                             </FooterStyle>
                                             <Columns>
-                                                <%--      <asp:TemplateColumn HeaderText="时段">
+                                                    <asp:TemplateColumn HeaderText="时段" Visible="false">
                                                     <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
                                                     <ItemStyle Font-Size="X-Small" HorizontalAlign="Left" VerticalAlign="Middle"></ItemStyle>
                                                     <ItemTemplate>
@@ -258,7 +257,7 @@
                                                             ID="Label2" NAME="Label2">
                                                         </asp:Label>
                                                     </ItemTemplate>
-                                                </asp:TemplateColumn>--%>
+                                                </asp:TemplateColumn> 
                                                 <asp:TemplateColumn HeaderText="内容">
                                                     <HeaderStyle HorizontalAlign="Center" Width="80px"></HeaderStyle>
                                                     <ItemStyle Font-Size="X-Small" HorizontalAlign="left" CssClass="tit2"></ItemStyle>
@@ -364,7 +363,7 @@
                                 <tr>
                                     <td colspan="2" class="tit2">
                                         <asp:DataGrid ID="dgAppDocList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
-                                            GridLines="Horizontal" PageSize="5" DataKeyField="DocID" Width="100%" PagerStyle-HorizontalAlign="center"
+                                            GridLines="Horizontal" PageSize="5" DataKeyField="Flow_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                             CellPadding="2" CssClass="top" BorderWidth="1px" ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
@@ -379,8 +378,8 @@
                                                     <ItemStyle Font-Size="X-Small" HorizontalAlign="Left" VerticalAlign="Middle" Height="20px"
                                                         CssClass="tit2"></ItemStyle>
                                                     <ItemTemplate>
-                                                        <a href='Document/ApproveDocument.aspx?DocId=<%# DataBinder.Eval(Container.DataItem,"DocID") %>'>
-                                                            <%# (DataBinder.Eval(Container.DataItem,"DocTitle").ToString().Length>30)?DataBinder.Eval(Container.DataItem,"DocTitle").ToString().Substring(0,30)+"...":DataBinder.Eval(Container.DataItem,"DocTitle").ToString() %>
+                                                        <a href='Document/ApproveDocument.aspx?DocId=<%# DataBinder.Eval(Container.DataItem,"Flow_ID") %>'>
+                                                            <%# (DataBinder.Eval(Container.DataItem, "Title").ToString().Length > 30) ? DataBinder.Eval(Container.DataItem, "Title").ToString().Substring(0, 30) + "..." : DataBinder.Eval(Container.DataItem, "Title").ToString()%>
                                                         </a>
                                                     </ItemTemplate>
                                                 </asp:TemplateColumn>
@@ -521,7 +520,7 @@
                                             GridLines="Horizontal" PageSize="5" DataKeyField="MailID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                             CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
-                                            OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound"
+                                           
                                             ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
                                             </ItemStyle>

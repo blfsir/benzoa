@@ -84,6 +84,7 @@ namespace UDS.SubModule.WorkAttendance
 				lbl_Second.Text = DateTime.Now.Second.ToString();
 				//显示本星期的考勤数据
 				GridBind();
+                 //btnCheckAttendance_Click(null, null);
 			}
 			else
 			{

@@ -254,8 +254,8 @@ namespace UDS.SubModule.UnitiveDocument
                 for (int i = 0; i < tmp; i++)
                 {
                     DataRow myDataRow = mydb.NewRow();
-                    myDataRow[0] = "-";
-                    myDataRow[0] = "-";
+                    myDataRow[0] = "";
+                    myDataRow[0] = "";
                     mydb.Rows.Add(myDataRow);
 
                 }
@@ -291,14 +291,14 @@ namespace UDS.SubModule.UnitiveDocument
                 if (EndTime != "")
                     return DateTime.Parse(EndTime).ToShortTimeString();
                 else
-                    return "-";
+                    return "";
 
             }
             else
             {
                 if (begintime == "" && endtime == "")
                 {
-                    return "-";
+                    return "";
                 }
                 int b = Int32.Parse(begintime);
                 int e = Int32.Parse(endtime);
@@ -558,8 +558,8 @@ namespace UDS.SubModule.UnitiveDocument
                 dgMailList.DataSource = dt.DefaultView;
                 dgMailList.DataBind();
 
-                dr = myDesktop.GetMyApprove(UserName, 2);
-                dt = Tools.ConvertDataReaderToDataTable(dr);
+                //dr = myDesktop.GetMyPostil(UserName);
+                dt = myDesktop.GetMyPostil(UserName);
                 if (dt.Rows.Count < 5)
                 {
                     int tmp = 5 - dt.Rows.Count;
@@ -631,21 +631,7 @@ namespace UDS.SubModule.UnitiveDocument
             }
         }
 
-        protected void dgBoard_ItemDataBound(object sender, DataGridItemEventArgs e)
-        {
-
-        }
-
-        protected void dgBoard_ItemCreated(object sender, DataGridItemEventArgs e)
-        {
-
-        }
-
-        protected void dgBoard_DataBinding(object sender, EventArgs e)
-        {
-
-
-        }
+       
 
         DataTable GetEventData()
         {
@@ -685,16 +671,69 @@ namespace UDS.SubModule.UnitiveDocument
 
         protected void myCalendar_DayRender(object sender, DayRenderEventArgs e)
         {
-            DateTime nextDate;
+
+            UDS.Components.Task task = new UDS.Components.Task();
+            DataTable mydb = Tools.ConvertDataReaderToDataTable(task.GetAllTaskBySomeone(DateTime.Today.ToShortDateString(), Username, 1));
+            Literal ltl = new Literal();
+
+            
+       
+            e.Cell.Controls.Clear();
+            ltl.Text = "";
+
+            ltl.Text = "<a   href='#' onclick=\"javascript:window.open('../Schedule/Manage.aspx','newtask','toolbar=yes,scrollbars=yes,width=800,height=600,resizable=yes');\">  " + e.Day.Date.Day + " </A>";
+            //ltl.Text += "<DIV class=\"BlackDate\">" + e.Day.Date.Day + "</DIV>";
+            //ltl.Text += e.Day.Date == myCalendar.TodaysDate ? "<DIV class=\"RedDate\">" + e.Day.Date.Day + "</DIV>" : "<DIV class=\"WhiteDate\">" + e.Day.Date.Day + "</DIV>";
+            e.Cell.Controls.Add(ltl);
+
+            foreach (DataRow dr in mydb.Rows)
+            {
+                if (DateTime.Parse(dr["Date"].ToString()).ToShortDateString() == e.Day.Date.ToShortDateString())
+                {
+                  //  e.Cell.BackColor = System.Drawing.Color.Yellow;
+                     
+                    e.Cell.Controls.Clear();
+                    ltl.Text = "";
+
+                    ltl.Text = "<a   href=\"javascript:dialwinprocess('','','2','" + dr["ID"].ToString() + "');\"> <font color='#FF0000'>" + e.Day.Date.Day + " </font></A>";
+                    //ltl.Text += "<DIV class=\"BlackDate\">" + e.Day.Date.Day + "</DIV>";
+                    //ltl.Text += e.Day.Date == myCalendar.TodaysDate ? "<DIV class=\"RedDate\">" + e.Day.Date.Day + "</DIV>" : "<DIV class=\"WhiteDate\">" + e.Day.Date.Day + "</DIV>";
+                    e.Cell.Controls.Add(ltl);
+                }
+                //else
+                //{
+                    
+                //    e.Cell.Controls.Clear();
+                //    ltl.Text = "";
+
+                //    ltl.Text = "<a   href='#' onclick=\"javascript:window.open('../Schedule/Manage.aspx','newtask','toolbar=yes,scrollbars=yes,width=800,height=600,resizable=yes');\">  " + e.Day.Date.Day + " </A>";
+                //    //ltl.Text += "<DIV class=\"BlackDate\">" + e.Day.Date.Day + "</DIV>";
+                //    //ltl.Text += e.Day.Date == myCalendar.TodaysDate ? "<DIV class=\"RedDate\">" + e.Day.Date.Day + "</DIV>" : "<DIV class=\"WhiteDate\">" + e.Day.Date.Day + "</DIV>";
+                //    e.Cell.Controls.Add(ltl);
+                //}
+            }
+
+
+            //DateTime nextDate;
+            //Literal ltl = new Literal();
            
-                    nextDate = DateTime.Now;
-                    if (nextDate.ToShortDateString() == e.Day.Date.ToShortDateString())
-                    {
-                        e.Cell.BackColor = System.Drawing.Color.Pink;
-                        
-                    }
+            //        nextDate = DateTime.Now;
+            //        if (nextDate.ToShortDateString() == e.Day.Date.ToShortDateString())
+            //        {
+            //            e.Cell.BackColor = System.Drawing.Color.Blue;
+            //            e.Cell.Controls.Clear();
+            //            ltl.Text = "";
+
+            //            ltl.Text = "<a class=date href=\"javascript:location.href='http://www.google.com';\">  " + e.Day.Date.Day + " </A>";
+            //            //ltl.Text += "<DIV class=\"BlackDate\">" + e.Day.Date.Day + "</DIV>";
+            //            //ltl.Text += e.Day.Date == myCalendar.TodaysDate ? "<DIV class=\"RedDate\">" + e.Day.Date.Day + "</DIV>" : "<DIV class=\"WhiteDate\">" + e.Day.Date.Day + "</DIV>";
+            //            e.Cell.Controls.Add(ltl);
+            //        }
                  
         }
+
+   
+
     
     }
 }

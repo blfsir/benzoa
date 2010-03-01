@@ -117,7 +117,35 @@ namespace UDS.Components
             //    dataReader = null;
             //}
 		}
-	
-	}
+
+
+        internal DataTable GetMyPostil(string UserName)
+        {
+            SqlDataReader dr = null; //存放人物的数据
+            Database mySQL = new Database();
+            try
+            { 
+                SqlParameter[] parameters = {
+											mySQL.MakeInParam("@StaffName",SqlDbType.VarChar,300,UserName)
+										};
+
+                mySQL.RunProc("sp_Flow_GetMyPostil", parameters, out dr);
+
+                DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
+                return dt;
+            }
+            finally
+            {
+                if (mySQL != null)
+                {
+                    mySQL.Close();
+                }
+                if (dr != null)
+                {
+                    dr.Close();
+                }
+            }
+        }
+    }
 	
 }
