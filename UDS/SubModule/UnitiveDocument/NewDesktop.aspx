@@ -363,7 +363,7 @@
                                 <tr>
                                     <td colspan="2" class="tit2">
                                         <asp:DataGrid ID="dgAppDocList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
-                                            GridLines="Horizontal" PageSize="5" DataKeyField="Flow_ID" Width="100%" PagerStyle-HorizontalAlign="center"
+                                            GridLines="Horizontal" PageSize="5"  Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                             CellPadding="2" CssClass="top" BorderWidth="1px" ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
@@ -378,7 +378,7 @@
                                                     <ItemStyle Font-Size="X-Small" HorizontalAlign="Left" VerticalAlign="Middle" Height="20px"
                                                         CssClass="tit2"></ItemStyle>
                                                     <ItemTemplate>
-                                                        <a href='Document/ApproveDocument.aspx?DocId=<%# DataBinder.Eval(Container.DataItem,"Flow_ID") %>'>
+                                                        <a href='DocumentFlow/DisplayDocument.aspx?DocID=<%# DataBinder.Eval(Container.DataItem,"Doc_ID") %>'>
                                                             <%# (DataBinder.Eval(Container.DataItem, "Title").ToString().Length > 30) ? DataBinder.Eval(Container.DataItem, "Title").ToString().Substring(0, 30) + "..." : DataBinder.Eval(Container.DataItem, "Title").ToString()%>
                                                         </a>
                                                     </ItemTemplate>
