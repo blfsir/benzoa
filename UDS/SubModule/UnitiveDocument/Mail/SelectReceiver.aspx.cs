@@ -54,7 +54,7 @@ namespace MaiSystem
 			listAccount.DataValueField = "Staff_Name";
 			listAccount.DataBind ();
 			
-			listDept .DataSource = staff.GetPositionList(1);
+			listDept.DataSource = staff.GetPositionList(1);
 			listDept.DataTextField = "Position_Name";
 			listDept.DataValueField = "Position_ID";
 			listDept.DataBind();

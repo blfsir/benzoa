@@ -341,7 +341,7 @@ namespace UDS.SubModule.Staff.Sch
                 ddl_Dept.DataTextField = "Dept_Name";
                 ddl_Dept.DataValueField = "Dept_Name";
                 ddl_Dept.DataBind();
-                ddl_Dept.Items.Insert(0, new ListItem("全部部门", "0"));
+                ddl_Dept.Items.Insert(0, new ListItem("全部部门", ""));
             }
             finally
             {
