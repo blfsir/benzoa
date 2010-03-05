@@ -23,15 +23,6 @@ namespace UDS.SubModule.UnitiveDocument {
         protected global::System.Web.UI.HtmlControls.HtmlForm Desktop;
         
         /// <summary>
-        /// cal1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DataControls.DataCalendar cal1;
-        
-        /// <summary>
         /// myCalendar control.
         /// </summary>
         /// <remarks>

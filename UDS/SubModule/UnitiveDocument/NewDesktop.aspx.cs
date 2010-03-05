@@ -51,7 +51,7 @@ namespace UDS.SubModule.UnitiveDocument
                 bindtaskgrid();
             }
 
-            cal1.DataSource = GetEventData();
+             
         }
 
         private void BandQuickFlow()
@@ -78,9 +78,9 @@ namespace UDS.SubModule.UnitiveDocument
                     DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
                     //AddBlankRowInDataTable(5, ref dt);
                     //DataView dv = new DataView(dt);
-                    if (dt.Rows.Count < 14)
+                    if (dt.Rows.Count < 8)
                     {
-                        int tmp = 14 - dt.Rows.Count;
+                        int tmp = 8 - dt.Rows.Count;
                         for (int i = 0; i < tmp; i++)
                         {
                             DataRow myDataRow = dt.NewRow();
@@ -112,9 +112,9 @@ namespace UDS.SubModule.UnitiveDocument
                 DataColumn dc2 = new DataColumn("Flow_Name");
                 dt.Columns.Add(dc1);
                 dt.Columns.Add(dc2);
-                if (dt.Rows.Count < 14)
+                if (dt.Rows.Count < 8)
                 {
-                    int tmp = 14 - dt.Rows.Count;
+                    int tmp = 8 - dt.Rows.Count;
                     for (int i = 0; i < tmp; i++)
                     {
                         DataRow myDataRow = dt.NewRow();

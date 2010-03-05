@@ -65,42 +65,11 @@
 </head>
 <body leftmargin="0" topmargin="0" rightmargin="5">
     <form id="Desktop" method="post" runat="server">
-    <%--  <div class="header"> 
-<table width="400" border="0" align="right" cellpadding="0" cellspacing="0" class="nav"> 
+    
+      
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
   <tr> 
-    <td height="65">&nbsp;</td> 
-  </tr> 
-  <tr> 
-    <td valign="top"><table width="446" border="0" cellspacing="0" cellpadding="0" class="navtxt"> 
-      <tr> 
-        <td width="25">&nbsp;</td> 
-        <td width="30" align="center"><a href="#">桌面</a></td> 
-        <td width="44" align="center"><a href="#">考勤</a></td> 
-        <td width="35" align="center"><a href="#">便签</a></td> 
-        <td width="44" align="center"><a href="#">日记</a></td> 
-        <td width="47" align="center"><a href="#">通讯录</a></td> 
-        <td width="35" align="center"><a href="#">设置</a></td> 
-        <td width="46" align="center"><a href="#">帮助</a></td> 
-        <td width="47" align="center"><a href="#">重登录</a></td> 
-        <td width="40" align="center"><a href="#">退出</a></td> 
-        <td width="53">&nbsp;</td> 
-      </tr> 
-    </table></td> 
-  </tr> 
-</table> 
-</div> --%>
-  <%--  <div class="blank1">
-        <span onclick="hiddenLeft()" class="navMenu">菜单</span>
-    </div>--%>
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
-    <tr>
-            <td width="20%">
-                &nbsp;
-            </td>
-        </tr>
-        <tr>
-            <td width="230" valign="top">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="left1" style="table-layout: fixed;">
+    <td width="200" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="left1" style="table-layout: fixed;">
                     <tr>
                         <td class="tit4">
                             我的日历
@@ -112,27 +81,16 @@
                     </tr>
                     <tr>
                         <td colspan="2" class="rili">
-                        <cc1:DataCalendar ID="cal1" runat="server" Width="100%" DayField="EventDay"  Visible="false">
-                                <itemtemplate>
-                    <br />
-                    <asp:Label id="lblTitle" runat="server"
-                               Font-Size="8"
-                               Font-Name="Arial" 
-                               Text='<%# Container.DataItem["EventTitle"] %>'
-                               ForeColor='<%# Container.DataItem["Color"] %>'
-                            />
+                         
                             
-                </itemtemplate>
-                            </cc1:DataCalendar>
-                            
-                            <asp:Calendar ID="myCalendar" runat="server" BackColor="#ffffff" Width="100%" Height="200px"
-                                Font-Size="12px" Font-Names="Arial" BorderWidth="0"
+                            <asp:Calendar ID="myCalendar" runat="server" BackColor="#ffffff" Width="100%" 
+                              Font-Names="Arial" BorderWidth="0"
                                 BorderColor="#000000"
-                                ondayrender="myCalendar_DayRender" >
-                                <TodayDayStyle ForeColor="White" BackColor="Green"></TodayDayStyle>
-                                <NextPrevStyle Font-Size="12px" Font-Bold="True" ForeColor="#333333"></NextPrevStyle>
-                                <DayHeaderStyle Font-Size="12px" Font-Bold="True"></DayHeaderStyle>
-                                <TitleStyle Font-Size="14px" Font-Bold="True" BorderWidth="0px" ForeColor="#ffffff">
+                                ondayrender="myCalendar_DayRender"  CellSpacing="0" >
+                                <TodayDayStyle ForeColor="White" BackColor="Green" Font-Size="10px"></TodayDayStyle>
+                                <NextPrevStyle Font-Size="6px" Font-Bold="True" ForeColor="#333333"></NextPrevStyle>
+                                <DayHeaderStyle Font-Size="10px" Font-Bold="True"></DayHeaderStyle>
+                                <TitleStyle Font-Size="10px" Font-Bold="True" BorderWidth="0px" ForeColor="#ffffff">
                                 </TitleStyle>
                                 <OtherMonthDayStyle   BackColor="LightGray" ></OtherMonthDayStyle>
                             </asp:Calendar>
@@ -165,12 +123,16 @@
                             &nbsp;
                         </td>
                     </tr>
-                </table>
-            </td>
+                </table></td> 
+    <td width="25"><%--空挡--%></td> 
+    <td> <table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+    
+        <tr>
+            
             <td>
-                <table width="95%" border="0" align="left" cellpadding="0" cellspacing="0" style="table-layout: fixed">
-                    <tr>
-                        <td width="49%" valign="top">
+                <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" style="table-layout: fixed;  ">
+                    <tr style="height:100px">
+                        <td width="49%" valign="top" height="100%">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                     <td class="tit1">
@@ -181,11 +143,11 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="tit2">
+                                    <td colspan="2" class="tit2" >
                                         <asp:DataGrid ID="dgNews" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="News_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" CssClass="top" BorderWidth="1px" ShowHeader="false">
+                                            CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false" Height="100%">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                 ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
@@ -227,7 +189,7 @@
                         <td>
                         </td>
                         <td width="49%" valign="top">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:80px">
                                 <tr>
                                     <td class="tit1">
                                         我的任务
@@ -237,12 +199,12 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="tit2">
+                                    <td colspan="2" class="tit2" height="80px">
                                         <asp:DataGrid ID="dgList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px" 
-                                            ShowHeader="false">
+                                            CellPadding="0" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px" 
+                                            ShowHeader="false" Height="100%">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                 ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
@@ -287,7 +249,7 @@
                         <td valign="top">
                             &nbsp;
                         </td>
-                        <td>
+                        <td width="25px">
                         </td>
                         <td valign="top">
                             &nbsp;
@@ -562,9 +524,40 @@
                 </table>
             </td>
         </tr>
-    </table>
-    <div class="footer">
-    </div>
+    </table></td> 
+  </tr> 
+</table> 
+ 
+<div class="footer"></div> 
+
+    <%--  <div class="header"> 
+<table width="400" border="0" align="right" cellpadding="0" cellspacing="0" class="nav"> 
+  <tr> 
+    <td height="65">&nbsp;</td> 
+  </tr> 
+  <tr> 
+    <td valign="top"><table width="446" border="0" cellspacing="0" cellpadding="0" class="navtxt"> 
+      <tr> 
+        <td width="25">&nbsp;</td> 
+        <td width="30" align="center"><a href="#">桌面</a></td> 
+        <td width="44" align="center"><a href="#">考勤</a></td> 
+        <td width="35" align="center"><a href="#">便签</a></td> 
+        <td width="44" align="center"><a href="#">日记</a></td> 
+        <td width="47" align="center"><a href="#">通讯录</a></td> 
+        <td width="35" align="center"><a href="#">设置</a></td> 
+        <td width="46" align="center"><a href="#">帮助</a></td> 
+        <td width="47" align="center"><a href="#">重登录</a></td> 
+        <td width="40" align="center"><a href="#">退出</a></td> 
+        <td width="53">&nbsp;</td> 
+      </tr> 
+    </table></td> 
+  </tr> 
+</table> 
+</div> --%>
+  <%--  <div class="blank1">
+        <span onclick="hiddenLeft()" class="navMenu">菜单</span>
+    </div>--%>
+    
     <%-- <table cellspacing="10" cellpadding="0" align="center" border="0" width="100%" style="table-layout: fixed;
         height: 100%">
         <tr>
