@@ -449,11 +449,14 @@ namespace UDS.SubModule.Schedule
 			switch (str) 
 			{
 				case "0":
-					return "?"; // 待定
+                    //return "?"; // 待定
+                    return "待定"; // 待定
 				case "1":
-					return "!"; // 待办
+                    //return "!"; // 待办
+                    return "待办"; // 待办
 				case "2":
-					return "√"; // 完成
+                    //return "√"; // 完成
+                    return "完成"; // 完成
 				default:
 					return "";
 			}

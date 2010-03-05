@@ -66,7 +66,8 @@ namespace UDS.SubModule.Schedule
             if (!Page.IsPostBack)
             {
                 HttpCookie UserCookie = Request.Cookies["Username"];
-                Username = UserCookie.Value.ToString();
+                //Username = UserCookie.Value.ToString();
+                Username=Server.UrlDecode(Request.Cookies["UserName"].Value);
                 PopulateListView();
                 UnameStr = Username;
                 DayTaskFrm.Attributes["src"] = "ViewDayTask.aspx?Date=" + CurrDate + "&UnameStr=" + UnameStr;
@@ -135,6 +136,8 @@ namespace UDS.SubModule.Schedule
             rbType.Items.Add(new ListItem("外出", "6"));
             rbType.Items.Add(new ListItem("假期", "7"));
             rbType.Items.Add(new ListItem("出差", "8"));
+            rbType.Items.Add(new ListItem("系统", "9"));
+            rbType.Items.Add(new ListItem("培训", "10"));
             rbType.Items[0].Selected = true;
             #endregion
 
@@ -476,7 +479,8 @@ namespace UDS.SubModule.Schedule
             string info = "<link href=\"../../Css/BasicLayout.css\" rel=\"stylesheet\" type=\"text/css\">";
             info += "<body leftmargin=\"0\" topmargin=\"0\">";
             HttpCookie UserCookie = Request.Cookies["Username"];
-            string Username = UserCookie.Value.ToString();
+            //string Username = UserCookie.Value.ToString();
+            string Username = Server.UrlDecode(Request.Cookies["UserName"].Value);
             if (ValidateForm())
             {
                 if (this.rbAttribute.SelectedItem.Value.ToString() == "1")

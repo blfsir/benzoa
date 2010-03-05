@@ -92,7 +92,7 @@
 												<TD align="center" width="80"><asp:checkbox id="cbNeedCo" runat="server" Text="需要协同" AutoPostBack="True"></asp:checkbox></TD>
 												<TD align="center" width="115" style="WIDTH: 115px"><asp:listbox id="listCooperator" runat="server" CssClass="inputcss" Height="80px" Width="120px"
 														Visible="False" SelectionMode="Multiple"></asp:listbox></TD>
-												<TD align="center" width="143" style="WIDTH: 143px"><asp:button id="btnAddUser" runat="server" CssClass="redbuttoncss" Text=">>" Visible="False"></asp:button><BR>
+												<TD align="center" width="143" style="WIDTH: 143px"><asp:button id="btnAddUser" runat="server" CssClass="redbuttoncss" Text="加入协同人" Visible="False"></asp:button><BR>
 													<asp:CheckBox id="cbRemind" runat="server" Text="站内短消息提醒" Font-Size="X-Small" Visible="False"></asp:CheckBox></TD>
 											</TR>
 										</TABLE>

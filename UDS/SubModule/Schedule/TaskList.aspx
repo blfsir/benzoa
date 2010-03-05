@@ -214,7 +214,7 @@
 				</tr>
 				<TR>
 					<td align="left"><FONT face="宋体"><asp:table id="Table1" runat="server" CssClass="top" Visible="False" Width="100%" BorderWidth="0px"
-								Height="195px"></asp:table><asp:label id="lblInstru" runat="server" Font-Size="X-Small">待办: !  待定: ?  完成: √ </asp:label></FONT></td>
+								Height="195px"></asp:table><asp:label id="lblInstru" runat="server" Font-Size="X-Small"><%--待办: !  待定: ?  完成: √--%> </asp:label></FONT></td>
 				</TR>
 				<TR>
 					<TD style="WIDTH: 150px">&nbsp;&nbsp;</TD>

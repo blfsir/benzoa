@@ -53,5 +53,10 @@ namespace ActiveRecord
             get { return Remark; }
             set {Remark  = value; }
         }
+
+        public static Dept Find(int id)
+        {
+            return (Dept)ActiveRecordBase.FindByPrimaryKey(typeof(Dept), id);
+        }
     }
 }

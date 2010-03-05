@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Castle.ActiveRecord;
 
 namespace ActiveRecord.Model
 {
@@ -13,7 +14,8 @@ namespace ActiveRecord.Model
         {
             Castle.ActiveRecord.Framework.IConfigurationSource config = Castle.ActiveRecord.Framework.Config.ActiveRecordSectionHandler.Instance;
 
-            Castle.ActiveRecord.ActiveRecordStarter.Initialize(config, typeof(Dept), typeof(Plan), typeof(QuickFlow), typeof(Diary));
+            Castle.ActiveRecord.ActiveRecordStarter.Initialize(config, typeof(Dept), typeof(Plan), typeof(QuickFlow), typeof(Diary),typeof(Staff),typeof(Asset));
+            //ActiveRecordStarter.Initialize(ActiveRecordLayer, config);
         }
 
         public static InitialBaseAR Instance

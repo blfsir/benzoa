@@ -81,11 +81,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Asset.cs" />
+    <Compile Include="Model\AssetCurrentLocation.cs" />
+    <Compile Include="Model\AssetHistory.cs" />
+    <Compile Include="Model\AssetType.cs" />
+    <Compile Include="Model\AssetUseState.cs" />
     <Compile Include="Model\Dept.cs" />
     <Compile Include="Model\Diary.cs" />
     <Compile Include="Model\InitialBaseAR.cs" />
     <Compile Include="Model\Plan.cs" />
     <Compile Include="Model\QuickFlow.cs" />
+    <Compile Include="Model\Staff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\DeptService.cs" />
   </ItemGroup>
