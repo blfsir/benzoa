@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewsManagement.aspx.cs" Inherits="UDS.SubModule.UnitiveDocument.News.NewsManagement" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0  >
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
  <head id="Head1" runat="server">
@@ -24,17 +24,17 @@
     <form id="form1" runat="server">
     <div>
         <table id="Table1" style="z-index: 105; left: 0px; position: absolute; top: 0px"
-            cellspacing="0" cellpadding="1" width="100%" border="0">
+            cellspacing="0" cellpadding="1" width="100%" border="0" class="gbtext">
             <tr>
                 <td align="left" style="height: 30px" background="../../../Images/treetopbg.jpg">
                     <span style="font-size: 10pt">新闻中心管理</span>
                 </td>
                 <td align="right" style="height: 30px" background="../../../Images/treetopbg.jpg">
                  
-                    <input class="redbuttoncss" style="width: 81px" onclick="location.href='EditNews.aspx';"
+                    <input class="redButtonCss" style="width: 81px" onclick="location.href='EditNews.aspx';"
                         type="button" value="发布新闻">
               
-                    <input class="redbuttoncss" style="width: 71px" onclick="location.href='../Desktop.aspx';"
+                    <input class="redButtonCss" style="width: 71px" onclick="location.href='../Desktop.aspx';"
                         type="button" value="返回">
                 </td>
             </tr>
@@ -63,12 +63,12 @@
                                 </asp:TemplateColumn>
                                 <asp:HyperLinkColumn DataNavigateUrlField="News_ID" DataNavigateUrlFormatString="EditNews.aspx?NewsID={0}"
                                     DataTextField="News_Name" HeaderText="新闻标题">
-                                    <HeaderStyle Font-Size="X-Small" Width="70%"></HeaderStyle>
-                                    <ItemStyle Font-Size="X-Small"></ItemStyle>
+                                    <HeaderStyle   Width="70%" Font-Size="14px"></HeaderStyle>
+                                   
                                 </asp:HyperLinkColumn>
                                 
                                	<asp:TemplateColumn HeaderText="发布日期">
-													<HeaderStyle HorizontalAlign="Center" Width="20%"></HeaderStyle>
+													<HeaderStyle HorizontalAlign="Center" Width="20%" Font-Size="14px"></HeaderStyle>
 													<ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
 													<ItemTemplate>
 														<asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"add_date") %>'>
@@ -78,12 +78,11 @@
 												</asp:TemplateColumn>
 												
                                 <asp:ButtonColumn Text="删除" HeaderText="删除" CommandName="Delete">
-                                    <HeaderStyle HorizontalAlign="Center" Width="5%"></HeaderStyle>
+                                    <HeaderStyle HorizontalAlign="Center" Width="5%" Font-Size="14px"></HeaderStyle>
                                     <ItemStyle HorizontalAlign="Center"></ItemStyle>
                                 </asp:ButtonColumn>
                             </Columns>
-                            <PagerStyle NextPageText="" HorizontalAlign="Right" BackColor="#E8F4FF" Mode="NumericPages">
-                            </PagerStyle>
+                          	<PagerStyle Font-Size="X-Small" HorizontalAlign="left" BackColor="#E8F4FF" Mode="NumericPages"></PagerStyle>
                         </asp:DataGrid>
 					 
                 </td>

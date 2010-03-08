@@ -145,7 +145,7 @@
                                 <tr>
                                     <td colspan="2" class="tit2" >
                                         <asp:DataGrid ID="dgNews" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
-                                            GridLines="Horizontal" PageSize="5" DataKeyField="News_ID" Width="100%" PagerStyle-HorizontalAlign="center"
+                                            GridLines="Horizontal" PageSize="6" DataKeyField="News_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                             CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false" Height="100%">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
@@ -271,7 +271,7 @@
                                         <asp:DataGrid ID="dgBoard" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="Board_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" CssClass="top" BorderWidth="1px" ShowHeader="false">
+                                            CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                 ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
@@ -284,8 +284,7 @@
                                                             <%# Eval("Board_Name")%></a>
                                                     </ItemTemplate>
                                                     <ItemStyle CssClass="tit2" />
-                                                    <HeaderStyle Font-Size="14px" />
-                                                    <HeaderStyle Font-Size="14px" />
+                                                    <HeaderStyle Font-Size="14px" /> 
                                                 </asp:TemplateColumn>
                                                 <%-- <asp:TemplateColumn HeaderText="发布日期">
                                                     <HeaderStyle HorizontalAlign="Center" Width="80px"></HeaderStyle>
@@ -325,9 +324,55 @@
                                 <tr>
                                     <td colspan="2" class="tit2">
                                         <asp:DataGrid ID="dgAppDocList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
+                                            GridLines="Horizontal" PageSize="5" Width="100%" PagerStyle-HorizontalAlign="center"
+                                            PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
+                                            CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false">
+                                            <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
+                                            <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
+                                                ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
+                                            <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">
+                                            </FooterStyle>
+                                            <Columns>
+                                                <asp:TemplateColumn HeaderText="文档标题" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
+                                                    <ItemTemplate>
+                                                        <a href='DocumentFlow/DisplayDocument.aspx?DocID=<%# DataBinder.Eval(Container.DataItem,"Doc_ID") %>'>
+                                                            <%# (DataBinder.Eval(Container.DataItem, "Title").ToString().Length > 30) ? DataBinder.Eval(Container.DataItem, "Title").ToString().Substring(0, 30) + "..." : DataBinder.Eval(Container.DataItem, "Title").ToString()%>
+                                                        </a>
+                                                    </ItemTemplate>
+                                                    <ItemStyle CssClass="tit2" />
+                                                    <HeaderStyle Font-Size="14px" /> 
+                                                </asp:TemplateColumn>
+                                                 
+                                            </Columns>
+                                            <PagerStyle Visible="False" HorizontalAlign="Right" ForeColor="White" BackColor="#93BEE2"
+                                                Mode="NumericPages"></PagerStyle>
+                                        </asp:DataGrid>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right" class="tit3">
+                                        <a href="Board/BoardList.aspx" target="_self">
+                                            <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <%--<td valign="top">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td class="tit1">
+                                        我的待签
+                                    </td>
+                                    <td align="right" class="tit1">
+                                        <img src="../../images/tag01.gif" width="22" height="16" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="tit2">
+                                        <asp:DataGrid ID="dgAppDocList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5"  Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" CssClass="top" BorderWidth="1px" ShowHeader="false">
+                                            CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
                                             </ItemStyle>
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
@@ -336,7 +381,7 @@
                                             </FooterStyle>
                                             <Columns>
                                                 <asp:TemplateColumn HeaderText="文档标题">
-                                                    <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
+                                                    <HeaderStyle HorizontalAlign="Left" Font-Size="14px"></HeaderStyle>
                                                     <ItemStyle Font-Size="X-Small" HorizontalAlign="Left" VerticalAlign="Middle" Height="20px"
                                                         CssClass="tit2"></ItemStyle>
                                                     <ItemTemplate>
@@ -345,14 +390,7 @@
                                                         </a>
                                                     </ItemTemplate>
                                                 </asp:TemplateColumn>
-                                                <%-- <asp:TemplateColumn HeaderText="上传人">
-                                                    <HeaderStyle HorizontalAlign="Center" Width="80px"></HeaderStyle>
-                                                    <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" Height="20px"></ItemStyle>
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="Label2" runat="server" Text='<%# GetRealName(DataBinder.Eval(Container, "DataItem.DocAddedBy").ToString()) %>'>
-                                                        </asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateColumn>--%>
+                                               
                                             </Columns>
                                             <PagerStyle Visible="False" Font-Size="12px" BorderColor="#E0E0E0" BorderStyle="Dotted"
                                                 HorizontalAlign="Right" PageButtonCount="5" Mode="NumericPages"></PagerStyle>
@@ -366,7 +404,7 @@
                                     </td>
                                 </tr>
                             </table>
-                        </td>
+                        </td>--%>
                     </tr>
                     <tr>
                         <td valign="top">
@@ -394,7 +432,7 @@
                                         <asp:DataGrid ID="ItemList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="item_id" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" CssClass="top" BorderWidth="1px" ShowHeader="false">
+                                            CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false">
                                             <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                 ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">
@@ -421,39 +459,7 @@
                                             <PagerStyle Visible="False" Font-Size="12px" BorderColor="#E0E0E0" BorderStyle="Dotted"
                                                 HorizontalAlign="Right" PageButtonCount="5" Mode="NumericPages"></PagerStyle>
                                         </asp:DataGrid>
-                                        <%-- <asp:DataGrid ID="dgFlowList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
-                                GridLines="Horizontal" PageSize="5" DataKeyField="Flow_ID" Width="100%" PagerStyle-HorizontalAlign="center"
-                                PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
-                                OnDataBinding="dgBoard_DataBinding" OnItemCreated="dgBoard_ItemCreated" OnItemDataBound="dgBoard_ItemDataBound">
-                                <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
-                                <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
-                                    ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
-                                <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">
-                                </FooterStyle>
-                                <Columns>
-                                    <asp:TemplateColumn HeaderText="流程名">
-                                        <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
-                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Left" VerticalAlign="Middle"></ItemStyle>
-                                        <ItemTemplate>
-                                            <a href='DocumentFlow/NewDocument.aspx?FlowID=<%# DataBinder.Eval(Container.DataItem,"Flow_ID") %>'>
-                                                <%# (DataBinder.Eval(Container.DataItem, "Flow_Name").ToString().Length > 30) ? DataBinder.Eval(Container.DataItem, "Flow_Name").ToString().Substring(0, 30) + "..." : DataBinder.Eval(Container.DataItem, "Flow_Name").ToString()%>
-                                            </a>
-                                        </ItemTemplate>
-                                    </asp:TemplateColumn>
-                                    <asp:TemplateColumn HeaderText="流程类别">
-                                        <HeaderStyle HorizontalAlign="Center" Width="80px"></HeaderStyle>
-                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
-                                        <ItemTemplate>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"Flow_Class") %>'>
-                                            </asp:Label>
-                                        </ItemTemplate>
-                                        <FooterStyle Font-Size="X-Small"></FooterStyle>
-                                    </asp:TemplateColumn>
-                                </Columns>
-                                <PagerStyle Visible="False" Font-Size="12px" BorderColor="#E0E0E0" BorderStyle="Dotted"
-                                    HorizontalAlign="Right" PageButtonCount="5" Mode="NumericPages"></PagerStyle>
-                            </asp:DataGrid>--%>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -481,7 +487,7 @@
                                         <asp:DataGrid ID="dgMailList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                             GridLines="Horizontal" PageSize="5" DataKeyField="MailID" Width="100%" PagerStyle-HorizontalAlign="center"
                                             PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
-                                            CellPadding="2" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
+                                            CellPadding="0" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
                                            
                                             ShowHeader="false">
                                             <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle" Height="20px">

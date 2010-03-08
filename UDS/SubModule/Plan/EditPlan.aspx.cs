@@ -59,6 +59,7 @@ namespace UDS.SubModule.Plan
             plan.PlanEndDate = DateTime.Parse(txtEndDate.Text);
 
             plan.SaveOrUpdate();
+            Response.Write("<script language=javascript>alert('计划保存完毕！');</script>");		
             
         }
 

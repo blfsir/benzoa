@@ -74,8 +74,8 @@
                                 </asp:HyperLinkColumn>--%>
                                 
                                	<asp:TemplateColumn HeaderText="发布日期">
-													<HeaderStyle HorizontalAlign="Center" Width="20%"></HeaderStyle>
-													<ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
+													<HeaderStyle HorizontalAlign="Center" Width="20%" Font-Size="14px"></HeaderStyle>
+													<ItemStyle Font-Size="X-Small" HorizontalAlign="Center"  CssClass="tit2"></ItemStyle>
 													<ItemTemplate>
 														<asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"add_date") %>'>
 														</asp:Label>
