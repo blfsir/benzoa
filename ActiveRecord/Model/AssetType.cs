@@ -55,5 +55,26 @@ namespace ActiveRecord.Model
            return (AssetType)ActiveRecordBase.FindByPrimaryKey(typeof(AssetType), id);
        }
 
+       public static AssetType[] FindAll()
+       {
+           return (AssetType[])ActiveRecordBase.FindAll(typeof(AssetType));
+       }
+       public void SaveOrUpdate()
+       {
+           AssetType at = new AssetType();
+           at = AssetType.Find(this.ID);//.Find(this.PlanObjectType, this.PlanPeriodType, this.PlanYear, this.PlanPeriod, this.PlanCreator);
+           if (at != null)
+           {
+               at.AssetTypeName = this.AssetTypeName;
+               at.AssetTypeRemark = this.AssetTypeRemark;
+               at.Update();
+           }
+           else
+           {
+               this.Save();
+           }
+
+       }
+
     }
 }

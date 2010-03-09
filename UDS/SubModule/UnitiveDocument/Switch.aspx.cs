@@ -118,6 +118,10 @@ namespace UDS.SubModule.UnitiveDocument
                         case "59": //资源预定
                             Response.Redirect("../Resources/ResourceManage.aspx?classID=" + classID);
                             break;
+
+                        case "60": //设备管理
+                            Response.Redirect("../Asset/AssetMange.aspx?classID=" + classID);
+                            break;
 						default:
 							break;
 					}

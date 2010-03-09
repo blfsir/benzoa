@@ -29,7 +29,7 @@ namespace ActiveRecord.Model
             InitialBaseAR ib = InitialBaseAR.Instance;
         }
 
-        [PrimaryKey]  
+        [PrimaryKey]
         public int ID
         {
             get { return id; }
@@ -51,18 +51,15 @@ namespace ActiveRecord.Model
         }
 
 
-        public static AssetCurrentLocation Find(int id)
+        public static AssetUseState Find(int id)
         {
-            return (AssetCurrentLocation)ActiveRecordBase.FindByPrimaryKey(typeof(AssetCurrentLocation), id);
+            return (AssetUseState)ActiveRecordBase.FindByPrimaryKey(typeof(AssetUseState), id);
         }
 
-
-//--现使用状况
-//create table AssetCurrentUseState
-//(
-//    ID			int	identity(1,1)	not null,				--ID(自增ID)
-//    AssetCurrentUseStateName		varchar(100)		null,					--现使用状况
-//    AssetCurrentUseStateRemark		varchar(500)		null,					--备注
-
+      
+        public static AssetUseState[] FindAll()
+        {
+            return (AssetUseState[])ActiveRecordBase.FindAll(typeof(AssetUseState));
+        }
     }
 }

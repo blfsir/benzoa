@@ -11,6 +11,7 @@ using System.Web.UI.WebControls.WebParts;
   
 using UDS.Components;
 using System.Data.SqlClient;
+using BLL;
 
 
 namespace UDS.SubModule.UnitiveDocument
@@ -78,9 +79,9 @@ namespace UDS.SubModule.UnitiveDocument
                     DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
                     //AddBlankRowInDataTable(5, ref dt);
                     //DataView dv = new DataView(dt);
-                    if (dt.Rows.Count < 8)
+                    if (dt.Rows.Count < 5)
                     {
-                        int tmp = 8 - dt.Rows.Count;
+                        int tmp = 5 - dt.Rows.Count;
                         for (int i = 0; i < tmp; i++)
                         {
                             DataRow myDataRow = dt.NewRow();
@@ -112,9 +113,9 @@ namespace UDS.SubModule.UnitiveDocument
                 DataColumn dc2 = new DataColumn("Flow_Name");
                 dt.Columns.Add(dc1);
                 dt.Columns.Add(dc2);
-                if (dt.Rows.Count < 8)
+                if (dt.Rows.Count < 5)
                 {
-                    int tmp = 8 - dt.Rows.Count;
+                    int tmp = 5 - dt.Rows.Count;
                     for (int i = 0; i < tmp; i++)
                     {
                         DataRow myDataRow = dt.NewRow();
@@ -732,6 +733,30 @@ namespace UDS.SubModule.UnitiveDocument
                  
         }
 
+ 
+
+        protected void imgSaveNote_Click(object sender, ImageClickEventArgs e)
+        {
+            string strContents = this.txtContents.Text;
+
+            //获取登录用户ID
+            string strUserid = Server.UrlDecode(Request.Cookies["UserID"].Value);
+
+          
+                object[] Params = new object[] { null, strContents, strUserid };
+
+                string strReturn = NoteObject.InsertNote(Params);
+
+                if (strReturn == "0")
+                {
+                    Page.RegisterStartupScript("", "<script>alert('添加失败！');</script>");
+                }
+                else
+                {
+                    Page.RegisterStartupScript("", "<script>alert('添加成功！');</script>");
+                }
+             
+        }
    
 
     

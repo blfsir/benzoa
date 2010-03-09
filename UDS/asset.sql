@@ -1,3 +1,13 @@
+
+insert into uds_class values('设备管理','设备管理',60,371,'admin',getdate(),0)
+
+update uds_class set classparentid=(select classid from uds_class where classname='设备管理') where classname='设备管理'
+
+insert into uds_proc_type values(1,60)
+
+go
+
+
 create table uds_asset
 (
 	ID											int	identity(1,1)	not null,					--ID(自增ID)

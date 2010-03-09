@@ -12,7 +12,7 @@ using Castle.ActiveRecord;
 
 namespace ActiveRecord.Model
 {
-        [ActiveRecord("[uds_staff]")]
+    [ActiveRecord("[AssetCurrentLocation]")]
    public  class AssetCurrentLocation : ActiveRecordBase
     {
 
@@ -33,12 +33,15 @@ namespace ActiveRecord.Model
             set { id = value; }
         }
 
+        [Property]
         public string AssetCurrentLocationName
         {
             get { return name; }
             set { name = value; }
         }
 
+
+        [Property]
         public string AssetCurrentLocationRemark
         {
             get { return remark; }
@@ -50,5 +53,12 @@ namespace ActiveRecord.Model
         {
             return (AssetCurrentLocation)ActiveRecordBase.FindByPrimaryKey(typeof(AssetCurrentLocation), id);
         }
+
+        public static AssetCurrentLocation[] FindAll()
+        {
+            return (AssetCurrentLocation[])ActiveRecordBase.FindAll(typeof(AssetCurrentLocation));
+        }
+
+        
     }
 }

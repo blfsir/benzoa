@@ -294,6 +294,25 @@ namespace UDS.SubModule.AssginRule
                 case "55":
                     rtnValue += "myDoc.gif";
                     break;
+
+                case "52":
+                    rtnValue += "t1.jpg";
+                    break;
+                case "57": //办公环境监控
+                    rtnValue += "t2.jpg";
+                    break;
+
+                case "58": //计划总结
+                    rtnValue += "t3.jpg";
+                    break;
+
+                case "59": //资源预定
+                    rtnValue += "t4.jpg";
+                    break;
+
+                case "60": //设备管理
+                    rtnValue += "t5.jpg";
+                    break;
 				default: 
 					rtnValue+= "red_ball.gif";
 					break;
