@@ -170,6 +170,8 @@ return true;
                             <td align="right">
                                 <input class="redbuttoncss" style="width: 81px" onclick="location.href='NewDiary.aspx?ReturnPage=1';"
                                     type="button" value="新增日记">
+                                    							<asp:Button id="btnDelete" runat="server" 
+                                    CssClass="redbuttoncss" Text="删除" onclick="btnDelete_Click1"></asp:Button>
                                 <%--<asp:button id="btnAdd" runat="server" Text="新增日记" CssClass="redbuttoncss" 
                                             onclick="btnAdd_Click1"></asp:button>
 										<asp:Button id="btnDelete" runat="server" CssClass="redbuttoncss" Text="删除"></asp:Button>
@@ -250,14 +252,14 @@ return true;
                                 <HeaderStyle HorizontalAlign="Center"></HeaderStyle>
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
                             </asp:BoundColumn>
-                            <%--<asp:TemplateColumn HeaderText="编辑">
+                       <asp:TemplateColumn HeaderText="编辑">
 										<HeaderStyle Width="5%"></HeaderStyle>
 										<ItemTemplate>
-											<a href='NewNote.aspx?ID=<%# DataBinder.Eval(Container.DataItem, "ID")%>' target="_self">编辑</a>
+											<a href='NewDiary.aspx?ID=<%# DataBinder.Eval(Container.DataItem, "ID")%>' target="_self">编辑</a>
 										</ItemTemplate>
 										<HeaderStyle HorizontalAlign="Center" ></HeaderStyle>
 										<ItemStyle HorizontalAlign="Center"></ItemStyle>
-									</asp:TemplateColumn>--%>
+									</asp:TemplateColumn> 
                         </Columns>
                         <PagerStyle Font-Size="X-Small" HorizontalAlign="left" BackColor="#E8F4FF" Mode="NumericPages">
                         </PagerStyle>

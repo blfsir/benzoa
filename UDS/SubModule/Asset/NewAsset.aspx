@@ -36,17 +36,7 @@
 		
 
 
-
-原使用人部门
-现使用人
-现使用人部门
-现存放地点
-现使用状况
-采购申请人
-采购日期
-变动日期
-保修期限
-附件
+ 
 
 
     </script>
@@ -88,8 +78,9 @@
                     规格及型号:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox1" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                    &nbsp;<asp:DropDownList ID="DropDownList1" runat="server">
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
                             runat="server" ErrorMessage="请输入规格及型号" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
                                 ID="Literal1" runat="server" EnableViewState="False"></asp:Literal>
                 </td>
@@ -155,8 +146,9 @@
                     现存放地点:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox7" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator8"
+                    &nbsp;<asp:DropDownList ID="DropDownList2" runat="server">
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8"
                             runat="server" ErrorMessage="请输入现存放地点" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
                                 ID="Literal7" runat="server" EnableViewState="False"></asp:Literal>
                 </td>
@@ -166,8 +158,9 @@
                     现使用状况:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox8" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator9"
+                    &nbsp;<asp:DropDownList ID="DropDownList3" runat="server">
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9"
                             runat="server" ErrorMessage="请输入现使用状况" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
                                 ID="Literal8" runat="server" EnableViewState="False"></asp:Literal>
                 </td>

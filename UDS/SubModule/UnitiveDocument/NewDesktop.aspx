@@ -171,18 +171,10 @@ function divChangbgColor(obj)
                             <div id="BianQianLayer">
                                 <div style="border-top: solid 1 #dddddd; padding-top: 2px; border-left: solid 1 #dddddd;
                                     border-right: solid 1 #dddddd; height: 20px;" align="right">
-                                    <span onclick="divChangbgColor(this)" style="cursor: hand; background: fff8f8; width: ;
-                                        border: solid 1 #dddddd; width: 13; font-size: 10px; margin-right: 2px"></span>
-                                    <span onclick="divChangbgColor(this)" style="cursor: hand; background: f2f2ff; width: ;
-                                        border: solid 1 #dddddd; width: 13; font-size: 10px; margin-right: 2px"></span>
-                                    <span onclick="divChangbgColor(this)" style="cursor: hand; background: f7fff0; width: ;
-                                        border: solid 1 #dddddd; width: 13; font-size: 10px; margin-right: 2px"></span>
-                                    <span onclick="divChangbgColor(this)" style="cursor: hand; background: ffffcc; width: ;
-                                        border: solid 1 #dddddd; width: 13; font-size: 10px; margin-right: 2px"></span>
-                                    &nbsp;<%--<span onclick="hideDiv()" style="cursor: hand; text-decoration: underline;
-                                        font-size: 9pt">--%><asp:ImageButton ID="imgSaveNote" runat="server" ImageUrl="../../images/ico_24.gif"
-                                            OnClick="imgSaveNote_Click" OnClientClick="hideDiv()" />&nbsp;<%--</span>--%>
-                                    <%--<span onClick="BianQianLayer.style.display='none'" style="cursor:hand; text-decoration:underline; font-size:9pt"><img src="images/ico_87.gif" align="absmiddle"></span>&nbsp;--%>
+                                     <span onClick="divChangbgColor(this)" style="cursor:hand;background:fff8f8;width:30px;border:solid 1 #dddddd;width:30px;font-size:10px; margin-right:2px"></span>
+ 
+                               <asp:ImageButton ID="imgSaveNote" runat="server" ImageUrl="../../images/ico_24.gif"
+                                            OnClick="imgSaveNote_Click" OnClientClick="hideDiv()" />&nbsp;  
                                 </div>
                                 <div id="BianQianText" contenteditable style="word-break: break-all; border-bottom: solid 1 #dddddd;
                                     border-left: solid 1 #dddddd; border-right: solid 1 #dddddd; height: 130px; color: #999999;

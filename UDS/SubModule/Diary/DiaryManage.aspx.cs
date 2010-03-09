@@ -57,8 +57,7 @@ namespace UDS.SubModule.Diary
                 this.tr_Tj.Visible = true;
                // this.btnAdd.Visible = false;
                 
-
-               // this.dbDiaryList.Columns[3].Visible = false;
+                 this.dbDiaryList.Columns[4].Visible = false;
             }
 
             if (!Page.IsPostBack)
@@ -71,6 +70,8 @@ namespace UDS.SubModule.Diary
 
                 BindStaff();
             }
+            btnDelete.Attributes.Add("OnClick", "return confirm('确认删除？');");
+
         }
 
         private void BindStaff()
@@ -219,7 +220,7 @@ namespace UDS.SubModule.Diary
 
             this.dbDiaryList.DataSource = dt;//.DefaultView;
             this.dbDiaryList.DataBind();
-
+            this.dbDiaryList.Columns[4].Visible = false;
             LabelPageInfo.Text = "当前（第" + (dbDiaryList.CurrentPageIndex + 1).ToString() + "页 共" + dbDiaryList.PageCount.ToString() + "页）";
         }
  
@@ -238,6 +239,37 @@ namespace UDS.SubModule.Diary
         {
             this.txtIsSearch.Text = "1";
             SearchBindGrid();
+        }
+
+    
+        protected void btnDelete_Click1(object sender, EventArgs e)
+        {
+            string strNoteID = this.GetSelectedItemID("chkNote_ID");
+            if (strNoteID != "")
+            {
+                object[] Params = null;// new object[] { null, strContents, strUserid };
+                string[] strNoteIDs = strNoteID.Split(',');
+
+                for (int i = 0; i < strNoteIDs.Length; i++)
+                {
+                    string strID = strNoteIDs[i];
+                    Params = new object[] { null, strID };
+                    DiaryObject.DeleteDiary(Params);
+                }
+
+                if (this.txtIsSearch.Text == "0")
+                {
+                    BindGrid();
+                }
+                else
+                {
+                    SearchBindGrid();
+                }
+            }
+            else
+            {
+                Page.RegisterStartupScript("", "<script>alert('请选择要删除的便签！');</script>");
+            }
         }
 
         

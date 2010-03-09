@@ -8,10 +8,10 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-  
-using System.Data.SqlClient; 
+
+using System.Data.SqlClient;
 using UDS.Components;
- 
+
 
 namespace UDS.SubModule.Diary
 {
@@ -30,16 +30,9 @@ namespace UDS.SubModule.Diary
                 {
                     ActiveRecord.Model.Diary diary = new ActiveRecord.Model.Diary();
                     diary = ActiveRecord.Model.Diary.Find(int.Parse(Request.QueryString["ID"]));
-                    this.FCKeditor2.Visible = false;
-                     
-                    txtContents.Visible = true;
-                    txtContents.Text = diary.Contents;
+                    FCKeditor2.Value = diary.Contents;
                 }
-                else
-                {
-                    FCKeditor2.Visible = true;
-                    txtContents.Visible = false;
-                }
+                
             }
 
             if (Request.QueryString["ReturnPage"] != null)
@@ -115,10 +108,19 @@ namespace UDS.SubModule.Diary
             diary.UserID = int.Parse(strUserid);
             diary.UserName = username;
             diary.SubmitDate = DateTime.Now;
-            diary.Save();
-
-         //   Page.RegisterStartupScript("", "<script>setFCKeditorReadOnly(FCKeditor2); </script>");
-            Page.RegisterStartupScript("", "<script>alert('添加成功！');location.href='DiaryManage.aspx?DisplayType=0';</script>");
+            if (Request.QueryString["ID"] != null)
+            {
+                diary.ID = int.Parse(Request.QueryString["ID"].ToString());
+                diary.Update();
+                Page.RegisterStartupScript("", "<script>alert('更新成功！');location.href='DiaryManage.aspx?DisplayType=0';</script>");
+            }
+            else
+            {
+                diary.Save();
+                Page.RegisterStartupScript("", "<script>alert('添加成功！');location.href='DiaryManage.aspx?DisplayType=0';</script>");
+            }
+            //   Page.RegisterStartupScript("", "<script>setFCKeditorReadOnly(FCKeditor2); </script>");
+           
         }
     }
 }

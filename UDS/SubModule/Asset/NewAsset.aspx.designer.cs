@@ -59,13 +59,13 @@ namespace UDS.SubModule.Asset {
         protected global::System.Web.UI.WebControls.Literal message;
         
         /// <summary>
-        /// TextBox1 control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -221,13 +221,13 @@ namespace UDS.SubModule.Asset {
         protected global::System.Web.UI.WebControls.Literal Literal6;
         
         /// <summary>
-        /// TextBox7 control.
+        /// DropDownList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
         
         /// <summary>
         /// RequiredFieldValidator8 control.
@@ -248,13 +248,13 @@ namespace UDS.SubModule.Asset {
         protected global::System.Web.UI.WebControls.Literal Literal7;
         
         /// <summary>
-        /// TextBox8 control.
+        /// DropDownList3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
         
         /// <summary>
         /// RequiredFieldValidator9 control.

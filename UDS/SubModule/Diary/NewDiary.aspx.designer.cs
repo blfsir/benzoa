@@ -32,15 +32,6 @@ namespace UDS.SubModule.Diary {
         protected global::System.Web.UI.HtmlControls.HtmlTable AutoNumber1;
         
         /// <summary>
-        /// txtContents control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContents;
-        
-        /// <summary>
         /// FCKeditor2 control.
         /// </summary>
         /// <remarks>
