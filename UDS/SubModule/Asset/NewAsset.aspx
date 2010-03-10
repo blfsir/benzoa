@@ -1,9 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewAsset.aspx.cs" Inherits="UDS.SubModule.Asset.NewAsset" %>
 
-
-
-
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <html>
 <head>
@@ -66,153 +62,123 @@
                     资产名称:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="txtStaffName" CssClass="InputCss" runat="server" Columns="70"
+                    &nbsp;<asp:TextBox ID="txtName" CssClass="InputCss" runat="server" Columns="70"
                         Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1"
-                            runat="server" ErrorMessage="请输入姓名" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
+                            runat="server" ErrorMessage="请输入名称" ControlToValidate="txtName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
                                 ID="message" runat="server" EnableViewState="False"></asp:Literal>
                 </td>
             </tr>
-             
-             
-             <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     规格及型号:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:DropDownList ID="DropDownList1" runat="server">
+                    &nbsp;<asp:DropDownList ID="ddlType" runat="server">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
-                            runat="server" ErrorMessage="请输入规格及型号" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal1" runat="server" EnableViewState="False"></asp:Literal>
+                    
                 </td>
             </tr>
-            
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     数量:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox2" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3"
-                            runat="server" ErrorMessage="请输入数量" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal2" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:TextBox ID="txtNumber" CssClass="InputCss" runat="server" Columns="70"
+                        Width="382"></asp:TextBox>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     原使用人:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox3" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4"
-                            runat="server" ErrorMessage="请输入原使用人" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal3" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:DropDownList ID="ddlOriginalUser" runat="server">
+                    </asp:DropDownList>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     原使用人部门:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox4" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator5"
-                            runat="server" ErrorMessage="请输入原使用人部门" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal4" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:DropDownList ID="ddlOriginalDept" runat="server">
+                    </asp:DropDownList>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     现使用人:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox5" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6"
-                            runat="server" ErrorMessage="请输入现使用人" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal5" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:DropDownList ID="ddlCurrentUser" runat="server">
+                    </asp:DropDownList>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     现使用人部门:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox6" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator7"
-                            runat="server" ErrorMessage="请输入现使用人部门" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal6" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:DropDownList ID="ddlCurrentDept" runat="server">
+                    </asp:DropDownList>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     现存放地点:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:DropDownList ID="DropDownList2" runat="server">
+                    &nbsp;<asp:DropDownList ID="ddlLocation" runat="server">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8"
-                            runat="server" ErrorMessage="请输入现存放地点" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal7" runat="server" EnableViewState="False"></asp:Literal>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     现使用状况:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:DropDownList ID="DropDownList3" runat="server">
+                    &nbsp;<asp:DropDownList ID="ddlUseState" runat="server">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9"
-                            runat="server" ErrorMessage="请输入现使用状况" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal8" runat="server" EnableViewState="False"></asp:Literal>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     采购申请人:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox9" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator10"
-                            runat="server" ErrorMessage="请输入姓名采购申请人" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal9" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:DropDownList ID="ddlBuyUser" runat="server">
+                    </asp:DropDownList>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     采购日期:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox10" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator11"
-                            runat="server" ErrorMessage="请输入采购日期" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal10" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:TextBox ID="txtBuyDate" CssClass="InputCss" runat="server" Columns="70"
+                        Width="382"></asp:TextBox>
                 </td>
             </tr>
-            
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     变动日期:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox11" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator12"
-                            runat="server" ErrorMessage="请输入变动日期" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal11" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:TextBox ID="txtMoveDate" CssClass="InputCss" runat="server" Columns="70"
+                        Width="382"></asp:TextBox>
                 </td>
             </tr>
-            
-             
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     保修期限:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="TextBox12" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator13"
-                            runat="server" ErrorMessage="请输入保修期限" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="Literal12" runat="server" EnableViewState="False"></asp:Literal>
+                    &nbsp;<asp:TextBox ID="txtWarrantyPeriod" CssClass="InputCss" runat="server" Columns="70"
+                        Width="382"></asp:TextBox>
                 </td>
             </tr>
-            
-             
-            <tr bgcolor="#e8f4ff"><td style="height: 34px" align="right" width="20%" height="34">
+            <%--<tr bgcolor="#e8f4ff">
+                <td style="height: 34px" align="right" width="20%" height="34">
                     附件:
                 </td>
                 <td style="height: 34px" height="34">
@@ -221,13 +187,13 @@
                             runat="server" ErrorMessage="请输入附件" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
                                 ID="Literal13" runat="server" EnableViewState="False"></asp:Literal>
                 </td>
-            </tr>
-             
+            </tr>--%>
             <tr>
                 <td align="center" colspan="2" height="35">
                     <font face="宋体">
-                        <asp:Button ID="cmdSubmit" runat="server" CssClass="redButtonCss" Width="60px" Text="确定"
-                            Height="20px"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="cmdSubmit" runat="server" CssClass="redButtonCss" 
+                        Width="60px" Text="确定"
+                            Height="20px" onclick="cmdSubmit_Click"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class="redButtonCss" style="width: 60px; height: 20px" onclick="ReturnBack(<%=ReturnPage%>)"
                             type="button" value="返 回" name="cmdReturn">
                     </font>
