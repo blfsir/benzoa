@@ -37,10 +37,9 @@ namespace UDS.SubModule.Asset
             this.ddlLocation.DataSource = dt;
             this.ddlLocation.DataBind();
 
-            //state
-            AssetUseState at = new AssetUseState();
-            AssetUseState[] atArrary = AssetUseState.FindAll();
-            DataTable dt1 = Converter.ConvertToDataTable(atArrary);
+            //state 
+            AssetUseState[] auArrary = AssetUseState.FindAll();
+            DataTable dt1 = Converter.ConvertToDataTable(auArrary);
             dt.Columns[0].ColumnName = "ID";
             dt.Columns[1].ColumnName = "Name";
             ddlUseState.DataTextField = "Name";
@@ -49,15 +48,14 @@ namespace UDS.SubModule.Asset
             this.ddlUseState.DataBind();
 
 
-            //type
-            AssetType at = new AssetType();
-            AssetType[] atArrary = AssetType.FindAll();
-            DataTable dt = Converter.ConvertToDataTable(atArrary);
+            //type 
+            AssetType[] attArrary = AssetType.FindAll();
+            DataTable dt2 = Converter.ConvertToDataTable(attArrary);
             dt.Columns[0].ColumnName = "ID";
             dt.Columns[1].ColumnName = "Name";
             ddlType.DataTextField = "Name";
             this.ddlType.DataValueField = "ID";
-            this.ddlType.DataSource = dt1;
+            this.ddlType.DataSource = dt2;
             this.ddlType.DataBind();
             
 
