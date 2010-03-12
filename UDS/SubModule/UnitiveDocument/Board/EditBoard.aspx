@@ -173,9 +173,9 @@
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <asp:Button ID="cmdOK" runat="server" Width="60px" CssClass="buttoncss" Text="确定"
+                <asp:Button ID="cmdOK" runat="server" Width="60px" CssClass="redbuttoncss" Text="确定"
                     OnClick="cmdOK_Click"></asp:Button><font face="宋体">&nbsp; </font>
-                <input class="buttoncss" style="width: 60px" onclick="javascript:location.href='BoardManagement.aspx'"
+                <input class="redbuttoncss" style="width: 60px" onclick="javascript:location.href='BoardManagement.aspx'"
                     type="button" value="返回">
             </td>
         </tr>

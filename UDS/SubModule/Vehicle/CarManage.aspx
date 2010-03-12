@@ -68,7 +68,7 @@
 		</script>
 		<LINK href="../../Css/BasicLayout.css" type="text/css" rel="stylesheet">
 	</HEAD>
-	<body MS_POSITIONING="GridLayout" leftmargin="0" topmargin="0">
+	<%--<body MS_POSITIONING="GridLayout" leftmargin="0" topmargin="0">
 		<form id="CarManage" method="post" runat="server">
 			<FONT face="宋体">
 				<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
@@ -144,5 +144,82 @@
 				</TABLE>
 			</FONT>
 		</form>
-	</body>
+	</body>--%>
+	<body leftmargin="0" topmargin="0">
+    <form id="Listview" method="post" runat="server">
+    <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr height="30">
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="60"
+                align="center">
+                <font color="#006699">车辆管理</font>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                <font face="宋体">
+                  <asp:button id="btnAdd" runat="server" Text="新增" Width="80px" CssClass="redbuttoncss"></asp:button>
+										<asp:Button id="btnDelete" Width="80px"  runat="server" CssClass="redbuttoncss" Text="删除"></asp:Button>&nbsp;</font>
+            </td>
+        </tr>
+    </table>
+    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" id="Table1">
+        <tr>
+            <td>
+                <table class="gbtext" id="Table2" cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tr>
+                        <td height="10" colspan="3" align="center">
+                        </td>
+                    </tr>
+                   
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="line-height: 20px;">
+                <asp:datagrid id="dbCarList" runat="server" OnPageIndexChanged="DataGrid_PageChanged" BorderColor="#93BEE2"
+								BorderStyle="None" BorderWidth="1px" BackColor="White" CellPadding="3" PageSize="15" AllowPaging="True"
+								AutoGenerateColumns="False" DataKeyField="ID" Width="100%">
+								<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+								<AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
+								<ItemStyle Font-Size="X-Small"></ItemStyle>
+								<HeaderStyle Font-Size="X-Small" Font-Bold="True" ForeColor="White" BackColor="#337FB2"></HeaderStyle>
+								<FooterStyle Font-Size="X-Small" HorizontalAlign="Right" BackColor="#E8F4FF"></FooterStyle>
+								<Columns>
+									<asp:TemplateColumn HeaderText="ID">
+										<HeaderStyle Width="5%"></HeaderStyle>
+										<ItemTemplate>
+											<asp:CheckBox id="chkID" runat="server"></asp:CheckBox>
+										</ItemTemplate>
+									</asp:TemplateColumn>
+									
+									<asp:BoundColumn DataField="CarType" HeaderText="车型" HeaderStyle-HorizontalAlign=Center>
+										<HeaderStyle Width="25%"></HeaderStyle>
+									</asp:BoundColumn>
+									<asp:BoundColumn DataField="CarNum" HeaderText="车号" HeaderStyle-HorizontalAlign=Center>
+										<HeaderStyle Width="25%"></HeaderStyle>
+									</asp:BoundColumn>
+									<asp:BoundColumn DataField="Memo" HeaderText="备注" HeaderStyle-HorizontalAlign=Center>
+										<HeaderStyle Width="40%"></HeaderStyle>
+									</asp:BoundColumn>
+									
+									<asp:TemplateColumn HeaderText="编辑">
+										<HeaderStyle Width="5%"></HeaderStyle>
+										<ItemTemplate>
+											<a href='NewCar.aspx?ID=<%# DataBinder.Eval(Container.DataItem, "ID")%>' target="_self">编辑</a>
+										</ItemTemplate>
+										<HeaderStyle HorizontalAlign="Center" ></HeaderStyle>
+										<ItemStyle HorizontalAlign="Center"></ItemStyle>
+									</asp:TemplateColumn>
+								</Columns>
+								<PagerStyle Font-Size="X-Small" HorizontalAlign="left" BackColor="#E8F4FF" Mode="NumericPages"></PagerStyle>
+							</asp:datagrid>
+							<asp:Label runat="server" ID="LabelPageInfo" Font-Size=X-Small></asp:Label>
+            </td>
+        </tr>
+       </table>
+    </form>
+</body>
 </HTML>

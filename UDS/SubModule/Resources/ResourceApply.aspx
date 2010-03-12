@@ -11,7 +11,7 @@
 		 
 		<LINK href="../../Css/BasicLayout.css" type="text/css" rel="stylesheet">
 	</HEAD>
-	<body MS_POSITIONING="GridLayout" leftmargin="0" topmargin="0">
+	<%--<body MS_POSITIONING="GridLayout" leftmargin="0" topmargin="0">
 		<form id="ManageStaff" method="post" runat="server">
 			<FONT face="宋体">
 				<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
@@ -58,5 +58,46 @@
 				</TABLE>
 			</FONT>
 		</form>
-	</body>
+	</body>--%>
+	<body leftmargin="0" topmargin="0">
+    <form id="Listview" method="post" runat="server">
+    <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr height="30">
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="60"
+                align="center">
+                <font color="#006699">资源预定</font>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                <font face="宋体">
+                  <input type="button" class="redButtonCss" value="会议室申请" onclick="javacript:location.href='../Meeting/ApplyMeeting.aspx'" />
+                  <input type="button" class="redButtonCss" value="车辆申请" onclick="javacript:location.href='../Vehicle/ApplyVehicle.aspx'" />&nbsp;</font>
+            </td>
+        </tr>
+    </table>
+    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" id="Table1">
+        <tr>
+            <td>
+                <table class="gbtext" id="Table2" cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tr>
+                        <td height="10" colspan="3" align="center">
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="line-height: 20px;">
+                
+            </td>
+        </tr>
+       </table>
+    </form>
+</body>
+
 </HTML>
