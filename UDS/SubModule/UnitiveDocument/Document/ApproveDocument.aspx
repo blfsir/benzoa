@@ -77,9 +77,9 @@
 					<TD style="FONT-SIZE: 8pt" vAlign="center" align="middle">
 						<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							<TR>
-								<TD style="HEIGHT: 28px" align="right"><FONT face="宋体">
+								<TD style="HEIGHT: 28px" align="center"><FONT face="宋体">
 										<asp:Button id="btnApprove" runat="server" Text="审批" CssClass="buttoncss" Width="60px"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><input type="button" value=" 返  回 " onclick="history.go(-1)" class="buttoncss"></TD>
-								<TD style="HEIGHT: 28px" align="right"><IMG height="25" src="../../../images/endbott.gif" width="279"></TD>
+								<TD style="HEIGHT: 28px" align="right">&nbsp;</TD>
 							</TR>
 						</table>
 					</TD>

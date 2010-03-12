@@ -91,7 +91,7 @@
 	<body MS_POSITIONING="GridLayout">
 		<form id="Form1" method="post" runat="server">
 			<FONT face="宋体">
-				<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<table cellSpacing="0" cellPadding="5" width="100%" border="0">
 					<tr>
 						<td colSpan="2">
 							<table cellSpacing="0" cellPadding="0" width="500" border="0">
@@ -167,13 +167,13 @@
 							</asp:datagrid></td>
 					</tr>
 					<tr>
-						<td vAlign="top">&nbsp;<font size="X-Small"><A onclick="selectAll()" href="#"><FONT size="2">全部选择</FONT></A>
-								&nbsp; <A onclick="unSelectAll()" href="#"><FONT size="2">全部取消</FONT></A>&nbsp;</font>&nbsp;&nbsp;
+						<td vAlign="top">&nbsp;<font size="X-Small"><A onClick="selectAll()" href="#"><FONT size="2">全部选择</FONT></A>
+								&nbsp; <A onClick="unSelectAll()" href="#"><FONT size="2">全部取消</FONT></A>&nbsp;</font>&nbsp;&nbsp;
 							<asp:linkbutton id="lnkbtnDelete" runat="server" Font-Size="X-Small" 
                                 CausesValidation="False" onclick="lnkbtnDelete_Click">丢弃</asp:linkbutton>&nbsp;&nbsp;&nbsp;
-							<FONT size="2"><A onclick="MoveToTeam()" href="#">
+							<FONT size="2"><A onClick="MoveToTeam()" href="#">
 									<asp:label id="lblRemove" runat="server" Font-Size="X-Small"> 目录移动</asp:label></A><FONT size="3">&nbsp;
-									<A onclick="CopyToTeam()" href="#">
+									<A onClick="CopyToTeam()" href="#">
 										<asp:Label id="lblCopy" runat="server">目录复制</asp:Label></A>&nbsp;&nbsp;&nbsp;
 								</FONT><A href="../Switch.aspx?ClassID=<%=ClassID%>&amp;Action=0" >
 									<asp:label id="lblDeliveryDoc" runat="server" Font-Size="X-Small">投递文档</asp:label></A><FONT size="3">&nbsp;
@@ -192,7 +192,7 @@
 				<tr>
 				<td>&nbsp;</td></tr>
 				<tr>
-				<td><input type="button" value="返回" onclick="javascript:history.go(-1)" class="redButtonCss"></td>
+				<td><input type="button" value="返回" onClick="javascript:history.go(-1)" class="redButtonCss"></td>
 				</tr>
 				<tr>
 				<td>
