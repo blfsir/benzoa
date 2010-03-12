@@ -10,6 +10,14 @@
     <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 
     <script language="javascript">
+			function delete_confirm(e) {
+				if (event.srcElement.outerText == "删除")
+				event.returnValue =confirm("您确认要删除?");
+			}
+			document.onclick=delete_confirm;		
+    </script>
+
+    <script language="javascript">
 			
 		var ball1 = new Image();
 		var ball2 = new Image();
@@ -90,13 +98,15 @@
                                 </td>
                                 <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right"
                                     width="85%">
-                                    <asp:Button ID="cmdNewStaff" runat="server" Text="新增IT设备" CssClass="redbuttoncss">
-                                    </asp:Button>
-                               
-                                    <input type="button" value="规格型号设置" class="redbuttoncss" style="width: 80px;" onclick="javacript:location.href='AssetTypeManage.aspx'" />
+                                    <input type="button" value="新增IT设备" class="redbuttoncss" style="width: 80px;" onclick="javacript:location.href='NewAsset.aspx'" />
+                                    <input type="button" value="查询设备" class="redbuttoncss" style="width: 80px;" onclick="javacript:location.href='AssetSearch.aspx'" />
+                                    <asp:button id="btnMove" runat="server" Text="设备转移" CssClass="redbuttoncss" 
+                                        style="width: 80px;" onclick="btnMove_Click" ></asp:button>
+                                    &nbsp;<input type="button" value="规格型号设置" class="redbuttoncss" style="width: 80px;"
+                                        onclick="javacript:location.href='AssetTypeManage.aspx'" />
                                     <input type="button" value="使用状态设置" class="redbuttoncss" style="width: 80px;" onclick="javacript:location.href='AssetStateManage.aspx'" />
                                     <input type="button" value="存放位置设置" class="redbuttoncss" style="width: 80px;" onclick="javacript:location.href='AssetLocationManage.aspx'" />
-                                    
+                                    &nbsp;
                                 </td>
                 </td>
             </tr>
@@ -104,10 +114,12 @@
         </TD></TR>
         <tr>
             <td>
-                <asp:DataGrid ID="dbStaffList" runat="server"  
-                    BorderColor="#93BEE2" BorderStyle="None" BorderWidth="1px" BackColor="White"
-                    CellPadding="3" PageSize="15" AllowPaging="True" AutoGenerateColumns="False"
-                    DataKeyField="Staff_ID" Width="100%" AllowSorting="True" >
+             
+                <asp:DataGrid ID="dgAssetList" runat="server" BorderColor="#93BEE2" BorderStyle="None"
+                    BorderWidth="1px" BackColor="White" CellPadding="3" PageSize="15" AllowPaging="True"
+                    AutoGenerateColumns="False" DataKeyField="ID" Width="100%" AllowSorting="True"
+                    OnDeleteCommand="dgAssetList_DeleteCommand" OnPageIndexChanged="dgAssetList_PageIndexChanged"
+                    OnSelectedIndexChanged="dgAssetList_SelectedIndexChanged">
                     <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
                     <AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
                     <ItemStyle Font-Size="X-Small" Wrap="false"></ItemStyle>
@@ -121,30 +133,36 @@
                                 <asp:CheckBox ID="chkStaff_ID" runat="server"></asp:CheckBox>
                             </ItemTemplate>
                         </asp:TemplateColumn>
-                        <asp:HyperLinkColumn Text="资产名称" DataNavigateUrlField="staff_id" DataNavigateUrlFormatString="NewAssetType.aspx?AssetID={0}"
-                            DataTextField="RealName" HeaderText="资产名称" SortExpression="RealName">
+                        <asp:HyperLinkColumn Text="资产名称" DataNavigateUrlField="ID" DataNavigateUrlFormatString="NewAsset.aspx?AssetID={0}"
+                            DataTextField="AssetName" HeaderText="资产名称" SortExpression="AssetName">
                             <HeaderStyle Wrap="false"></HeaderStyle>
                             <ItemStyle Wrap="false" />
                         </asp:HyperLinkColumn>
-                        <asp:BoundColumn DataField="Mobile" SortExpression="Mobile" HeaderText="规格及型号">
+                        <asp:BoundColumn DataField="AssetTypeID" SortExpression="AssetTypeID" HeaderText="规格及型号">
                             <HeaderStyle Wrap="false"></HeaderStyle>
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="Age" SortExpression="Age" HeaderText="数量">
+                        <asp:BoundColumn DataField="AssetNumber" SortExpression="AssetNumber" HeaderText="数量">
                             <HeaderStyle HorizontalAlign="Center" Wrap="false"></HeaderStyle>
                             <ItemStyle HorizontalAlign="Center" Wrap="false"></ItemStyle>
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="SexName" SortExpression="SexName" HeaderText="原使用人">
+                        <asp:BoundColumn DataField="AssetPreviousUserID" SortExpression="AssetPreviousUserID"
+                            HeaderText="原使用人">
                             <HeaderStyle Wrap="false"></HeaderStyle>
                             <ItemStyle Wrap="false" />
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="Email" SortExpression="Email" HeaderText="现使用人">
+                        <asp:BoundColumn DataField="AssetCurrentUserID" SortExpression="AssetCurrentUserID"
+                            HeaderText="现使用人">
                             <HeaderStyle Width="100px"></HeaderStyle>
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="position_Name" SortExpression="position_Name" HeaderText="现使用状况
-">
+                        <asp:BoundColumn DataField="AssetCurrentUseState" SortExpression="AssetCurrentUseState"
+                            HeaderText="现使用状况">
                             <HeaderStyle Wrap="false"></HeaderStyle>
                             <ItemStyle Wrap="false" />
                         </asp:BoundColumn>
+                        <asp:ButtonColumn Text="删除" HeaderText="删除" CommandName="Delete">
+                            <HeaderStyle HorizontalAlign="Center" Width="5%"></HeaderStyle>
+                            <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                        </asp:ButtonColumn>
                     </Columns>
                     <PagerStyle Font-Size="X-Small" HorizontalAlign="left" BackColor="#E8F4FF" Mode="NumericPages">
                     </PagerStyle>

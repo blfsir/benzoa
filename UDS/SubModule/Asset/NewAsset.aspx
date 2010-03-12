@@ -19,27 +19,42 @@
             color: #0000ff;
         }
     </style>
-
+    
     <script language="javascript">
-		function ReturnBack(ReturnType)
-		{			
-			if(ReturnType==0)
-				location.href ="ListView.aspx?Position_ID=<%=PositionID%>";	
-			else
-				location.href ="../Staff/ManageStaff.aspx";			
-		}
-		
-		
+			function dialwinprocess(txtName)
+			{
+				var newdialoguewin = window.showModalDialog("../Position/SelectStaff.aspx?txtName="+txtName,window,"dialogWidth:600px;DialogHeight=490px;status:no");
+				if(newdialoguewin!=null){
+					if(newdialoguewin.length>5)
+					{
+						ReceiverTypeArray = newdialoguewin.split("|");
+						SendToArray = ReceiverTypeArray[0].split("-");
+						MobileSendToArray = ReceiverTypeArray[1].split("-");
+						try{
+							this.document.MsgSend.txtSendTo.value = SendToArray[0];
+							//this.document.MsgSend.txtMobileSendTo.value = MobileSendToArray[0];
+						}
+						catch(e){}
+						
+						
+					}
+				}
+			}
+			
+			function SendMsg()
+			{
+				if(event.keyCode==10)
+				{
+					document.MsgSend.btnSend.click();
+				}
+			}
+		</script>
 
-
- 
-
-
-    </script>
+  
 
 </head>
 <body leftmargin="0" topmargin="0">
-    <form id="NewStaff" method="post" runat="server">
+    <form id="MsgSend"  method="post" runat="server">
     <center>
         <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
             width="100%" border="0">
@@ -57,7 +72,7 @@
         </table>
         <table class="gbtext" id="AutoNumber1" style="border-collapse: collapse" bordercolor="#93bee2"
             cellspacing="0" cellpadding="0" width="100%" border="1" runat="server">
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     资产名称:
                 </td>
@@ -65,10 +80,10 @@
                     &nbsp;<asp:TextBox ID="txtName" CssClass="InputCss" runat="server" Columns="70"
                         Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1"
                             runat="server" ErrorMessage="请输入名称" ControlToValidate="txtName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="message" runat="server" EnableViewState="False"></asp:Literal>
+                                ID="message" runat="server" EnableViewState="False"></asp:Literal><asp:TextBox ID="lblAssetID" runat="server" Width="0px"></asp:TextBox>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     规格及型号:
                 </td>
@@ -78,7 +93,7 @@
                     
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     数量:
                 </td>
@@ -87,16 +102,17 @@
                         Width="382"></asp:TextBox>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     原使用人:
                 </td>
                 <td style="height: 34px" height="34">
                     &nbsp;<asp:DropDownList ID="ddlOriginalUser" runat="server">
                     </asp:DropDownList>
+                      <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="" name="txtOriginalUser"><A onclick="dialwinprocess('txtOriginalUser')" href="#"><img src="../../DataImages/staff.gif" border="0"><FONT face="宋体">选择人员</FONT></A>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     原使用人部门:
                 </td>
@@ -105,16 +121,17 @@
                     </asp:DropDownList>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     现使用人:
                 </td>
                 <td style="height: 34px" height="34">
                     &nbsp;<asp:DropDownList ID="ddlCurrentUser" runat="server">
                     </asp:DropDownList>
+                      <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="" name="txtCurrentUser"><A onclick="dialwinprocess('txtCurrentUser')" href="#"><img src="../../DataImages/staff.gif" border="0"><FONT face="宋体">选择人员</FONT></A>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     现使用人部门:
                 </td>
@@ -123,7 +140,7 @@
                     </asp:DropDownList>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     现存放地点:
                 </td>
@@ -132,7 +149,7 @@
                     </asp:DropDownList>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     现使用状况:
                 </td>
@@ -141,34 +158,35 @@
                     </asp:DropDownList>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     采购申请人:
                 </td>
                 <td style="height: 34px" height="34">
                     &nbsp;<asp:DropDownList ID="ddlBuyUser" runat="server">
                     </asp:DropDownList>
+                    <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="<%=SendToRealName%>" name="txtSendTo"><A onclick="dialwinprocess('txtSendTo')" href="#"><img src="../../DataImages/staff.gif" border="0"><FONT face="宋体">选择人员</FONT></A>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     采购日期:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="txtBuyDate" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox>
+                    &nbsp;<asp:TextBox ID="txtBuyDate" onfocus="setday(this)" CssClass="InputCss" runat="server"
+                        Columns="70" Width="382" ReadOnly="True"></asp:TextBox>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     变动日期:
                 </td>
                 <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="txtMoveDate" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox>
+                    &nbsp;<asp:TextBox ID="txtMoveDate" onfocus="setday(this)" CssClass="InputCss" runat="server"
+                        Columns="70" Width="382" ReadOnly="True"></asp:TextBox>
                 </td>
             </tr>
-            <tr bgcolor="#e8f4ff">
+            <tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     保修期限:
                 </td>
@@ -177,7 +195,7 @@
                         Width="382"></asp:TextBox>
                 </td>
             </tr>
-            <%--<tr bgcolor="#e8f4ff">
+            <%--<tr >
                 <td style="height: 34px" align="right" width="20%" height="34">
                     附件:
                 </td>
@@ -194,8 +212,8 @@
                         <asp:Button ID="cmdSubmit" runat="server" CssClass="redButtonCss" 
                         Width="60px" Text="确定"
                             Height="20px" onclick="cmdSubmit_Click"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="redButtonCss" style="width: 60px; height: 20px" onclick="ReturnBack(<%=ReturnPage%>)"
-                            type="button" value="返 回" name="cmdReturn">
+                        <input class="redButtonCss" style="width: 60px; height: 20px"  
+                            type="button" value="返 回" name="cmdReturn" onclick="javascript:location.href='AssetMange.aspx'">
                     </font>
                 </td>
             </tr>

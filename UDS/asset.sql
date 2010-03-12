@@ -7,11 +7,10 @@ insert into uds_proc_type values(1,60)
 
 go
 
-
 create table uds_asset
 (
 	ID											int	identity(1,1)	not null,					--ID(×ÔÔöID)
-	AssetCode						varchar(50) not null,
+	AssetCode						varchar(50)  null,
 	AssetName       				varchar(300) not null,
 	AssetTypeID     				int not null,
 	AssetNumber     				int null default(1),
@@ -23,11 +22,11 @@ create table uds_asset
 	AssetCurrentUseState 	int null,
 	AssetBuyUserID 					int null,
 	AssetBuyDate 						Datetime null,
-	AssetMoveDate 					Datetime null,
+	AssetMoveDate 					Datetime null ,
 	AssetWarrantyPeriod   	varchar(50) null,
 	AssetAttachFile 				varchar(100) null,
 	AssetRemark 						varchar(200) null,
-	AssetCreateDate				datetime not null,
+	AssetCreateDate				datetime not null default(getdate()),
 	AssetCreateUserID			int not null,
 	IsDelete		int					null default(0),			--ÊÇ·ñÉ¾³ý(0:Î´É¾³ý£»1£ºÒÑÉ¾³ý)
 	unique(ID),

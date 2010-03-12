@@ -1649,6 +1649,7 @@
     <Content Include="js\cal_conf2.js" />
     <Content Include="SubModule\Asset\AssetLocationManage.aspx" />
     <Content Include="SubModule\Asset\AssetMange.aspx" />
+    <Content Include="SubModule\Asset\AssetSearch.aspx" />
     <Content Include="SubModule\Asset\AssetStateManage.aspx" />
     <Content Include="SubModule\Asset\AssetTypeManage.aspx" />
     <Content Include="SubModule\Asset\NewAsset.aspx" />
@@ -1790,6 +1791,7 @@
     <Content Include="SubModule\Position\PositionTreeView.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="SubModule\Position\SelectStaff.aspx" />
     <Content Include="SubModule\Position\UpdateCaste.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -2288,6 +2290,13 @@
     <Compile Include="SubModule\Asset\AssetMange.aspx.designer.cs">
       <DependentUpon>AssetMange.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SubModule\Asset\AssetSearch.aspx.cs">
+      <DependentUpon>AssetSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Asset\AssetSearch.aspx.designer.cs">
+      <DependentUpon>AssetSearch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SubModule\Asset\AssetStateManage.aspx.cs">
       <DependentUpon>AssetStateManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2594,6 +2603,13 @@
     <Compile Include="SubModule\Position\PositionTreeView.aspx.cs">
       <DependentUpon>PositionTreeView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Position\SelectStaff.aspx.cs">
+      <DependentUpon>SelectStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Position\SelectStaff.aspx.designer.cs">
+      <DependentUpon>SelectStaff.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\Position\UpdateCaste.aspx.cs">
       <DependentUpon>UpdateCaste.aspx</DependentUpon>

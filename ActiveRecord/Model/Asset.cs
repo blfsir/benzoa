@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 using Castle.ActiveRecord;
 
 using NHibernate;
 using Castle.ActiveRecord.Framework.Config;
 using ActiveRecord.Model;
-using Castle.ActiveRecord.Queries;
+using NHibernate.Criterion;
 using System.Data;
 
 
@@ -41,6 +42,7 @@ namespace ActiveRecord.Model
         public Asset()
         {
             InitialBaseAR ib = InitialBaseAR.Instance;
+            this.AssetCreateDate = DateTime.Now;
         }
 
         [PrimaryKey]
@@ -191,7 +193,16 @@ namespace ActiveRecord.Model
         public DateTime AssetCreateDate
         {
             get { return assetcreatedate; }
-            set { assetcreatedate = value; }
+            set {
+                if (value == null || value.ToString().Length <=0)
+                {
+                    assetcreatedate = DateTime.Now;
+                }
+                else
+                {
+                    assetcreatedate = value;
+                }
+            }
         }
         [Property]
         public int AssetCreateUserID
@@ -226,6 +237,17 @@ namespace ActiveRecord.Model
             return (Asset)ActiveRecordBase.FindByPrimaryKey(typeof(Asset), id);
         }
 
+        public static Asset[] FindAll()
+        {
+            return (Asset[])ActiveRecordBase.FindAll(typeof(Asset));
+        }
+
+        public static Asset[] Find(string assetName)
+        {
+             
+           
+            return (Asset[])FindAll(typeof(Asset), Expression.Like("AssetName",assetName, MatchMode.Anywhere));
+        }
 
 
     }

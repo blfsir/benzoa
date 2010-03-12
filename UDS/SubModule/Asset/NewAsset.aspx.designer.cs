@@ -14,13 +14,13 @@ namespace UDS.SubModule.Asset {
     public partial class NewAsset {
         
         /// <summary>
-        /// NewStaff control.
+        /// MsgSend control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm NewStaff;
+        protected global::System.Web.UI.HtmlControls.HtmlForm MsgSend;
         
         /// <summary>
         /// AutoNumber1 control.
@@ -57,6 +57,15 @@ namespace UDS.SubModule.Asset {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal message;
+        
+        /// <summary>
+        /// lblAssetID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox lblAssetID;
         
         /// <summary>
         /// ddlType control.
