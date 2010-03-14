@@ -68,11 +68,28 @@
 	</HEAD>
 	<body topmargin=0 leftmargin=0>
 		<form id="Catalog" method="post" runat="server">
-		  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
+                        border="0">
+                        <tr>
+                            <td width="23" height="30" align="right" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#c0d9e6" class="GbText" style="width: 23px">
+                                <font color="#003366" size="3">
+                                    <img height="16" src="../../../DataImages/page.gif" width="16"></font>
+                            </td>
+                            <td class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#e8f4ff"><asp:Label ID="lblTitle" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small"
+                                        Width="53px">  公司论坛</asp:Label>
+                          </td>
+                            <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff">&nbsp;</td>
+                        </tr>
+                    </table>
+                    
+		<%--  <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	  <tr>
 						<td background="../../../Images/bbsback.jpg"><img src="../../../Images/bbs.jpg"></td><td background="../../../Images/bbsback.jpg"><br><font color=white>|</font> <a  style="color: #ffffff;" href='<%="search/index.aspx?classid="+classid%>'>搜索</a> <font color=white>|</font></td>
 					</tr>
-				</table><br>
+				</table>--%>
+				<br>
 				<table class="GbText" id="AutoNumber1" style="BORDER-COLLAPSE: collapse; line-height:20px;" borderColor="#93BEE2" height="80" cellSpacing="0" cellPadding="5" width="98%" border="1" align=center>
 					<tr>
 						<td class="GbText" align="center" bgcolor="#337fb2" colSpan="2" height="24"><b><font color="#ffffff">论坛</font></b></td>
@@ -106,6 +123,18 @@
 							</tr>
 							<asp:Repeater ID="rpt_board" OnItemDataBound="rpt_board_ItemDataBound" DataSource='<%# ((DataRowView)Container.DataItem).Row.GetChildRows("catolog_board") %>' Runat="server">
 								<ItemTemplate>
+								
+								<tr>
+						<td class="GbText" align="center" bgcolor="#337fb2" colSpan="2" height="24"><b><font color="#ffffff">论坛</font></b></td>
+					  <td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>帖子</b></font></td>
+						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>回复</b></font></td>
+						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>最新帖子</b></font></td>
+						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>版主</b></font></td>
+					</tr>
+								
+								
+								
+								
 									<tr>
 										<td width="60" align="center">&nbsp; <img  runat="server" alt='<%# GetImageAlt(DataBinder.Eval(Container.DataItem,"[\"formitems\"]").ToString())%>' src='<%# GetImagePath(DataBinder.Eval(Container.DataItem,"[\"formitems\"]").ToString())%>' />
 <td height="0" valign="top"><FONT face="宋体"><a href="ListView.aspx?BoardID=<%# DataBinder.Eval(Container.DataItem,"[\"board_id\"]")%>&ClassID=<%# Request["ClassID"]%>"><%# DataBinder.Eval(Container.DataItem,"[\"board_name\"]")%></a>

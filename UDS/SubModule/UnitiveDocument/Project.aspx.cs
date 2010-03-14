@@ -198,12 +198,12 @@ namespace UDS.SubModule.UnitiveDocument
 
 
                 this.line1.Visible = pjt.GetAccessPermission(classID, Username, cstRightToViewDocument);
-                this.IMG1.Visible = this.line1.Visible;
+                //this.IMG1.Visible = this.line1.Visible;
                 this.dgDocList.Visible = this.line1.Visible;
                 this.imgSubscribe.Visible = this.line1.Visible;
                 this.lblSubscribe.Visible = this.line1.Visible;
                 this.line2.Visible = pjt.GetAccessPermission(classID, Username, cstRightToApproveDocument);
-                this.IMG3.Visible = this.line2.Visible;
+                //this.IMG3.Visible = this.line2.Visible;
                 this.dgAppDocList.Visible = this.line2.Visible;
 
                 #endregion
@@ -254,7 +254,7 @@ namespace UDS.SubModule.UnitiveDocument
                 }
                 else
                 {
-                    IMG3.Visible = false;
+                    //IMG3.Visible = false;
                     dgAppDocList.Visible = false;
                     lblApp.Visible = false;
                 }

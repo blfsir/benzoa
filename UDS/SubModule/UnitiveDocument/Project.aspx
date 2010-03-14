@@ -84,9 +84,24 @@
 						</td>
 					</tr>
 					<tr id="tr1" runat="server">
-						<td class="text" vAlign="top" width="100%" height="120"><IMG src="../../Images/line1.gif" runat="server" id="line1"><br>
-							<A href="Document/Listview.aspx?ClassID=<%=classID%>" ><IMG id="IMG1" src="../../Images/newmain_r4_c1.jpg" border="0" runat="server"></A>&nbsp;<FONT face="宋体">
-								<BR>
+						<td class="text" vAlign="top" width="100%" height="120"><IMG src="../../Images/line1.gif" runat="server" id="line1">
+						<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
+                        border="0">
+                        <tr style="cursor:pointer;" onclick="javascript:location.href='Document/Listview.aspx?ClassID=<%=classID%>';">
+                            <td width="23" height="30" align="right" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#c0d9e6" class="GbText" style="width: 23px">
+                                <font color="#003366" size="3">
+                                    <img height="16" src="../../../DataImages/flag.gif" width="16"></font>
+                            </td>
+                            <td class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#e8f4ff"><asp:Label ID="lblTitle" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small"
+                                        Width="53px">  项目文档</asp:Label>
+                          </td>
+                            <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff">
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                    <FONT face="宋体">
 								<asp:datagrid id="dgDocList" runat="server" BorderColor="#E8F4FF" Font-Names="Arial" Width="100%" GridLines="Horizontal" CellPadding="2" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" AllowPaging="True" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" DataKeyField="DocID" PageSize="5">
 									<ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
 									<HeaderStyle Font-Size="X-Small" HorizontalAlign="Center" Height="20px" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
@@ -131,10 +146,26 @@
 									<PagerStyle Visible="False" Font-Size="12px" BorderColor="#E0E0E0" BorderStyle="Dotted" HorizontalAlign="Right" PageButtonCount="5" Mode="NumericPages"></PagerStyle>
 								</asp:datagrid></FONT></td>
 					</tr>
-					<tr id="tr2" runat="server">
+					<tr id="tr2" runat="server" >
 						<td class="text" vAlign="bottom" width="100%" height="120"><IMG src="../../Images/line1.gif"><br>
-							<A href="Mail/Index.aspx?classID=<%=classID%>" ><IMG id="IMG2" src="../../Images/newmain_r4_c2.jpg" border="0" runat="server"></A>
-							&nbsp;
+							<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
+                        border="0">
+                        <tr style="cursor:pointer;" onclick="javascript:location.href='Mail/Index.aspx?classID=<%=classID%>';">
+                            <td width="23" height="30" align="right" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#c0d9e6" class="GbText" style="width: 23px">
+                                <font color="#003366" size="3">
+                                    <img height="16" src="../../../DataImages/flag.gif" width="16"></font>
+                            </td>
+                            <td class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#e8f4ff"><asp:Label ID="Label1" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small"
+                                        Width="53px">  项目邮箱</asp:Label>
+                          </td>
+                            <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff">
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                    
+              
 							<asp:datagrid id="dgMailList" runat="server" BorderColor="#E8F4FF" Font-Names="Arial" Width="100%" GridLines="Horizontal" CellPadding="2" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" AllowPaging="True" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" DataKeyField="MailID" PageSize="5">
 								<ItemStyle HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
 								<HeaderStyle Font-Size="X-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Top" BackColor="#E8F4FF"></HeaderStyle>
@@ -183,8 +214,24 @@
 						</td>
 					</tr>
 					<tr id="tr3" runat="server">
-						<td class="text" vAlign="bottom" width="100%" height="120"><IMG id="line2" src="../../Images/line1.gif" runat="server"><br>
-							<A href="Approve/ListView.aspx?ClassID=<%=classID%>&amp;DisplayType=1" ><IMG id="IMG3" src="../../Images/newmain_r9_c2.jpg" border="0" runat="server"></A>&nbsp;
+						<td class="text" vAlign="bottom" width="100%" height="120"><IMG id="line2" src="../../Images/line1.gif" runat="server">
+							<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
+                        border="0">
+                        <tr  style="cursor:pointer;" onclick="javascript:location.href='Approve/ListView.aspx?ClassID=<%=classID%>';">
+                            <td width="23" height="30" align="right" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#c0d9e6" class="GbText" style="width: 23px">
+                                <font color="#003366" size="3">
+                                    <img height="16" src="../../../DataImages/flag.gif" width="16"></font>
+                            </td>
+                            <td class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#e8f4ff"><asp:Label ID="Label2" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small"
+                                        Width="53px">  项目审批</asp:Label>
+                          </td>
+                            <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff">
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+							    
 							<A href="#"></A>
 							<asp:label id="lblApp" runat="server" Visible="False">审批文档</asp:label><BR>
 							<asp:datagrid id="dgAppDocList" runat="server" BorderColor="#E8F4FF" Font-Names="Arial" Width="100%" CellPadding="2" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" AllowPaging="True" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" DataKeyField="DocID" PageSize="5">

@@ -29,23 +29,24 @@
 <body leftmargin="0" topmargin="0">
     <form id="NewStaff" method="post" runat="server">
     <center>
-        <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
+            <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" style="table-layout:fixed"
             width="100%" border="0">
             <tr height="30">
-                <td class="GbText" width="3%" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <font color="#003366" size="3">
-                        <img alt="" src="../../DataImages/ClientManage.gif"></font>
-                </td>
-                <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <b><font face="宋体">新增设备存放位置</font></b>
-                </td>
+                <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/t5.jpg" width="16">
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width=120"
+                align="left">
+                <font color="#006699">新增设备存放位置</font>
+            </td>
                 <td class="GbText" align="right" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
                 </td>
             </tr>
         </table>
         <table class="gbtext" id="AutoNumber1" style="border-collapse: collapse" bordercolor="#93bee2"
             cellspacing="0" cellpadding="0" width="100%" border="1" runat="server">
-            <tr bgcolor="#e8f4ff">
+            <tr>
                 <td style="height: 34px" align="right" width="20%" height="34">
                     存放位置:
                 </td>
