@@ -112,7 +112,7 @@
                         <tr>
                             <td bgcolor="#024289">
                                 &nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="../../DataImages/xpDesktop.gif">
-                                </asp:Image><font face="ËÎÌו">&nbsp;<a style="text-decoration: none" href="Desktop.aspx"
+                                </asp:Image><font face="ËÎÌו">&nbsp;<a style="text-decoration: none" href="NewDesktop.aspx"
                                     target="MainFrame"><font color="white">×ÀÃז(<%=UserName%>)</font></a></font>
                             </td>
                             <td width="1">

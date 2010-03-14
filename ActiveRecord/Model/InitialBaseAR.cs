@@ -14,7 +14,7 @@ namespace ActiveRecord.Model
         {
             Castle.ActiveRecord.Framework.IConfigurationSource config = Castle.ActiveRecord.Framework.Config.ActiveRecordSectionHandler.Instance;
 
-            Castle.ActiveRecord.ActiveRecordStarter.Initialize(config, typeof(Dept), typeof(Plan), typeof(QuickFlow), typeof(Diary), typeof(Staff), typeof(Asset), typeof(AssetType), typeof(AssetCurrentLocation), typeof(AssetUseState));
+            Castle.ActiveRecord.ActiveRecordStarter.Initialize(config, typeof(Dept), typeof(Plan), typeof(QuickFlow), typeof(Diary), typeof(Staff), typeof(Asset), typeof(AssetType), typeof(AssetCurrentLocation), typeof(AssetUseState),typeof(AssetHistory));
             //ActiveRecordStarter.Initialize(ActiveRecordLayer, config);
         }
 

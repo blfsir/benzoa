@@ -50,7 +50,7 @@
         </table>
         <table class="gbtext" id="AutoNumber1" style="border-collapse: collapse" bordercolor="#93bee2"
             cellspacing="0" cellpadding="0" width="100%" border="1" runat="server">
-            <tr >
+            <tr bgcolor="#e8f4ff">
                 <td style="height: 34px" align="right" width="20%" height="34">
                     用户姓名:
                 </td>
@@ -71,7 +71,7 @@
                             runat="server" ErrorMessage="请输入真实姓名" ControlToValidate="txtRealName" Font-Size="X-Small"></asp:RequiredFieldValidator>
                 </td>
             </tr>
-            <tr >
+            <tr bgcolor="#e8f4ff">
                 <td align="right" width="20%" height="30">
                     性别:
                 </td>
@@ -90,7 +90,7 @@
                         Columns="70" Width="383" ReadOnly="True"></asp:TextBox>
                 </td>
             </tr>
-            <tr >
+            <tr bgcolor="#e8f4ff">
                 <td align="right" width="20%" height="30">
                     密码:
                 </td>
@@ -110,7 +110,7 @@
                             ErrorMessage="密码确认错误" ControlToValidate="txtRePassword" Font-Size="X-Small" ControlToCompare="txtPassword"></asp:CompareValidator>
                 </td>
             </tr>
-            <tr >
+            <tr bgcolor="#e8f4ff">
                 <td align="right" width="20%" height="30">
                     电子邮件:
                 </td>
@@ -132,7 +132,7 @@
                         Width="382"></asp:TextBox>
                 </td>
             </tr>
-            <tr >
+            <tr bgcolor="#e8f4ff">
                 <td align="right" width="20%" height="30">
                     移动电话:
                 </td>

@@ -224,7 +224,7 @@
         <tr>
             <td style="line-height: 20px;">
                 <asp:DataGrid ID="dgAssetList" runat="server" BorderColor="#93BEE2" BorderStyle="None"
-                    BorderWidth="1px" BackColor="White" CellPadding="3" PageSize="15" AllowPaging="True"
+                    BorderWidth="1px" BackColor="White" CellPadding="3" PageSize="15"  
                     AutoGenerateColumns="False" DataKeyField="ID" Width="100%" AllowSorting="True"
                     OnDeleteCommand="dgAssetList_DeleteCommand" OnPageIndexChanged="dgAssetList_PageIndexChanged"
                     OnSelectedIndexChanged="dgAssetList_SelectedIndexChanged">
@@ -242,28 +242,27 @@
                             </ItemTemplate>
                         </asp:TemplateColumn>
                         <asp:HyperLinkColumn Text="资产名称" DataNavigateUrlField="ID" DataNavigateUrlFormatString="NewAsset.aspx?AssetID={0}"
-                            DataTextField="AssetName" HeaderText="资产名称" SortExpression="AssetName">
+                            DataTextField="AssetName" HeaderText="资产名称"  >
                             <HeaderStyle Wrap="false"></HeaderStyle>
                             <ItemStyle Wrap="false" />
                         </asp:HyperLinkColumn>
-                        <asp:BoundColumn DataField="AssetTypeID" SortExpression="AssetTypeID" HeaderText="规格及型号">
+                        <asp:BoundColumn DataField="AssetTypeID"   HeaderText="规格及型号" Visible="false">
                             <HeaderStyle Wrap="false"></HeaderStyle>
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="AssetNumber" SortExpression="AssetNumber" HeaderText="数量">
+                        <asp:BoundColumn DataField="AssetNumber"  HeaderText="数量" Visible="false">
                             <HeaderStyle HorizontalAlign="Center" Wrap="false"></HeaderStyle>
                             <ItemStyle HorizontalAlign="Center" Wrap="false"></ItemStyle>
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="AssetPreviousUserID" SortExpression="AssetPreviousUserID"
-                            HeaderText="原使用人">
+                        <asp:BoundColumn DataField="AssetPreviousUserID"  
+                            HeaderText="原使用人" Visible="false">
                             <HeaderStyle Wrap="false"></HeaderStyle>
                             <ItemStyle Wrap="false" />
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="AssetCurrentUserID" SortExpression="AssetCurrentUserID"
-                            HeaderText="现使用人">
+                        <asp:BoundColumn DataField="AssetCurrentUserID" 
+                            HeaderText="现使用人" Visible="false">
                             <HeaderStyle Width="100px"></HeaderStyle>
                         </asp:BoundColumn>
-                        <asp:BoundColumn DataField="AssetCurrentUseState" SortExpression="AssetCurrentUseState"
-                            HeaderText="现使用状况">
+                        <asp:BoundColumn DataField="AssetCurrentUseState"        Visible="false"                      HeaderText="现使用状况">
                             <HeaderStyle Wrap="false"></HeaderStyle>
                             <ItemStyle Wrap="false" />
                         </asp:BoundColumn>

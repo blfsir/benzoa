@@ -212,7 +212,11 @@
 	         parwin.document.all.MsgSend.txtOriginalUser.value = listSendToTxtStr; 
 	         setDdlValue('ddlOriginalUser',listSendToTxtStr);
 	    }
-	    
+	    if(txtName=="txtMoveAsset")
+	    {
+	         parwin.document.all.AssetMove.txtMoveAsset.value = listSendToTxtStr; 
+	         setDdlValue('ddlMoveTo',listSendToTxtStr);
+	    }
 	    
 		window.close();
 	}

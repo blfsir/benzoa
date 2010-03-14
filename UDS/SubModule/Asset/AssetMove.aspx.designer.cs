@@ -14,15 +14,6 @@ namespace UDS.SubModule.Asset {
     public partial class AssetMove {
         
         /// <summary>
-        /// ChangeDepartment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm ChangeDepartment;
-        
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -32,39 +23,21 @@ namespace UDS.SubModule.Asset {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// ddlBuyUser control.
+        /// ddlMoveTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBuyUser;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMoveTo;
         
         /// <summary>
-        /// cboPosition control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cboPosition;
-        
-        /// <summary>
-        /// cmdSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputSubmit cmdSubmit;
-        
-        /// <summary>
-        /// cbRemind control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbRemind;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }
