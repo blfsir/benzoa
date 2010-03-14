@@ -67,9 +67,9 @@
 		</script>
 	</HEAD>
 	<body topmargin=0 leftmargin=0>
-		<form id="Catalog" method="post" runat="server"><p>
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
+		<form id="Catalog" method="post" runat="server">
+		  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	  <tr>
 						<td background="../../../Images/bbsback.jpg"><img src="../../../Images/bbs.jpg"></td><td background="../../../Images/bbsback.jpg"><br><font color=white>|</font> <a  style="color: #ffffff;" href='<%="search/index.aspx?classid="+classid%>'>ËÑË÷</a> <font color=white>|</font></td>
 					</tr>
 				</table><br>

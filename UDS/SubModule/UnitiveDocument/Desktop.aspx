@@ -314,20 +314,21 @@
  
 <div class="footer"></div> --%>
  
-    <table cellspacing="10" cellpadding="0" align="center" border="0" width="100%" style="table-layout: fixed;
+    <table cellspacing="10" cellpadding="0" align="center" border="0" width="98%" style="table-layout: fixed;
         height: 100%">
         <tr>
             <td valign="top">
                 <table id="Table5" cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
                     <tr>
-                        <td>
-                            <img id="IMG5" src="../../Images/desktop5.gif" border="0" runat="server">
+                        <td width="50" bgcolor="#2C72AE">
+                            <img id="IMG5" src="../../Images/desktop5_1.jpg" border="0" runat="server">
                         </td>
-                        <td valign="bottom" align="right" width="40">
+                        <td bgcolor="#2C72AE" class="tit5">公司公告</td>
+                        <td width="40" align="center" bgcolor="#2C72AE">
                             <a href="Board/BoardManagement.aspx" target="_self">
                                 <img alt="" src="../../Images/more.gif" border="0"></a>
                         </td>
-                        <td valign="bottom" align="right" width="40">
+                        <td width="40" align="center" bgcolor="#2C72AE">
                             <%if (isAdmin == true)
                               {%>
                             <a href="Board/EditBoard.aspx" target="_self">
@@ -335,13 +336,12 @@
                             <%}
                               else
                               {%>
-                            &nbsp;&nbsp; &nbsp;
                             <%}%>
                         </td>
                         
                     </tr>
                     <tr>
-                        <td colspan="3" height="40">
+                        <td colspan="4" height="40">
                             <asp:DataGrid ID="dgBoard" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                 GridLines="Horizontal" PageSize="5" DataKeyField="Board_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                 PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
@@ -379,20 +379,21 @@
                         </td>
                     </tr>
                 </table>
-            </td>
+          </td>
             <td valign="top">
                 <table id="Table6" cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
                     <tr>
-                        <td>
-                            <img id="Img6" src="../../Images/desktop6.gif" border="0" runat="server">
-                        </td>
-                        <td valign="bottom" align="right" width="40">
+                        <td width="50" bgcolor="#337FB3">
+                            <img id="Img6" src="../../Images/desktop6_1.jpg" border="0" runat="server"></td>
+                        <td bgcolor="#337FB3" class="tit5">公文流转</td>
+                        <td width="40" bgcolor="#337FB3">&nbsp;</td>
+                        <td width="40" align="center" bgcolor="#337FB3">
                             <a href="DocumentFlow/FlowTemplate.aspx" target="_self">
                                 <img alt="" src="../../Images/more.gif" border="0"></a>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" height="40">
+                        <td colspan="4" height="40">
                             <asp:DataGrid ID="dgFlowList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                 GridLines="Horizontal" PageSize="5" DataKeyField="Flow_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                 PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
@@ -436,21 +437,22 @@
             <td valign="top">
                 <table id="Table1" cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
                     <tr>
-                        <td>
-                            <img id="IMG1" src="../../Images/desktop1.jpg" border="0" runat="server">
+                        <td width="50" bgcolor="#337FB3">
+                            <img id="IMG1" src="../../Images/desktop1_1.jpg" border="0" runat="server">
                         </td>
-                        <td valign="bottom" align="right">
+                        <td bgcolor="#337FB3" class="tit5">今日任务</td>
+                        <td width="40" align="center" bgcolor="#337FB3"><a href="../Schedule/TaskList.aspx" target="_self">
+                                <img alt="" src="../../Images/more.gif" border="0"></a>
                            
                         </td>
-                        <td valign="bottom" align="right">
-                            <a href="../Schedule/TaskList.aspx" target="_self">
-                                <img alt="" src="../../Images/more.gif" border="0"></a> <a onclick="var newwin=window.open('../Schedule/Manage.aspx','newtask','toolbar=yes,scrollbars=yes,width=800,height=600,resizable=yes');newwin.moveTo(0,0);newwin.focus();"
+                        <td width="40" align="center" bgcolor="#337FB3">
+                             <a onClick="var newwin=window.open('../Schedule/Manage.aspx','newtask','toolbar=yes,scrollbars=yes,width=800,height=600,resizable=yes');newwin.moveTo(0,0);newwin.focus();"
                                     href="#" target="_self">
                                     <img alt="" src="../../Images/new.gif" border="0"></a>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" height="40">
+                        <td colspan="4" height="40">
                             <asp:DataGrid ID="dgList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                 GridLines="Horizontal" PageSize="5" DataKeyField="ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                 PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
@@ -488,20 +490,22 @@
                         </td>
                     </tr>
                 </table>
-            </td>
+          </td>
             <td valign="top">
                 <table id="Table2" cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
                     <tr>
-                        <td>
-                            <img id="Img4" src="../../Images/desktop2.jpg" border="0" runat="server">
+                        <td width="50" bgcolor="#337FB3">
+                            <img src="../../Images/desktop2_1.jpg" width="45" height="30" border="0" id="Img4" runat="server">
                         </td>
-                        <td valign="bottom" align="right" width="40">
+                        <td bgcolor="#337FB3" class="tit5">我的文档</td>
+                        <td width="40" bgcolor="#337FB3">&nbsp;</td>
+                        <td width="40" align="center" bgcolor="#337FB3">
                             <a href="NewDoc/Listview.aspx" target="_self">
                                 <img alt="" src="../../Images/more.gif" border="0"></a>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" height="40">
+                        <td colspan="4" height="40">
                             <asp:DataGrid ID="dgDocList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                 GridLines="Horizontal" PageSize="5" DataKeyField="DocID" Width="100%" PagerStyle-HorizontalAlign="center"
                                 PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
@@ -546,20 +550,21 @@
                 <table id="Table3" cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
                   
                     <tr>
-                        <td valign="top">
-                            <img id="IMG2" src="../../Images/desktop3.jpg" border="0" runat="server">
+                        <td width="50" bgcolor="#337FB3">
+                            <img id="IMG2" src="../../Images/desktop3_1.jpg" border="0" runat="server">
                         </td>
-                        <td valign="bottom" align="right" width="40">
+                        <td bgcolor="#337FB3" class="tit5">我的邮箱</td>
+                        <td width="40" align="center" bgcolor="#337FB3">
                             <a href="Mail/Index.aspx" target="_self">
                                 <img alt="" src="../../Images/more.gif" border="0"></a>
                         </td>
-                        <td valign="bottom" align="right" width="40">
+                        <td width="40" align="center" bgcolor="#337FB3">
                             <a href="Mail/Compose.aspx?ClassID=0" target="_self">
                                 <img alt="" src="../../Images/new.gif" border="0"></a>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" height="40">
+                        <td colspan="4" height="40">
                             <asp:DataGrid ID="dgMailList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                 GridLines="Horizontal" PageSize="5" DataKeyField="MailID" Width="100%" PagerStyle-HorizontalAlign="center"
                                 PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
@@ -593,20 +598,22 @@
                         </td>
                     </tr>
                 </table>
-            </td>
+          </td>
             <td valign="top">
                 <table id="Table4" cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
                     <tr>
-                        <td valign="top">
-                            <img id="IMG3" src="../../Images/desktop4.jpg" border="0" runat="server">
+                        <td width="50" bgcolor="#337FB3">
+                            <img id="IMG3" src="../../Images/desktop4_1.jpg" border="0" runat="server">
                         </td>
-                        <td valign="bottom" align="right" width="40">
+                        <td bgcolor="#337FB3" class="tit5">我的审批</td>
+                        <td width="40" valign="top" bgcolor="#337FB3">&nbsp;</td>
+                        <td width="40" align="center" bgcolor="#337FB3">
                             <a href="Approve/Listview.aspx" target="_self">
                                 <img alt="" src="../../Images/more.gif" border="0"></a>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" height="40">
+                        <td colspan="4" height="40">
                             <asp:DataGrid ID="dgAppDocList" runat="server" AllowPaging="True" BorderColor="#E8F4FF"
                                 GridLines="Horizontal" PageSize="5" DataKeyField="DocID" Width="100%" PagerStyle-HorizontalAlign="center"
                                 PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"

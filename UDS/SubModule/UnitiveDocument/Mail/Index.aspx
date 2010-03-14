@@ -69,24 +69,25 @@
 	</HEAD>
 	<body leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout">
 		<form id="MailList" method="post" runat="server">
-			<table cellSpacing="0" cellPadding="0" width="100%">
-				<tr>
-					<td vAlign="top" height="38"><TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-							<TR height="30">
-								<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-									align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../Images/icon/284.GIF" width="16"></FONT></TD>
-								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
+        <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+							<TR>
+								<TD width="20" height="30"
+									align="right" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../Images/icon/284.GIF" width="16"></FONT></TD>
+							  <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
 									align="right">我的邮件</TD>
 								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体">
 										<asp:label id="lblMsg" runat="server" Width="88px" Font-Size="X-Small"></asp:label>&nbsp;
 										<asp:button id="btnClear" runat="server" Visible="False" Text="清 空" CssClass="redButtonCss"></asp:button>
 										&nbsp;
 										<asp:button id="btnDelete" runat="server" Text="删 除" CssClass="redButtonCss"></asp:button>&nbsp;
-										<INPUT class="redButtonCss" onclick="selectAll()" type="button" value="全 选">&nbsp;
-										<INPUT class="redButtonCss" onclick="unSelectAll()" type="button" value="取 消">&nbsp;
+										<INPUT class="redButtonCss" onClick="selectAll()" type="button" value="全 选">&nbsp;
+										<INPUT class="redButtonCss" onClick="unSelectAll()" type="button" value="取 消">&nbsp;
 										<asp:dropdownlist id="listFolderType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="FolderListChange"></asp:dropdownlist></FONT></TD>
 							</TR>
 						</TABLE>
+			<table width="98%" align="center" cellPadding="0" cellSpacing="0">
+				<tr>
+					<td vAlign="top" height="10">
 					</td>
 				</tr>
 				<tr>
@@ -117,7 +118,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td vAlign="top" align="center">
+					<td vAlign="top">
 						<asp:datagrid id="dgMailList" runat="server" Width="100%" OnItemDataBound="DataGrid_ItemDataBinding"
 							OnSortCommand="DataGrid_Sort" AllowSorting="True" CellPadding="3" BackColor="White" BorderWidth="1px"
 							BorderStyle="None" BorderColor="#93BEE2" AutoGenerateColumns="False" AllowPaging="True" PagerStyle-Mode="NumericPages"

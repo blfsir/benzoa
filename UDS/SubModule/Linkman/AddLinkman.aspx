@@ -12,22 +12,22 @@
 	<body MS_POSITIONING="GridLayout" topmargin="0" leftmargin="0">
 		<form id="AddLinkman" method="post" runat="server">
 			<TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-				<TR height="30">
-					<TD class="GbText" width="24" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG height="16" src="../../Images/icon/057.GIF" width="16"></FONT></TD>
-					<TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" width="80"
-						align="right"><font color="#006699">我的联系人</font></TD>
+				<TR>
+					<TD width="24" height="30" align="center" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../Images/icon/057.GIF" width="16"></FONT></TD>
+			    <TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" width="70"
+						align="center">我的联系人</TD>
 					<TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" align="right">
 						选择联系人类别
-						<asp:dropdownlist id="ddl_LinkmanType" runat="server" AutoPostBack="True">
+				  <asp:dropdownlist id="ddl_LinkmanType" runat="server" AutoPostBack="True">
 							<asp:ListItem Value="staff">公司员工</asp:ListItem>
 							<asp:ListItem Value="client">客户联系人</asp:ListItem>
 							<asp:ListItem Value="custom">自定义</asp:ListItem>
-						</asp:dropdownlist>&nbsp;
-						<asp:Button id="btn_Back" runat="server" Text="返 回" CssClass="redbuttoncss" CausesValidation="False"></asp:Button>&nbsp;
-						<asp:button id="btn_AddList" runat="server" Text="添 加" CssClass="redbuttoncss"></asp:button></TD>
+						</asp:dropdownlist> 
+					  <asp:Button id="btn_Back" runat="server" Text="返 回" CssClass="redbuttoncss" CausesValidation="False"></asp:Button> 
+						<asp:button id="btn_AddList" runat="server" Text="添 加" CssClass="redbuttoncss"></asp:button>&nbsp;</TD>
 				</TR>
 				<tr>
-					<td height="8" colspan="3"></td>
+					<td height="10" colspan="3"></td>
 				<tr>
 				</tr>
 			</TABLE>
@@ -49,7 +49,7 @@
 					</TR>
 					<TR>
 						<TD align="right" width="100%" colSpan="3">
-							<TABLE id="tbl_Select" cellSpacing="0" cellPadding="0" width="100%" border="0" runat="server">
+							<TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0" id="tbl_Select" runat="server">
 								<TR>
 									<TD width="100%" colSpan="2"><asp:datagrid id="dgrd_List" runat="server" Width="100%" AutoGenerateColumns="False" AllowPaging="True"
 											Visible="False" BorderColor="#93BEE2" BorderWidth="1px" CellPadding="3" PageSize="15">
@@ -153,8 +153,8 @@
 								</TR>
 							</TABLE>
 							<TABLE id="tbl_Custom" style="BORDER-COLLAPSE: collapse" borderColor="#93bee2" cellSpacing="0"
-								cellPadding="0" width="100%" align="center" border="1" class="gbtext" runat="server">
-								<TR>
+								cellPadding="0" width="98%" align="center" border="1" class="gbtext" runat="server">
+						  <TR>
 									<TD style="WIDTH: 73px" height="24" bgcolor="#e8f4ff">&nbsp;姓名</TD>
 									<TD height="24" style="WIDTH: 82px">&nbsp;<asp:textbox id="tbx_Name" runat="server" CssClass="inputcss"></asp:textbox>
 										<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="不能为空" ControlToValidate="tbx_Name"

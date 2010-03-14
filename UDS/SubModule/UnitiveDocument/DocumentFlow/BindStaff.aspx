@@ -12,19 +12,20 @@
 	<body MS_POSITIONING="GridLayout" topmargin="0" leftmargin="0">
 		<form id="BangdingRole" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
-					<TR>
-						<TD vAlign="middle" height="87" align="center" style="COLOR: #006699; FONT-FAMILY: 'Arial Black'; HEIGHT: 87px">
-							<TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-								<TR height="30">
-									<TD class="GbText" align="right" width="20" background="../../../Images/treetopbg.jpg"
-										bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
-									<TD class="GbText" align="left" width="63" background="../../../Images/treetopbg.jpg"
-										bgColor="#e8f4ff" style="WIDTH: 63px"><FONT color="#006699">人员绑定：</FONT></TD>
+            <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+								<TR>
+									<TD width="20" height="30" align="right" background="../../../Images/treetopbg.jpg"
+										bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
+								  <TD class="GbText" align="left" width="63" background="../../../Images/treetopbg.jpg"
+										bgColor="#e8f4ff" style="WIDTH: 63px">人员绑定：</TD>
 									<TD class="GbText" align="left" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff">
 										<asp:Label id="labTitle" runat="server" Width="543px"></asp:Label></TD>
 								</TR>
-							</TABLE>
+			</TABLE>
+				<TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0">
+					<TR>
+						<TD vAlign="middle" height="87" align="center" style="COLOR: #006699; FONT-FAMILY: 'Arial Black'; HEIGHT: 87px">
+							
 							<P><FONT face="宋体">可用下面四种方法中任意一种或多种选择所需要的人</FONT>
 							</P>
 						</TD>
@@ -34,12 +35,12 @@
 							<TABLE class="gbtext" cellSpacing="0" cellPadding="0" width="444" border="0" style="WIDTH: 444px; HEIGHT: 777px"
 								align="center">
 								<TR>
-									<TD style="WIDTH: 47px; HEIGHT: 21px" align="center" width="47" bgColor="#eee7f2">1</TD>
-									<TD width="143" style="WIDTH: 143px; HEIGHT: 21px" align="left" bgcolor="#eee7f2">
+									<TD style="WIDTH: 47px; HEIGHT: 21px" align="center" width="47" bgColor="#e8f4ff">1</TD>
+									<TD width="143" style="WIDTH: 143px; HEIGHT: 21px" align="left" bgcolor="#e8f4ff">
 										<asp:label id="Label2" runat="server" Height="15px" Width="66px">已选角色：</asp:label></TD>
-									<TD width="35" style="WIDTH: 35px; HEIGHT: 21px" align="center" bgcolor="#eee7f2" colSpan="1"
+									<TD width="35" style="WIDTH: 35px; HEIGHT: 21px" align="center" bgcolor="#e8f4ff" colSpan="1"
 										rowSpan="1"></TD>
-									<TD width="91" style="WIDTH: 91px; HEIGHT: 21px" align="left" bgcolor="#eee7f2">
+									<TD width="91" style="WIDTH: 91px; HEIGHT: 21px" align="left" bgcolor="#e8f4ff">
 										<asp:label id="Label1" runat="server" Height="15px" Width="83px">待选角色：</asp:label></TD>
 								</TR>
 								<TR>
@@ -53,11 +54,11 @@
 									<TD style="WIDTH: 91px; HEIGHT: 117px"><asp:listbox id="lstAllRole" runat="server" Width="165px" Height="130px" SelectionMode="Multiple"></asp:listbox></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 47px; HEIGHT: 18px" vAlign="middle" align="center" bgColor="#eee7f2">2</TD>
-									<TD style="WIDTH: 143px; HEIGHT: 16px" vAlign="middle" bgColor="#eee7f2">
+									<TD style="WIDTH: 47px; HEIGHT: 18px" vAlign="middle" align="center" bgColor="#e8f4ff">2</TD>
+									<TD style="WIDTH: 143px; HEIGHT: 16px" vAlign="middle" bgColor="#e8f4ff">
 										<asp:label id="Label3" runat="server" Width="56px" Height="15px">已选职位</asp:label></TD>
-									<TD style="WIDTH: 35px; HEIGHT: 16px" bgColor="#eee7f2"><FONT style="BACKGROUND-COLOR: #ffffff"></FONT></TD>
-									<TD style="WIDTH: 91px; HEIGHT: 16px" bgColor="#eee7f2">
+									<TD style="WIDTH: 35px; HEIGHT: 16px" bgColor="#e8f4ff"><FONT style="BACKGROUND-COLOR: #ffffff"></FONT></TD>
+									<TD style="WIDTH: 91px; HEIGHT: 16px" bgColor="#e8f4ff">
 										<asp:label id="Label4" runat="server" Width="110px" Height="15px">待选职位</asp:label></TD>
 								</TR>
 								<TR>
@@ -75,11 +76,11 @@
 										<asp:listbox id="lstAllPosition" runat="server" Height="130px" Width="167px" SelectionMode="Multiple"></asp:listbox></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 47px; HEIGHT: 18px" vAlign="middle" align="center" bgColor="#eee7f2">3</TD>
-									<TD style="WIDTH: 143px; HEIGHT: 18px" vAlign="middle" bgColor="#eee7f2">
+									<TD style="WIDTH: 47px; HEIGHT: 18px" vAlign="middle" align="center" bgColor="#e8f4ff">3</TD>
+									<TD style="WIDTH: 143px; HEIGHT: 18px" vAlign="middle" bgColor="#e8f4ff">
 										<asp:label id="Label8" runat="server" Width="110px" Height="15px">已选项目：（成员）</asp:label></TD>
-									<TD bgColor="#eee7f2"></TD>
-									<TD bgColor="#eee7f2">
+									<TD bgColor="#e8f4ff"></TD>
+									<TD bgColor="#e8f4ff">
 										<asp:label id="Label5" runat="server" Width="110px" Height="15px">待选项目：</asp:label></TD>
 								</TR>
 								<TR>
@@ -93,11 +94,11 @@
 										<asp:listbox id="lstAllTeam" runat="server" Height="133px" Width="166px" SelectionMode="Multiple"></asp:listbox></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 47px; HEIGHT: 4px" align="center"><FONT style="BACKGROUND-COLOR: #eee7f2"></FONT></TD>
-									<TD style="WIDTH: 143px; HEIGHT: 4px" bgcolor="#eee7f2" align="left">
+									<TD align="center" bgcolor="#e8f4ff" style="WIDTH: 47px; HEIGHT: 4px"><FONT style="BACKGROUND-COLOR: #eee7f2"></FONT></TD>
+									<TD style="WIDTH: 143px; HEIGHT: 4px" bgcolor="#e8f4ff" align="left">
 										<asp:Label id="Label9" runat="server" Width="118px">已选项目：（组长）</asp:Label></TD>
-									<TD style="WIDTH: 35px; HEIGHT: 4px" align="center" bgcolor="#eee7f2"></TD>
-									<TD bgcolor="#eee7f2" align="left">
+									<TD style="WIDTH: 35px; HEIGHT: 4px" align="center" bgcolor="#e8f4ff"></TD>
+									<TD bgcolor="#e8f4ff" align="left">
 										<asp:label id="Label10" runat="server" Width="71px" Height="15px">待选项目：</asp:label></TD>
 								</TR>
 								<TR>
@@ -112,11 +113,11 @@
 										<asp:listbox id="lstAllTeamLeader" runat="server" Width="166px" Height="133px" SelectionMode="Multiple"></asp:listbox></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 47px; HEIGHT: 18px" vAlign="middle" align="center" bgColor="#eee7f2">4</TD>
-									<TD style="WIDTH: 143px; HEIGHT: 18px" vAlign="middle" bgColor="#eee7f2">
+									<TD style="WIDTH: 47px; HEIGHT: 18px" vAlign="middle" align="center" bgColor="#e8f4ff">4</TD>
+									<TD style="WIDTH: 143px; HEIGHT: 18px" vAlign="middle" bgColor="#e8f4ff">
 										<asp:label id="Label6" runat="server" Width="105px" Height="15px">已选人员：</asp:label></TD>
-									<TD style="WIDTH: 35px; HEIGHT: 18px" bgColor="#eee7f2"></TD>
-									<TD style="WIDTH: 91px; HEIGHT: 18px" bgColor="#eee7f2">
+									<TD style="WIDTH: 35px; HEIGHT: 18px" bgColor="#e8f4ff" ></TD>
+									<TD style="WIDTH: 91px; HEIGHT: 18px" bgColor="#e8f4ff">
 										<asp:label id="Label7" runat="server" Width="110px" Height="15px">待选人员</asp:label></TD>
 								</TR>
 								<TR>
@@ -132,7 +133,7 @@
 						</TD>
 					</TR>
 					<TR>
-						<TD align="center" height="19" bgColor="#eee7f2" style="HEIGHT: 19px"><font face="宋体" size="2">所有选定人员</font></TD>
+						<TD align="center" height="19" bgColor="#e8f4ff" style="HEIGHT: 19px"><font face="宋体" size="2">所有选定人员</font></TD>
 					</TR>
 					<TR>
 						<TD align="center" height="40">

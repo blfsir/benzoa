@@ -100,7 +100,7 @@
 	</HEAD>
 	<body leftMargin="3" topMargin="3" MS_POSITIONING="GridLayout">
 		<form id="ListView" runat="server">
-			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0" id="Table1">
 				<TR>
 					<TD>
 						<TABLE class="gbtext" id="Table2" cellSpacing="0" cellPadding="0" width="100%" border="0">
@@ -114,7 +114,7 @@
 									<asp:Button id="cmdSetRight" runat="server" Text="权限管理" CssClass="redbuttoncss"></asp:Button>
 									<asp:Button id="cmdOnDepartment" runat="server" Text="复职" CssClass="redbuttoncss"></asp:Button>
 									<asp:Button id="cmdOffDepartment" runat="server" Text="离职" CssClass="redbuttoncss"></asp:Button>
-									<asp:Button id="cmdChangeDepartment" runat="server" Text="调职" CssClass="redbuttoncss"></asp:Button>&nbsp;&nbsp;</TD>
+									<asp:Button id="cmdChangeDepartment" runat="server" Text="调职" CssClass="redbuttoncss"></asp:Button>&nbsp;</TD>
 							</TR>
 						</TABLE>
 					</TD>

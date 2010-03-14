@@ -119,20 +119,24 @@ String.prototype.Trim = function()
     <center>
         <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
             width="100%" border="0">
-            <tr height="30">
-                <td class="GbText" width="3%" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
+            <tr>
+                <td width="20" height="30" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText">
                     <font color="#003366" size="3">
                         <img alt="" src="../../DataImages/ClientManage.gif"></font>
                 </td>
-                <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <b><b><b><font face="宋体">车辆申请</font></b></b></b>
-                </td>
+                <td width="60" align="center" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText">
+              <font face="宋体">车辆申请</font></td>
                 <td class="GbText" align="right" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
                 </td>
             </tr>
         </table>
-        <table class="gbtext" id="AutoNumber1" style="border-collapse: collapse" bordercolor="#93bee2"
-            cellspacing="0" cellpadding="0" width="100%" border="1" runat="server">
+        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="10"></td>
+          </tr>
+        </table>
+        <table width="98%" border="1" align="center" cellpadding="0"
+            cellspacing="0" bordercolor="#93bee2" class="gbtext" id="AutoNumber1" style="border-collapse: collapse" runat="server">
             <tr bgcolor="#e8f4ff">
                 <td style="height:20px" colspan=6>
                 <table style="font-size:9pt;"><tr><td >车辆占用情况[<span id="spanRq" runat=server>2010-2-4</span>]&nbsp;</td><td><div style="width:15px;background-color:Red;"></div></td><td>&nbsp;占用</td></tr></table></td>
@@ -145,45 +149,45 @@ String.prototype.Trim = function()
             </tr>
             
             <tr bgcolor="#e8f4ff">
-                <td style="height: 34px;" align="right" width="10%">
+                <td  align="center" width="120">
                     用车部门:
                 </td>
-                <td style="height: 34px" >
+                <td >
                     &nbsp;<asp:TextBox ID="txtDepartment" CssClass="InputCss" runat="server" Columns="70"
                         Width="230"></asp:TextBox>
                     <%--<asp:DropDownList ID="ddlMeetingType" runat="server" Width="230">
                     </asp:DropDownList>--%>
                 </td>
-                <td style="height: 34px" align="right" width="10%">
+                <td align="center" width="120">
                     用车人:
                 </td>
-                <td style="height: 34px" height="34">
+                <td height="34">
                     &nbsp;<asp:TextBox ID="txtUsePeople" CssClass="InputCss" runat="server" Columns="70"
                         Width="230"></asp:TextBox>
                 </td>
-                 <td style="height: 34px" align="right"  width="10%">
+                 <td align="center"  width="120">
                     联系电话:
                 </td>
-                <td style="height: 34px" height="34">
+                <td height="34">
                     &nbsp;<asp:TextBox ID="txtTelephone" CssClass="InputCss" runat="server" Columns="70"
                         Width="230"></asp:TextBox>
                 </td>    
             </tr>
             <tr>
                
-                <td style="height: 34px" align="right"  height="34">
+                <td width="120"  height="34" align="center">
                     出车任务:
                 </td>
-                <td style="height: 34px" height="34" colspan=5>
+                <td height="34" colspan=5>
                     &nbsp;<asp:TextBox ID="txtTask" CssClass="InputCss" runat="server" Columns="70"
                         Width="99%" Rows="6" TextMode="MultiLine"></asp:TextBox>
                 </td>
             </tr>
             <tr bgcolor="#e8f4ff">
-                <td style="height: 34px" align="right"  height="34">
+                <td width="120"  height="34" align="center">
                     用车时间:
                 </td>
-                <td style="height: 34px" height="34" colspan=2>
+                <td height="34" colspan=2>
                     &nbsp;<asp:TextBox ID="txtUseTime" onfocus="setday(this);" CssClass="InputCss" runat="server"
                         Columns="70" Width="120" ReadOnly="True" onchange="onChangDate();"></asp:TextBox>
                     <asp:DropDownList ID="ddlHour" runat="server" CssClass="InputCss">
@@ -217,26 +221,26 @@ String.prototype.Trim = function()
                         <asp:ListItem>30</asp:ListItem>
                     </asp:DropDownList>分
                 </td>
-                <td style="height: 34px" align="right"  height="34">
+                <td align="right"  height="34">
                     用时:
                 </td>
-                <td style="height: 34px" height="34" colspan=2>
+                <td height="34" colspan=2>
                     &nbsp;<asp:TextBox ID="txtTimes" CssClass="InputCss" runat="server"
                         Columns="70" Width="120" ></asp:TextBox> &nbsp;小时
                 </td>
             </tr>
             <tr>
-                <td style="height: 34px" align="right"  height="34">
+                <td width="120"  height="34" align="center">
                     用车人数:
                 </td>
-                <td style="height: 34px" height="34" colspan=2>
+                <td height="34" colspan=2>
                     &nbsp;<asp:TextBox ID="txtPeopleNum" CssClass="InputCss" runat="server" Columns="70"
                         Width="130"></asp:TextBox> &nbsp;0 表示人数不确定
                 </td>
-                <td style="height: 34px" align="right"  height="34">
+                <td align="right"  height="34">
                     用车性质:
                 </td>
-                <td style="height: 34px" colspan=2>
+                <td colspan=2>
                     <asp:RadioButtonList ID="rbtnlNature" runat="server" CssClass="InputCss"
                         RepeatDirection="Horizontal" Width="93px" BorderStyle="None">
                         <asp:ListItem Selected="True">公</asp:ListItem>
@@ -245,10 +249,10 @@ String.prototype.Trim = function()
                 </td>
             </tr>
             <tr bgcolor="#e8f4ff">
-                <td style="height: 34px" align="right"  height="34">
+                <td width="120"  height="34" align="center">
                     申请车辆:
                 </td>
-                <td style="height: 34px" height="34" colspan=5>
+                <td height="34" colspan=5>
                     &nbsp;<%--<asp:TextBox ID="txtApplyCar" CssClass="InputCss" runat="server" Columns="70"
                         Width="530"></asp:TextBox>--%>
                         <asp:DropDownList ID="ddlApplyCar" runat="server" Width="230">
@@ -260,8 +264,7 @@ String.prototype.Trim = function()
                 <td align="center" colspan="6" height="35">
                     <font face="宋体">
                         <asp:Button ID="cmdSubmit" runat="server" CssClass="redButtonCss" Width="60px" Text="确定"
-                            Height="20px" OnClientClick="return DoValidate();"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        
+                            Height="20px" OnClientClick="return DoValidate();"></asp:Button>
                     </font>
                 </td>
             </tr>

@@ -205,22 +205,22 @@
 	<body MS_POSITIONING="GridLayout">
 		<form id="Fee" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="1">
+				<TABLE width="98%" border="1" align="center" cellPadding="3" cellSpacing="0" bordercolor="#93bee2" id="Table1">
 					<TR>
-						<TD align="right"><asp:dropdownlist id="ddl_order" runat="server">
+						<TD height="30" align="right" bgcolor="#E8F4FF"><asp:dropdownlist id="ddl_order" runat="server">
 								<asp:ListItem Value="client">按客户发生费用总量排列</asp:ListItem>
 								<asp:ListItem Value="sellman">按销售人员费用总量排列</asp:ListItem>
 							</asp:dropdownlist></TD>
 					</TR>
 					<TR>
-						<TD>开始时间
+						<TD height="30">开始时间
 							<asp:textbox id="tbx_begintime" onfocus="setday(this);" runat="server" ReadOnly="True"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ErrorMessage="*" Display="Dynamic" ControlToValidate="tbx_begintime"></asp:requiredfieldvalidator>结束时间
 							<asp:textbox id="tbx_endtime" onfocus="setday(this);" runat="server" ReadOnly="True"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="tbx_endtime"></asp:requiredfieldvalidator><asp:radiobutton id="rbtn_thisweek" onclick="quickseldate('week');" runat="server" GroupName="quickselect"
 								Text="本周"></asp:radiobutton><asp:radiobutton id="rbtn_thismonth" onclick="quickseldate('month');" runat="server" GroupName="quickselect"
 								Text="本月"></asp:radiobutton><asp:button id="btn_OK" runat="server" Text="确定"></asp:button></TD>
 					</TR>
 					<TR>
-						<TD>共
+						<TD height="30" bgcolor="#E8F4FF">共
 							<asp:literal id="ltl_Client" runat="server"></asp:literal>位客户，共发生费用
 							<asp:literal id="ltl_Fee" runat="server"></asp:literal>元</TD>
 					</TR>
@@ -320,9 +320,6 @@
 								</Columns>
 								<PagerStyle Mode="NumericPages" HorizontalAlign="Right"></PagerStyle>
 							</asp:datagrid></TD>
-					</TR>
-					<TR>
-						<TD align="center">&nbsp;</TD>
 					</TR>
 				</TABLE>
 			</FONT>

@@ -73,30 +73,35 @@ function GetServerTime(updatespan)
 		}
 		</script>
 	</HEAD>
-	<body leftmargin="0" topmargin="0" onload="GetServerTime(15*60*1000)">
+	<body leftmargin="0" topmargin="0" onLoad="GetServerTime(15*60*1000)">
 		<form method="post" runat="server">
-			<table border="0" cellpadding="0" cellspacing="0" style="BORDER-COLLAPSE: collapse" bordercolor="#111111"
-				width="100%" height="1">
-				<tr height="30">
-					<td width="3%" bgcolor="#c0d9e6" class="GbText" background="../../Images/treetopbg.jpg"><font color="#006699" size="3"><img src="../..//DataImages/page2.gif" width="16" height="16"></font></td>
-					<td bgcolor="#c0d9e6" class="GbText" background="../../Images/treetopbg.jpg"><b>我的考勤</b></td>
+			<table border="0" cellpadding="0" cellspacing="0" style="BORDER-COLLAPSE: collapse" bordercolor="#111111" width="100%" height="1">
+				<tr>
+					<td width="20" height="30" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText"><font color="#006699" size="3"><img src="../..//DataImages/page2.gif" width="16" height="16"></font></td>
+					<td width="60" align="center" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText">我的考勤</td>
+					<td align="center" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText">&nbsp;</td>
 				</tr>
 			</table>
-			<TABLE id="Table1" style="HEIGHT: 258px" cellSpacing="1" cellPadding="1" width="100%" border="0"
-				class="gbtext">
-				<TR>
-					<TD align="center" height="50">
+			<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+			    <td height="10"></td>
+		      </tr>
+		  </table> 
+			<TABLE width="98%" border="1" align="center" cellPadding="3" cellSpacing="0"
+				class="gbtext" id="Table1" bordercolor="#93bee2">
+			  <TR>
+					<TD height="30" align="center" bgcolor="#e8f4ff">
 						<asp:Label id="lblDutyMessage" runat="server">考勤信息</asp:Label>
 						<asp:label id="lbl_Time" runat="server" Font-Size="X-Small"></asp:label>
 						<asp:label id="lbl_Hour" runat="server" Font-Size="X-Small">Label</asp:label>:<asp:label id="lbl_Minute" runat="server" Font-Size="X-Small">Label</asp:label>:<asp:label id="lbl_Second" runat="server" Font-Size="X-Small">Label</asp:label>
-				<TR>
+		  <TR>
 					<TD align="center">
 						<asp:TextBox id="txtAttendanceMemo" runat="server" TextMode="MultiLine" Height="150px" Width="500px"
 							Visible="False"></asp:TextBox></TD>
 				</TR>
 				<TR>
-					<TD align="center" height="40">
-						<asp:Button id="btnCheckAttendance" CommandArgument="" runat="server" CssClass="buttoncss" Width="80px" ></asp:Button></TD>
+					<TD height="30" align="center" bgcolor="#e8f4ff">
+						<asp:Button id="btnCheckAttendance" CommandArgument="" runat="server" CssClass="buttoncss" Width="80px" Visible="false"></asp:Button></TD>
 				</TR>
 				<TR>
 					<TD><FONT face="宋体">

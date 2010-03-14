@@ -13,12 +13,12 @@
 		<form id="WebForm1" method="post" runat="server">
 			<FONT face="宋体">
             <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-								<TR height="30">
-									<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-										align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
-									<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
+								<TR >
+									<TD width="20" height="30"
+										align="right" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
+								  <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
 										align="center"><font color="#006699">文档流转</font></TD>
-									<TD width="944" align="right" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" class="GbText"><FONT face="宋体">
+									<TD align="right" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" class="GbText"><FONT face="宋体">
 									        <asp:Button runat="server" ID="btnSetDesktopFlow" Width="95px" 
                                             Text="设为快捷流程" CssClass="buttoncss" onclick="btnSetDesktopFlow_Click" />
 											<asp:Button id="cmdListDraft" runat="server" Width="55px" Text="列表" CssClass="buttoncss"></asp:Button>&nbsp;</FONT></TD>

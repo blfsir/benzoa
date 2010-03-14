@@ -73,18 +73,25 @@
 		<form id="ClientInfo" method="post" runat="server">
 			<FONT face="宋体">
 				<TABLE borderColor="#111111" cellSpacing="0" cellPadding="0" width="100%" border="0">
-					<TR height="30">
-						<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-							align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/myLinkman.gif" width="16"></FONT></TD>
-						<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="75"
-							align="right" style="WIDTH: 75px">客户管理</TD>
+					<TR>
+						<TD width="20" height="30"
+							align="right" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/myLinkman.gif" width="16"></FONT></TD>
+					  <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
+							align="center">客户管理</TD>
 						<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="left">-查询&nbsp;</TD>
 					</TR>
 				</TABLE>
-				<TABLE id="Table1" borderColor="#93bee2" cellSpacing="0" cellPadding="0" width="100%" border="1"
-					style="BORDER-COLLAPSE: collapse" class="GbText">
+			</FONT>
+		  <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+			    <td height="10"></td>
+		      </tr>
+		  </table>
+			<FONT face="宋体">
+				<TABLE width="98%" border="1" align="center" cellPadding="3" cellSpacing="0" borderColor="#93bee2" class="GbText" id="Table1"
+					style="BORDER-COLLAPSE: collapse">
 					<TR>
-						<TD style="WIDTH: 683px">查询条件：&nbsp;&nbsp;
+						<TD width="50%" height="30" bgcolor="#E8F4FF">查询条件：&nbsp;&nbsp;
 							<asp:dropdownlist id="ddl_search" runat="server" AutoPostBack="True" Width="130px">
 								<asp:ListItem Value="客户名称">客户名称</asp:ListItem>
 								<asp:ListItem Value="客户分类">客户分类</asp:ListItem>
@@ -99,7 +106,7 @@
 								<asp:ListItem Value="本周新增客户">本周新增客户</asp:ListItem>
 								<asp:ListItem Value="本月新增客户">本月新增客户</asp:ListItem>
 							</asp:dropdownlist><asp:textbox id="tbx_searchvalue" runat="server" CssClass="inputcss"></asp:textbox>&nbsp;</TD>
-						<TD>查询范围
+						<TD bgcolor="#E8F4FF">查询范围
 							<asp:dropdownlist id="ddl_SearchBound" runat="server">
 								<asp:ListItem Value="1">本人与下属</asp:ListItem>
 								<asp:ListItem Value="2">仅本人</asp:ListItem>
@@ -110,7 +117,7 @@
 						<TD colSpan="2"><asp:radiobuttonlist id="rbl_searchvalue" runat="server" Visible="False"></asp:radiobuttonlist></TD>
 					</TR>
 					<TR>
-						<TD colSpan="2"><asp:button id="btn_addsearch" runat="server" Text="添加条件" CssClass="redbuttoncss"></asp:button>&nbsp;
+						<TD height="30" colSpan="2"><asp:button id="btn_addsearch" runat="server" Text="添加条件" CssClass="redbuttoncss"></asp:button>&nbsp;
 							<asp:button id="btn_Del" runat="server" Text="删除条件" CssClass="redbuttoncss"></asp:button></TD>
 					</TR>
 					<TR>
@@ -125,9 +132,9 @@
 						<TD colSpan="2"></TD>
 					</TR>
 				</TABLE>
-				<asp:DataGrid id="dgrd_clientlist" runat="server" Width="100%" AllowSorting="True" AllowPaging="True"
+				<asp:DataGrid id="dgrd_clientlist" runat="server" Width="98%" AllowSorting="True" AllowPaging="True"
 					AutoGenerateColumns="False">
-					<HeaderStyle ForeColor="White" BackColor="#337FB2"></HeaderStyle>
+		      <HeaderStyle ForeColor="White" BackColor="#337FB2"></HeaderStyle>
 					<Columns>
 						<asp:TemplateColumn></asp:TemplateColumn>
 						<asp:BoundColumn DataField="ID" SortExpression="ID" HeaderText="编号"></asp:BoundColumn>

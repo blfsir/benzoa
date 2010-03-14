@@ -91,7 +91,7 @@
 	<body MS_POSITIONING="GridLayout">
 		<form id="Form1" method="post" runat="server">
 			<FONT face="宋体">
-				<table cellSpacing="0" cellPadding="5" width="100%" border="0">
+				<table width="98%" border="0" align="center" cellPadding="5" cellSpacing="0">
 					<tr>
 						<td colSpan="2">
 							<table cellSpacing="0" cellPadding="0" width="500" border="0">
@@ -186,7 +186,7 @@
 									<asp:label id="lblManagePermission" runat="server" Font-Size="X-Small"> 权限管理</asp:label></A></FONT></td>
 					</tr>
 				</table>
-				<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<table width="98%" border="0" align="center" cellPadding="0" cellSpacing="0">
 				<tr>
 				<td>&nbsp;</td></tr>
 				<tr>

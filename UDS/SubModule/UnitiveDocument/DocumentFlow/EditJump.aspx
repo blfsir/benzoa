@@ -18,11 +18,18 @@
 	</HEAD>
 	<body leftMargin="0" topMargin="0" MS_POSITIONING="GridLayout">
 		<form id="Form1" method="post" runat="server">
-			<TABLE class="gbtext" id="Table2" cellSpacing="1" cellPadding="1" width="100%" border="0">
-				<TR>
-					<TD style="HEIGHT: 30px" background="../../../Images/treetopbg.jpg" colSpan="2"><FONT face="宋体">步骤跳转：
+			<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+			  <TR>
+					<TD height="30" colSpan="2" background="../../../Images/treetopbg.jpg"><FONT face="宋体">步骤跳转：
 							<asp:label id="labTitle" runat="server" Width="318px"></asp:label></FONT></TD>
-				</TR>
+			  </TR>
+		  </table>
+			<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#93bee2">
+			  <tr>
+			    <td height="10"></td>
+		      </tr>
+		  </table>
+			<TABLE width="98%" border="1" align="center" cellPadding="3" cellSpacing="0" class="gbtext" id="Table2" bordercolor="#93bee2">
 				<TR>
 					<TD style="WIDTH: 61px"><FONT face="宋体">条件判断：</FONT></TD>
 					<TD><FONT face="宋体"><asp:dropdownlist id="ddFieldName" runat="server" Width="150px" Height="20px"></asp:dropdownlist>&nbsp;<asp:dropdownlist id="ddCompare" runat="server" Width="77px" Height="20px">

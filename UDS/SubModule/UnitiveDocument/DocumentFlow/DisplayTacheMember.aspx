@@ -47,7 +47,7 @@
           background='../../../Images/maillistbutton<%Response.Write(GetSelectImage("1","2",DisplayType,4));%>.gif' 
           >&nbsp;
 										<asp:linkbutton id="lbPostiler" runat="server">已批人员</asp:linkbutton></TD>
-									<TD align="right"><INPUT class=redButtonCss style="WIDTH: 64px; HEIGHT: 20px" onclick="ReturnBack(<%=ReturnPage%>)" type=button value=返回>&nbsp;</TD>
+									<TD align="right"><INPUT class=redButtonCss style="WIDTH: 64px; HEIGHT: 20px" onClick="ReturnBack(<%=ReturnPage%>)" type=button value=返回>&nbsp;</TD>
 								</TR>
 							</TABLE>
 						</TD>

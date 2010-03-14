@@ -14,54 +14,54 @@
 		<form id="ClientHistoryContact" method="post" runat="server">
 			<FONT face="宋体">
 				<TABLE id="Table1" class="gbtext" cellSpacing="0" style="BORDER-COLLAPSE: collapse" cellPadding="0"
-					width="508" border="1" bordercolor="#93bee2" align="left">
+					width="98%" border="1" bordercolor="#93bee2" align="left">
 					<TR>
-						<TD class="gbtext">客户名称</TD>
-						<TD style="WIDTH: 119px">
-							<asp:Literal id="ltl_ClientName" runat="server"></asp:Literal></TD>
-						<TD>客户简称</TD>
+						<TD width="120" height="30" bgcolor="#E8F4FF" class="gbtext">&nbsp;客户名称</TD>
 						<TD>
-							<asp:Literal id="ltl_ClientShortName" runat="server"></asp:Literal></TD>
-					</TR>
-					<TR>
-						<TD>更新时间</TD>
-						<TD style="WIDTH: 119px">
-							<asp:Literal id="ltl_UpdateTime" runat="server"></asp:Literal></TD>
-						<TD>发现时间</TD>
+							&nbsp;<asp:Literal id="ltl_ClientName" runat="server"></asp:Literal></TD>
+						<TD width="120" bgcolor="#E8F4FF">&nbsp;客户简称</TD>
 						<TD>
-							<asp:Literal id="ltl_Birthday" runat="server"></asp:Literal></TD>
+							&nbsp;<asp:Literal id="ltl_ClientShortName" runat="server"></asp:Literal></TD>
 					</TR>
 					<TR>
-						<TD>接洽次数</TD>
-						<TD style="WIDTH: 119px">
-							<asp:Literal id="ltl_ContactTimes" runat="server"></asp:Literal></TD>
-						<TD>销售阶段</TD>
+						<TD width="120" height="30" bgcolor="#E8F4FF">&nbsp;更新时间</TD>
 						<TD>
-							<asp:Literal id="ltl_SellPhase" runat="server"></asp:Literal></TD>
-					</TR>
-					<TR>
-						<TD>成交预估</TD>
-						<TD style="WIDTH: 119px">
-							<asp:Literal id="ltl_BargainPrognosis" runat="server"></asp:Literal></TD>
-						<TD>发生费用</TD>
+							&nbsp;<asp:Literal id="ltl_UpdateTime" runat="server"></asp:Literal></TD>
+						<TD width="120" bgcolor="#E8F4FF">&nbsp;发现时间</TD>
 						<TD>
-							<asp:Literal id="ltl_Fee" runat="server"></asp:Literal></TD>
+							&nbsp;<asp:Literal id="ltl_Birthday" runat="server"></asp:Literal></TD>
 					</TR>
 					<TR>
-						<TD>销售人员</TD>
-						<TD style="WIDTH: 119px">
-							<asp:Literal id="ltl_AddMan" runat="server"></asp:Literal></TD>
-						<TD></TD>
-						<TD></TD>
+						<TD width="120" height="30" bgcolor="#E8F4FF">&nbsp;接洽次数</TD>
+						<TD>
+							&nbsp;<asp:Literal id="ltl_ContactTimes" runat="server"></asp:Literal></TD>
+						<TD width="120" bgcolor="#E8F4FF">&nbsp;销售阶段</TD>
+						<TD>
+							&nbsp;<asp:Literal id="ltl_SellPhase" runat="server"></asp:Literal></TD>
 					</TR>
 					<TR>
-						<TD>历史接触记录</TD>
-						<TD style="WIDTH: 119px"></TD>
-						<TD></TD>
-						<TD></TD>
+						<TD width="120" height="30" bgcolor="#E8F4FF">&nbsp;成交预估</TD>
+						<TD>
+							&nbsp;<asp:Literal id="ltl_BargainPrognosis" runat="server"></asp:Literal></TD>
+						<TD width="120" bgcolor="#E8F4FF">&nbsp;发生费用</TD>
+						<TD>
+							&nbsp;<asp:Literal id="ltl_Fee" runat="server"></asp:Literal></TD>
 					</TR>
 					<TR>
-						<TD colSpan="4">
+						<TD width="120" height="30" bgcolor="#E8F4FF">&nbsp;销售人员</TD>
+						<TD>
+							&nbsp;<asp:Literal id="ltl_AddMan" runat="server"></asp:Literal></TD>
+						<TD width="120" bgcolor="#E8F4FF">&nbsp;</TD>
+						<TD>&nbsp;</TD>
+					</TR>
+					<TR>
+						<TD width="120" height="30" bgcolor="#E8F4FF">&nbsp;历史接触记录</TD>
+						<TD>&nbsp;</TD>
+						<TD width="120" bgcolor="#E8F4FF">&nbsp;</TD>
+						<TD>&nbsp;</TD>
+					</TR>
+					<TR>
+						<TD colSpan="4" height="30">
 							<uc1:ControlClientContactHistory id="ControlClientContactHistory1" runat="server"></uc1:ControlClientContactHistory></TD>
 					</TR>
 				</TABLE>

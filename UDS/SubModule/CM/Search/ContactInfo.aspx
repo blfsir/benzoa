@@ -62,7 +62,7 @@
 	<body MS_POSITIONING="GridLayout">
 		<form id="ContactInfo" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE id="Table1" style="Z-INDEX: 101; LEFT: 8px; POSITION: absolute; TOP: 12px" cellSpacing="1" cellPadding="1" width="100%" border="1">
+				<TABLE id="Table1" style="Z-INDEX: 101; LEFT: 8px; POSITION: absolute; TOP: 12px" cellSpacing="0" cellPadding="3" width="100%" border="1" bordercolor="#93bee2">
 					<TR>
 						<TD>查询条件：
 							<asp:DropDownList id="ddl_search" runat="server" AutoPostBack="True">
@@ -83,7 +83,7 @@
 							<asp:RadioButtonList id="rbl_searchvalue" runat="server"></asp:RadioButtonList></TD>
 					</TR>
 					<TR>
-						<TD>
+						<TD height="30" align="center" bgcolor="#e8f4ff">
 							<asp:Button id="btn_addsearch" runat="server" Text="添加"></asp:Button>&nbsp;
 							<asp:Button id="btn_Del" runat="server" Text="删除"></asp:Button></TD>
 					</TR>
@@ -93,7 +93,7 @@
 							<asp:Button id="btn_OK" runat="server" Text="查询"></asp:Button></TD>
 					</TR>
 					<TR>
-						<TD>共查到
+						<TD height="30" align="center" bgcolor="#e8f4ff">共查到
 							<asp:Literal id="ltl_Client" runat="server"></asp:Literal>位符合条件的客户</TD>
 					</TR>
 					<TR>

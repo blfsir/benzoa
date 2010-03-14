@@ -17,11 +17,11 @@
 		<form id="ListDocument" method="post" runat="server">
 			<FONT face="宋体">
             <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-								<TR height="30">
+								<TR>
 									<TD class="GbText" align="right" width="20" background="../../../Images/treetopbg.jpg"
 										bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
-									<TD class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
-										bgColor="#e8f4ff"><font color="#006699">文档流转</font></TD>
+									<TD width="60" height="30" align="center" background="../../../Images/treetopbg.jpg"
+										bgColor="#e8f4ff" class="GbText"><font color="#006699">文档流转</font></TD>
 									<TD class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff"><FONT face="宋体">&nbsp;&nbsp;&nbsp;</FONT></TD>
 								</TR>
 			</TABLE>

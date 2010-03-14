@@ -316,7 +316,7 @@ setTimeout('Delay()',20);
 if (ns||ie)window.onload=Delay;
 
 		</script>
-		<TABLE id="Table1" height="200" cellSpacing="0" cellPadding="0" width="400" border="0">
+		<TABLE width="400" height="200" border="0" align="center" cellPadding="0" cellSpacing="0" id="Table1">
 			<TR>
 				<TD background="../..//Images/time.gif"></TD>
 			</TR>

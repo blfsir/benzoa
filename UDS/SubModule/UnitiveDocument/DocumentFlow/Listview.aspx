@@ -21,11 +21,11 @@
 		<form id="Listview" method="post" runat="server">
 			<FONT face="宋体">
             <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-								<TR height="30">
-									<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-										align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
-									<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
-										align="center"><font color="#006699">文档流转</font></TD>
+								<TR>
+									<TD width="20" height="30"
+										align="right" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
+								  <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
+										align="center">文档流转</TD>
 									<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体"><asp:button id="cmdNewFlow" runat="server" CssClass="redbuttoncss" Height="21px" Text="新建流程"
 												Width="66px"></asp:button>
 <FONT face="宋体">

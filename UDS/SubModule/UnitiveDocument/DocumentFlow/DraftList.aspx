@@ -15,11 +15,11 @@
 					<FONT face="宋体">
                     <TABLE id="Table3" borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%"
 										border="0">
-										<TR height="30">
-											<TD class="GbText" align="right" width="20" background="../../../Images/treetopbg.jpg"
-												bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
-											<TD class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
-												bgColor="#e8f4ff"><FONT color="#006699">文档流转</FONT></TD>
+										<TR>
+											<TD width="20" height="30" align="right" background="../../../Images/treetopbg.jpg"
+												bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
+										  <TD class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
+												bgColor="#e8f4ff">文档流转</TD>
 											<TD class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff"><FONT face="宋体"><asp:button id="cmdQuery" runat="server" Width="50px" Text="查询" CssClass="redbuttoncss"></asp:button> <asp:button id="cmdNewDocument" runat="server" Width="54px" Text="撰稿" CssClass="redbuttoncss"></asp:button>&nbsp;</FONT></TD>
 										</TR>
 					</TABLE>
@@ -37,8 +37,7 @@
 											<TD align="center" width="90" background="../../../Images/maillistbutton1.gif"><asp:linkbutton id="lbMyApproved" runat="server" CssClass="Newbutton">已经批阅</asp:linkbutton></TD>
 											<TD align="center" width="90" background="../../../Images/maillistbutton2.gif"><asp:linkbutton id="lbDraftList" runat="server" CssClass="Newbutton">拟稿箱</asp:linkbutton></TD>
 											<%if(bManageFlow==true){%>
-											<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">&nbsp;
-												<asp:linkbutton id="lbFlowManage" runat="server" CssClass="Newbutton">流程管理</asp:linkbutton></TD>
+											<TD align="center" width="90" background="../../../Images/maillistbutton1.gif"><asp:linkbutton id="lbFlowManage" runat="server" CssClass="Newbutton">流程管理</asp:linkbutton></TD>
 											<%}%>
 											<%else {%>
 											<TD align="center">&nbsp;

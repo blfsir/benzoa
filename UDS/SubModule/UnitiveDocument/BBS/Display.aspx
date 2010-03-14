@@ -51,10 +51,10 @@
 			<div align="center">
 				<center>
 					<table id="AutoNumber1" style="BORDER-COLLAPSE: collapse" height="224" cellSpacing="0"
-						cellPadding="0" width="96%" border="1">
+						cellPadding="3" width="98%" border="1" bordercolor="#93bee2">
 						<tr bgcolor="#93bee2">
-							<td class="Gbtext" align="center" colSpan="2" height="26"><asp:label id="lblTitle" runat="server" Font-Bold="True" Font-Names="宋体" Font-Size="Medium"></asp:label><asp:CheckBox ID="cbx_sysBulletin" Text="系统公告" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox><asp:CheckBox ID="cbx_DeskTop" Text="桌面显示" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox><asp:CheckBox ID="cbx_boardBulletin" Text="板块公告" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox></td>
-						</tr>
+							<td class="Gbtext" align="center" colSpan="2" height="30"><asp:label id="lblTitle" runat="server" Font-Bold="True" Font-Names="宋体" Font-Size="Medium"></asp:label><asp:CheckBox ID="cbx_sysBulletin" Text="系统公告" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox><asp:CheckBox ID="cbx_DeskTop" Text="桌面显示" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox><asp:CheckBox ID="cbx_boardBulletin" Text="板块公告" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox></td>
+					  </tr>
 						<tr>
 							<td class="Gbtext" align="left" bgColor="#e8f4ff" height="26" valign="top">
 								<B>发送日期</B>：<br>
@@ -69,7 +69,7 @@
 							<td class="Gbtext" id="itemcontent" vAlign="top" align="left" bgColor="#e8f4ff" height="26"
 								runat="server">
 							</td>
-							<asp:repeater id="replaylist" Runat="server">
+					  <asp:repeater id="replaylist" Runat="server">
 							<ItemTemplate>
 								<tr>
 									<td height="26" align="left" class="Gbtext" bgcolor='#e8f4ff' valign=top>
@@ -89,7 +89,7 @@
 									</td>
 								</tr>
 							</ItemTemplate>
-						</asp:repeater>
+					  </asp:repeater>
 						</tr>
 						<tr>
 							<td class="Gbtext" width="100" height="30" align="right">排版:&nbsp;</td>
@@ -142,7 +142,7 @@
 							<td class="Gbtext" align="center" width="736" colSpan="2" height="30"><A href="javascript:window.close();">关闭窗口</A></td>
 						</tr>
 					</table>
-				</center>
+			  </center>
 			</div>
 		</form>
 		</FORM>

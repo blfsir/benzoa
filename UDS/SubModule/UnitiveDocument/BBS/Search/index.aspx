@@ -41,22 +41,27 @@
 			<table style="BORDER-COLLAPSE: collapse" borderColor="#111111" height="1" cellSpacing="0"
 				cellPadding="0" width="100%" border="0">
 				<tr height="30">
-					<td class="GbText" width="3%" background="../../../../Images/treetopbg.jpg" bgColor="#c0d9e6"><font color="#003366" size="3"><IMG height="16" src="../../../../DataImages/page.gif" width="16"></font></td>
-					<td bgcolor="#c0d9e6" class="GbText" background="../../../../Images/treetopbg.jpg"><b>公司论坛 
-							BBS</b> | <a href='<%="index.aspx?classid="+classid%>'>搜索</a> |</td>
+					<td class="GbText" width="25" background="../../../../Images/treetopbg.jpg" bgColor="#c0d9e6"><font color="#003366" size="3"><IMG height="16" src="../../../../DataImages/page.gif" width="16"></font></td>
+					<td bgcolor="#c0d9e6" class="GbText" background="../../../../Images/treetopbg.jpg">公司论坛 
+							BBS | <a href='<%="index.aspx?classid="+classid%>'>搜索</a> |</td>
 				</tr>
 			</table>
 			<TABLE id="Table2"  cellSpacing="0"
-				cellPadding="0" width="100%" border="0">
+				cellPadding="0" width="98%" border="0" align="center">
 				<TR>
 					<TD>
-						<TABLE id="tbl_Search" cellSpacing="0" cellPadding="0" width="100%" style="BORDER-COLLAPSE: collapse" borderColor="#93bff2" border="1" runat="server" class=gbtext>
-							<TR>
-								<TD colSpan="2" height=40px>&nbsp;输入关键字&nbsp;&nbsp;<asp:textbox id="tbx_Key" runat="server" Width="440" CssClass=inputcss></asp:textbox><FONT face="宋体">&nbsp;&nbsp;<asp:button id="btn_OK" runat="server" Text="开始搜索" CssClass=redbuttoncss Width=80px></asp:button></FONT></TD>
+						<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+						  <tr>
+						    <td height="10"></td>
+					      </tr>
+					  </table>
+						<TABLE width="100%" border="1" align="center" cellPadding="0" cellSpacing="0" borderColor="#93bff2" class=gbtext id="tbl_Search" style="BORDER-COLLAPSE: collapse" runat="server">
+						  <TR>
+								<TD colSpan="2" height=30>&nbsp;输入关键字&nbsp;&nbsp;<asp:textbox id="tbx_Key" runat="server" Width="440" CssClass=inputcss></asp:textbox><FONT face="宋体">&nbsp;&nbsp;<asp:button id="btn_OK" runat="server" Text="开始搜索" CssClass=redbuttoncss Width=80px></asp:button></FONT></TD>
 							</TR>
 							<TR>
-								<TD align="left" colSpan="2" height=40px>&nbsp;<FONT face="宋体">高级搜索选项</FONT>&nbsp;<FONT face="宋体"><asp:radiobutton id="rbtn_author" runat="server" Text="搜索作者" GroupName="searchoption" Checked="True"></asp:radiobutton></FONT><asp:radiobutton id="Radiobutton1" runat="server" Text="搜索主题" GroupName="searchoption"></asp:radiobutton>
-								&nbsp;&nbsp;<FONT style="FONT-SIZE: x-small" face="宋体">日期范围</FONT>
+								<TD align="left" colSpan="2" height=30>&nbsp;<FONT face="宋体">高级搜索选项</FONT>&nbsp;<FONT face="宋体"><asp:radiobutton id="rbtn_author" runat="server" Text="搜索作者" GroupName="searchoption" Checked="True"></asp:radiobutton></FONT><asp:radiobutton id="Radiobutton1" runat="server" Text="搜索主题" GroupName="searchoption"></asp:radiobutton>
+								&nbsp;&nbsp;日期范围
 									<asp:textbox id="tbx_Time" runat="server" Width="80px" CssClass=inputcss></asp:textbox><asp:dropdownlist id="ddl_Time" runat="server" Width=80>
 										<asp:ListItem Value="0">全部</asp:ListItem>
 										<asp:ListItem Value="w">星期</asp:ListItem>
@@ -64,8 +69,8 @@
 										<asp:ListItem Value="m">月</asp:ListItem>
 										<asp:ListItem Value="y">年</asp:ListItem>
 									</asp:dropdownlist>
-									&nbsp;&nbsp;<FONT style="FONT-SIZE: x-small" face="宋体">论坛选择
-										<asp:DropDownList id="dll_Board" runat="server" Width="80px"></asp:DropDownList></FONT></TD>
+									&nbsp;&nbsp;论坛选择
+										<asp:DropDownList id="dll_Board" runat="server" Width="80px"></asp:DropDownList></TD>
 							</TR>
 						</TABLE>
 					</TD>
@@ -89,7 +94,7 @@
 								<asp:TemplateColumn HeaderText="贴子主题">
 									<ItemStyle HorizontalAlign="Left"></ItemStyle>
 									<ItemTemplate>
-										<a onclick="javascript:window.open('../display.aspx?ItemID=<%# DataBinder.Eval(Container, "DataItem.item_id") %>&BoardID=<%# DataBinder.Eval(Container, "DataItem.board_id")%>','_blank','')" href="#" >
+										<a onClick="javascript:window.open('../display.aspx?ItemID=<%# DataBinder.Eval(Container, "DataItem.item_id") %>&BoardID=<%# DataBinder.Eval(Container, "DataItem.board_id")%>','_blank','')" href="#" >
 											<%# DataBinder.Eval(Container, "DataItem.title") %>
 										</a>
 									</ItemTemplate>

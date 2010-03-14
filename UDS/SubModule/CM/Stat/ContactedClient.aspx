@@ -67,10 +67,10 @@
 		}
 		</script>
 	</HEAD>
-	<body MS_POSITIONING="GridLayout">
+	<body MS_POSITIONING="GridLayout" leftMargin="0" topmargin="0">
 		<form id="ContactedClient" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="1">
+				<TABLE width="98%" border="1" align="center" cellPadding="1" cellSpacing="1" id="Table1">
 					<TR>
 						<TD>共接触
 							<asp:Literal id="ltl_Client" runat="server"></asp:Literal>位客户</TD>

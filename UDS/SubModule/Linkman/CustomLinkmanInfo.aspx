@@ -12,25 +12,30 @@
 	<body MS_POSITIONING="GridLayout" topmargin="0" leftmargin="0">
 		<form id="CustomLinkman" method="post" runat="server">
 			<TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-				<TR height="30">
-					<TD class="GbText" width="24" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG height="16" src="../../DataImages/myLinkman.gif" width="16"></FONT></TD>
-					<TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" width="80" align="right"><font color="#006699">联系人资料</font></TD>
+				<TR >
+					<TD width="24" height="30" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../DataImages/myLinkman.gif" width="16"></FONT></TD>
+				  <TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" width="70" align="center">联系人资料</TD>
 					<TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" align="right"><FONT face="宋体">&nbsp;
 						</FONT>&nbsp;</TD>
 				</TR>
 			</TABLE>
-			<TABLE id="tbl_Custom" style="BORDER-COLLAPSE: collapse" borderColor="#93bee2" cellSpacing="0" cellPadding="0" width="100%" align="center" border="1" runat="server" class="gbtext">
+			<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+			    <td height="10"></td>
+		      </tr>
+		  </table>
+			<TABLE id="tbl_Custom" style="BORDER-COLLAPSE: collapse" borderColor="#93bee2" cellSpacing="0" cellPadding="0" width="98%" align="center" border="1" runat="server" class="gbtext">
 				<TR>
-					<TD style="WIDTH: 90px; HEIGHT: 35px" height="35" bgcolor="#e8f4ff">&nbsp;姓名</TD>
-					<TD height="35" style="WIDTH: 154px; HEIGHT: 35px"><FONT face="宋体">&nbsp;</FONT>
+					<TD  bgcolor="#e8f4ff">&nbsp;姓名</TD>
+					<TD height="35" ><FONT face="宋体">&nbsp;</FONT>
 						<asp:textbox id="tbx_Name" runat="server" CssClass="inputcss"></asp:textbox>
 						<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="不能为空" ControlToValidate="tbx_Name" Display="Dynamic"></asp:RequiredFieldValidator></TD>
-					<TD style="WIDTH: 90px; HEIGHT: 35px" height="35" bgcolor="#e8f4ff">&nbsp;性别</TD>
+					<TD  bgcolor="#e8f4ff">&nbsp;性别</TD>
 					<TD height="35" style="WIDTH: 151px; HEIGHT: 35px"><FONT face="宋体">&nbsp;</FONT><SELECT id="ddl_Gender" name="Select1" runat="server">
 							<OPTION value="1" selected>男</OPTION>
 							<OPTION value="0">女</OPTION>
 						</SELECT></TD>
-					<TD style="WIDTH: 90px; HEIGHT: 35px" height="35" bgcolor="#e8f4ff">&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					<TD  bgcolor="#e8f4ff">&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 						龄</TD>
 					<TD height="35" style="HEIGHT: 35px"><FONT face="宋体">&nbsp;</FONT>
 						<asp:textbox id="tbx_Age" runat="server" CssClass="inputcss" Width="36px"></asp:textbox><FONT face="宋体">&nbsp;
@@ -76,7 +81,7 @@
 						</asp:datalist></TD>
 				</TR>
 				<TR>
-					<TD style="WIDTH: 73px" vAlign="top" align="left" height="24" bgcolor="#e8f4ff">&nbsp;备注</TD>
+					<TD vAlign="top" align="left" height="24" bgcolor="#e8f4ff">&nbsp;备注</TD>
 					<TD vAlign="top" colSpan="5" height="24"><FONT face="宋体">&nbsp;</FONT><asp:textbox id="tbx_Memo" runat="server" Width="581px" Height="95px" TextMode="MultiLine"></asp:textbox></TD>
 				</TR>
 				<TR>

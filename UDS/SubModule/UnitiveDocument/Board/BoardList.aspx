@@ -20,10 +20,10 @@
         <table id="Table1" style="z-index: 105; left: 0px; position: absolute; top: 0px"
             cellspacing="0" cellpadding="1" width="100%" border="0">
             <tr>
-                <td align="left" style="height: 30px" background="../../../Images/treetopbg.jpg">
+                <td align="left" background="../../../Images/treetopbg.jpg">
                     <span style="font-size: 10pt">公司公告管理</span>
                 </td>
-                <td align="right" style="height: 30px" background="../../../Images/treetopbg.jpg">
+                <td align="right" background="../../../Images/treetopbg.jpg">
                    
                     <input class="redbuttoncss" style="width: 71px" onclick="location.href='../NewDesktop.aspx';"
                         type="button" value="返回">

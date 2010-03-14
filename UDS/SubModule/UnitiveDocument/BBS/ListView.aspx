@@ -118,24 +118,24 @@ function SubmitForm( BtObject )
 						<td background="../../../Images/bbsback.jpg"><img src="../../../Images/bbs.jpg"></td><td background="../../../Images/bbsback.jpg"><br><font color=white>|</font> <a  style="color: #ffffff;" href='<%="search/index.aspx?classid="+classid%>'>搜索</a> <font color=white>|</font></td>
 					</tr>
 				</table><br>
-			<table id="AutoNumber4" style="BORDER-COLLAPSE: collapse" borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<table id="AutoNumber4" style="BORDER-COLLAPSE: collapse" borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="98%" border="0" align="center">
 				<tr>
 					<td class="BlueTextBX" align="middle" height="1"><asp:Label ID="lblBoardName" Runat="server" Font-Bold="true" Font-Underline="false"></asp:Label></td>
-					<td class="BlueTextBX" align="right" height="1"><input type=button onclick="window.open('NewItem.aspx?BoardID=<%=boardid%>');" value="发送新贴" class=redbuttoncss></td>
+					<td class="BlueTextBX" align="right" height="1"><input type=button onClick="window.open('NewItem.aspx?BoardID=<%=boardid%>');" value="发送新贴" class=redbuttoncss></td>
 				</tr>
 				<tr>
 					<td colspan=2>
-						<table width=100%>
+						<table width=100% align="center">
 							<tr>
-					<td width=10%  style="FONT-SIZE: x-small">系统公告:</td>
-					<td style="FONT-SIZE: x-small">
-					<marquee behavior=scroll scrollamount=5 loop=0  onmouseover="this.stop()" onmouseout="this.start();" direction=left  id="sys_bulletin" runat=server></marquee>
+					<td width=10%  >系统公告:</td>
+					<td >
+					<marquee behavior=scroll scrollamount=5 loop=0  onmouseover="this.stop()" onMouseOut="this.start();" direction=left  id="sys_bulletin" runat=server></marquee>
 					</td>
 				</tr>
 				<tr>
-					<td style="FONT-SIZE: x-small">本版公告:</td>
-					<td style="FONT-SIZE: x-small">
-					<marquee  behavior=scroll scrollamount=10 loop=0  onmouseover="this.stop()" onmouseout="this.start();" direction=left  id="mar_bulletin" runat=server></marquee>
+					<td >本版公告:</td>
+					<td >
+					<marquee  behavior=scroll scrollamount=10 loop=0  onmouseover="this.stop()" onMouseOut="this.start();" direction=left  id="mar_bulletin" runat=server></marquee>
 					</td>
 				</tr>
 						</table>
@@ -157,7 +157,7 @@ function SubmitForm( BtObject )
 					<asp:TemplateColumn HeaderText="贴子主题">
 						<ItemStyle HorizontalAlign=Left></ItemStyle>
 						<ItemTemplate>
-							<a onclick="javascript:window.open('display.aspx?ItemID=<%# DataBinder.Eval(Container, "DataItem.item_id") %>&BoardID=<%=boardid%>','_blank','')" href="#" >
+							<a onClick="javascript:window.open('display.aspx?ItemID=<%# DataBinder.Eval(Container, "DataItem.item_id") %>&BoardID=<%=boardid%>','_blank','')" href="#" >
 								<%# DataBinder.Eval(Container, "DataItem.title") %>
 							</a>
 						</ItemTemplate>
@@ -194,7 +194,7 @@ function SubmitForm( BtObject )
 				<PagerStyle Font-Size="12px" BorderStyle="Dotted" HorizontalAlign="Right" ForeColor="#337FB2" BackColor="#e8f4ff" Mode="NumericPages" ></PagerStyle>
 			</asp:datagrid>
 			
-			<table width=100%>
+			<table width=98% align="center">
 				<tr>
 				<!--
 					<td class="GbText" style="HEIGHT: 31px" width="83%" bgColor="#c0d9e6" height="31">&nbsp;<input class="ButtonCss" id="btn_Go" style="WIDTH: 36px; HEIGHT: 20px" type="button" value="转到" name="btn_Go" runat="server">

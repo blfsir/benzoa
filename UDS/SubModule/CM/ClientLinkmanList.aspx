@@ -16,18 +16,18 @@
 	<body>
 		<form id="ClinetLinkmanList" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE id="Table1" style="BORDER-COLLAPSE: collapse" borderColor="#93bee2" cellSpacing="0" cellPadding="0" width="100%" align="center" border="1" class="gbtext">
+				<TABLE id="Table1" style="BORDER-COLLAPSE: collapse" borderColor="#93bee2" cellSpacing="0" cellPadding="0" width="98%" align="center" border="1" class="gbtext">
 					<TR>
-						<TD></TD>
+						<TD height="30" bgcolor="#E8F4FF">&nbsp;</TD>
 					</TR>
 					<TR>
-						<TD align="right"><asp:hyperlink id="HyperLink1" runat="server" Target="_blank">添加</asp:hyperlink></TD>
+						<TD height="30" align="right"><asp:hyperlink id="HyperLink1" runat="server" Target="_blank">添加</asp:hyperlink></TD>
 					</TR>
 					<TR>
 						<TD><asp:radiobuttonlist id="rbl_LinkmanList" runat="server" CssClass="gbtext"></asp:radiobuttonlist></TD>
 					</TR>
 					<TR>
-						<TD align="middle"><asp:button id="btn_OK" runat="server" Text="确定" CssClass="buttoncss"></asp:button></TD>
+						<TD height="30" align="center"><asp:button id="btn_OK" runat="server" Text="确定" CssClass="buttoncss"></asp:button></TD>
 					</TR>
 				</TABLE>
 			</FONT>

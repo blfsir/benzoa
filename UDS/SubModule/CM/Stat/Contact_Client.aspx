@@ -94,12 +94,12 @@
 		}
 		</script>
 	</HEAD>
-	<body MS_POSITIONING="GridLayout">
+	<body MS_POSITIONING="GridLayout" leftMargin="0" topmargin="0">
 		<form id="Contact_Client" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="1">
+			<TABLE width="98%" border="0" align="center" cellPadding="3" cellSpacing="0" id="Table1">
 					<TR>
-						<TD>开始时间
+						<TD height="30">开始时间
 							<asp:textbox id="tbx_begintime" onfocus="setday(this);" runat="server" ReadOnly="True"></asp:textbox>&nbsp;
 							<asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server" ControlToValidate="tbx_begintime" Display="Dynamic"
 								ErrorMessage="*"></asp:requiredfieldvalidator>结束时间
@@ -108,82 +108,76 @@
 								Text="本周"></asp:radiobutton><asp:radiobutton id="rbtn_thismonth" onclick="quickseldate('month');" runat="server" GroupName="quickselect"
 								Text="本月"></asp:radiobutton>&nbsp;
 							<asp:Button id="btn_OK" runat="server" Text="确定" CssClass="redbuttoncss" Width="48px"></asp:Button></TD>
-					</TR>
-					<TR>
-						<TD align="center">
-							<TABLE id="Table2" cellSpacing="1" cellPadding="1" width="100%" border="1">
+			  </TR>
+				</TABLE><TABLE width="98%" border="1" align="center" cellPadding="3" cellSpacing="0" borderColor="#93bee2" id="Table2">
 								<TR>
-									<TD style="WIDTH: 248px" align="center" bgColor="beige">明细</TD>
-									<TD align="center" bgColor="#f5f5dc" colSpan="" rowSpan="">点击数字查看详情</TD>
-									<TD style="WIDTH: 274px" align="center" bgColor="#f5f5dc" colSpan="" rowSpan="">明细</TD>
-									<TD align="center" bgColor="#f5f5dc" colSpan="" rowSpan="">点击数字查看详情</TD>
+									<TD height="30" align="center" bgColor="#93bee2">细明</TD>
+									<TD align="center" bgColor="#93bee2" colSpan="" rowSpan="">点击数字查看详情</TD>
+									<TD align="center" bgColor="#93bee2" colSpan="" rowSpan="">明细</TD>
+									<TD align="center" bgColor="#93bee2" colSpan="" rowSpan="">点击数字查看详情</TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 248px">添加接触记录的销售人员数：</TD>
-									<TD><A onclick="javascript:window.open('sellman.aspx?begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" height="30" bgcolor="#E8F4FF">添加接触记录的销售人员数：</TD>
+									<TD><A onClick="javascript:window.open('sellman.aspx?begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#"><asp:literal id="ltl_AddContactSellman" runat="server"></asp:literal></A>
 									</TD>
-									<TD style="WIDTH: 274px">接触总数：
+									<TD width="200" bgcolor="#E8F4FF">接触总数：
 									</TD>
-									<TD><A onclick="javascript:window.open('contactedclient.aspx?type=ac&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD><A onClick="javascript:window.open('contactedclient.aspx?type=ac&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#"><asp:literal id="ltl_Contact" runat="server"></asp:literal></A></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 248px">拜访客户次数：
+									<TD width="200" height="30" bgcolor="#E8F4FF">拜访客户次数：
 									</TD>
-									<TD><A onclick="javascript:window.open('contactedclient.aspx?type=cc&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD><A onClick="javascript:window.open('contactedclient.aspx?type=cc&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#"><asp:literal id="ltl_CallinContact" runat="server"></asp:literal></A></TD>
-									<TD style="WIDTH: 274px">新发现客户数：</TD>
-									<TD><A onclick="javascript:window.open('contactedclient.aspx?type=nc&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" bgcolor="#E8F4FF">新发现客户数：</TD>
+									<TD><A onClick="javascript:window.open('contactedclient.aspx?type=nc&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_NewClient" runat="server"></asp:literal></A></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 248px">进入商务谈判的客户数（新）：</TD>
-									<TD><A onclick="javascript:window.open('contactedclient.aspx?type=neonc&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" height="30" bgcolor="#E8F4FF">进入商务谈判的客户数（新）：</TD>
+									<TD><A onClick="javascript:window.open('contactedclient.aspx?type=neonc&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_NegotiateClient_New" runat="server"></asp:literal></A></TD>
-									<TD style="WIDTH: 274px">3星以上的客户数量（新）：</TD>
-									<TD><A onclick="javascript:window.open('contactedclient.aspx?type=n3c&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" bgcolor="#E8F4FF">3星以上的客户数量（新）：</TD>
+									<TD><A onClick="javascript:window.open('contactedclient.aspx?type=n3c&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_New3Client_New" runat="server"></asp:literal></A></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 248px">进入商务谈判的客户数（总）：</TD>
-									<TD><A onclick="javascript:window.open('contactedclient.aspx?type=neoc&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" height="30" bgcolor="#E8F4FF">进入商务谈判的客户数（总）：</TD>
+									<TD><A onClick="javascript:window.open('contactedclient.aspx?type=neoc&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_NegotiateClient_Total" runat="server"></asp:literal></A></TD>
-									<TD style="WIDTH: 274px">3星以上的客户数量（总）：</TD>
-									<TD><A onclick="javascript:window.open('contactedclient.aspx?type=3c&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" bgcolor="#E8F4FF">3星以上的客户数量（总）：</TD>
+									<TD><A onClick="javascript:window.open('contactedclient.aspx?type=3c&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_New3Client_Total" runat="server"></asp:literal></A></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 248px">发生费用总数：</TD>
-									<TD><A onclick="javascript:window.open('fee.aspx?type=client&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" height="30" bgcolor="#E8F4FF">发生费用总数：</TD>
+									<TD><A onClick="javascript:window.open('fee.aspx?type=client&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_Fee" runat="server"></asp:literal></A></TD>
-									<TD style="WIDTH: 274px">发生费用次数：</TD>
-									<TD><A onclick="javascript:window.open('fee.aspx?type=sellman&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" bgcolor="#E8F4FF">发生费用次数：</TD>
+									<TD><A onClick="javascript:window.open('fee.aspx?type=sellman&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_FeeTimes" runat="server"></asp:literal></A></TD>
 								</TR>
 								<TR>
-									<TD style="WIDTH: 248px">发生费用客户数：</TD>
-									<TD><A onclick="javascript:window.open('fee.aspx?type=client&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" height="30" bgcolor="#E8F4FF">发生费用客户数：</TD>
+									<TD><A onClick="javascript:window.open('fee.aspx?type=client&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_FeeClient" runat="server"></asp:literal></A></TD>
-									<TD style="WIDTH: 274px">发生费用销售人员数：</TD>
-									<TD><A onclick="javascript:window.open('fee.aspx?type=sellman&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
+									<TD width="200" bgcolor="#E8F4FF">发生费用销售人员数：</TD>
+									<TD><A onClick="javascript:window.open('fee.aspx?type=sellman&amp;begintime='+document.Contact_Client.tbx_begintime.value+'&amp;endtime='+document.Contact_Client.tbx_endtime.value),'_blank'"
 											href="#">
 											<asp:literal id="ltl_FeeSellman" runat="server"></asp:literal></A></TD>
 								</TR>
 							</TABLE>
-							&nbsp;&nbsp;
-						</TD>
-					</TR>
-				</TABLE>
-			</FONT>
-		</form>
+		  </FONT>
+	</form>
 	</body>
 </HTML>

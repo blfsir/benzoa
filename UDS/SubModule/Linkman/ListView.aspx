@@ -27,15 +27,13 @@
 		<form id="ListView" method="post" runat="server">
 			<TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
 				<TR height="30">
-					<TD class="GbText" width="24" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-						style="HEIGHT: 29px"><FONT color="#003366" size="3"><IMG height="16" src="../../DataImages/myLinkMan.GIF" width="16"></FONT></TD>
-					<TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" width="80"
-						align="right" style="HEIGHT: 29px"><font color="#006699">我的联系人</font></TD>
+					<TD class="GbText" width="24" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG height="16" src="../../DataImages/myLinkMan.GIF" width="16"></FONT></TD>
+					<TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" width="70"
+						align="center">我的联系人</TD>
 					<TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6" align="right"
 						style="HEIGHT: 29px">
-						<asp:dropdownlist id="ddl_CustomLinkmanType" runat="server" Visible="False" AutoPostBack="True" Width="100px"></asp:dropdownlist>&nbsp;<INPUT type="button" value="查 询" class="redbuttoncss" onclick="location.href='Search/index.aspx'">
-						<INPUT id="btn_SelAll" onclick="selectAll()" type="button" value="全 选" class="redbuttoncss">&nbsp;
-						<asp:button id="btn_Del" runat="server" Text="删 除" CssClass="redbuttoncss"></asp:button></TD>
+		        <asp:dropdownlist id="ddl_CustomLinkmanType" runat="server" Visible="False" AutoPostBack="True" Width="100px"></asp:dropdownlist>&nbsp;<INPUT type="button" value="查 询" class="redbuttoncss" onClick="location.href='Search/index.aspx'">
+						<INPUT id="btn_SelAll" onClick="selectAll()" type="button" value="全 选" class="redbuttoncss">&nbsp;<asp:button id="btn_Del" runat="server" Text="删 除" CssClass="redbuttoncss"></asp:button>&nbsp;</TD>
 				</TR>
 				<tr>
 					<td height="8" colspan="3"></td>
@@ -43,7 +41,7 @@
 				</tr>
 			</TABLE>
 			<FONT face="宋体">
-				<TABLE id="Table2" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TABLE id="Table2" cellSpacing="0" cellPadding="0" width="98%" border="0" align="center">
 					<TR>
 						<TD>
 							<TABLE class="gbtext" id="Table6" cellSpacing="0" cellPadding="0" width="100%" border="0">

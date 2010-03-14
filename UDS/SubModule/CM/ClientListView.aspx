@@ -122,49 +122,43 @@
 <body leftmargin="0" topmargin="0">
     <form id="ClientListView" method="post" runat="server">
     <font face="宋体">
-        <table class="gbtext" id="Table1" cellspacing="0" cellpadding="0" width="100%" border="0">
-            <tr>
-                <td valign="top" height="38">
-                    <table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
+    <table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
                         border="0" id="Table2">
-                        <tr height="30">
-                            <td class="GbText" align="right" width="20" background="../../Images/treetopbg.jpg"
-                                bgcolor="#c0d9e6">
-                                <font color="#003366" size="3">
+                        <tr>
+                            <td width="20" height="30" align="right" background="../../Images/treetopbg.jpg"
+                                bgcolor="#c0d9e6" class="GbText">
+                                <font color="#003366" >
                                     <img height="16" src="../../DataImages/ClientManage.gif" width="16"></font>
-                            </td>
-                            <td class="GbText" align="right" width="60" background="../../Images/treetopbg.jpg"
-                                bgcolor="#e8f4ff">
-                                <font color="#006699">我的客户</A></font>
-                            </td>
-                            <td class="GbText" style="width: 146px; height: 20px" align="right" background="../../Images/treetopbg.jpg"
-                                bgcolor="#e8f4ff">
-                                <font color="#006699">查看视角</A>
-                                    <asp:DropDownList ID="ddl_MySubordinate" runat="server" AutoPostBack="True" 
+                    </td>
+                            <td class="GbText" align="center" width="60" background="../../Images/treetopbg.jpg"
+                                bgcolor="#e8f4ff">我的客户</A>
+                        </td>
+                            <td class="GbText" style="width: 146px; height: 20px" align="center" background="../../Images/treetopbg.jpg"
+                                bgcolor="#e8f4ff">查看视角</A>
+                                  <asp:DropDownList ID="ddl_MySubordinate" runat="server" AutoPostBack="True" 
                                     onselectedindexchanged="ddl_MySubordinate_SelectedIndexChanged">
-                                    </asp:DropDownList>
-                                    &nbsp;</font>
-                            </td>
+                                  </asp:DropDownList>                                  &nbsp;
+                          </td>
                             <td class="GbText" align="right" background="../../Images/treetopbg.jpg" bgcolor="#e8f4ff">
                                 <font face="宋体">
-                                    <asp:Panel ID="pnl" runat="server" Height="8px" Width="499px" Visible="true">
-                                        <input class="redbuttoncss" id="Button2" onclick="window.open('Stat/Contact_Client.aspx','_blank')"
+                                  <asp:Panel ID="pnl" runat="server" Height="8px" Width="499px" Visible="true">
+                                        <input class="redbuttoncss" id="Button2" onClick="window.open('Stat/Contact_Client.aspx','_blank')"
                                             type="button" value=" 汇 总" name="Button1">&nbsp;<input class="redbuttoncss" id="Button1"
                                                 onclick="window.open('Search/ClientInfo.aspx','_blank')" type="button" value=" 查 询"
-                                                name="Button1">&nbsp;<input class="redbuttoncss" onclick="selectAll()" type="button"
-                                                    value="全 选">
-                                        <asp:Button ID="btn_Del" runat="server" CssClass="redbuttoncss" Text="删 除" OnClick="btn_Del_Click">
-                                        </asp:Button>
-                                        <asp:Button ID="btn_AddClient" runat="server" CssClass="redbuttoncss" Text="添加客户"
-                                            OnClick="btn_AddClient_Click"></asp:Button>
-                                        <asp:Button ID="btn_AddLinkman" runat="server" CssClass="redbuttoncss" Text="添加联络人"
-                                            OnClick="btn_AddLinkman_Click"></asp:Button>
-                                        <asp:Button ID="btn_AddContact" runat="server" CssClass="redbuttoncss" Text="添加接触"
-                                            OnClick="btn_AddContact_Click"></asp:Button></asp:Panel>
+                                                name="Button1">&nbsp;<input class="redbuttoncss" onClick="selectAll()" type="button"
+                                                    value="全 选">&nbsp;<asp:Button ID="btn_Del" runat="server" CssClass="redbuttoncss" Text="删 除" OnClick="btn_Del_Click">
+                                        </asp:Button>&nbsp;<asp:Button ID="btn_AddClient" runat="server" CssClass="redbuttoncss" Text="添加客户"
+                                            OnClick="btn_AddClient_Click"></asp:Button>&nbsp;<asp:Button ID="btn_AddLinkman" runat="server" CssClass="redbuttoncss" Text="添加联络人"
+                                            OnClick="btn_AddLinkman_Click"></asp:Button>&nbsp;<asp:Button ID="btn_AddContact" runat="server" CssClass="redbuttoncss" Text="添加接触"
+                                            OnClick="btn_AddContact_Click"></asp:Button>&nbsp;</asp:Panel>
                                 </font>
                             </td>
                         </tr>
                     </table>
+        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="gbtext" id="Table1">
+            <tr>
+                <td valign="top" height="10">
+                    
                 </td>
             </tr>
             <tr>
@@ -172,19 +166,15 @@
                     <table class="gbtext" id="Table3" cellspacing="0" cellpadding="0" width="100%" border="0">
                         <tr>
                             <td id="TD1" valign="middle" align="center" width="90" background="../../images/maillistbutton2.gif"
-                                runat="server">
-                                &nbsp;<asp:LinkButton ID="lbtn_MyClient" runat="server" CssClass="Newbutton" 
+                                runat="server"><asp:LinkButton ID="lbtn_MyClient" runat="server" CssClass="Newbutton" 
                                     onclick="lbtn_MyClient_Click">我的客户</asp:LinkButton><a
                                     href="ClientListView.aspx"></a>
                             </td>
                             <td id="TD2" valign="middle" align="center" width="90" background="../../images/maillistbutton1.gif"
-                                runat="server">
-                                &nbsp;<asp:LinkButton ID="lbtn_coClient" runat="server" CssClass="Newbutton" 
+                                runat="server"><asp:LinkButton ID="lbtn_coClient" runat="server" CssClass="Newbutton" 
                                     onclick="lbtn_coClient_Click">我的协同客户</asp:LinkButton>
                             </td>
-                            <td style="height: 25px" align="right">
-                                &nbsp;
-                            </td>
+                            <td style="height: 25px" align="right"></td>
                             <td style="height: 25px" align="right">
                                 <asp:Panel ID="pnl_ClientInfo" runat="server">
                                     &nbsp;共
