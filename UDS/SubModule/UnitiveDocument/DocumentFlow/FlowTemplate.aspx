@@ -12,26 +12,27 @@
 	<body MS_POSITIONING="GridLayout" leftmargin="0" topmargin="0" rightmargin="0">
 		<form id="WebForm1" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-					<tr>
-						<td vAlign="top" height="38"><TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+            <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
 								<TR height="30">
 									<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
 										align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
 									<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
-										align="right"><font color="#006699">文档流转</font></TD>
-									<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体">
+										align="center"><font color="#006699">文档流转</font></TD>
+									<TD width="944" align="right" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" class="GbText"><FONT face="宋体">
 									        <asp:Button runat="server" ID="btnSetDesktopFlow" Width="95px" 
                                             Text="设为快捷流程" CssClass="buttoncss" onclick="btnSetDesktopFlow_Click" />
-											<asp:Button id="cmdListDraft" runat="server" Width="55px" Text="列表" CssClass="buttoncss"></asp:Button>&nbsp;&nbsp;&nbsp;</FONT></TD>
+											<asp:Button id="cmdListDraft" runat="server" Width="55px" Text="列表" CssClass="buttoncss"></asp:Button>&nbsp;</FONT></TD>
 								</TR>
 							</TABLE>
+				<TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0" id="Table1">
+					<tr>
+						<td vAlign="top" height="10">
 						</td>
 					</tr>
 					<TR>
 						<TD>
-							<TABLE class="gbtext" id="Table2" height="24" cellSpacing="0" cellPadding="0" width="100%"
-								border="0">
+							<TABLE width="100%" height="24"
+								border="0" align="center" cellPadding="0" cellSpacing="0" class="gbtext" id="Table2">
 								<TR>
 									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">
 										<asp:LinkButton id="lbMyApprove" runat="server" CssClass=Newbutton>我的批阅</asp:LinkButton></TD>
@@ -46,13 +47,12 @@
 										<asp:LinkButton id="lbManageFlow"  CssClass=Newbutton runat="server">流程管理</asp:LinkButton></TD>
 									<%}%>
 									<%else {%>
-									<TD align="center" width="90">&nbsp;
+									<TD align="center">&nbsp;
 									</TD>
 									<%}%>
 									<TD align="center">&nbsp;</TD>
 								</TR>
-							</TABLE>
-						</TD>
+					  </TABLE></TD>
 					</TR>
 					<TR>
 						<TD>

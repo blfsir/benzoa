@@ -20,38 +20,40 @@
 	<body leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout">
 		<form id="Listview" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-					<tr>
-						<td vAlign="top" height="38"><TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+            <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
 								<TR height="30">
 									<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
 										align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
 									<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
-										align="right"><font color="#006699">文档流转</font></TD>
+										align="center"><font color="#006699">文档流转</font></TD>
 									<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体"><asp:button id="cmdNewFlow" runat="server" CssClass="redbuttoncss" Height="21px" Text="新建流程"
-												Width="66px"></asp:button>&nbsp;&nbsp; <FONT face="宋体">
-												<asp:button id="cmdDeleteFlow" runat="server" CssClass="redbuttoncss" Height="20px" Text="删除流程"
-													Width="69px"></asp:button>&nbsp; </FONT>
+												Width="66px"></asp:button>
+<FONT face="宋体">
+		<asp:button id="cmdDeleteFlow" runat="server" CssClass="redbuttoncss" Height="20px" Text="删除流程"
+													Width="69px"></asp:button>
+</FONT>
 											<asp:button id="cmdManageStyle" runat="server" CssClass="redbuttoncss" Text="表单管理"></asp:button>&nbsp;</FONT></TD>
 								</TR>
 							</TABLE>
-						</td>
+				<TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0" id="Table1">
+					<tr>
+						<td vAlign="top" height="10"></td>
 					</tr>
 					<TR>
 						<TD>
 							<TABLE class="gbtext" id="Table3" height="24" cellSpacing="0" cellPadding="0" width="100%"
 								border="0">
 								<TR>
-									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">&nbsp;
+									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">
 										<asp:linkbutton id="lbMyApprove" runat="server"  CssClass=Newbutton>我的批阅</asp:linkbutton></TD>
-									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">&nbsp;
+									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">
 										<asp:linkbutton id="LinkButton1" runat="server"  CssClass=Newbutton>我的申请</asp:linkbutton></TD>
-									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">&nbsp;
+									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">
 										<asp:linkbutton id="lbMyApproved" runat="server"  CssClass=Newbutton>已经批阅</asp:linkbutton></TD>
-									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">&nbsp;
+									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif">
 										<asp:linkbutton id="lbMyDraft" runat="server"  CssClass=Newbutton>拟稿箱</asp:linkbutton></TD>
 									<%if(bManageFlow==true){%>
-									<TD align="center" width="90" background="../../../Images/maillistbutton2.gif">&nbsp;
+									<TD align="center" width="90" background="../../../Images/maillistbutton2.gif">
 										<asp:linkbutton id="lbManageFlow" runat="server"  CssClass=Newbutton>流程管理</asp:linkbutton></TD>
 									<%} else {%>
 									<TD align="right">&nbsp;&nbsp;<FONT face="宋体">&nbsp;</FONT></TD>

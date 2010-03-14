@@ -10,23 +10,22 @@
 		<LINK href="../../../Css/BasicLayout.css" type="text/css" rel="stylesheet">
 	</HEAD>
 	<body leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout">
-		<P><FONT face="宋体">
-				<FORM id="WebForm1" method="post" runat="server">
+
+<FORM id="WebForm1" method="post" runat="server">
 					<FONT face="宋体">
-						<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-							<TR>
-								<TD vAlign="top" height="38">
-									<TABLE id="Table3" borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%"
+                    <TABLE id="Table3" borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%"
 										border="0">
 										<TR height="30">
 											<TD class="GbText" align="right" width="20" background="../../../Images/treetopbg.jpg"
 												bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
-											<TD class="GbText" align="right" width="60" background="../../../Images/treetopbg.jpg"
+											<TD class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
 												bgColor="#e8f4ff"><FONT color="#006699">文档流转</FONT></TD>
-											<TD class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff"><FONT face="宋体"><asp:button id="cmdQuery" runat="server" Width="50px" Text="查询" CssClass="buttoncss"></asp:button><asp:button id="cmdNewDocument" runat="server" Width="54px" Text="撰稿" CssClass="buttoncss"></asp:button>&nbsp;&nbsp;&nbsp;</FONT></TD>
+											<TD class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff"><FONT face="宋体"><asp:button id="cmdQuery" runat="server" Width="50px" Text="查询" CssClass="redbuttoncss"></asp:button> <asp:button id="cmdNewDocument" runat="server" Width="54px" Text="撰稿" CssClass="redbuttoncss"></asp:button>&nbsp;</FONT></TD>
 										</TR>
-									</TABLE>
-								</TD>
+					</TABLE>
+						<TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0" id="Table1">
+							<TR>
+								<TD vAlign="top" height="10"></TD>
 							</TR>
 							<TR>
 								<TD>
@@ -42,7 +41,7 @@
 												<asp:linkbutton id="lbFlowManage" runat="server" CssClass="Newbutton">流程管理</asp:linkbutton></TD>
 											<%}%>
 											<%else {%>
-											<TD align="center" width="90">&nbsp;
+											<TD align="center">&nbsp;
 											</TD>
 											<%}%>
 											<TD align="center">&nbsp;</TD>
@@ -115,7 +114,6 @@
 						</TABLE>
 					</FONT>
 				</FORM>
-			</FONT>
-		</P>
-	</body>
+
+
 </HTML>

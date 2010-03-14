@@ -103,6 +103,8 @@
             
             <tr>
                 <td align="right" width="20%" height="30" colspan="2">
+                <asp:TextBox ID="txtContents" CssClass="InputCss" runat="server" Columns="70"
+                        Width="791px" Rows="5" TextMode="MultiLine"></asp:TextBox>
                         
                       <fckeditorv2:fckeditor id="FCKeditor2" runat="server" width="100%" height="200px">
                                                         </fckeditorv2:fckeditor> 

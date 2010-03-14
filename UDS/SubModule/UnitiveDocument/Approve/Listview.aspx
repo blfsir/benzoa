@@ -34,22 +34,21 @@
 	</HEAD>
 	<body leftmargin="0" topmargin="0">
 		<form id="Approve" method="post" runat="server">
-			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-				<tr>
-					<td vAlign="top" height="38"><TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-							<TR height="30">
-								<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
+			<TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			  <TR height="30">
+			    <TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
 									align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/myDoc2.gif" width="16"></FONT></TD>
-								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
-									align="right">我的文档</TD>
-								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体">
-										<asp:Panel id="PanFunction" runat="server" Height="3px"><INPUT class="redButtonCss" onclick="selectAll()" type="button" value="全部选择"> 
-            &nbsp; <INPUT class="redButtonCss" onclick="unSelectAll()" type="button" value="全部取消">&nbsp; 
-<asp:Button id="btnApproveDocument" runat="server" Text="批阅文档" CssClass="redButtonCss"></asp:Button>&nbsp; 
-<asp:Button id="btnThowAwayDocument" runat="server" Text="丢弃文档" CssClass="redButtonCss"></asp:Button>&nbsp;&nbsp;</asp:Panel></FONT></TD>
-							</TR>
-						</TABLE>
-					</td>
+			    <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
+									align="center">我的文档</TD>
+			    <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体">
+			      <asp:Panel id="PanFunction" runat="server" Height="3px">
+			        <INPUT class="redButtonCss" onClick="selectAll()" type="button" value="全部选择"> <INPUT class="redButtonCss" onClick="unSelectAll()" type="button" value="全部取消"> <asp:Button id="btnApproveDocument" runat="server" Text="批阅文档" CssClass="redButtonCss"></asp:Button> <asp:Button id="btnThowAwayDocument" runat="server" Text="丢弃文档" CssClass="redButtonCss"></asp:Button>&nbsp;</asp:Panel>
+			      </FONT></TD>
+		      </TR>
+		  </TABLE>
+			<TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0" id="Table1">
+				<tr>
+					<td vAlign="top" height="10"></td>
 				</tr>
 				<TR>
 					<TD>

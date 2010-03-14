@@ -200,12 +200,12 @@
 										</asp:Label>
 									</ItemTemplate>
 								</asp:TemplateColumn>
-								<asp:TemplateColumn HeaderText="评论">
+								<asp:TemplateColumn HeaderText="反馈">
 									<HeaderStyle HorizontalAlign="Center"></HeaderStyle>
 									<ItemStyle HorizontalAlign="Center"></ItemStyle>
 									<ItemTemplate>
 										<a href="#" onclick='javascript:return dialwinprocess("<%# DataBinder.Eval(Container, "DataItem.Date") %>","","3","<%# DataBinder.Eval(Container, "DataItem.TaskID") %>")'>
-											评论</a>
+											反馈</a>
 									</ItemTemplate>
 								</asp:TemplateColumn>
 							</Columns>

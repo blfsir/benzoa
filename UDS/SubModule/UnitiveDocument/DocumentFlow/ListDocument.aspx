@@ -16,19 +16,18 @@
 	<body leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout">
 		<form id="ListDocument" method="post" runat="server">
 			<FONT face="宋体">
-				<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-					<tr>
-						<td vAlign="top" height="38">
-							<TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+            <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
 								<TR height="30">
 									<TD class="GbText" align="right" width="20" background="../../../Images/treetopbg.jpg"
 										bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/DocFlow.gif" width="16"></FONT></TD>
-									<TD class="GbText" align="right" width="60" background="../../../Images/treetopbg.jpg"
+									<TD class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
 										bgColor="#e8f4ff"><font color="#006699">文档流转</font></TD>
 									<TD class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff"><FONT face="宋体">&nbsp;&nbsp;&nbsp;</FONT></TD>
 								</TR>
-							</TABLE>
-						</td>
+			</TABLE>
+	  <TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0" id="Table1">
+					<tr>
+						<td vAlign="top" height="10"></td>
 					</tr>
 					<TR>
 						<TD>
@@ -43,7 +42,7 @@
           ><asp:linkbutton id="lbMyDocument" runat="server" CssClass="Newbutton">我的申请</asp:linkbutton></TD>
 									<TD align=center width=90 
           background='../../../Images/maillistbutton<%Response.Write(GetSelectImage("1","2",DisplayType,3));%>.gif' 
-          ><asp:linkbutton id="lbMyApproved" runat="server" CssClass="Newbutton">已经批阅</asp:linkbutton></TD>
+          ><asp:LinkButton ID="lbMyApproved" runat="server" CssClass="Newbutton">已经批阅</asp:LinkButton></TD>
 									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif"><asp:linkbutton id="lbMyDraft" runat="server" CssClass="Newbutton" >拟稿箱</asp:linkbutton></TD>
 									<%if(bManageFlow==true){%>
 									<TD align="center" width="90" background="../../../Images/maillistbutton1.gif"><asp:linkbutton id="lbManageFlow" runat="server" CssClass="Newbutton" >流程管理</asp:linkbutton></TD>
@@ -59,11 +58,12 @@
 					<TR>
 						<TD></TD>
 					</TR>
-				</TABLE>
-				<asp:datagrid id="dgDocumentList" runat="server" Font-Size="X-Small" PageSize="15" CellPadding="3"
+				</TABLE><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><asp:datagrid id="dgDocumentList" runat="server" Font-Size="X-Small" PageSize="15" CellPadding="3"
 					BorderWidth="1px" BorderStyle="None" BorderColor="#93BEE2" BackColor="White" OnPageIndexChanged="DataGrid_PageChanged"
 					AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" Width="100%">
-					<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+			    <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
 					<AlternatingItemStyle Font-Size="X-Small" HorizontalAlign="Center" BackColor="#E8F4FF"></AlternatingItemStyle>
 					<ItemStyle Font-Size="X-Small" HorizontalAlign="Center" ForeColor="#003399" BackColor="White"></ItemStyle>
 					<HeaderStyle HorizontalAlign="Center" ForeColor="White" VerticalAlign="Middle" BackColor="#337FB2"></HeaderStyle>
@@ -108,6 +108,10 @@
 					</Columns>
 					<PagerStyle NextPageText="" Font-Size="X-Small" HorizontalAlign="Right" ForeColor="#003399"
 						BackColor="#E8F4FF" Mode="NumericPages"></PagerStyle>
-				</asp:datagrid></FONT></form>
+				</asp:datagrid></td>
+  </tr>
+</table>
+
+				</FONT></form>
 	</body>
 </HTML>

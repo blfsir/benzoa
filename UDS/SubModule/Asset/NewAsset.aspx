@@ -56,16 +56,17 @@
 <body leftmargin="0" topmargin="0">
     <form id="MsgSend"  method="post" runat="server">
     <center>
-        <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
+        <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" style="table-layout:fixed"
             width="100%" border="0">
             <tr height="30">
-                <td class="GbText" width="3%" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <font color="#003366" size="3">
-                        <img alt="" src="../../DataImages/ClientManage.gif"></font>
-                </td>
-                <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <b><b><b><font face="宋体">新增IT设备</font></b></b></b>
-                </td>
+                <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/t5.jpg" width="16">
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="60"
+                align="center">
+                <font color="#006699">新增IT设备</font>
+            </td>
                 <td class="GbText" align="right" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
                 </td>
             </tr>

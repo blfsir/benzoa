@@ -14,13 +14,13 @@ namespace UDS.SubModule.Asset {
     public partial class AssetMange {
         
         /// <summary>
-        /// ManageStaff control.
+        /// Listview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm ManageStaff;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Listview;
         
         /// <summary>
         /// btnMove control.
@@ -39,14 +39,5 @@ namespace UDS.SubModule.Asset {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataGrid dgAssetList;
-        
-        /// <summary>
-        /// DisplayColumn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DisplayColumn;
     }
 }
