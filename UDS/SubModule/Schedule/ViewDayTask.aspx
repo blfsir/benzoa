@@ -20,14 +20,15 @@
 	.borderMenuLayerOver { FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #949494; BORDER-BOTTOM-COLOR: #949494; BORDER-TOP-COLOR: #949494; BORDER-RIGHT-COLOR: #949494 }
 	.textWhite { FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #999999; LINE-HEIGHT: 22px; FONT-FAMILY: "宋体" }
 	.top { FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none }
+	.newtable {line-height:20px; border-color:#93bee2; text-indent:4px; }
 		</style>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" leftmargin="0" topmargin="0">
 		<form id="ViewDayTask" method="post" runat="server">
-			<asp:table id="Table1" style="Z-INDEX: 101; LEFT: 3px; POSITION: absolute; TOP: 22px" runat="server"
+			<asp:table CssClass="newtable" id="Table1" style="Z-INDEX: 101; LEFT: 3px; width:98%; POSITION: absolute; TOP: 22px;  font-size:12px;"  cellpadding="0" cellspacing="3" runat="server"
 				BorderWidth="0px" Height="116px"></asp:table>
 			<asp:Label id="lblTitle" style="Z-INDEX: 102; LEFT: 3px; POSITION: absolute; TOP: 1px" runat="server"
-				Font-Size="X-Small" BackColor="White" Height="7px" Width="94px">执行人日程表:</asp:Label>
+				Font-Size="12px" BackColor="White" Height="7px" Width="94px">执行人日程表:</asp:Label>
 		</form>
 	</body>
 </HTML>

@@ -101,7 +101,7 @@ function GetServerTime(updatespan)
 				</TR>
 				<TR>
 					<TD height="30" align="center" bgcolor="#e8f4ff">
-						<asp:Button id="btnCheckAttendance" CommandArgument="" runat="server" CssClass="buttoncss" Width="80px" Visible="false"></asp:Button></TD>
+						<asp:Button id="btnCheckAttendance" CommandArgument="" runat="server" CssClass="buttoncss" Width="80px"></asp:Button></TD>
 				</TR>
 				<TR>
 					<TD><FONT face="宋体">
@@ -114,27 +114,42 @@ function GetServerTime(updatespan)
 											<%# DateTime.Parse(((DataRowView)Container.DataItem)["WorkDate"].ToString()).ToShortDateString()%>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="上班时间">
+									<asp:TemplateColumn HeaderText="登录上班时间">
 										<ItemTemplate>
 											<%# GetTime(((DataRowView)Container.DataItem)["OnDuty"])%>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="上班备注">
+									<asp:TemplateColumn HeaderText="登录上班备注">
 										<ItemTemplate>
 											<%# GetMemo(((DataRowView)Container.DataItem)["OnDuty_MemoID"])%>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="下班时间">
+									<asp:TemplateColumn HeaderText="登录下班时间">
 										<ItemTemplate>
 											<%#	GetTime(((DataRowView)Container.DataItem)["OffDuty"])%>
 											<asp:Literal id="Literal2" Runat="server"></asp:Literal>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="下班备注">
+									<asp:TemplateColumn HeaderText="登录下班备注">
 										<ItemTemplate>
 											<%# GetMemo(((DataRowView)Container.DataItem)["OffDuty_MemoID"])%>
 										</ItemTemplate>
 									</asp:TemplateColumn>
+									
+									
+									<asp:TemplateColumn HeaderText="打卡上班时间">
+										<ItemTemplate>
+											<%# GetMemo(((DataRowView)Container.DataItem)["fingerprintOnDuty"])%>
+										</ItemTemplate>
+									</asp:TemplateColumn>
+									
+									<asp:TemplateColumn HeaderText="打卡下班时间">
+										<ItemTemplate>
+											<%# GetMemo(((DataRowView)Container.DataItem)["fingerprintOffDuty"])%>
+										</ItemTemplate>
+									</asp:TemplateColumn>
+									
+									
 								</Columns>
 								<PagerStyle NextPageText="下周考勤记录" PrevPageText="上周考勤记录" HorizontalAlign="Center"></PagerStyle>
 							</asp:DataGrid></FONT></TD>

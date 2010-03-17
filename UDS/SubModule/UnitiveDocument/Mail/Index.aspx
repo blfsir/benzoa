@@ -141,8 +141,8 @@
 									</ItemTemplate>
 								</asp:TemplateColumn>
 								<asp:TemplateColumn HeaderText="ÓÊ¼þÖ÷Ìâ">
-									<HeaderStyle HorizontalAlign="Left"></HeaderStyle>
-									<ItemStyle Font-Size="X-Small" HorizontalAlign="Left"></ItemStyle>
+									<HeaderStyle HorizontalAlign="Center"></HeaderStyle>
+									<ItemStyle Font-Size="X-Small" HorizontalAlign="Center"></ItemStyle>
 									<ItemTemplate>
 										<a href='ReadMail.aspx?MailId=<%# DataBinder.Eval(Container.DataItem,"MailID") %>&CurrentPageIndex=<%=CurrentPageIndex%>&FolderType=<%=Session["FolderType"].ToString()%>'>
 											<%# (DataBinder.Eval(Container.DataItem,"MailSubject").ToString().Length>20)?DataBinder.Eval(Container.DataItem,"MailSubject").ToString().Substring(0,20)+"...":DataBinder.Eval(Container.DataItem,"MailSubject").ToString() %>

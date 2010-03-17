@@ -34,19 +34,20 @@
 	</HEAD>
 	<body leftMargin="0" topMargin="0">
 		<form id="Subscription" method="post" runat="server">
-			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-				<tr>
-					<td vAlign="top" height="38"><TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-							<TR height="30">
+        <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+							<TR>
 								<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-									align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/help_page.gif" width="16"></FONT></TD>
-								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
-									align="right"><font color="#006699"><FONT color="#006699">我的项目</FONT></font></TD>
-								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体"><input type="button" onclick="selectAll()" value="全部选择" class="redButtonCss">
-										&nbsp; <input type="button" onclick="unSelectAll()" value="全部取消" class="redButtonCss">&nbsp;
-										<asp:Button id="btnDeleteSubscription" runat="server" Text="删除订阅" CssClass="redButtonCss"></asp:Button></FONT></TD>
+									align="right"><IMG height="16" src="../../../DataImages/help_page.gif" width="16"></TD>
+								<TD width="60" height="30"
+									align="center" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" class="GbText">我的项目</TD>
+		<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><input type="button" onClick="selectAll()" value="全部选择" class="redButtonCss">
+<input type="button" onClick="unSelectAll()" value="全部取消" class="redButtonCss">
+<asp:Button id="btnDeleteSubscription" runat="server" Text="删除订阅" CssClass="redButtonCss"></asp:Button>&nbsp;</TD>
 							</TR>
 						</TABLE>
+			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<tr>
+					<td vAlign="top" height="10">
 					</td>
 				</tr>
 				<TR>

@@ -57,7 +57,7 @@ namespace UDS.SubModule.Diary
                 this.tr_Tj.Visible = true;
                // this.btnAdd.Visible = false;
                 
-                 this.dbDiaryList.Columns[4].Visible = false;
+                // this.dbDiaryList.Columns[4].Visible = false;
             }
 
             if (!Page.IsPostBack)
@@ -268,7 +268,7 @@ namespace UDS.SubModule.Diary
             }
             else
             {
-                Page.RegisterStartupScript("", "<script>alert('请选择要删除的便签！');</script>");
+                Page.RegisterStartupScript("", "<script>alert('请选择要删除的日记！');</script>");
             }
         }
 

@@ -116,11 +116,11 @@
                 </td>
                 <td height="30">
                     &nbsp;<asp:TextBox ID="txtEmail" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3"
+                        Width="382"></asp:TextBox><%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3"
                             runat="server" ErrorMessage="请填写电子邮件地址" ControlToValidate="txtEmail" Font-Size="X-Small"
                             Display="Dynamic"></asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="checkmail"
                                 runat="server" ErrorMessage="错误的EMAIL格式" ControlToValidate="txtEmail" Display="Dynamic"
-                                ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>--%>
                 </td>
             </tr>
             <tr>

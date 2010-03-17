@@ -68,7 +68,6 @@
             width: 590px;
         }
     </style>
-
 </head>
 <body leftmargin="0" topmargin="0" ms_positioning="GridLayout" forecolor="#006699">
     <form id="EditField" method="post" enctype="multipart/form-data" runat="server">
@@ -101,7 +100,6 @@
             </tr>
             <tr>
                 <td align="center">
-                                        
                 </td>
             </tr>
             <tr>
@@ -122,27 +120,26 @@
                     </asp:DropDownList>--%>
                     <tr>
                         <td>
-                            <table id="Table2" bordercolor="#93bee2" cellspacing="0" cellpadding="0" width="100%"
-                                border="1" style="border-collapse: collapse" class="GbText">
+                            <table id="Table2" bordercolor="#93bee2" cellspacing="0" cellpadding="0" width="98%"
+                                border="0" style="border-collapse: collapse" align="center" class="GbText">
                                 <tr>
-                                    <td style="width: 104px" height="24">
-                                        <font color="#006699">
-                                            <asp:Label ID="Label2" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small"
-                                                Width="53px">内 容：</asp:Label></font>
+                                    <td style="width: 104px;" height="24">
+                                        
+                                            <asp:Label ID="Label2" runat="server" Font-Names="宋体" Width="53px">&nbsp;内 容：</asp:Label> 
                                     </td>
                                     <td height="24" class="style1">
-                                         <asp:TextBox runat="server" MaxLength="200" ID="txtContent" Width="600px"></asp:TextBox>
+                                        <asp:TextBox runat="server" MaxLength="200" ID="txtContent" Width="300px"></asp:TextBox>
+                                    </td>
+                                     <td style="width: 104px;" height="24">
+                                        
+                                            <asp:Label ID="Label1" runat="server" Font-Names="宋体"  >&nbsp;搜索范围：</asp:Label> 
                                     </td>
                                     <td height="24">
-                                        <font color="#006699">
-                                            <asp:Label ID="Label1" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small" Width="80">  搜索范围：</asp:Label></font>
-                                    </td>
-                                    <td height="24">  <asp:DropDownList ID="ddlPlanObjectType" runat="server">
+                                        <asp:DropDownList ID="ddlPlanObjectType" runat="server">
                                             <asp:ListItem Text="全部" Value=""></asp:ListItem>
                                             <asp:ListItem Text="个人计划" Value="个人计划"></asp:ListItem>
                                             <asp:ListItem Text="部门计划" Value="部门计划"></asp:ListItem>
                                         </asp:DropDownList>
-                                       
                                         <asp:DropDownList ID="ddlPlanPeriodType" runat="server">
                                             <asp:ListItem Text="全部" Value=""></asp:ListItem>
                                             <asp:ListItem Text="周计划" Value="周计划"></asp:ListItem>
@@ -152,14 +149,10 @@
                                             </asp:ListItem>
                                         </asp:DropDownList>
                                     </td>
-                                    <td height="24" style="width: 91px">
-                                        <asp:Button ID="btnSearch" runat="server" Text="查询" class="buttoncss" OnClick="btnSearch_Click" />
-                                    </td>
                                     <td height="24">
+                                        <asp:Button ID="btnSearch" runat="server" Width="80px" Text="查询" class="buttoncss" OnClick="btnSearch_Click" />
                                     </td>
                                 </tr>
-                                 
-                                
                             </table>
                             <table width="100%" height="35" border="0" align="center" cellpadding="0" cellspacing="4"
                                 bgcolor="" class="tableStyle">
@@ -187,16 +180,10 @@
                                         &nbsp; <a href="EditPlan.aspx">计划录入</a> 
                                     </td>
                                 </tr>--%>
+                            </table>
+                            <table>
                                 <tr>
-                                    <td align="left" nowrap>
-                                       
-                                    </td>
-                                    <td colspan="5">
-                                        <%-- <input name="txt_content" style="width: 100%" maxlength="200">--%>
-                                       
-                                    </td>
-                                    <td nowrap align="right">
-                                        &nbsp;&nbsp;
+                                    <td height="10">
                                     </td>
                                 </tr>
                             </table>
@@ -205,33 +192,32 @@
                     <tr>
                         <td>
     </div>
-    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#dddddd">
-        <tr bgcolor="#F3F3F3">
+    <table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#E8F4FF">
+        <tr bgcolor="#E8F4FF">
             <td align="right" valign="top">
-                <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#dddddd">
+                <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#E8F4FF">
                     <tr>
-                        <td>
+                        <td style="background-color: #E8F4FF">
                             上期总结
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div id="past_plan_content" style="word-break: break-all; float: left; height: 200px;
-                                width: 100%; padding-top: 10px; border: 1px; padding-bottom: 20px; border: 1px;
-                                background-color: White;" runat="server">
+                                width: 100%; border: 1px; border: 1px; padding: 15px; background-color: White;"
+                                runat="server">
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="background-color: #E8F4FF">
                             本期计划
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div id="current_plan_content" style="word-break: break-all; float: left; height: 200px;
-                                width: 100%; padding-top: 10px; border: 1px; padding-bottom: 20px; border: 1px;
-                                background-color: White;" runat="server">
+                                width: 100%; padding: 15px; border: 1px; background-color: White;" runat="server">
                             </div>
                         </td>
                     </tr>
@@ -239,7 +225,7 @@
             </td>
             <td valign="top" width="200px">
                 <asp:ListBox runat="server" ID="lbxPlan" OnSelectedIndexChanged="lbxPlan_SelectedIndexChanged"
-                    Width="100%" AutoPostBack="true" Height="460px"></asp:ListBox>
+                    Width="100%" AutoPostBack="true" Height="460px" BackColor="#ffffff"></asp:ListBox>
                 <%--<asp:DataGrid ID="dgPlanList" runat="server" Width="100%" AutoGenerateColumns="False"
                 AllowSorting="True" PageSize="20" AllowPaging="True" BorderColor="#93BEE2" BorderWidth="1px">
                 <AlternatingItemStyle BackColor="#E8F4FF"></AlternatingItemStyle>

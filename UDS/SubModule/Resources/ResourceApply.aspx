@@ -75,7 +75,9 @@
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
                 <font face="宋体">
                   <input type="button" class="redButtonCss" value="会议室申请" onclick="javacript:location.href='../Meeting/ApplyMeeting.aspx'" />
-                  <input type="button" class="redButtonCss" value="车辆申请" onclick="javacript:location.href='../Vehicle/ApplyVehicle.aspx'" />&nbsp;</font>
+                  <input type="button" class="redButtonCss" value="会议查询" onclick="javacript:location.href='../Meeting/MeetingManage.aspx'" />
+                  <input type="button" class="redButtonCss" value="车辆申请" onclick="javacript:location.href='../Vehicle/ApplyVehicle.aspx'" />
+                  <input type="button" class="redButtonCss" value="车辆查询" onclick="javacript:location.href='../Vehicle/VehicleManage.aspx'" /> &nbsp;</font>
             </td>
         </tr>
     </table>

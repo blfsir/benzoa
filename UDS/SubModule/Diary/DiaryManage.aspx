@@ -131,21 +131,21 @@ return true;
 <body ms_positioning="GridLayout" leftmargin="0" topmargin="0">
     <form id="ManageStaff" method="post" runat="server">
     <font face="宋体">
-    <table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
+    <table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%" style="table-layout:fixed"
                         border="0">
-                        <tbody>
+                        
                             <tr>
                                 <td width="20" height="30" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText">
                                     <font color="#003366" size="3">
                                         <img height="16" src="../../DataImages/staff.gif" width="16"></font>
                                 </td>
                                 <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="60"
-                                    align="center" id="td_title" runat="server">我的日记
+                                    align="left" id="td_title" runat="server">我的日记
                           </td>
                                 <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
                                 </td>
                             </tr>
-                        </tbody>
+                         
                     </table>
       </font>
     <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -154,7 +154,7 @@ return true;
       </tr>
     </table>
     <font face="宋体">
-    <table width="98%" border="1" align="center" cellpadding="0" cellspacing="0" id="Table1" bordercolor="#93bee2">
+    <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" id="Table1" bordercolor="#93bee2">
         <tr>
             <td>
                 <table class="gbtext" id="Table2" cellspacing="0" cellpadding="0" width="100%" border="0">
@@ -168,11 +168,12 @@ return true;
                             <asp:LinkButton ID="lbNoteCollect" runat="server" CssClass="Newbutton" OnClick="lbNoteCollect_Click">日记查询</asp:LinkButton>
                         </td>
                         <td align="right">
-                            <input class="redbuttoncss" style="width: 81px" onClick="location.href='NewDiary.aspx?ReturnPage=1';"
+                            <input class="redbuttoncss" style="width: 80px" onClick="location.href='NewDiary.aspx?ReturnPage=1';"
                                     type="button" value="新增日记">
+                                    <asp:Button id="btnDelete"  style="width: 80px" runat="server" CssClass="redbuttoncss" Text="删除"></asp:Button>&nbsp;
                             <%--<asp:button id="btnAdd" runat="server" Text="新增日记" CssClass="redbuttoncss" 
                                             onclick="btnAdd_Click1"></asp:button>
-										<asp:Button id="btnDelete" runat="server" CssClass="redbuttoncss" Text="删除"></asp:Button>
+										
 										<asp:button id="btnShoucang" runat="server" Text="加入收藏" CssClass="redbuttoncss"></asp:button>--%>
                         </td>
                     </tr>

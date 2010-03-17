@@ -26,11 +26,37 @@
 	</HEAD>
 	<body leftMargin="0" topMargin="0" MS_POSITIONING="GridLayout">
 		<form id="Project" method="post" runat="server">
+			<table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
+            </td>
+            <td width="60" height="30" align="center" background="../../../Images/treetopbg.jpg"
+                bgcolor="#e8f4ff" class="GbText">
+                工作管理 <asp:label id="lblClassName" runat="server" BorderColor="Transparent" Font-Size="Medium" Font-Names="楷体_GB2312"></asp:label> <asp:label id="lblMember" runat="server"></asp:label>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                <font face="宋体">
+                    <input runat="server" id="lblComposeMail" class="redButtonCss" onclick="javascript:location.href='Mail/Compose.aspx?classID=<%=classID%>';" type="button" value="撰写邮件">
+                    <input id="lblDeliveryDoc" runat="server" class="redButtonCss" onclick="javascript:location.href='Switch.aspx?Action=0&amp;ClassID=<%=classID%>';" type="button" value="投递文档">
+                    <input id="lblManageDirectory" runat="server"  class="redButtonCss" onclick="javascript:location.href='oClassNode.aspx?Action=1&amp;classID=<%=classID%>';" type="button" value="目录管理">
+                    <input id="lblManageProject" runat="server"  class="redButtonCss" onclick="javascript:location.href='ManageProject.aspx?Action=3&amp;classID=<%=classID%>';" type="button" value="管理项目">
+                    <input id="lblSubscribe" runat="server"  class="redButtonCss" onclick="javascript:location.href='Project.aspx?classID=<%=classID%>&amp;Action=5';" type="button" value="订阅项目">
+                    <input id="lblManagePermission" runat="server"  class="redButtonCss" onclick="javascript:location.href='../AssignRule/RightListView.aspx?ObjID=<%=classID%>&amp;displayType=1';" type="button" value="权限管理">
+                    <input id="lblShowMember" runat="server" class="redButtonCss" onclick="javascript:location.href='MemberListView.aspx?TeamID=<%=classID%>';" type="button" value="显示组员">
+                    <input    class="redButtonCss" onclick="javascript:MoveToTeam();" type="button" value="项目移动">  
+                    &nbsp;</font>
+            </td>
+        </tr>
+    </table>
+    
 			<table height="345" cellSpacing="0" cellPadding="1" width="100%" align="right" border="0">
-				<TBODY>
+				
 					<tr>
 						<td class="text" vAlign="top" width="100%" height="57">
-							<table class="GbText" height="68" cellSpacing="0" cellPadding="0" width="100%" border="0">
+							<%--<table class="GbText" height="0" cellSpacing="0" cellPadding="0" width="100%" border="0">
 								<tr>
 									<td width="60"><IMG height="68" src="../../Images/p_leftbg.gif" width="60"></td>
 									<td align="middle" width="200" background="../../Images/p_leftcenterbg.gif">
@@ -54,10 +80,10 @@
 										</table>
 									</td>
 									<td align="middle" background="../../Images/p_centerbg.gif">
-										<table height="66" cellSpacing="0" cellPadding="0" width="96%" align="left" border="0">
+										 <table height="66" cellSpacing="0" cellPadding="0" width="96%" align="left" border="0">
 											<tr>
 												<td vAlign="center" align="middle" width="22"><asp:image id="imgComposeMail" runat="server" ImageUrl="../../Images/icon/284.GIF" Height="16px" Width="16px"></asp:image></td>
-												<td vAlign="center"><A href="Mail/Compose.aspx?classID=<%=classID%>" ><asp:label id="lblComposeMail" runat="server" Font-Size="X-Small"> 撰写邮件</asp:label></A></td>
+												<td vAlign="center"><A href="Mail/Compose.aspx?classID=<%=classID%>" ><asp:label CssClass="redButtonCss" id="lblComposeMail" runat="server" Font-Size="X-Small"> 撰写邮件</asp:label></A></td>
 												<td vAlign="center" align="middle" width="22"><asp:image id="imgDeliveryDoc" runat="server" ImageUrl="../../Images/icon/278.GIF" Height="16px" Width="16px"></asp:image></td>
 												<td vAlign="center"><A href="Switch.aspx?Action=0&amp;ClassID=<%=classID%>" ><asp:label id="lblDeliveryDoc" runat="server" Font-Size="X-Small">投递文档</asp:label></A><A href="MemberListView.aspx?TeamID=<%=classID%>" ></A></td>
 												<td vAlign="center" align="middle" width="22"><asp:image id="imgManageDirectory" runat="server" ImageUrl="../../Images/icon/001.GIF" Height="16px" Width="16px"></asp:image>&nbsp;</td>
@@ -69,18 +95,17 @@
 												<td vAlign="center" align="middle"><asp:image id="imgSubscribe" runat="server" ImageUrl="../../Images/Icon/mydoc.gif" Height="16px" Width="16px"></asp:image></td>
 												<td vAlign="center"><A href="Project.aspx?classID=<%=classID%>&amp;Action=5" ><asp:label id="lblSubscribe" runat="server" Font-Size="X-Small"> 订阅项目</asp:label></A></td>
 												<td vAlign="center" align="middle"><asp:image id="imgManagePermission" runat="server" ImageUrl="../../Images/icon/118.gif" Height="16px" Width="16px"></asp:image></td>
-												<TD vAlign="center"><A 
-                  href="../AssignRule/RightListView.aspx?ObjID=<%=classID%>&amp;displayType=1"><asp:label id="lblManagePermission" runat="server" Font-Size="X-Small"> 权限管理</asp:label></A><A href="Switch.aspx?Action=0&amp;ClassID=<%=classID%>" ></A></TD>
+												<TD vAlign="center"><A              href="../AssignRule/RightListView.aspx?ObjID=<%=classID%>&amp;displayType=1"><asp:label id="lblManagePermission" runat="server" Font-Size="X-Small"> 权限管理</asp:label></A><A href="Switch.aspx?Action=0&amp;ClassID=<%=classID%>" ></A></TD>
 												<td vAlign="center" align="middle"><asp:image id="imgShowMember" runat="server" ImageUrl="../../Images/admin_ico2.gif" Height="16px" Width="16px"></asp:image></td>
 												<td vAlign="center"><A href="MemberListView.aspx?TeamID=<%=classID%>" ><asp:label id="lblShowMember" runat="server" Font-Size="X-Small">显示组员</asp:label></A><A onclick="MoveToTeam()" href="#"></A></td>
 												<td vAlign="center" align="middle"><asp:image id="imgRemove" runat="server" ImageUrl="../../Images/Icon/03.gif" Height="16px" Width="16px"></asp:image>&nbsp;</td>
 												<td vAlign="center"><A onclick="MoveToTeam()" href="#"><asp:label id="lblRemove" runat="server" Font-Size="X-Small"> 项目移动</asp:label></A><A href="../AssignRule/RightListView.aspx?ObjID=<%=classID%>&amp;displayType=1" ></A></td>
 											</tr>
-										</table>
+										</table> 
 									</td>
 									<td align="right" width="84"><IMG height="68" src="../../Images/p_rightbg.gif" width="84"></td>
 								</tr>
-							</table>
+							</table>--%>
 						</td>
 					</tr>
 					<tr id="tr1" runat="server">

@@ -53,6 +53,7 @@ namespace UDS.SubModule.Schedule
 
 		public void PopulateDateToTable(DateTime sDate,int dayCount,string Username)
 		{
+            
 		 
 			string[] UnameStr = System.Text.RegularExpressions.Regex.Split(Username,",");
 			
@@ -148,7 +149,7 @@ namespace UDS.SubModule.Schedule
 			TableCell c = null;
 			c = new TableCell();
 			c.CssClass = "top";
-			c.Controls.Add(new LiteralControl("<font size=3>"+sDate.ToString("yyyy/MM/dd")+"</font>&nbsp;&nbsp;&nbsp;    "));	
+			c.Controls.Add(new LiteralControl(""+sDate.ToString("yyyy/MM/dd")+"</font>&nbsp;&nbsp;&nbsp;    "));	
 			r.Cells.Add(c);
 			
 			if(Username!="")
@@ -207,7 +208,7 @@ namespace UDS.SubModule.Schedule
 							{
 								string []a = period[j].ToString().Split('-');
 								//c.Controls.Add(new LiteralControl("<div style='position:absolute; width:86px; height:76px; z-index:1'><font size=3>aa"+a[0].ToString()+"</font></div>"));
-								c.Controls.Add(new LiteralControl("<font size=3>"+a[0].ToString()+"</font>"));
+								c.Controls.Add(new LiteralControl(" "+a[0].ToString()+" "));
 							}
 							else
 								c.Controls.Add(new LiteralControl(""));

@@ -39,7 +39,7 @@
 	</HEAD>
 	<body text="#000000" leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout">
 		<form id="ListView" runat="server">
-			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="98%" border="0" align="center">
 				<TR>
 					<TD>
 						<TABLE class="gbtext" id="Table2" cellSpacing="0" cellPadding="0" width="100%" border="0">
@@ -53,7 +53,7 @@
 									<asp:Button id="cmdManageRight" runat="server" Width="72px" Text="权限管理" Height="19px" CssClass="redbuttoncss"></asp:Button>
 									<asp:Button id="cmdDeleteStaffFromRole" runat="server" Width="74px" Text="脱离角色" Height="20px"
 										CssClass="redbuttoncss"></asp:Button>
-									<asp:Button id="cmdAddToRole" runat="server" Width="73px" Text="加入角色" Height="20px" CssClass="redbuttoncss"></asp:Button>
+									<asp:Button id="cmdAddToRole" runat="server" Width="73px" Text="加入角色" Height="20px" CssClass="redbuttoncss"></asp:Button>&nbsp;
 								</TD>
 							</TR>
 						</TABLE>

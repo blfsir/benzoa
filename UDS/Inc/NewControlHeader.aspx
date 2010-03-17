@@ -177,7 +177,7 @@ function changeuser()
         <td width="25">&nbsp;</td> 
         <td width="30" align="center"><a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main">桌面</a></td> 
         <td width="44" align="center"><a href="#" onclick="InfraLeft()">菜单</a> </td> 
-        <td width="35" align="center"><a href="../SubModule/Note/NoteManage.aspx" target="MainFrame">便签</a></td> 
+        <td width="35" align="center"><a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx" target="MainFrame">密码</a></td> 
         <td width="44" align="center"><a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame">日记</a></td> 
         <td width="47" align="center"><a href="../SubModule/WorkAttendance/Default.aspx" target="MainFrame">考勤</a></td> 
         <td width="35" align="center"><a href="../SubModule/Resources/ResourceApply.aspx" target="MainFrame">资源</a></td> 

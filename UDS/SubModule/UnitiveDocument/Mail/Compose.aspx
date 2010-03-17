@@ -103,12 +103,12 @@
 	</HEAD>
 	<body leftMargin="0" MS_POSITIONING="GridLayout" topmargin="0">
 		<form id="Compose" method="post" encType="multipart/form-data" runat="server">
-        <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+        <TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0" style="table-layout:fixed">
 							<TR>
 								<TD width="20" height="30"
 									align="right" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../Images/icon/284.GIF" width="16"></FONT></TD>
 							  <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
-									align="center">我的邮件</TD>
+									align="right">我的邮件</TD>
 								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"> </TD>
 							</TR>
 						</TABLE>

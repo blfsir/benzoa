@@ -35,9 +35,9 @@
 	<body leftmargin="0" topmargin="0">
 		<form id="Approve" method="post" runat="server">
 			<TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-			  <TR height="30">
-			    <TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-									align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/myDoc2.gif" width="16"></FONT></TD>
+			  <TR>
+			    <TD width="20" height="30"
+									align="right" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/myDoc2.gif" width="16"></FONT></TD>
 			    <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
 									align="center">我的文档</TD>
 			    <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体">

@@ -33,23 +33,23 @@
 		<LINK href="../../../Css/basiclayout.css" type="text/css" rel="stylesheet">
 	</HEAD>
 	<body leftMargin="0" topMargin="0">
-		<form id="Task" method="post" runat="server">
-			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-				<tr>
-					<td vAlign="top" height="38"><TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
-							<TR height="30">
-								<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-									align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/help_page.gif" width="16"></FONT></TD>
+		<form id="Task" method="post" runat="server"><TABLE borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+					  <TR>
+						<TD width="20" height="30"
+									align="right" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><IMG height="16" src="../../../DataImages/help_page.gif" width="16"></TD>
 								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
-									align="right"><font color="#006699">我的项目</font></TD>
-								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体">
+									align="center">我的项目</TD>
+								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right">
 										<asp:panel id="PanFunction" runat="server">
-											<INPUT class="redButtonCss" onclick="selectAll()" type="button" value="全部选择"></FONT>
-									<INPUT class="redButtonCss" onclick="unSelectAll()" type="button" value="全部取消"></asp:panel></FONT></TD>
+											<INPUT class="redButtonCss" onClick="selectAll()" type="button" value="全部选择">
+							  <INPUT class="redButtonCss" onClick="unSelectAll()" type="button" value="全部取消"></asp:panel></FONT></TD>
 							</TR>
 						</TABLE>
+			<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<tr>
+					<td vAlign="top" height="10">
 					</td>
-				</tr>
+			  </tr>
 				<TR>
 					<TD>
 						<TABLE class="gbtext" id="Table2" cellSpacing="0" cellPadding="0" width="100%" border="0">

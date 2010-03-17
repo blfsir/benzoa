@@ -209,7 +209,8 @@ function divChangbgColor(obj)
                                                     新闻中心
                                                 </td>
                                                 <td align="right" class="tit1">
-                                                    <img src="../../Images/tag01.gif" width="22" height="16" />
+                                                    <a href="News/NewsList.aspx" target="_self">
+                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -250,8 +251,7 @@ function divChangbgColor(obj)
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right" class="tit3">
-                                                    <a href="News/NewsList.aspx" target="_self">
-                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
+                                                   
                                                 </td>
                                             </tr>
                                         </table>
@@ -265,7 +265,8 @@ function divChangbgColor(obj)
                                                     我的任务
                                                 </td>
                                                 <td align="right" class="tit1">
-                                                    <img src="../../images/tag01.gif" width="22" height="16" />
+                                                      <a href="../Schedule/TaskList.aspx" target="_self">
+                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -308,8 +309,7 @@ function divChangbgColor(obj)
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right" class="tit3">
-                                                    <a href="../Schedule/TaskList.aspx" target="_self">
-                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
+                                                  
                                                 </td>
                                             </tr>
                                         </table>
@@ -333,7 +333,8 @@ function divChangbgColor(obj)
                                                     通知公告
                                                 </td>
                                                 <td align="right" class="tit1">
-                                                    <img src="../../images/tag01.gif" width="22" height="16" />
+                                                   <a href="Board/BoardList.aspx" target="_self">
+                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -373,8 +374,7 @@ function divChangbgColor(obj)
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right" class="tit3">
-                                                    <a href="Board/BoardList.aspx" target="_self">
-                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
+                                                    
                                                 </td>
                                             </tr>
                                         </table>
@@ -388,7 +388,8 @@ function divChangbgColor(obj)
                                                     我的待签
                                                 </td>
                                                 <td align="right" class="tit1">
-                                                    <img src="../../images/tag01.gif" width="22" height="16" />
+                                                   <a href="Board/BoardList.aspx" target="_self">
+                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -420,8 +421,7 @@ function divChangbgColor(obj)
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right" class="tit3">
-                                                    <a href="Board/BoardList.aspx" target="_self">
-                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
+                                                   
                                                 </td>
                                             </tr>
                                         </table>
@@ -493,7 +493,8 @@ function divChangbgColor(obj)
                                                     公司论坛
                                                 </td>
                                                 <td align="right" class="tit1">
-                                                    <img src="../../images/tag01.gif" width="22" height="16" />
+                                                     <a href="BBS/Catalog.aspx">
+                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -532,8 +533,7 @@ function divChangbgColor(obj)
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right" class="tit3">
-                                                    <a href="BBS/Catalog.aspx">
-                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
+                                                   
                                                 </td>
                                             </tr>
                                         </table>
@@ -547,7 +547,8 @@ function divChangbgColor(obj)
                                                     我的邮箱
                                                 </td>
                                                 <td align="right" class="tit1">
-                                                    <img src="../../images/tag01.gif" width="22" height="16" />
+                                                    <a href="Mail/Index.aspx" target="_self">
+                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -587,8 +588,7 @@ function divChangbgColor(obj)
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right" class="tit3">
-                                                    <a href="Mail/Index.aspx" target="_self">
-                                                        <img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a>
+                                                   
                                                 </td>
                                             </tr>
                                         </table>

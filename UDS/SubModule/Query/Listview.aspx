@@ -12,7 +12,7 @@
 	<body leftMargin="1" topMargin="1" rightMargin="1" MS_POSITIONING="GridLayout">
 		<form id="Listview" method="post" runat="server">
 			<FONT face="ËÎÌו">
-				<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TABLE width="98%" border="0" align="center" cellPadding="0" cellSpacing="0" id="Table1">
 					<tr>
 						<td>
 							<TABLE class="gbtext" id="tabDoc" cellSpacing="0" cellPadding="0" width="90" border="0"
