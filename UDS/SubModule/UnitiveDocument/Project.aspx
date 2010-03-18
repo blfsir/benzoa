@@ -33,9 +33,9 @@
                 align="right">
                 <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
             </td>
-            <td width="60" height="30" align="center" background="../../../Images/treetopbg.jpg"
+            <td width="150" height="30" align="left" background="../../../Images/treetopbg.jpg"
                 bgcolor="#e8f4ff" class="GbText">
-                工作管理 <asp:label id="lblClassName" runat="server" BorderColor="Transparent" Font-Size="Medium" Font-Names="楷体_GB2312"></asp:label> <asp:label id="lblMember" runat="server"></asp:label>
+                <%--工作管理--%> <asp:label id="lblClassName" runat="server" BorderColor="Transparent" ></asp:label> <asp:label id="lblMember" runat="server" Visible="false"></asp:label>
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
                 <font face="宋体">
@@ -46,7 +46,7 @@
                     <input id="lblSubscribe" runat="server"  class="redButtonCss" onclick="javascript:location.href='Project.aspx?classID=<%=classID%>&amp;Action=5';" type="button" value="订阅项目">
                     <input id="lblManagePermission" runat="server"  class="redButtonCss" onclick="javascript:location.href='../AssignRule/RightListView.aspx?ObjID=<%=classID%>&amp;displayType=1';" type="button" value="权限管理">
                     <input id="lblShowMember" runat="server" class="redButtonCss" onclick="javascript:location.href='MemberListView.aspx?TeamID=<%=classID%>';" type="button" value="显示组员">
-                    <input    class="redButtonCss" onclick="javascript:MoveToTeam();" type="button" value="项目移动">  
+                    <input id="lblRemove" runat="server"   class="redButtonCss" onclick="javascript:MoveToTeam();" type="button" value="项目移动">  
                     &nbsp;</font>
             </td>
         </tr>
@@ -54,9 +54,9 @@
     
 			<table height="345" cellSpacing="0" cellPadding="1" width="100%" align="right" border="0">
 				
-					<tr>
+					<%--<tr>
 						<td class="text" vAlign="top" width="100%" height="57">
-							<%--<table class="GbText" height="0" cellSpacing="0" cellPadding="0" width="100%" border="0">
+							<table class="GbText" height="0" cellSpacing="0" cellPadding="0" width="100%" border="0">
 								<tr>
 									<td width="60"><IMG height="68" src="../../Images/p_leftbg.gif" width="60"></td>
 									<td align="middle" width="200" background="../../Images/p_leftcenterbg.gif">
@@ -105,11 +105,11 @@
 									</td>
 									<td align="right" width="84"><IMG height="68" src="../../Images/p_rightbg.gif" width="84"></td>
 								</tr>
-							</table>--%>
+							</table> 
 						</td>
-					</tr>
+					</tr>--%>
 					<tr id="tr1" runat="server">
-						<td class="text" vAlign="top" width="100%" height="120"><IMG src="../../Images/line1.gif" runat="server" id="line1">
+						<td class="text" vAlign="top" width="100%" height="120"><IMG src="../../Images/line1.gif" runat="server" id="line1" visible="false" style="display:none;">
 						<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
                         border="0">
                         <tr style="cursor:pointer;" onclick="javascript:location.href='Document/Listview.aspx?ClassID=<%=classID%>';">
@@ -172,7 +172,7 @@
 								</asp:datagrid></FONT></td>
 					</tr>
 					<tr id="tr2" runat="server" >
-						<td class="text" vAlign="bottom" width="100%" height="120"><IMG src="../../Images/line1.gif"><br>
+						<td class="text" vAlign="bottom" width="100%" height="120"> 
 							<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
                         border="0">
                         <tr style="cursor:pointer;" onclick="javascript:location.href='Mail/Index.aspx?classID=<%=classID%>';">
@@ -239,7 +239,7 @@
 						</td>
 					</tr>
 					<tr id="tr3" runat="server">
-						<td class="text" vAlign="bottom" width="100%" height="120"><IMG id="line2" src="../../Images/line1.gif" runat="server">
+						<td class="text" vAlign="bottom" width="100%" height="120"><IMG id="line2" src="../../Images/line1.gif" runat="server" style="display:none;">
 							<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
                         border="0">
                         <tr  style="cursor:pointer;" onclick="javascript:location.href='Approve/ListView.aspx?ClassID=<%=classID%>';">
@@ -258,7 +258,7 @@
                     </table>
 							    
 							<A href="#"></A>
-							<asp:label id="lblApp" runat="server" Visible="False">审批文档</asp:label><BR>
+							<asp:label id="lblApp" runat="server" Visible="false" Height="0px">审批文档</asp:label> 
 							<asp:datagrid id="dgAppDocList" runat="server" BorderColor="#E8F4FF" Font-Names="Arial" Width="100%" CellPadding="2" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" AllowPaging="True" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" DataKeyField="DocID" PageSize="5">
 								<ItemStyle HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
 								<HeaderStyle Font-Size="X-Small" HorizontalAlign="Center" Height="20px" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>

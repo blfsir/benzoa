@@ -43,7 +43,7 @@
 				<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
 					<TR>
 						<TD><IMG height="25" src="../../../Images/temp.gif" width="250"></TD>
-						<TD align="right"><IMG height="25" src="../../../images/endbott.gif" width="279"></TD>
+						<TD align="right">&nbsp;</TD>
 					</TR>
 				</TABLE>
 			</div>

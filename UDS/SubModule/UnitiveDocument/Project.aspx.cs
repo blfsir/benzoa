@@ -49,7 +49,7 @@ namespace UDS.SubModule.UnitiveDocument
         protected System.Web.UI.HtmlControls.HtmlInputButton lblSubscribe;
 		//protected System.Web.UI.WebControls.Label lblDeliveryDoc;
         protected System.Web.UI.HtmlControls.HtmlInputButton lblDeliveryDoc;
-		protected System.Web.UI.WebControls.Label lblRemove;
+        protected System.Web.UI.HtmlControls.HtmlInputButton lblRemove;
         protected System.Web.UI.HtmlControls.HtmlInputButton lblManagePermission;
 //		protected System.Web.UI.WebControls.Image imgComposeMail;
 //		protected System.Web.UI.WebControls.Image imgSubscribe;

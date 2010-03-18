@@ -59,7 +59,7 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0">
 					<tr>
 						<td><img src="../../../Images/temp.gif" width="250" height="25"></td>
-						<td align="right"><img src="../../../images/endbott.gif" width="279" height="25"></td>
+						<td align="right">&nbsp;</td>
 					</tr>
 				</table>
 			</div>
