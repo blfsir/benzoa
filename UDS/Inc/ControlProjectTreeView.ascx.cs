@@ -190,7 +190,7 @@ namespace UDS.Inc
 			switch (ClassType)
 			{ 
                 case "0":
-                    rtnValue += "工作管理2.gif";
+                    rtnValue += "project.gif";
                     break;
                 case "1":
                     rtnValue += "文档管理2.gif";

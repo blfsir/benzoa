@@ -200,7 +200,7 @@
     <Content Include="Css\tr.js" />
     <Content Include="Css\TreeView.Css" />
     <Content Include="Css\复件 BasicLayout.css" />
-    <Content Include="DataImages\bg01.gif" />
+    <Content Include="DataImages\project.gif" />
     <Content Include="DataImages\人员管理1.gif" />
     <Content Include="DataImages\人员管理2.gif" />
     <Content Include="DataImages\公司公告1.gif" />
@@ -212,7 +212,6 @@
     <Content Include="DataImages\办公室环境监控1.gif" />
     <Content Include="DataImages\办公室环境监控2.gif" />
     <Content Include="DataImages\工作管理1.gif" />
-    <Content Include="DataImages\工作管理2.gif" />
     <Content Include="DataImages\我的任务1.gif" />
     <Content Include="DataImages\我的任务2.gif" />
     <Content Include="DataImages\我的文档1.gif" />
