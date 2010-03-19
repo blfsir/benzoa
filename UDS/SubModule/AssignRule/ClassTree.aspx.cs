@@ -237,78 +237,85 @@ namespace UDS.SubModule.AssginRule
 			string rtnValue = "../../DataImages/";
 			switch (ClassType)
 			{
-                case "0":
-                    rtnValue += "工作管理2.gif";
-                    break;
-                case "1":
-                    rtnValue += "文档管理2.gif";
-                    break;
-                case "2":
-                    rtnValue += "我的邮件2.gif";
-                    break;
-                case "3":
-                    rtnValue += "公司论坛2.gif";
-                    break;
-                case "4":
-                    rtnValue += "人员管理2.gif";
-                    break;
-                case "5":
-                    rtnValue += "help_page.gif";
-                    break;
-                case "6":
-                    rtnValue += "我的任务2.gif";
-                    break;
-                case "7":
-                    rtnValue += "我的邮件2.gif";
-                    break;
-                case "8":
-                    rtnValue += "文档管理2.gif";
-                    break;
-                case "9":
-                    rtnValue += "公文流转2.gif";
-                    break;
-                case "10":
-                    rtnValue += "ClientManage.gif";
-                    break;
-                case "11":
-                    rtnValue += "myLinkman.gif";
-                    break;
-                case "12":
-                    rtnValue += "职位管理2.gif";
-                    break;
-                case "13":
-                    rtnValue += "角色管理2.gif";
-                    break;
-                case "14":
-                    rtnValue += "考勤管理2.gif";
-                    break;
+				case "0":
+					rtnValue+= "flag.gif" ;
+					break;
+				case "1":
+					rtnValue+= "myDoc.gif" ;
+					break;
+				case "2":
+					rtnValue+= "mail.gif" ;
+					break;
+				case "3":
+					rtnValue+= "page.gif" ;
+					break;
+				case "4":
+					rtnValue+= "staff.gif" ;
+					break;
+				case "5":
+					rtnValue+= "help_page.gif" ;
+					break;
+				case "6":
+					rtnValue+= "MyTask.gif";
+					break;
+				case "7":
+					rtnValue+= "mail.gif" ;
+					break;
+				case "8":
+					rtnValue+= "myDoc.gif" ;
+					break;
+				case "9":
+					rtnValue+= "DocFlow.gif" ;
+					break;
+				case "10":
+					rtnValue+= "ClientManage.gif" ;
+					break;
+				case "11":
+					rtnValue+= "myLinkman.gif" ;
+					break;
+				case "12":
+					rtnValue+= "position.gif" ;
+					break;
+				case "13":
+					rtnValue+= "role.gif" ;
+					break;
+				case "14":
+					rtnValue+= "kaoqin.gif" ;
+					break;
+				case "15":
+					rtnValue+= "workadmin.gif" ;
+					break;
+				case "16":
+					rtnValue+= "message.gif" ;
+					break;
                 case "50":
-                    rtnValue += "公司公告2.gif";
+                    rtnValue += "board.gif";
                     break;
                 case "55":
-                    rtnValue += "文档管理2.gif";
+                    rtnValue += "myDoc.gif";
                     break;
+
                 case "52":
-                    rtnValue += "新闻中心2.gif"; //新闻中心
+                    rtnValue += "t1.gif";
                     break;
                 case "57": //办公环境监控
-                    rtnValue += "办公室环境监控2.gif";
+                    rtnValue += "t2.gif";
                     break;
 
                 case "58": //计划总结
-                    rtnValue += "计划总结2.gif";
+                    rtnValue += "t3.gif";
                     break;
 
                 case "59": //资源预定
-                    rtnValue += "资源预定2.gif";
+                    rtnValue += "t4.gif";
                     break;
 
                 case "60": //设备管理
-                    rtnValue += "设备管理2.gif";
+                    rtnValue += "t5.gif";
                     break;
-                default:
-                    rtnValue += "red_ball.gif";
-                    break;
+				default: 
+					rtnValue+= "red_ball.gif";
+					break;
 			}
 			return rtnValue;
 		}
