@@ -168,7 +168,7 @@ function divChangbgColor(obj)
                     <tr>
                         <td colspan="2" class="tit3">
                            
-                            <div id="BianQianLayer">
+                            <div id="BianQianLayer" style="background-color:#ffffcc">
                                 <div style="border-top: solid 1 #dddddd; padding-top: 2px; border-left: solid 1 #dddddd;
                                     border-right: solid 1 #dddddd; height: 20px;" align="right">
                                     <span onclick="divChangbgColor(this)" style="cursor: hand; background: fff8f8; width: ;

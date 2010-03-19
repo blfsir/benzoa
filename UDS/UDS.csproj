@@ -201,6 +201,7 @@
     <Content Include="Css\TreeView.Css" />
     <Content Include="Css\复件 BasicLayout.css" />
     <Content Include="DataImages\ClientManage.gif" />
+    <Content Include="DataImages\myDoc2.gif" />
     <Content Include="DataImages\flag.gif" />
     <Content Include="DataImages\person.gif" />
     <Content Include="DataImages\red_ball.gif" />
