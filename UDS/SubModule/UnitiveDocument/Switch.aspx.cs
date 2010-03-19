@@ -38,10 +38,10 @@ namespace UDS.SubModule.UnitiveDocument
 				case "1":
 					switch (classtype)
 					{
-						case "0":
+						case "0": //工作管理
 							Response.Redirect("Project.aspx?classID="+classID);
 							break;
-						case "1":
+						case "1": 
 							Response.Redirect("Document/ListView.aspx?classID="+classID);
 							break;
 						case "2":
