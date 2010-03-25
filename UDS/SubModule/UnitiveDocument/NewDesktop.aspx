@@ -219,7 +219,7 @@ function divChangbgColor(obj)
                                                         GridLines="Horizontal" PageSize="6" DataKeyField="News_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                                         PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                                         CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false" Height="100%">
-                                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
+                                                       
                                                         <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                             ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
                                                         <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">
@@ -276,7 +276,7 @@ function divChangbgColor(obj)
                                                         PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                                         CellPadding="0" OnPageIndexChanged="DataGrid_PageChanged" CssClass="top" BorderWidth="1px"
                                                         ShowHeader="false" Height="100%">
-                                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
+                                                   
                                                         <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                             ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
                                                         <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">
@@ -343,7 +343,7 @@ function divChangbgColor(obj)
                                                         GridLines="Horizontal" PageSize="5" DataKeyField="Board_ID" Width="100%" PagerStyle-HorizontalAlign="center"
                                                         PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                                         CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false">
-                                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
+                                                     
                                                         <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                             ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
                                                         <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">
@@ -398,7 +398,7 @@ function divChangbgColor(obj)
                                                         GridLines="Horizontal" PageSize="5" Width="100%" PagerStyle-HorizontalAlign="center"
                                                         PagerStyle-Mode="NumericPages" AutoGenerateColumns="False" BackColor="White"
                                                         CellPadding="0" CssClass="top" BorderWidth="1px" ShowHeader="false">
-                                                        <ItemStyle Font-Size="X-Small" HorizontalAlign="Center" VerticalAlign="Middle"></ItemStyle>
+                                                   
                                                         <HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="20px"
                                                             ForeColor="#006699" VerticalAlign="Middle" BackColor="#E8F4FF"></HeaderStyle>
                                                         <FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" VerticalAlign="Bottom">

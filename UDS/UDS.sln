@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_sql", "db_sql", "{F59EE9
 		20100228resources.sql = 20100228resources.sql
 		20100303.sql = 20100303.sql
 		20100309.sql = 20100309.sql
-		20100312workattendence.sqll = 20100312workattendence.sqll
+		20100312workattendence.sql = 20100312workattendence.sql
 		asset.sql = asset.sql
 		DailyNotes.txt = DailyNotes.txt
 		department.sql = department.sql
@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db_sql", "db_sql", "{F59EE9
 		staffSearch.sql = staffSearch.sql
 		C:\Documents and Settings\Administrator\桌面\车辆\车辆\DB\vehicle.sql = C:\Documents and Settings\Administrator\桌面\车辆\车辆\DB\vehicle.sql
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{28C53A42-1853-440C-8EA0-B05C988844C8}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -67,5 +69,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28C53A42-1853-440C-8EA0-B05C988844C8} = {F59EE9AD-8E28-4469-9852-AF90855C0644}
 	EndGlobalSection
 EndGlobal

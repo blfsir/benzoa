@@ -1,3 +1,0 @@
-
-alter table UDS_WorkAttendence_Data 
-add  fingerprintOnDuty datetime, fingerprintOffDuty datetime 

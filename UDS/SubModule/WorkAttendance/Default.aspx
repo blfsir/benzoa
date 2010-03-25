@@ -139,13 +139,13 @@ function GetServerTime(updatespan)
 									
 									<asp:TemplateColumn HeaderText="打卡上班时间">
 										<ItemTemplate>
-											<%# GetMemo(((DataRowView)Container.DataItem)["fingerprintOnDuty"])%>
+											<%# GetTime(((DataRowView)Container.DataItem)["fingerprintOnDuty"])%>
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									
 									<asp:TemplateColumn HeaderText="打卡下班时间">
 										<ItemTemplate>
-											<%# GetMemo(((DataRowView)Container.DataItem)["fingerprintOffDuty"])%>
+											<%# GetTime(((DataRowView)Container.DataItem)["fingerprintOffDuty"])%>
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									
