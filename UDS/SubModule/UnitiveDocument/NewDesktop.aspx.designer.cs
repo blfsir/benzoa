@@ -68,15 +68,6 @@ namespace UDS.SubModule.UnitiveDocument {
         protected global::System.Web.UI.WebControls.DataGrid dgNews;
         
         /// <summary>
-        /// dgList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataGrid dgList;
-        
-        /// <summary>
         /// dgBoard control.
         /// </summary>
         /// <remarks>
@@ -86,15 +77,6 @@ namespace UDS.SubModule.UnitiveDocument {
         protected global::System.Web.UI.WebControls.DataGrid dgBoard;
         
         /// <summary>
-        /// dgAppDocList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataGrid dgAppDocList;
-        
-        /// <summary>
         /// ItemList control.
         /// </summary>
         /// <remarks>
@@ -102,6 +84,24 @@ namespace UDS.SubModule.UnitiveDocument {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataGrid ItemList;
+        
+        /// <summary>
+        /// dgList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataGrid dgList;
+        
+        /// <summary>
+        /// dgAppDocList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataGrid dgAppDocList;
         
         /// <summary>
         /// dgMailList control.

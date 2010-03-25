@@ -79,9 +79,9 @@ namespace UDS.SubModule.UnitiveDocument
                     DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
                     //AddBlankRowInDataTable(5, ref dt);
                     //DataView dv = new DataView(dt);
-                    if (dt.Rows.Count < 5)
+                    if (dt.Rows.Count < 6)
                     {
-                        int tmp = 5 - dt.Rows.Count;
+                        int tmp = 6 - dt.Rows.Count;
                         for (int i = 0; i < tmp; i++)
                         {
                             DataRow myDataRow = dt.NewRow();
@@ -113,9 +113,9 @@ namespace UDS.SubModule.UnitiveDocument
                 DataColumn dc2 = new DataColumn("Flow_Name");
                 dt.Columns.Add(dc1);
                 dt.Columns.Add(dc2);
-                if (dt.Rows.Count < 5)
+                if (dt.Rows.Count < 6)
                 {
-                    int tmp = 5 - dt.Rows.Count;
+                    int tmp = 6 - dt.Rows.Count;
                     for (int i = 0; i < tmp; i++)
                     {
                         DataRow myDataRow = dt.NewRow();
@@ -143,9 +143,9 @@ namespace UDS.SubModule.UnitiveDocument
                 DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
                 //AddBlankRowInDataTable(5, ref dt);
                 //DataView dv = new DataView(dt);
-                if (dt.Rows.Count < 5)
+                if (dt.Rows.Count < 6)
                 {
-                    int tmp = 5 - dt.Rows.Count;
+                    int tmp = 6 - dt.Rows.Count;
                     for (int i = 0; i < tmp; i++)
                     {
                         DataRow myDataRow = dt.NewRow();
@@ -186,9 +186,9 @@ namespace UDS.SubModule.UnitiveDocument
                 DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
                 //AddBlankRowInDataTable(5, ref dt);
                 //DataView dv = new DataView(dt);
-                if (dt.Rows.Count < 5)
+                if (dt.Rows.Count < 6)
                 {
-                    int tmp = 5 - dt.Rows.Count;
+                    int tmp = 6 - dt.Rows.Count;
                     for (int i = 0; i < tmp; i++)
                     {
                         DataRow myDataRow = dt.NewRow();
@@ -249,9 +249,9 @@ namespace UDS.SubModule.UnitiveDocument
             UDS.Components.Task task = new UDS.Components.Task();
             DataTable mydb = Tools.ConvertDataReaderToDataTable(task.GetAllTaskBySomeone(DateTime.Today.ToShortDateString(), Username, 1));
 
-            if (mydb.Rows.Count < 5)
+            if (mydb.Rows.Count < 6)
             {
-                int tmp = 5 - mydb.Rows.Count;
+                int tmp = 6 - mydb.Rows.Count;
                 for (int i = 0; i < tmp; i++)
                 {
                     DataRow myDataRow = mydb.NewRow();
@@ -416,9 +416,9 @@ namespace UDS.SubModule.UnitiveDocument
                 DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
                 //AddBlankRowInDataTable(5, ref dt);
                 //DataView dv = new DataView(dt);
-                if (dt.Rows.Count < 5)
+                if (dt.Rows.Count < 6)
                 {
-                    int tmp = 5 - dt.Rows.Count;
+                    int tmp = 6 - dt.Rows.Count;
                     for (int i = 0; i < tmp; i++)
                     {
                         DataRow myDataRow = dt.NewRow();
@@ -540,9 +540,9 @@ namespace UDS.SubModule.UnitiveDocument
 
                 dr = myDesktop.GetMyMail(UserName, 1);
                 DataTable dt = Tools.ConvertDataReaderToDataTable(dr);
-                if (dt.Rows.Count < 5)
+                if (dt.Rows.Count < 6)
                 {
-                    int tmp = 5 - dt.Rows.Count;
+                    int tmp = 6 - dt.Rows.Count;
                     for (int i = 0; i < tmp; i++)
                     {
                         DataRow myDataRow = dt.NewRow();
@@ -561,9 +561,9 @@ namespace UDS.SubModule.UnitiveDocument
 
                 //dr = myDesktop.GetMyPostil(UserName);
                 dt = myDesktop.GetMyPostil(UserName);
-                if (dt.Rows.Count < 5)
+                if (dt.Rows.Count < 6)
                 {
-                    int tmp = 5 - dt.Rows.Count;
+                    int tmp = 6 - dt.Rows.Count;
                     for (int i = 0; i < tmp; i++)
                     {
                         DataRow myDataRow = dt.NewRow();
