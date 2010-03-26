@@ -97,13 +97,11 @@ function GetLink()
 //}
 //-->
     </script>
-
-    
-    <link href="../Css/mycss1.css" type="text/css" rel="stylesheet">
-     <link href="../Css/oa.css" type="text/css" rel="stylesheet">
+<%--
+    <link href="../Css/mycss1.css" type="text/css" rel="stylesheet">--%>
+    <link href="../Css/oa.css" type="text/css" rel="stylesheet">
 </head>
-<body text="#ffffff" leftmargin="0" topmargin="0"  
-    marginheight="0" marginwidth="0">
+<body text="#ffffff" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
 
     <script language="JavaScript">
 function intPage(ParentNameStr){
@@ -165,30 +163,77 @@ function changeuser()
 
     </script>
 
-    <form name="Head"> 
-     <div class="header">  <div class="header2"> 
-    <table width="400" border="0" align="right" cellpadding="0" cellspacing="0" class="nav" > 
-  <tr> 
-    <td height="65">&nbsp;</td> 
-  </tr> 
-  <tr> 
-    <td valign="top"><table width="446" border="0" cellspacing="0" cellpadding="0" class="navtxt"> 
-      <tr> 
-        <td width="25">&nbsp;</td> 
-        <td width="30" align="center"><a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main">桌面</a></td> 
-        <td width="44" align="center"><a href="#" onclick="InfraLeft()">菜单</a> </td> 
-        <td width="35" align="center"><a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx" target="MainFrame">密码</a></td> 
-        <td width="44" align="center"><a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame">日记</a></td> 
-        <td width="47" align="center"><a href="../SubModule/WorkAttendance/Default.aspx" target="MainFrame">考勤</a></td> 
-        <td width="35" align="center"><a href="../SubModule/Resources/ResourceApply.aspx" target="MainFrame">资源</a></td> 
-        <td width="46" align="center"><a href="../help/help.htm" target="_blank">帮助</a></td> 
-        <td width="47" align="center"><a   onclick="ComfirmExit(2)" href="#" target="_self">重登录</a></td> 
-        <td width="40" align="center"><a  onclick="ComfirmExit(1)" href="#" target="_self">退出</a></td> 
-        <td width="53">&nbsp;</td> 
-      </tr> 
-    </table></td> 
-  </tr> 
-</table> </div></div>
+    <form name="Head">
+    <div class="header">
+        <div class="header2">
+            <table width="480" border="0" align="right" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                         <a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main"><img src="../../images/bg01_04.gif" width="47" height="90" /></a>
+                         <a href="#" onclick="InfraLeft()"><img src="../../images/bg01_05.gif" width="49" height="90" /></a>
+                         <a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx" target="MainFrame"><img src="../../images/bg01_06.gif" width="47" height="90" /></a>
+                         <a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame"><img src="../../images/bg01_07.gif" width="43" height="90" /></a>
+                        <a href="../SubModule/WorkAttendance/Default.aspx" target="MainFrame"><img src="../../images/bg01_08.gif" width="45" height="90" /></a>
+                        <a href="../SubModule/Resources/ResourceApply.aspx" target="MainFrame"><img src="../../images/bg01_09.gif" width="43" height="90" /></a>
+                        <a href="../help/help.htm" target="_blank"> <img src="../../images/bg01_10.gif" width="41" height="90" /></a>
+                        <a onclick="ComfirmExit(2)" href="#" target="_self"><img src="../../images/bg01_11.gif" width="46" height="90" /></a>
+                          <a onclick="ComfirmExit(1)" href="#" target="_self"><img src="../../images/bg01_12.gif" width="47" height="90" /></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <%--<div class="header">
+        <div class="header2">
+            <table width="400" border="0" align="right" cellpadding="0" cellspacing="0" class="nav">
+                <tr>
+                    <td height="65">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <table width="446" border="0" cellspacing="0" cellpadding="0" class="navtxt">
+                            <tr>
+                                <td width="25">
+                                    &nbsp;
+                                </td>
+                                <td width="30" align="center">
+                                    <a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main">桌面</a>
+                                </td>
+                                <td width="44" align="center">
+                                    <a href="#" onclick="InfraLeft()">菜单</a>
+                                </td>
+                                <td width="35" align="center">
+                                    <a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx" target="MainFrame">密码</a>
+                                </td>
+                                <td width="44" align="center">
+                                    <a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame">日记</a>
+                                </td>
+                                <td width="47" align="center">
+                                    <a href="../SubModule/WorkAttendance/Default.aspx" target="MainFrame">考勤</a>
+                                </td>
+                                <td width="35" align="center">
+                                    <a href="../SubModule/Resources/ResourceApply.aspx" target="MainFrame">资源</a>
+                                </td>
+                                <td width="46" align="center">
+                                    <a href="../help/help.htm" target="_blank">帮助</a>
+                                </td>
+                                <td width="47" align="center">
+                                    <a onclick="ComfirmExit(2)" href="#" target="_self">重登录</a>
+                                </td>
+                                <td width="40" align="center">
+                                    <a onclick="ComfirmExit(1)" href="#" target="_self">退出</a>
+                                </td>
+                                <td width="53">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>--%>
     </form>
 </body>
 </html>
