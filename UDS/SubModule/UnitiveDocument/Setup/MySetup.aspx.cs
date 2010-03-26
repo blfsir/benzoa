@@ -88,7 +88,7 @@ namespace UDS.SubModule.UnitiveDocument.Setup
 
 		private void cmdCancel_Click(object sender, System.EventArgs e)
 		{
-			Response.Redirect("../Desktop.aspx");
+			Response.Redirect("../NewDesktop.aspx");
 		}
 	}
 }
