@@ -93,6 +93,12 @@
             font-family: "Arial" , "Helvetica" , "sans-serif";
             text-decoration: none;
         }
+        
+        .Menu img  
+        {  
+            height:20px;  
+            width:20px;  
+        }          
     </style>
 
     <script language="javascript"> 
@@ -101,19 +107,19 @@
 
 </head>
 <body style="background-position: right 50%; background-attachment: fixed; background-repeat: no-repeat"
-    leftmargin="0" background="../../Images/lefttreebg.gif" topmargin="0" bgcolor="#024289"
+    leftmargin="0" background="../../Images/lefttreebg.gif" topmargin="0" bgcolor="#f0f5fb"
     onload="SetStatus()">
     <form id="Projecttreeview" method="post" runat="server">
     <table height="100%" cellspacing="0" cellpadding="0" width="100%" border="0">
         <tr>
-            <td valign="center" height="30">
+            <td valign="center" height="30" bgcolor="#f0f5fb">
                 <font face="宋体">
                     <table id="Table1" height="30" cellspacing="0" cellpadding="0" width="100%" border="0">
                         <tr>
-                            <td bgcolor="#f0f5fb">
-                                &nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="../../DataImages/xpDesktop.gif">
-                                </asp:Image><font face="宋体">&nbsp;<a style="text-decoration: none" href="NewDesktop.aspx"
-                                    target="MainFrame"><font color="white">桌面(<%=UserName%>)</font></a></font>
+                            <td >
+                                &nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="../../DataImages/tag13.png"  width="20" height="20" >
+                                </asp:Image> &nbsp;<a style="text-decoration: none" href="NewDesktop.aspx"
+                                    target="MainFrame">桌面(<%=UserName%>)</a> 
                             </td>
                             <td width="1">
                             </td>
@@ -122,8 +128,8 @@
                 </font>
             </td>
         </tr>
-        <tr valign="top">
-            <td>
+        <tr valign="top" bgcolor="#f0f5fb">
+            <td  bgcolor="#f0f5fb">
                 <uc1:ControlProjectTreeView ID="ControlProjectTreeView1" runat="server"></uc1:ControlProjectTreeView>
             </td>
         </tr>
