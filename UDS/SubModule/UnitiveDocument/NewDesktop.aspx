@@ -61,7 +61,7 @@ function divChangbgColor(obj)
 <body leftmargin="0" topmargin="0" rightmargin="5">
     <form id="Desktop" method="post" runat="server">
   
-    <div style="padding:10px;"> 
+    <div style="padding:10px;" onclick="InfraLeft()"> 
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"> 
   <tr> 
     <td width="205" valign="top" bgcolor="#dbecf3"><div class="left2"><table width="190" border="0" align="center" cellpadding="0" cellspacing="0"> 

@@ -69,7 +69,7 @@
 		</script>
 	</HEAD>
 	<body style="BACKGROUND-POSITION: right 50%; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-REPEAT: no-repeat"
-		leftMargin="0" background="../../Images/lefttreebg.gif" topMargin="0" bgcolor="#0051a5"
+		leftMargin="0" background="../../Images/lefttreebg.gif" topMargin="0" bgcolor="#337fb2"
 		onload='setInterval("re()",(GetCookie("UDS_RefreshTime"))==null?30000:GetCookie("UDS_RefreshTime"))'>
 		<form id="Online" method="post" runat="server">
 			<table width="222" border="0" height="29" style="WIDTH: 222px; HEIGHT: 29px">
