@@ -124,10 +124,10 @@ namespace UDS.SubModule.UnitiveDocument.Document
 		
 			if(mySQL.RunProc("sp_ApproveDocument",parameters)>0)
 			{
-				Response.Write("<script language='javascript'>window.alert('审批文件成功!');self.location='../Desktop.aspx';</script>");
+                Response.Write("<script language='javascript'>window.alert('审批文件成功!');self.location='../NewDesktop.aspx';</script>");
 			}	
 			else
-				Response.Write("<script language='javascript'>window.alert('审批文件成功!');self.location='../Desktop.aspx';</script>");
+				Response.Write("<script language='javascript'>window.alert('审批文件成功!');self.location='../NewDesktop.aspx';</script>");
 				
 		}
 	}
