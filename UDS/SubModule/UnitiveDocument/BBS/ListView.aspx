@@ -113,16 +113,22 @@ function SubmitForm( BtObject )
 	</HEAD>
 	<body topmargin=0 leftmargin=0>
 		<form id="ListView" method="post" runat="server">
-			<table  width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td background="../../../Images/bbsback.jpg"><img src="../../../Images/bbs.jpg"></td><td background="../../../Images/bbsback.jpg"><br><font color=white>|</font> <a  style="color: #ffffff;" href='<%="search/index.aspx?classid="+classid%>'>搜索</a> <font color=white>|</font></td>
-					</tr>
-				</table><br>
+				<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
+                        border="0">
+                        <tr>
+                            <td width="23" height="30" align="right" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#c0d9e6" class="GbText" style="width: 23px">
+                                <font color="#003366" size="3">
+                                    <img height="16" src="../../../DataImages/page.gif" width="16"></font>
+                            </td>
+                            <td class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
+                                bgcolor="#e8f4ff"><asp:Label ID="lblBoardName" Runat="server" Font-Bold="true" Font-Underline="false"></asp:Label>
+                          </td>
+                            <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff"><input type=button onClick="window.open('NewItem.aspx?BoardID=<%=boardid%>');" value="发送新贴" class=redbuttoncss></td>
+                        </tr>
+                    </table><br>
 			<table id="AutoNumber4" style="BORDER-COLLAPSE: collapse" borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="98%" border="0" align="center">
-				<tr>
-					<td class="BlueTextBX" align="middle" height="1"><asp:Label ID="lblBoardName" Runat="server" Font-Bold="true" Font-Underline="false"></asp:Label></td>
-					<td class="BlueTextBX" align="right" height="1"><input type=button onClick="window.open('NewItem.aspx?BoardID=<%=boardid%>');" value="发送新贴" class=redbuttoncss></td>
-				</tr>
+				 
 				<tr>
 					<td colspan=2>
 						<table width=100% align="center">

@@ -80,7 +80,7 @@
                                 bgcolor="#e8f4ff"><asp:Label ID="lblTitle" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small"
                                         Width="53px">  公司论坛</asp:Label>
                           </td>
-                            <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff">&nbsp;</td>
+                            <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff"><A id="A1" runat="server" width="80px" class="redButtonCss">&nbsp;&nbsp; 添加分类 &nbsp;&nbsp;</A></td>
                         </tr>
                     </table>
                     
@@ -91,45 +91,43 @@
 				</table>--%>
 				<br>
 				<table class="GbText" id="AutoNumber1" style="BORDER-COLLAPSE: collapse; line-height:20px;" borderColor="#93BEE2" height="80" cellSpacing="0" cellPadding="5" width="98%" border="1" align=center>
-					<tr>
+				<%--	<tr>
 						<td class="GbText" align="center" bgcolor="#337fb2" colSpan="2" height="24"><b><font color="#ffffff">论坛</font></b></td>
 					  <td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>帖子</b></font></td>
 						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>回复</b></font></td>
 						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>最新帖子</b></font></td>
 						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>版主</b></font></td>
-					</tr>
-					<tr>
-						<td class="GbText" align="left" colSpan="6" height="22"><A id="A1" runat=server >添加分类</A></td>
-					</tr>
+						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>设置</b></font></td>
+					</tr>--%>
+					 
 					<asp:repeater id="rpt_catalog" Runat="server">
 						<ItemTemplate>
 							<tr>
-								<td bgColor="#93BEE2" colSpan="6" height="22"><FONT face="宋体" color=#000000">
+								<td bgColor="#93BEE2" colSpan="7" height="22"><FONT face="宋体" color=#000000">
 										<strong>
 										<asp:label id="LCatalog" runat="server" Width="100%" text='<%# DataBinder.Eval(Container.DataItem,"catalog_name") %>'>
 									    </asp:label>
-										</strong>									</FONT>
+										</strong>									<asp:Panel ID="adminop" Runat=server Visible='<%# Admin%>'><A  href="ManageBoard.aspx?Action=AddBoard&CatalogID=<%# DataBinder.Eval(Container.DataItem,"catalog_id")%>&classID=<%=classid%>">添加板块</A>|<asp:LinkButton ID="btndelcatalog" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"catalog_id")%>' OnClick="btndelcatalog_Click" Runat=server>删除分类</asp:LinkButton>|<A  href="ManageCatalog.aspx?Action=ModifyCatalog&CatalogID=<%# DataBinder.Eval(Container.DataItem,"catalog_id")%>&classID=<%=classid%>">
+							  编辑分类</A>|</asp:Panel></FONT>
 								</td>
 							</tr>
-							<tr>
+						<%--	<tr>
 								<td align="left" bgColor="white" colSpan="6" height="22"><FONT face="宋体"><asp:label id="LCatalog_Description" runat="server" Width="100%"  text='<%# DataBinder.Eval(Container.DataItem,"catalog_description") %>'>
 										</asp:label>
 									</FONT>
 								</td>
-							</tr>
-							<tr>
-								<td align="right" bgColor="#e8f4ff" colSpan="6" height="22"><asp:Panel ID="adminop" Runat=server Visible='<%# Admin%>'><A  href="ManageBoard.aspx?Action=AddBoard&CatalogID=<%# DataBinder.Eval(Container.DataItem,"catalog_id")%>&classID=<%=classid%>">添加板块</A>|<asp:LinkButton ID="btndelcatalog" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"catalog_id")%>' OnClick="btndelcatalog_Click" Runat=server>删除分类</asp:LinkButton>|<A  href="ManageCatalog.aspx?Action=ModifyCatalog&CatalogID=<%# DataBinder.Eval(Container.DataItem,"catalog_id")%>&classID=<%=classid%>">
-							  编辑分类</A>|</asp:Panel></td>
-							</tr>
+							</tr>--%>
+							 
 							<asp:Repeater ID="rpt_board" OnItemDataBound="rpt_board_ItemDataBound" DataSource='<%# ((DataRowView)Container.DataItem).Row.GetChildRows("catolog_board") %>' Runat="server">
 								<ItemTemplate>
 								
 								<tr>
-						<td class="GbText" align="center" bgcolor="#337fb2" colSpan="2" height="24"><b><font color="#ffffff">论坛</font></b></td>
-					  <td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>帖子</b></font></td>
-						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>回复</b></font></td>
-						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>最新帖子</b></font></td>
-						<td class="GbText" align="center" bgcolor="#337fb2" height="24"><font color="#ffffff"><b>版主</b></font></td>
+						<td class="GbText" align="center" bgcolor="#e8f4ff" colSpan="2" height="24"><b><font color="#93bee2">版块</font></b></td>
+					  <td class="GbText" align="center" bgcolor="#e8f4ff" height="24"><font color="#93bee2"><b>帖子</b></font></td>
+						<td class="GbText" align="center" bgcolor="#e8f4ff" height="24"><font color="#93bee2"><b>回复</b></font></td>
+						<td class="GbText" align="center" bgcolor="#e8f4ff" height="24"><font color="#93bee2"><b>最新帖子</b></font></td>
+						<td class="GbText" align="center" bgcolor="#e8f4ff" height="24"><font color="#93bee2"><b>版主</b></font></td>
+						<td class="GbText" align="center" bgcolor="#e8f4ff" height="24"><font color="#93bee2"><b>设置</b></font></td>
 					</tr>
 								
 								
@@ -172,11 +170,10 @@
 												</ItemTemplate>
 										  </asp:Repeater>
 										</td>
-									</tr>
-									<tr>
-										<td height="22" colSpan="6" align="right" bgColor="#e8f4ff"><asp:Panel ID="Adminop1" Runat=server Visible='<%# AdminBoard(Int32.Parse(DataBinder.Eval(Container.DataItem,"[\"board_id\"]").ToString()),Username) || Admin %>'><A href="ManageBoardMaster.aspx?BoardID=<%# DataBinder.Eval(Container.DataItem,"[\"board_id\"]")%>&classID=<%=classid%>" >设定斑竹</A>|<asp:LinkButton ID="lbtnDelBoard" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"[\"board_id\"]")%>' OnClick="DeleteBoard"  Runat=server>删除板块</asp:LinkButton>|<A href="ManageBoard.aspx?Action=ModifyBoard&BoardID=<%# DataBinder.Eval(Container.DataItem,"[\"board_id\"]")%>&classID=<%=classid%>">
+										<td height="22"  align="center" ><asp:Panel ID="Adminop1" Runat=server Visible='<%# AdminBoard(Int32.Parse(DataBinder.Eval(Container.DataItem,"[\"board_id\"]").ToString()),Username) || Admin %>'><A href="ManageBoardMaster.aspx?BoardID=<%# DataBinder.Eval(Container.DataItem,"[\"board_id\"]")%>&classID=<%=classid%>" >设定斑竹</A>|<asp:LinkButton ID="lbtnDelBoard" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"[\"board_id\"]")%>' OnClick="DeleteBoard"  Runat=server>删除板块</asp:LinkButton>|<A href="ManageBoard.aspx?Action=ModifyBoard&BoardID=<%# DataBinder.Eval(Container.DataItem,"[\"board_id\"]")%>&classID=<%=classid%>">
 									  编辑板块</A>|<asp:HyperLink id="SetBoardMember" NavigateUrl='<%# "ManageBoardMember.aspx?BoardID="+DataBinder.Eval(Container.DataItem,"[\"board_id\"]")+"&classid="+classid%>' Visible='<%# !Convert.ToBoolean(DataBinder.Eval(Container.DataItem,"[\"board_type\"]"))%>' runat=server>编辑成员</asp:HyperLink></asp:Panel></td>
-								  </tr>
+									</tr>
+									 
 								</ItemTemplate>
 							</asp:Repeater>
 						</ItemTemplate>
