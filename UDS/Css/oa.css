@@ -31,27 +31,32 @@ CURSOR: hand;
  */
 body { margin:0px; overflow:hidden; font-family: "宋体", Verdana, Geneva, sans-serif; font-size:14px; background-color: #337fb2;}
 img { border:none;}
-a:link{color:#000;;text-decoration: none;}
-a:visited{color:#000;;text-decoration: none;}
+a:link{color:#000;text-decoration: none;}
+a:visited{color:#000;text-decoration: none;}
 a:hover,a:active{color:#069; text-decoration: none;}
-.header { background:url(images/bg01_01.gif); height:90px;}
-.header2 { background:url(images/bg01_02.gif) no-repeat; height:90px;}
+.header { background:url(../../images/bg01_01.gif); height:90px;}
+.header2 { background:url(../../images/bg01_02.gif) no-repeat; height:90px;}
 .manitable{ margin-top:10px;}
 .sidebar{ float:left; width:20%;}
 .tit1 { font-size:14px; font-weight:bold; color:#069; line-height:24px; border-bottom:1px #666 solid;}
-.tit2 { font-size:12px; font-weight:normal color:#666; line-height:22px; border-bottom:1px #c9c9c7 dashed; border-left:1px #c9c9c7 solid; border-right:1px #c9c9c7 solid; background:#FFF;height:22px; text-indent:1.8em;}
-.tit3 { font-size:14px; font-weight:normal color:#666; line-height:22px; border:1px #c9c9c7 solid; background:#FFF; border-top:none; height:22px;}
+.tit2 { font-size:12px; font-weight:normal; color:#666; line-height:22px; border-bottom:1px #c9c9c7 dashed; border-left:1px #c9c9c7 solid; border-right:1px #c9c9c7 solid; background:#FFF;height:22px; text-indent:1.8em;}
+.tit3 { font-size:14px; font-weight:normal; color:#666; line-height:22px; border:1px #c9c9c7 solid; background:#FFF; border-top:none; height:22px;}
 .tit4 { font-size:12px; font-weight:bold; color:#000; line-height:24px; border-bottom:1px #666 solid;}
 .rili {  border:1px #c9c9c7 solid; background:#FFF; border-top:none; height:200px;}
 .blank1{ height:12px;}
-.left1{ background:url(images/ntag003.gif) repeat-x;}
-.left2{ background:url(images/ntag005.gif) repeat-x;}
+.left1{ background:url(../../vimages/ntag003.gif) repeat-x;}
+.left2{ background:url(../../images/ntag005.gif) repeat-x;}
 .left3{ font-size:12px;}
-.tit2{ background:url(images/tag03.gif) no-repeat 12px 8px #FFF;}
+.tit2{ background:url(../../images/tag03.gif) no-repeat 12px 8px #FFF;}
 .maor1 { margin-right:10px; margin-top:3px;}
 .nav{ background: url(images/bg03.gif); width:446px; height:90px;}
 .navtxt { font-size:12px; color:#FFF;}
-.navtxt a:link{color: #FFF;;text-decoration: none;}
-.navtxt a:visited{color: #FFF;;text-decoration: none;}
+.navtxt a:link{color: #FFF;text-decoration: none;}
+.navtxt a:visited{color: #FFF;text-decoration: none;}
 .navtxt a:hover,a:active{color: #FF0; text-decoration: none;}
+.Menu img  
+{  
+    height:20px;  
+    width:20px;  
+}  
 
