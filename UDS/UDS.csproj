@@ -1920,6 +1920,7 @@
     <Content Include="SubModule\UnitiveDocument\Board\BoardManagement.aspx" />
     <Content Include="SubModule\UnitiveDocument\Board\EditBoard.aspx" />
     <Content Include="SubModule\UnitiveDocument\Board\ViewBoard.aspx" />
+    <Content Include="SubModule\UnitiveDocument\hideFrame.html" />
     <Content Include="SubModule\UnitiveDocument\NewIndex.aspx">
       <SubType>Form</SubType>
     </Content>

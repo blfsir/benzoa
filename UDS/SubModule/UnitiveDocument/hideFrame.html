@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>hideFrame</title>
+<script type="text/javascript">
+    var iniCols, noCols, o_mf, s;
+    function init() {
+        o_mf = window.parent.document.getElementById("thisFrame");
+        noCols = iniCols = o_mf.cols;
+      
+        if ((pos = noCols.indexOf(",")) != -1) {
+        
+            noCols = "200px" + noCols.substring(pos);
+        }
+   
+        s = false;
+    }
+    function change() {
+        s = !s;
+        if (s == true) {
+            o_mf.cols = noCols;
+            document.getElementById("opmenu").title = "关闭菜单";
+          //  document.getElementById("menuSwitch").src = "../../images/ntag001.gif";
+        } else {
+            o_mf.cols = iniCols;
+             document.getElementById("opmenu").title = "打开菜单";
+           // document.getElementById("menuSwitch").src = "../../images/ntag001.gif";
+        }
+    }
+    
+   
+    
+</script>
+<style type="text/css">
+    body {
+        background-color:#DFE5FA;
+        margin:0px;
+        padding:0px;
+        text-align:center;
+        cursor:pointer;
+    }
+</style>
+</head>
+<body onload="init();" onclick="change();" style="background-color:#337fb2;"   id="opmenu" title="打开菜单">
+<table border="0" cellspacing="0" cellpadding="0"> 
+<tr>
+<td   ></td> 
+</tr></table>
+    <!--<div>
+        <img align="middle" name="menuSwitch" id="menuSwitch" src="../../images/ntag001.gif" alt="隐藏" style="margin:0px;padding:0px;position:absolute;top:45%;display:block" />
+    </div>-->
+</body>
+</html>

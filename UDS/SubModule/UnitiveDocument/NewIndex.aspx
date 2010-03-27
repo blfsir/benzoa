@@ -18,7 +18,14 @@ function login()
 }
 		</script>
 	</head>
-	<frameset id="thisFrame" cols="0,*" rows="*">  
+	<frameset id="thisFrame" cols="0,10px,*" rows="*" border="0">  
+ 
+			<frame name="LeftFrame" src="Left.aspx" scrolling="auto" frameborder="0" border="0" framespacing="0" noresize >
+			<frame id="hide" name="hide" src="hideFrame.html" marginheight="0" marginwidth="0" scrolling="no" noresize="noresize" >
+			<frame name="MainFrame" src="NewDesktop.aspx" scrolling="auto" frameborder="0" border="0" framespacing="0">
+		 
+	</frameset>
+	<%--<frameset id="thisFrame" cols="0,*" rows="*">  
 		<frameset>
 			<frame name="LeftFrame" src="Left.aspx" scrolling="auto" frameborder="0" border="0" framespacing="0" noresize >
 			<frame name="MainFrame" src="NewDesktop.aspx" scrolling="auto" frameborder="0" border="0" framespacing="0">
@@ -36,5 +43,5 @@ function login()
 				</body>
 			</noframes>
 		</frameset>
-	</frameset>
+	</frameset>--%>
 </html>

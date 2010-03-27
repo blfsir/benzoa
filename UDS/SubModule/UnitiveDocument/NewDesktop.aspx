@@ -61,7 +61,7 @@ function divChangbgColor(obj)
 <body leftmargin="0" topmargin="0" rightmargin="5">
     <form id="Desktop" method="post" runat="server">
   
-    <div style="padding:10px;" onclick="InfraLeft()"> 
+    <div style=" padding-bottom:10px; padding-right:10px; padding-top:10px; padding-left:0px;"  > 
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"> 
   <tr> 
     <td width="205" valign="top" bgcolor="#dbecf3"><div class="left2"><table width="190" border="0" align="center" cellpadding="0" cellspacing="0"> 
@@ -70,18 +70,27 @@ function divChangbgColor(obj)
         <td align="right" class="tit4">&nbsp;</td> 
         </tr> 
       <tr> 
-        <td colspan="2" class="rili"><asp:Calendar ID="myCalendar" runat="server" 
+        <td colspan="2" class="rili">
+        <asp:Calendar ID="myCalendar" runat="server" BackColor="#ffffff" Width="100%"  BorderWidth="0" BorderColor="#000000" 
+                OnDayRender="myCalendar_DayRender" CellSpacing="0" Height="100%"  >
+                 <TodayDayStyle ForeColor="White" BackColor="#b5dbee" Font-Size="16px"></TodayDayStyle>
+                                <NextPrevStyle Font-Size="16px" Font-Bold="True" ForeColor="#333333"></NextPrevStyle>
+                                <DayHeaderStyle Font-Size="10px" Font-Bold="True"></DayHeaderStyle>
+                                <TitleStyle Font-Size="10px" Font-Bold="True" BorderWidth="0px" ForeColor="#ffffff">
+                                </TitleStyle>
+                                <OtherMonthDayStyle BackColor="LightGray"></OtherMonthDayStyle></asp:Calendar>
+            <%--<asp:Calendar ID="myCalendar" runat="server" 
                 BackColor="#ffffff" Width="100%" Font-Names="Arial"
                                 BorderWidth="0" BorderColor="#000000" 
                 OnDayRender="myCalendar_DayRender" CellSpacing="0" Height="100%" 
-                PrevMonthText="&lt;" SelectMonthText="&lt;&lt;">
-                                <TodayDayStyle ForeColor="White" BackColor="Green" Font-Size="10px"></TodayDayStyle>
+                PrevMonthText="&lt;" SelectMonthText="" SelectWeekText="">
+                                <TodayDayStyle ForeColor="White" BackColor="#b5dbee" Font-Size="16px"></TodayDayStyle>
                                 <NextPrevStyle Font-Size="6px" Font-Bold="True" ForeColor="#333333"></NextPrevStyle>
                                 <DayHeaderStyle Font-Size="10px" Font-Bold="True"></DayHeaderStyle>
                                 <TitleStyle Font-Size="10px" Font-Bold="True" BorderWidth="0px" ForeColor="#ffffff">
                                 </TitleStyle>
                                 <OtherMonthDayStyle BackColor="LightGray"></OtherMonthDayStyle>
-                            </asp:Calendar></td> 
+                            </asp:Calendar>--%></td> 
         </tr> 
       </table> 
         <table width="190" border="0" align="center" cellpadding="0" cellspacing="0"> 
@@ -167,7 +176,8 @@ function divChangbgColor(obj)
         </table> 
           <table width="100%" border="0" cellspacing="0" cellpadding="0" class="manitable"> 
             <tr> 
-              <td class="tit1"> 通知公告</td> 
+              <td class="tit1"> 通知公告
+                                            </td> 
               <td align="right" class="tit1"><a href="#">  <a href="Board/BoardList.aspx" target="_self"><img src="../../images/tag02.gif" width="40" height="17" class="maor1" /></a></td> 
             </tr> 
             <tr>

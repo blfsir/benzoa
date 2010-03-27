@@ -1,4 +1,4 @@
-<%@ Import Namespace="UDS.Components" %>
+<%@ Import Namespace="UDS.Components"%>
 <%@ Import Namespace="System.Data.SqlClient" %>
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="System" %>
@@ -170,6 +170,24 @@ function changeuser()
                 <tr>
                     <td>
                          <a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main"><img src="../../images/bg01_04.gif" width="47" height="90" /></a>
+                         <a href="#" ><img src="../../images/bg01_05.gif" width="49" height="90" /></a>
+                         <a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx" target="MainFrame"><img src="../../images/bg01_06.gif" width="47" height="90" /></a>
+                         <a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame"><img src="../../images/bg01_07.gif" width="43" height="90" /></a>
+                        <a href="../SubModule/WorkAttendance/Default.aspx" target="MainFrame"><img src="../../images/bg01_08.gif" width="45" height="90" /></a>
+                        <a href="../SubModule/Resources/ResourceApply.aspx" target="MainFrame"><img src="../../images/bg01_09.gif" width="43" height="90" /></a>
+                        <a href="../help/help.htm" target="_blank"> <img src="../../images/bg01_10.gif" width="41" height="90" /></a>
+                        <a onclick="ComfirmExit(2)" href="#" target="_self"><img src="../../images/bg01_11.gif" width="46" height="90" /></a>
+                          <a onclick="ComfirmExit(1)" href="#" target="_self"><img src="../../images/bg01_12.gif" width="47" height="90" /></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <%--
+        <div class="header2">
+            <table width="480" border="0" align="right" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                         <a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main"><img src="../../images/bg01_04.gif" width="47" height="90" /></a>
                          <a href="#" onclick="InfraLeft()"><img src="../../images/bg01_05.gif" width="49" height="90" /></a>
                          <a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx" target="MainFrame"><img src="../../images/bg01_06.gif" width="47" height="90" /></a>
                          <a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame"><img src="../../images/bg01_07.gif" width="43" height="90" /></a>
@@ -182,7 +200,7 @@ function changeuser()
                 </tr>
             </table>
         </div>
-        <%--<div class="header">
+        <div class="header">
         <div class="header2">
             <table width="400" border="0" align="right" cellpadding="0" cellspacing="0" class="nav">
                 <tr>
