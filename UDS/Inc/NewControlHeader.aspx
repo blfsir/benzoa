@@ -170,8 +170,8 @@ function changeuser()
                 <tr>
                     <td>
                          <a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main"><img src="../../images/bg01_04.gif" width="47" height="90" /></a>
-                       
-                         <a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx" target="MainFrame"><img src="../../images/bg01_06.gif" width="47" height="90" /></a>
+                         <a href="../SubModule/Note/NoteManage.aspx" target="main"><img src="../../images/bg01_06.gif" width="47" height="90" /></a>
+                         <a href="../SubModule/UnitiveDocument/Setup/MySetup.aspx" target="MainFrame"><img src="../../images/bg01_16.gif" width="47" height="90" /></a>
                          <a href="../SubModule/Diary/DiaryManage.aspx" target="MainFrame"><img src="../../images/bg01_07.gif" width="43" height="90" /></a>
                         <a href="../SubModule/WorkAttendance/Default.aspx" target="MainFrame"><img src="../../images/bg01_08.gif" width="45" height="90" /></a>
                         <a href="../SubModule/Resources/ResourceApply.aspx" target="MainFrame"><img src="../../images/bg01_09.gif" width="43" height="90" /></a>

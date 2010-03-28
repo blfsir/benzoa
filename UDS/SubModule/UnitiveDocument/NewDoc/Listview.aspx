@@ -46,7 +46,7 @@
             </td>
             <td width="60" height="30" align="center" background="../../../Images/treetopbg.jpg"
                 bgcolor="#e8f4ff" class="GbText">
-                我的文档
+                <font color="#006699">我的文档</font>
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
                 <font face="宋体">

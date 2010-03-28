@@ -76,10 +76,12 @@
                                 <font color="#003366" size="3">
                                     <img height="16" src="../../../DataImages/page.gif" width="16"></font>
                             </td>
-                            <td class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
-                                bgcolor="#e8f4ff"><asp:Label ID="lblTitle" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small"
-                                        Width="53px">  公司论坛</asp:Label>
-                          </td>
+                            
+                          <td width="60" height="30" align="left" background="../../../Images/treetopbg.jpg"
+                bgcolor="#e8f4ff" class="GbText">
+                <font color="#006699">&nbsp;<asp:Label ID="lblTitle" runat="server" ForeColor="#006699" 
+                                        Width="53px">公司论坛</asp:Label></font>
+            </td>
                             <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff"><A id="A1" runat="server" width="80px" class="redButtonCss">&nbsp;&nbsp; 添加分类 &nbsp;&nbsp;</A></td>
                         </tr>
                     </table>

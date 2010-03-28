@@ -33,9 +33,9 @@
                 align="right">
                 <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
             </td>
+            <!--工作管理-->
             <td width="150" height="30" align="left" background="../../../Images/treetopbg.jpg"
-                bgcolor="#e8f4ff" class="GbText">
-                <%--工作管理--%> <asp:label id="lblClassName" runat="server" BorderColor="Transparent" ></asp:label> <asp:label id="lblMember" runat="server" Visible="false"></asp:label>
+                bgcolor="#e8f4ff" class="GbText">&nbsp;<font color="#006699"><asp:label id="lblClassName" runat="server" BorderColor="Transparent" ></asp:label> <asp:label id="lblMember" runat="server" Visible="false"></asp:label> </font>
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
                 <font face="宋体">

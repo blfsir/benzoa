@@ -76,7 +76,7 @@ function divChangbgColor(obj)
                  <TodayDayStyle ForeColor="White" BackColor="#b5dbee" Font-Size="16px"></TodayDayStyle>
                                 <NextPrevStyle Font-Size="16px" Font-Bold="True" ForeColor="#333333"></NextPrevStyle>
                                 <DayHeaderStyle Font-Size="10px" Font-Bold="True"></DayHeaderStyle>
-                                <TitleStyle Font-Size="10px" Font-Bold="True" BorderWidth="0px" ForeColor="#ffffff">
+                                <TitleStyle Font-Size="17px" Font-Bold="True" BorderWidth="0px" ForeColor="#ffffff">
                                 </TitleStyle>
                                 <OtherMonthDayStyle BackColor="LightGray"></OtherMonthDayStyle></asp:Calendar>
             <%--<asp:Calendar ID="myCalendar" runat="server" 
