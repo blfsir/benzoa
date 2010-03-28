@@ -366,9 +366,8 @@
                 align="right">
                 <img height="16" src="../../../DataImages/staff.gif" width="16">
             </td>
-            <td width="60" height="30" align="center" background="../../../Images/treetopbg.jpg"
-                bgcolor="#e8f4ff" class="GbText">
-                人员管理
+            <td width="60" height="30" align="left" background="../../../Images/treetopbg.jpg"
+                bgcolor="#e8f4ff" class="GbText">&nbsp;<font color="#006699">人员管理</font>
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
                 <font face="宋体">
