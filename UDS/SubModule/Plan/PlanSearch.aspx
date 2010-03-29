@@ -84,15 +84,15 @@
                                 <font color="#003366" size="3">
                                     <img height="16" src="../../../DataImages/DocFlow.gif" width="16"></font>
                             </td>
-                            <td class="GbText" align="right" width="60" background="../../../Images/treetopbg.jpg"
+                            <td class="GbText" align="left" width="60" background="../../../Images/treetopbg.jpg"
                                 bgcolor="#e8f4ff">
                                 <font color="#006699">
-                                    <asp:Label ID="lblTitle" runat="server" ForeColor="#006699" Font-Names="宋体" Font-Size="X-Small"
-                                        Width="53px"> 计划管理</asp:Label></font>
+                                    <asp:Label ID="lblTitle" runat="server" ForeColor="#006699" Width="53px"> 计划查询</asp:Label></font>
                             </td>
                             <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff">
-                                <input type="button" value="计划录入" class="buttoncss" style="width: 80px;" onclick="javacript:location.href='EditPlan.aspx'" />
-                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:Button ID="btnSearch" runat="server" Width="80px" Text="查询" class="redButtonCss"
+                                    OnClick="btnSearch_Click" />
+                                <input type="button" value="返回" class="redButtonCss" style="width: 80px;" onclick="javacript:location.href='PlanManage.aspx'" />&nbsp;
                             </td>
                         </tr>
                     </table>
@@ -104,149 +104,81 @@
             </tr>
             <tr>
                 <td>
-                    <%--<asp:DropDownList ID="ddlPlanObjectType" runat="server" 
-                    onselectedindexchanged="ddlPlanObjectType_SelectedIndexChanged" AutoPostBack="true">
-            <asp:ListItem Text="个人计划" Value="个人计划"></asp:ListItem>
-            <asp:ListItem Text="部门计划" Value="部门计划"></asp:ListItem>
-                </asp:DropDownList>
-                <asp:DropDownList ID="ddlPlanPeriodType" runat="server" 
-                    onselectedindexchanged="ddlPlanPeriodType_SelectedIndexChanged" AutoPostBack="true">
-                <asp:ListItem Text="周计划" Value="周计划"></asp:ListItem>
-                <asp:ListItem Text="月计划" Value="月计划"></asp:ListItem>
-                <asp:ListItem Text="季计划" Value="季计划"></asp:ListItem>
-                <asp:ListItem Text="半年计划" Value="半年计划"></asp:ListItem> 
-                    <asp:ListItem Text="年计划" Value="年计划">
-                    </asp:ListItem>
-                    </asp:DropDownList>--%>
-                    <tr>
-                        <td>
-                            <table id="Table2" bordercolor="#93bee2" cellspacing="0" cellpadding="0" width="98%"
-                                border="0" style="border-collapse: collapse" align="center" class="GbText">
-                                <tr>
-                                    <td style="width: 104px;" height="24">
-                                        
-                                            <asp:Label ID="Label2" runat="server" Font-Names="宋体" Width="53px">&nbsp;内 容：</asp:Label> 
-                                    </td>
-                                    <td height="24" class="style1">
-                                        <asp:TextBox runat="server" MaxLength="200" ID="txtContent" Width="300px"></asp:TextBox>
-                                    </td>
-                                     <td style="width: 104px;" height="24">
-                                        
-                                            <asp:Label ID="Label1" runat="server" Font-Names="宋体"  >&nbsp;搜索范围：</asp:Label> 
-                                    </td>
-                                    <td height="24">
-                                        <asp:DropDownList ID="ddlPlanObjectType" runat="server">
-                                            <asp:ListItem Text="全部" Value=""></asp:ListItem>
-                                            <asp:ListItem Text="个人计划" Value="个人计划"></asp:ListItem>
-                                            <asp:ListItem Text="部门计划" Value="部门计划"></asp:ListItem>
-                                        </asp:DropDownList>
-                                        <asp:DropDownList ID="ddlPlanPeriodType" runat="server">
-                                            <asp:ListItem Text="全部" Value=""></asp:ListItem>
-                                            <asp:ListItem Text="周计划" Value="周计划"></asp:ListItem>
-                                            <asp:ListItem Text="月计划" Value="月计划"></asp:ListItem>
-                                            <asp:ListItem Text="季计划" Value="季计划"></asp:ListItem>
-                                            <asp:ListItem Text="年计划" Value="年计划">
-                                            </asp:ListItem>
-                                        </asp:DropDownList>
-                                    </td>
-                                    <td height="24">
-                                        <asp:Button ID="btnSearch" runat="server" Width="80px" Text="查询" class="buttoncss" OnClick="btnSearch_Click" />
-                                    </td>
-                                </tr>
-                            </table>
-                            <table width="100%" height="35" border="0" align="center" cellpadding="0" cellspacing="4"
-                                bgcolor="" class="tableStyle">
-                                <%--<tr>
-                                    <td align="left" nowrap>
-                                        
-                                    </td>
-                                    <td nowrap>
-                                       
-                                    </td>
-                                    <td width="70" height="30" align="right" nowrap>
-                                        起始日期： 
-                                    </td>
-                                    <td height="30">
-                                        
-                                    </td>
-                                    <td width="70" height="30" align="right" nowrap>
-                                      终止日期： 
-                                    </td>
-                                    <td height="30" align="center">
-                                        <input type="text" name="txtEndDate" class="dateTimePicker" style="width: 108px"
-                                            size="10"> 
-                                    </td>
-                                    <td>
-                                        &nbsp; <a href="EditPlan.aspx">计划录入</a> 
-                                    </td>
-                                </tr>--%>
-                            </table>
-                            <table>
-                                <tr>
-                                    <td height="10">
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+                    <table id="Table2" bordercolor="#93bee2" cellspacing="0" cellpadding="0" width="98%"
+                        border="1" style="border-collapse: collapse" align="center" class="GbText" style="background-color: #e8f4ff">
+                        <tr>
+                            <td colspan="2">
+                                <table id="Table3" bordercolor="#93bee2" cellspacing="0" cellpadding="0" width="98%"
+                                    border="0" style="border-collapse: collapse" align="center" class="GbText" style="background-color: #e8f4ff">
+                                    <tr>
+                                        <td style="width: 104px;" height="24">
+                                            <asp:Label ID="Label2" runat="server" Font-Names="宋体">&nbsp;搜索内容：</asp:Label>
+                                        </td>
+                                        <td height="24" class="style1" style="padding: 5">
+                                            <asp:TextBox runat="server" MaxLength="200" ID="txtContent" Width="300px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 104px;" height="24">
+                                            <asp:Label ID="Label1" runat="server" Font-Names="宋体">&nbsp;搜索范围：</asp:Label>
+                                        </td>
+                                        <td height="24">
+                                            <asp:DropDownList ID="ddlPlanObjectType" runat="server">
+                                                <asp:ListItem Text="全部" Value=""></asp:ListItem>
+                                                <asp:ListItem Text="个人计划" Value="个人计划"></asp:ListItem>
+                                                <asp:ListItem Text="部门计划" Value="部门计划"></asp:ListItem>
+                                            </asp:DropDownList>
+                                            <asp:DropDownList ID="ddlPlanPeriodType" runat="server">
+                                                <asp:ListItem Text="全部" Value=""></asp:ListItem>
+                                                <asp:ListItem Text="周计划" Value="周计划"></asp:ListItem>
+                                                <asp:ListItem Text="月计划" Value="月计划"></asp:ListItem>
+                                                <asp:ListItem Text="季计划" Value="季计划"></asp:ListItem>
+                                                <asp:ListItem Text="年计划" Value="年计划">
+                                                </asp:ListItem>
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#E8F4FF">
+                            <td align="right" valign="top">
+                                <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#E8F4FF">
+                                    <tr>
+                                        <td style="background-color: #E8F4FF">
+                                            上期总结
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div id="past_plan_content" style="word-break: break-all; float: left; height: 200px;
+                                                width: 100%; border: 1px; border: 1px; padding: 15px; background-color: White;"
+                                                runat="server">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #E8F4FF">
+                                            本期计划
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div id="current_plan_content" style="word-break: break-all; float: left; height: 200px;
+                                                width: 100%; padding: 15px; border: 1px; background-color: White;" runat="server">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td valign="top" width="15%">
+                                <asp:ListBox runat="server" ID="lbxPlan" OnSelectedIndexChanged="lbxPlan_SelectedIndexChanged"
+                                    Width="100%" AutoPostBack="true" Height="460px" BackColor="#ffffff"></asp:ListBox>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
     </div>
-    <table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#E8F4FF">
-        <tr bgcolor="#E8F4FF">
-            <td align="right" valign="top">
-                <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#E8F4FF">
-                    <tr>
-                        <td style="background-color: #E8F4FF">
-                            上期总结
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="past_plan_content" style="word-break: break-all; float: left; height: 200px;
-                                width: 100%; border: 1px; border: 1px; padding: 15px; background-color: White;"
-                                runat="server">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #E8F4FF">
-                            本期计划
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div id="current_plan_content" style="word-break: break-all; float: left; height: 200px;
-                                width: 100%; padding: 15px; border: 1px; background-color: White;" runat="server">
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td valign="top" width="200px">
-                <asp:ListBox runat="server" ID="lbxPlan" OnSelectedIndexChanged="lbxPlan_SelectedIndexChanged"
-                    Width="100%" AutoPostBack="true" Height="460px" BackColor="#ffffff"></asp:ListBox>
-                <%--<asp:DataGrid ID="dgPlanList" runat="server" Width="100%" AutoGenerateColumns="False"
-                AllowSorting="True" PageSize="20" AllowPaging="True" BorderColor="#93BEE2" BorderWidth="1px">
-                <AlternatingItemStyle BackColor="#E8F4FF"></AlternatingItemStyle>
-                <ItemStyle Font-Size="X-Small"></ItemStyle>
-                <Columns>
-                    <asp:TemplateColumn HeaderText="计划">
-                        <ItemTemplate>
-                            <%#  DataBinder.Eval(Container.DataItem,"planname")%>
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
-                     <asp:TemplateColumn HeaderText="提交时间">
-                                            <ItemTemplate>
-                                                <%#  DataBinder.Eval(Container.DataItem,"Realname")%>
-                                            </ItemTemplate>
-                                        </asp:TemplateColumn> 
-                </Columns>
-                <PagerStyle HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
-            </asp:DataGrid>--%>
-            </td>
-        </tr>
-    </table>
     </form>
 </body>
 </html>
