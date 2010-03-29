@@ -74,7 +74,7 @@
 								<TD width="20" height="30"
 									align="right" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6" class="GbText"><FONT color="#003366" size="3"><IMG height="16" src="../../../Images/icon/284.GIF" width="16"></FONT></TD>
 							  <TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="60"
-									align="right">我的邮件</TD>
+									align="right"><font color="#006699">我的邮件</font></TD>
 								<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right"><FONT face="宋体">
 										<asp:label id="lblMsg" runat="server" Width="88px" Font-Size="X-Small"></asp:label>&nbsp;
 										<asp:button id="btnClear" runat="server" Visible="False" Text="清 空" CssClass="redButtonCss"></asp:button>
@@ -124,7 +124,7 @@
 							BorderStyle="None" BorderColor="#93BEE2" AutoGenerateColumns="False" AllowPaging="True" PagerStyle-Mode="NumericPages"
 							PagerStyle-HorizontalAlign="Right" OnPageIndexChanged="DataGrid_PageChanged" DataKeyField="MailID"
 							PageSize="15">
-							<SelectedItemStyle Font-Bold="True" ForeColor="White" BackColor="#008A8C"></SelectedItemStyle>
+							<SelectedItemStyle  ForeColor="White" BackColor="#008A8C"></SelectedItemStyle>
 							<AlternatingItemStyle BackColor="#E8F4FF"></AlternatingItemStyle>
 							<ItemStyle Font-Size="X-Small" HorizontalAlign="Center" ForeColor="Black" VerticalAlign="Middle"
 								BackColor="White"></ItemStyle>
