@@ -53,7 +53,7 @@
 					<table id="AutoNumber1" style="BORDER-COLLAPSE: collapse" height="224" cellSpacing="0"
 						cellPadding="3" width="98%" border="1" bordercolor="#93bee2">
 						<tr bgcolor="#93bee2">
-							<td class="Gbtext" align="center" colSpan="2" height="30"><asp:label id="lblTitle" runat="server" Font-Bold="True" Font-Names="宋体" Font-Size="Medium"></asp:label><asp:CheckBox ID="cbx_sysBulletin" Text="系统公告" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox><asp:CheckBox ID="cbx_DeskTop" Text="桌面显示" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox><asp:CheckBox ID="cbx_boardBulletin" Text="板块公告" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox></td>
+							<td class="Gbtext" align="center" colSpan="2" height="30"><asp:label id="lblTitle" runat="server"  Font-Names="宋体" Font-Size="Medium"></asp:label><asp:CheckBox ID="cbx_sysBulletin" Text="系统公告" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox><asp:CheckBox ID="cbx_DeskTop" Text="桌面显示" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox><asp:CheckBox ID="cbx_boardBulletin" Text="板块公告" Visible="False" AutoPostBack="True" Runat="server"></asp:CheckBox></td>
 					  </tr>
 						<tr>
 							<td class="Gbtext" align="left" bgColor="#e8f4ff" height="26" valign="top">
