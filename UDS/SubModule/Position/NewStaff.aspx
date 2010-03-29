@@ -18,6 +18,11 @@
             font-size: 14px;
             color: #0000ff;
         }
+        .style1
+        {
+            font-size: 12px;
+            width: 32px;
+        }
     </style>
 
     <script language="javascript">
@@ -34,20 +39,22 @@
 <body leftmargin="0" topmargin="0">
     <form id="NewStaff" method="post" runat="server">
     <center>
-        <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
-            width="100%" border="0">
-            <tr height="30">
-                <td class="GbText" width="3%" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <font color="#003366" size="3">
-                        <img alt="" src="../../DataImages/ClientManage.gif"></font>
+     <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/ClientManage.gif" width="16">
+            </td>
+            <td width="60" height="30" align="left" background="../../../Images/treetopbg.jpg"
+                bgcolor="#e8f4ff" class="GbText">
+                &nbsp;<font color="#006699">员工注册</font>
+            </td>
+            <td class="GbText" align="right" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">&nbsp;
                 </td>
-                <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <b><b><b><font face="宋体">员工注册</font></b></b></b>
-                </td>
-                <td class="GbText" align="right" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                </td>
-            </tr>
-        </table>
+        </tr>
+    </table>
+ 
         <table class="gbtext" id="AutoNumber1" style="border-collapse: collapse" bordercolor="#93bee2"
             cellspacing="0" cellpadding="0" width="100%" border="1" runat="server">
             <tr bgcolor="#e8f4ff">
@@ -154,7 +161,7 @@
                                 ValidationExpression="\d*"></asp:RegularExpressionValidator></font>
                 </td>
             </tr>
-               <tr id="Tr1" runat="server">
+            <tr id="Tr1" runat="server">
                 <td align="right" width="20%" height="30">
                     所属部门:
                 </td>
@@ -164,7 +171,6 @@
                     </font>
                 </td>
             </tr>
-            
             <tr id="myposition" runat="server">
                 <td align="right" width="20%" height="30">
                     所属职位:
@@ -180,11 +186,9 @@
                     合同首签日期:
                 </td>
                 <td height="30">
-                    &nbsp;<asp:TextBox ID="txtContractDate" onfocus="setday(this)" CssClass="InputCss" runat="server"
-                        Columns="70" Width="383" ReadOnly="True"></asp:TextBox>
+                    &nbsp;<asp:TextBox ID="txtContractDate" onfocus="setday(this)" CssClass="InputCss"
+                        runat="server" Columns="70" Width="383" ReadOnly="True"></asp:TextBox>
                 </td>
-                
-               
             </tr>
             <tr>
                 <td align="right" width="20%" height="30">
