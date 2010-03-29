@@ -122,7 +122,7 @@ function SubmitForm( BtObject )
                                     <img height="16" src="../../../DataImages/page.gif" width="16"></font>
                             </td>
                             <td class="GbText" align="center" width="60" background="../../../Images/treetopbg.jpg"
-                                bgcolor="#e8f4ff"><asp:Label ID="lblBoardName" Runat="server" Font-Bold="true" Font-Underline="false"></asp:Label>
+                                bgcolor="#e8f4ff"><asp:Label ID="lblBoardName" Runat="server"  Font-Underline="false"></asp:Label>
                           </td>
                             <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff"><input type=button onClick="window.open('NewItem.aspx?BoardID=<%=boardid%>');" value="·¢ËÍÐÂÌù" class=redbuttoncss></td>
                         </tr>
