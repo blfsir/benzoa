@@ -113,7 +113,7 @@
 			<asp:Label id="Label1" runat="server" Width="140px" Height="18px" Font-Size="X-Small">请选择要转移到的人员:</asp:Label>
 			<asp:DropDownList ID="ddlMoveTo" runat="server">
                     </asp:DropDownList>
-                    <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="" name="txtMoveAsset"><A onclick="dialwinprocess('txtMoveAsset')" href="#"><img src="../../DataImages/staff.gif" border="0"><FONT face="宋体">选择人员</FONT></A> </CENTER>
+                    <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="" name="txtMoveAsset"><A onclick="dialwinprocess('txtMoveAsset')" href="#"> <FONT face="宋体">选择人员</FONT></A> </CENTER>
 			<CENTER>&nbsp;</CENTER>
 			<CENTER>&nbsp;</CENTER>
 			<CENTER><asp:Button ID="btnSubmit" runat="server" class="redButtonCss" Text="确定" 

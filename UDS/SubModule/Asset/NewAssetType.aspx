@@ -34,7 +34,7 @@
             <tr height="30">
                 <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
                 align="right">
-                <img height="16" src="../../../DataImages/t5.jpg" width="16">
+                <img height="16" src="../../../DataImages/t5.gif" width="16">
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width=120"
                 align="left">
@@ -52,7 +52,7 @@
                 </td>
                 <td style="height: 34px" height="34">
                     &nbsp;<asp:TextBox ID="txtAssetTypeName" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                        Width="382"></asp:TextBox><font color="red">*</font><asp:RequiredFieldValidator ID="RequiredFieldValidator1"
                             runat="server" ErrorMessage="请输入规格型号名称" ControlToValidate="txtAssetTypeName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
                                 ID="message" runat="server" EnableViewState="False"></asp:Literal>  <asp:TextBox ID="lblAssetID" runat="server" Width="0px"></asp:TextBox>
                 </td>
@@ -63,7 +63,7 @@
                 </td>
                 <td height="30">
                     &nbsp;<asp:TextBox ID="txtRemark" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                        Width="382"></asp:TextBox><font color="red">*</font><asp:RequiredFieldValidator ID="RequiredFieldValidator2"
                             runat="server" ErrorMessage="请输入备注" ControlToValidate="txtRemark" Font-Size="X-Small"></asp:RequiredFieldValidator>
                 </td>
             </tr>

@@ -53,10 +53,10 @@
                         AutoGenerateColumns="False" DataKeyField="ID" Width="100%" 
                         AllowSorting="True" ondeletecommand="dbStaffList_DeleteCommand" 
                         onpageindexchanged="dbStaffList_PageIndexChanged">
-                        <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+                        <SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
                         <AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
                         <ItemStyle Font-Size="X-Small" Wrap="false"></ItemStyle>
-                        <HeaderStyle Font-Size="X-Small" Wrap="false" Font-Bold="True" ForeColor="White"
+                        <HeaderStyle Font-Size="X-Small" Wrap="false"  ForeColor="White"
                             BackColor="#337FB2"></HeaderStyle>
                         <FooterStyle Font-Size="X-Small" HorizontalAlign="Right" BackColor="#E8F4FF"></FooterStyle>
                         <Columns>
@@ -104,7 +104,7 @@
         <tr height="30">
             <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
                 align="right">
-                <img height="16" src="../../../DataImages/t5.jpg" width="16">
+                <img height="16" src="../../../DataImages/t5.gif" width="16">
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="120"
                 align="left">
@@ -138,10 +138,10 @@
                         AutoGenerateColumns="False" DataKeyField="ID" Width="100%" 
                         AllowSorting="True" ondeletecommand="dbStaffList_DeleteCommand" 
                         onpageindexchanged="dbStaffList_PageIndexChanged">
-                        <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+                        <SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
                         <AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
                         <ItemStyle Font-Size="X-Small" Wrap="false"></ItemStyle>
-                        <HeaderStyle Font-Size="X-Small" Wrap="false" Font-Bold="True" ForeColor="White"
+                        <HeaderStyle Font-Size="X-Small" Wrap="false"  ForeColor="White"
                             BackColor="#337FB2"></HeaderStyle>
                         <FooterStyle Font-Size="X-Small" HorizontalAlign="Right" BackColor="#E8F4FF"></FooterStyle>
                         <Columns>

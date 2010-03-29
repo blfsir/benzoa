@@ -61,7 +61,7 @@
             <tr height="30">
                 <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
                 align="right">
-                <img height="16" src="../../../DataImages/t5.jpg" width="16">
+                <img height="16" src="../../../DataImages/t5.gif" width="16">
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="60"
                 align="center">
@@ -110,7 +110,7 @@
                 <td style="height: 34px" height="34">
                     &nbsp;<asp:DropDownList ID="ddlOriginalUser" runat="server">
                     </asp:DropDownList>
-                      <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="" name="txtOriginalUser"><A onclick="dialwinprocess('txtOriginalUser')" href="#"><img src="../../DataImages/staff.gif" border="0"><FONT face="宋体">选择人员</FONT></A>
+                      <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="" name="txtOriginalUser"><A onclick="dialwinprocess('txtOriginalUser')" href="#"> <FONT face="宋体">选择人员</FONT></A>
                 </td>
             </tr>
             <tr >
@@ -129,7 +129,7 @@
                 <td style="height: 34px" height="34">
                     &nbsp;<asp:DropDownList ID="ddlCurrentUser" runat="server">
                     </asp:DropDownList>
-                      <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="" name="txtCurrentUser"><A onclick="dialwinprocess('txtCurrentUser')" href="#"><img src="../../DataImages/staff.gif" border="0"><FONT face="宋体">选择人员</FONT></A>
+                      <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="" name="txtCurrentUser"><A onclick="dialwinprocess('txtCurrentUser')" href="#"> <FONT face="宋体">选择人员</FONT></A>
                 </td>
             </tr>
             <tr >
@@ -166,7 +166,7 @@
                 <td style="height: 34px" height="34">
                     &nbsp;<asp:DropDownList ID="ddlBuyUser" runat="server">
                     </asp:DropDownList>
-                    <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="<%=SendToRealName%>" name="txtSendTo"><A onclick="dialwinprocess('txtSendTo')" href="#"><img src="../../DataImages/staff.gif" border="0"><FONT face="宋体">选择人员</FONT></A>
+                    <INPUT class=InputCss readOnly style="display:none;" type=text size=50 value="<%=SendToRealName%>" name="txtSendTo"><A onclick="dialwinprocess('txtSendTo')" href="#"> <FONT face="宋体">选择人员</FONT></A>
                 </td>
             </tr>
             <tr >

@@ -34,7 +34,7 @@
             <tr height="30">
                 <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
                 align="right">
-                <img height="16" src="../../../DataImages/t5.jpg" width="16">
+                <img height="16" src="../../../DataImages/t5.gif" width="16">
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width=120"
                 align="left">
