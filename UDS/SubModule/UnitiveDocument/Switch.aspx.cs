@@ -112,7 +112,7 @@ namespace UDS.SubModule.UnitiveDocument
                             break;
 
                         case "58": //计划总结
-                            Response.Redirect("../Plan/PlanSearch.aspx?classID=" + classID);
+                            Response.Redirect("../Plan/PlanManage.aspx?classID=" + classID);
                             break;
 
                         case "59": //资源预定
