@@ -30,10 +30,10 @@
 								AllowPaging="True" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" OnPageIndexChanged="DataGrid_PageChanged"
 								DataKeyField="DocID" PageSize="15" BorderWidth="1px" CellPadding="3" BorderColor="#93BEE2"
 								BorderStyle="None" BackColor="White">
-								<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+								<SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
 								<AlternatingItemStyle BackColor="#E8F4FF"></AlternatingItemStyle>
 								<ItemStyle ForeColor="#003399" VerticalAlign="Middle" BackColor="White"></ItemStyle>
-								<HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="10px" ForeColor="White"
+								<HeaderStyle Font-Size="X-Small"  HorizontalAlign="Center" Height="10px" ForeColor="White"
 									VerticalAlign="Top" BackColor="#337FB2"></HeaderStyle>
 								<FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" ForeColor="#003399"
 									VerticalAlign="Bottom" BackColor="#99CCCC"></FooterStyle>
@@ -105,10 +105,10 @@
 								PagerStyle-Mode="NumericPages" AllowPaging="True" AutoGenerateColumns="False" AllowSorting="True"
 								Width="100%" BackColor="White" BorderStyle="None" BorderColor="#93BEE2" CellPadding="3" BorderWidth="1px"
 								PageSize="15">
-								<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+								<SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
 								<AlternatingItemStyle HorizontalAlign="Center" BackColor="#E8F4FF"></AlternatingItemStyle>
 								<ItemStyle HorizontalAlign="Center" ForeColor="#003399" VerticalAlign="Middle" BackColor="White"></ItemStyle>
-								<HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" Height="10px" ForeColor="White"
+								<HeaderStyle Font-Size="X-Small"  HorizontalAlign="Center" Height="10px" ForeColor="White"
 									VerticalAlign="Top" BackColor="#337FB2"></HeaderStyle>
 								<FooterStyle Font-Size="XX-Small" HorizontalAlign="Center" Height="10px" ForeColor="#003399"
 									VerticalAlign="Bottom" BackColor="#99CCCC"></FooterStyle>
