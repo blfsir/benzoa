@@ -66,10 +66,10 @@
 						<asp:DataGrid id="RightsGrid" runat="server" AutoGenerateColumns="False" PageSize="15" AllowPaging="True"
 							Font-Names="宋体" BorderWidth="1px" BorderColor="#93BEE2" BorderStyle="None" BackColor="White"
 							CellPadding="3" DataKeyField="rule_id" Width="100%" OnPageIndexChanged="DataGrid_PageChanged">
-							<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+							<SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
 							<AlternatingItemStyle BackColor="#E8F4FF"></AlternatingItemStyle>
 							<ItemStyle Font-Size="Smaller" Font-Names="宋体" ForeColor="#003399" BackColor="White"></ItemStyle>
-							<HeaderStyle Font-Names="宋体" Font-Bold="True" HorizontalAlign="Center" ForeColor="White" BackColor="#337FB2"></HeaderStyle>
+							<HeaderStyle Font-Names="宋体"  HorizontalAlign="Center" ForeColor="White" BackColor="#337FB2"></HeaderStyle>
 							<FooterStyle ForeColor="#003399" BackColor="#99CCCC"></FooterStyle>
 							<Columns>
 								<asp:TemplateColumn HeaderText="◎">
@@ -79,11 +79,11 @@
 									</ItemTemplate>
 								</asp:TemplateColumn>
 								<asp:BoundColumn DataField="proc_name" HeaderText="权限名">
-									<HeaderStyle Font-Size="X-Small" Font-Names="宋体" Font-Bold="True" HorizontalAlign="Left" Width="19%"></HeaderStyle>
+									<HeaderStyle Font-Size="X-Small" Font-Names="宋体"  HorizontalAlign="Left" Width="19%"></HeaderStyle>
 									<ItemStyle HorizontalAlign="Left"></ItemStyle>
 								</asp:BoundColumn>
 								<asp:BoundColumn DataField="proc_desc" HeaderText="权限描述">
-									<HeaderStyle Font-Size="Smaller" Font-Names="宋体" Font-Bold="True" HorizontalAlign="Left" Width="58%"></HeaderStyle>
+									<HeaderStyle Font-Size="Smaller" Font-Names="宋体"  HorizontalAlign="Left" Width="58%"></HeaderStyle>
 									<ItemStyle Font-Size="X-Small" HorizontalAlign="Left"></ItemStyle>
 								</asp:BoundColumn>
 								<asp:TemplateColumn HeaderText="权限对象">

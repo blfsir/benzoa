@@ -15,7 +15,7 @@
 			&nbsp;
 			<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
 				<TR>
-					<TD align="middle" height="28" style="HEIGHT: 28px"><FONT face="宋体"><asp:label id="lblTaskDetailTitle" runat="server" Font-Bold="True" Font-Size="Medium">任务详细情况</asp:label></FONT></TD>
+					<TD align="middle" height="28" style="HEIGHT: 28px"><FONT face="宋体"><asp:label id="lblTaskDetailTitle" runat="server"  Font-Size="Medium">任务详细情况</asp:label></FONT></TD>
 				</TR>
 				<TR>
 					<TD align="middle">

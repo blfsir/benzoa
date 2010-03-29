@@ -134,18 +134,22 @@
 <body leftmargin="0" topmargin="0">
     <form id="SearchData" method="post" runat="server">
     <font face="ËÎÌå">
-        <table id="Table1" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
-            width="100%" border="0">
-            <tr height="30">
-                <td class="GbText" width="3%" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <font color="#003366" size="3">
-                        <img alt="" src="../../DataImages/kaoqin2.gif"></font>
-                </td>
-                <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
-                    <b><b>¿¼ÇÚ²éÑ¯</b></b>
-                </td>
-            </tr>
-        </table>
+       <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/MyTask.gif" width="16">
+            </td>
+            <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="60"
+                height="30" align="left">
+                &nbsp;<font color="#006699">¿¼ÇÚ²éÑ¯</font>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                  &nbsp; 
+            </td>
+        </tr>
+    </table>
         <table class="GBText" id="Table1" style="border-collapse: collapse; height: 242px"
             bordercolor="#93bee2" height="242" cellspacing="1" cellpadding="1" width="100%"
             border="1" designtimedragdrop="56">

@@ -13,15 +13,21 @@
   </HEAD>
 	<body MS_POSITIONING="GridLayout" leftmargin="0" topmargin="0">
 		<form id="Form1" method="post" runat="server">
-			<TABLE borderColor="#111111" cellSpacing="0" cellPadding="0" width="100%" border="0">
-				<TR height="30">
-					<TD class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgColor="#c0d9e6"
-						align="right"><FONT color="#003366" size="3"><IMG height="16" src="../../../DataImages/myLinkman.gif" width="16"></FONT></TD>
-					<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" width="75"
-						align="right" style="WIDTH: 75px">员工查询</TD>
-					<TD class="GbText" background="../../../Images/treetopbg.jpg" bgColor="#e8f4ff" align="right">&nbsp;</TD>
-				</TR>
-			</TABLE>
+			 <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/ClientManage.gif" width="16">
+            </td>
+            <td width="60" height="30" align="left" background="../../../Images/treetopbg.jpg"
+                bgcolor="#e8f4ff" class="GbText">
+                &nbsp;<font color="#006699">员工查询</font>
+            </td>
+            <td class="GbText" align="right" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6">&nbsp;
+                </td>
+        </tr>
+    </table>
 			<FONT face="宋体">
 				<br>
 				<TABLE id="Table1" borderColor="#93bee2" cellSpacing="0" cellPadding="0" width="100%" border="1"

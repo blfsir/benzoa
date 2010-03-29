@@ -201,6 +201,7 @@
     <Content Include="Css\TreeView.Css" />
     <Content Include="Css\复件 BasicLayout.css" />
     <Content Include="DataImages\ClientManage.gif" />
+    <Content Include="DataImages\common.gif" />
     <Content Include="DataImages\myDoc2.gif" />
     <Content Include="DataImages\flag.gif" />
     <Content Include="DataImages\person.gif" />
@@ -1773,6 +1774,7 @@
     <Content Include="SubModule\Note\NewNote.aspx" />
     <Content Include="SubModule\Note\NoteManage.aspx" />
     <Content Include="SubModule\Plan\EditPlan.aspx" />
+    <Content Include="SubModule\Plan\PlanManage.aspx" />
     <Content Include="SubModule\Plan\PlanSearch.aspx" />
     <Content Include="SubModule\Plan\PlanView.aspx" />
     <Content Include="SubModule\Position\ChangePosition.aspx">
@@ -1835,24 +1837,12 @@
       <SubType>Form</SubType>
     </Content>
     <Content Include="SubModule\SM\Index.aspx" />
-    <Content Include="SubModule\SM\MsgHistory.aspx">
-      <SubType>Form</SubType>
-    </Content>
-    <Content Include="SubModule\SM\MsgList.aspx">
-      <SubType>Form</SubType>
-    </Content>
-    <Content Include="SubModule\SM\MsgManage.aspx">
-      <SubType>Form</SubType>
-    </Content>
-    <Content Include="SubModule\SM\MsgSend.aspx">
-      <SubType>Form</SubType>
-    </Content>
-    <Content Include="SubModule\SM\SelectReceiver.aspx">
-      <SubType>Form</SubType>
-    </Content>
-    <Content Include="SubModule\SM\Setup.aspx">
-      <SubType>Form</SubType>
-    </Content>
+    <Content Include="SubModule\SM\MsgHistory.aspx" />
+    <Content Include="SubModule\SM\MsgList.aspx" />
+    <Content Include="SubModule\SM\MsgManage.aspx" />
+    <Content Include="SubModule\SM\MsgSend.aspx" />
+    <Content Include="SubModule\SM\SelectReceiver.aspx" />
+    <Content Include="SubModule\SM\Setup.aspx" />
     <Content Include="SubModule\Staff\ManageStaff.aspx">
       <SubType>Form</SubType>
     </Content>
@@ -2577,6 +2567,13 @@
     </Compile>
     <Compile Include="SubModule\Plan\EditPlan.aspx.designer.cs">
       <DependentUpon>EditPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubModule\Plan\PlanManage.aspx.cs">
+      <DependentUpon>PlanManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubModule\Plan\PlanManage.aspx.designer.cs">
+      <DependentUpon>PlanManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SubModule\Plan\PlanSearch.aspx.cs">
       <DependentUpon>PlanSearch.aspx</DependentUpon>

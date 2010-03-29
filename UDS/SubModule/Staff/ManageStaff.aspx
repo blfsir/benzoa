@@ -129,10 +129,10 @@
                         BorderColor="#93BEE2" BorderStyle="None" BorderWidth="1px" BackColor="White"
                         CellPadding="3" PageSize="15" AllowPaging="True" AutoGenerateColumns="False"
                         DataKeyField="Staff_ID" Width="100%" AllowSorting="True" OnSortCommand="dbStaffList_SortCommand">
-                        <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+                        <SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
                         <AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
                         <ItemStyle Font-Size="X-Small" Wrap="false"></ItemStyle>
-                        <HeaderStyle Font-Size="X-Small" Wrap="false" Font-Bold="True" ForeColor="White"
+                        <HeaderStyle Font-Size="X-Small" Wrap="false"  ForeColor="White"
                             BackColor="#337FB2"></HeaderStyle>
                         <FooterStyle Font-Size="X-Small" HorizontalAlign="Right" BackColor="#E8F4FF"></FooterStyle>
                         <Columns>
@@ -417,10 +417,10 @@
                         BorderColor="#93BEE2" BorderStyle="None" BorderWidth="1px" BackColor="White"
                         CellPadding="3" PageSize="15" AllowPaging="True" AutoGenerateColumns="False"
                         DataKeyField="Staff_ID" Width="100%" AllowSorting="True" OnSortCommand="dbStaffList_SortCommand">
-                        <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+                        <SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
                         <AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
                         <ItemStyle Font-Size="X-Small" Wrap="false"></ItemStyle>
-                        <HeaderStyle Font-Size="X-Small" Wrap="false" Font-Bold="True" ForeColor="White"
+                        <HeaderStyle Font-Size="X-Small" Wrap="false"  ForeColor="White"
                             BackColor="#337FB2"></HeaderStyle>
                         <FooterStyle Font-Size="X-Small" HorizontalAlign="Right" BackColor="#E8F4FF"></FooterStyle>
                         <Columns>

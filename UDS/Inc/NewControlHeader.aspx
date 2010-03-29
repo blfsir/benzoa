@@ -168,6 +168,7 @@ function changeuser()
         <div class="header2">
             <table width="480" border="0" align="right" cellpadding="0" cellspacing="0">
                 <tr>
+                
                     <td>
                          <a href="../SubModule/UnitiveDocument/NewIndex.aspx" target="main"><img src="../../images/bg01_04.gif" width="47" height="90" /></a>
                          <a href="../SubModule/Note/NoteManage.aspx" target="main"><img src="../../images/bg01_06.gif" width="47" height="90" /></a>
@@ -180,7 +181,11 @@ function changeuser()
                           <a onclick="ComfirmExit(1)" href="#" target="_self"><img src="../../images/bg01_12.gif" width="47" height="90" /></a>
                     </td>
                 </tr>
+                
             </table>
+            
+        </div>
+      
         </div>
         <%--
         <div class="header2">

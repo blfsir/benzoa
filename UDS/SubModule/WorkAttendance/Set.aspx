@@ -129,13 +129,22 @@
 	</HEAD>
 	<body leftMargin="0" topMargin="0" MS_POSITIONING="GridLayout">
 		<form id="Set" method="post" runat="server">
-			<TABLE id="Table1" borderColor="#111111" height="1" cellSpacing="0" cellPadding="0" width="100%"
-				border="0">
-				<TR height="30">
-					<TD class="GbText" width="3%" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6"><FONT color="#003366" size="3"><IMG alt="" src="../../DataImages/workadmin2.gif"></FONT></TD>
-					<TD class="GbText" background="../../Images/treetopbg.jpg" bgColor="#c0d9e6"><B><B>øº«⁄…Ë÷√</B></B></TD>
-				</TR>
-			</TABLE>
+		<table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/MyTask.gif" width="16">
+            </td>
+            <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="60"
+                height="30" align="left">
+                &nbsp;<font color="#006699">øº«⁄…Ë÷√</font>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                     &nbsp; 
+            </td>
+        </tr>
+    </table>
 			<TABLE class="GBText" id="Table1" style="BORDER-COLLAPSE: collapse; HEIGHT: 109px" borderColor="#93bee2"
 				height="109" cellSpacing="1" cellPadding="1" width="100%" border="1" DESIGNTIMEDRAGDROP="56">
 				<TR>
