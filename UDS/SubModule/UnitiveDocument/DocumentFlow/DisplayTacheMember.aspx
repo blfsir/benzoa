@@ -56,7 +56,7 @@
 						<TD><asp:datagrid id="dbStaffList" runat="server" Width="100%" DataKeyField="Staff_ID" AllowPaging="True"
 								AutoGenerateColumns="False" PageSize="15" BorderWidth="1px" BackColor="White" BorderColor="#93BEE2"
 								BorderStyle="None" CellPadding="3" OnPageIndexChanged="DataGrid_PageChanged">
-								<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+								<SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
 								<AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
 								<ItemStyle Font-Size="X-Small" ForeColor="#003399" BackColor="White"></ItemStyle>
 								<HeaderStyle Font-Size="X-Small" ForeColor="White" BackColor="#337FB2"></HeaderStyle>

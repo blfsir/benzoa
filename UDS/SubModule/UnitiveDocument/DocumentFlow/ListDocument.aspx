@@ -63,7 +63,7 @@
     <td><asp:datagrid id="dgDocumentList" runat="server" Font-Size="X-Small" PageSize="15" CellPadding="3"
 					BorderWidth="1px" BorderStyle="None" BorderColor="#93BEE2" BackColor="White" OnPageIndexChanged="DataGrid_PageChanged"
 					AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" Width="100%">
-			    <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+			    <SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
 					<AlternatingItemStyle Font-Size="X-Small" HorizontalAlign="Center" BackColor="#E8F4FF"></AlternatingItemStyle>
 					<ItemStyle Font-Size="X-Small" HorizontalAlign="Center" ForeColor="#003399" BackColor="White"></ItemStyle>
 					<HeaderStyle HorizontalAlign="Center" ForeColor="White" VerticalAlign="Middle" BackColor="#337FB2"></HeaderStyle>

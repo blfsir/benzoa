@@ -59,7 +59,7 @@
 							<asp:DataGrid id="dgFlowList" runat="server" CellPadding="3" BackColor="White" BorderWidth="1px"
 								BorderStyle="None" BorderColor="#93BEE2" OnPageIndexChanged="DataGrid_PageChanged" Font-Size="X-Small"
 								AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" Width="100%" PageSize="15" DataKeyField="Flow_ID">
-								<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+								<SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
 								<AlternatingItemStyle Font-Size="X-Small" HorizontalAlign="Center" BackColor="#E8F4FF"></AlternatingItemStyle>
 								<ItemStyle Font-Size="X-Small" HorizontalAlign="Center" ForeColor="#003399" BackColor="White"></ItemStyle>
 								<HeaderStyle HorizontalAlign="Center" ForeColor="White" VerticalAlign="Middle" BackColor="#337FB2"></HeaderStyle>

@@ -51,10 +51,10 @@
                         BorderColor="#93BEE2" BorderStyle="None"
                             BorderWidth="1px" BackColor="White" CellPadding="3" 
                         OnDeleteCommand="MyDataGrid_Delete" onitemdatabound="dgStyleList_ItemDataBound">
-                            <SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+                            <SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
                             <AlternatingItemStyle Font-Size="X-Small" BackColor="#E8F4FF"></AlternatingItemStyle>
                             <ItemStyle Font-Size="X-Small" ForeColor="#003399" BackColor="White"></ItemStyle>
-                            <HeaderStyle Font-Bold="True" HorizontalAlign="Left" ForeColor="White" VerticalAlign="Middle"
+                            <HeaderStyle  HorizontalAlign="Left" ForeColor="White" VerticalAlign="Middle"
                                 BackColor="#337FB2"></HeaderStyle>
                             <FooterStyle ForeColor="#003399" BackColor="#99CCCC"></FooterStyle>
                             <Columns>

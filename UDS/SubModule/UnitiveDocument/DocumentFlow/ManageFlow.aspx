@@ -32,10 +32,10 @@
 								BackColor="White" CellPadding="3" AutoGenerateColumns="False" AllowPaging="True" PageSize="15" DataKeyField="Step_ID"
 								OnPageIndexChanged="DataGrid_PageChanged" Width="100%" HorizontalAlign="Center" AllowSorting="True" OnDeleteCommand="MyDataGrid_Delete"
 								OnEditCommand="MyDataGrid_Move">
-								<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
+								<SelectedItemStyle  ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>
 								<AlternatingItemStyle Font-Size="X-Small" HorizontalAlign="Center" BackColor="#E8F4FF"></AlternatingItemStyle>
 								<ItemStyle Font-Size="X-Small" HorizontalAlign="Center" ForeColor="#003399" BackColor="White"></ItemStyle>
-								<HeaderStyle Font-Size="X-Small" Font-Bold="True" HorizontalAlign="Center" ForeColor="White"
+								<HeaderStyle Font-Size="X-Small"  HorizontalAlign="Center" ForeColor="White"
 									BackColor="#337FB2"></HeaderStyle>
 								<FooterStyle HorizontalAlign="Center" ForeColor="#003399" BackColor="#99CCCC"></FooterStyle>
 								<Columns>
