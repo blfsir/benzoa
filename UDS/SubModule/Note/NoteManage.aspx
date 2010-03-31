@@ -90,33 +90,33 @@ function ock_Search(){
 <body ms_positioning="GridLayout" leftmargin="0" topmargin="0">
     <form id="ManageStaff" method="post" runat="server">
     <font face="宋体">
-        <table id="Table1" cellspacing="0" cellpadding="0" width="100%" border="0">
-            <tr>
-                <td valign="top">
-                    <table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%"
-                        border="0">
-                        <tbody>
-                            <tr height="30">
-                                <td class="GbText" width="20" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
-                                    align="right">
-                                    <font color="#003366" size="3">
-                                        <img height="16" src="../../DataImages/staff.gif" width="16"></font>
-                                </td>
-                                <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#e8f4ff" width="60"
-                                    align="right" id="td_title" runat="server">
-                                    <font color="#006699">我的便签</font>
-                                </td>
-                                <td class="GbText" background="../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right"
-                                    width="85%">
-                                </td>
-                </td>
-            </tr>
-            </TBODY></table>
-        </TD></TR>
+        <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
+            </td>
+            <td width="60" height="30" align="center" background="../../../Images/treetopbg.jpg" id="td_title" runat="server"
+                bgcolor="#e8f4ff" class="GbText">
+                <font color="#006699">我的便签</font>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                <font face="宋体">
+                  &nbsp;</font>
+            </td>
+        </tr>
+    </table>
+    
+      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" id="Table1">
         <tr>
             <td>
-                <table class="gbtext" id="Table2" cellspacing="0" cellpadding="0" width="100%" border="0">
+                <table class="gbtext" id="Table1" cellspacing="0" cellpadding="0" width="100%" border="0">
                     <tr>
+                        <td height="10" colspan="3" align="center">
+                        </td>
+                    </tr>
+                     <tr>
                         <td align="center" width="90" background='../../images/maillistbutton<%Response.Write(GetSelectImage("1","2",DisplayType,0));%>.gif'
                             height="24">
                             <asp:LinkButton ID="lbMyNote" runat="server" CssClass="Newbutton">我的便签</asp:LinkButton>
@@ -132,11 +132,8 @@ function ock_Search(){
                             </asp:Button>
                         </td>
                     </tr>
-                </table>
-            </td>
-        </tr>
-        <tr id="tr_Tj" runat="server" bgcolor="#e8f4ff">
-            <td align="left">
+                    <tr id="tr_Tj" runat="server" bgcolor="#e8f4ff">
+            <td align="left" colspan="3">
                 <table class="gbtext" id="Table3" cellspacing="0" cellpadding="0" width="100%" border="0">
                     <tr>
                         <td align="right">
@@ -169,9 +166,13 @@ function ock_Search(){
                 </table>
             </td>
         </tr>
+                    
+                </table>
+            </td>
+        </tr>
         <tr>
-            <td>
-                <asp:DataGrid ID="dbNoteList" runat="server" OnPageIndexChanged="DataGrid_PageChanged"
+            <td style="line-height: 20px;">
+                 <asp:DataGrid ID="dbNoteList" runat="server" OnPageIndexChanged="DataGrid_PageChanged"
                     BorderColor="#93BEE2" BorderStyle="None" BorderWidth="1px" BackColor="White"
                     CellPadding="3" PageSize="15" AllowPaging="True" AutoGenerateColumns="False"
                     DataKeyField="ID" Width="100%">
@@ -208,13 +209,13 @@ function ock_Search(){
                     </PagerStyle>
                 </asp:DataGrid>
                 <asp:Label runat="server" ID="LabelPageInfo" Font-Size="X-Small"></asp:Label>
+                
             </td>
         </tr>
-        <tr>
-            <td>
-            </td>
-        </tr>
-        </TABLE> </font>
+        </table>
+        
+        
+         
     </form>
 </body>
 </html>

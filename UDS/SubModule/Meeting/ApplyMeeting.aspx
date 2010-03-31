@@ -113,18 +113,23 @@ String.prototype.Trim = function()
 <body leftmargin="0" topmargin="0">
     <form id="ApplyMeeting" method="post" runat="server">
     <center>
-        <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
-            width="100%" border="0">
-            <tr>
-                <td width="20" height="30" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText">
-                    <font color="#003366" size="3">
-                        <img alt="" src="../../DataImages/ClientManage.gif"></font>
-                </td>
-                <td width="60" align="center" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText">
-            <font face="宋体">会议申请</font></td>
-                <td background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" class="GbText">&nbsp;                </td>
-            </tr>
-        </table>
+         <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
+            </td>
+            <td width="60" height="30" align="center" background="../../../Images/treetopbg.jpg"
+                bgcolor="#e8f4ff" class="GbText">
+                <font color="#006699">会议申请</font>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                <font face="宋体">
+                  &nbsp;</font>
+            </td>
+        </tr>
+    </table>
         <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
           <tr>
             <td height="10"></td>
