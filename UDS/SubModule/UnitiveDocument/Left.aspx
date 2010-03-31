@@ -13,7 +13,7 @@
 		<frame name="onlineShowFrame" scrolling="no" noresize src="Online.aspx" border="0">
 	</frameset>
 	<noframes>
-		<body bgcolor="#f0f5fb" text="#000000">
+		<body bgcolor="#e8f4ff" text="#000000">
 			<form id="Left" method="post" runat="server">
 			</form>
 		</body>

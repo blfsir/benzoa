@@ -72,30 +72,19 @@ function divChangbgColor(obj)
       <tr> 
         <td colspan="2" class="rili">
         <asp:Calendar ID="myCalendar" runat="server" BackColor="#ffffff" Width="100%"  BorderWidth="0" BorderColor="#000000" 
-                OnDayRender="myCalendar_DayRender" CellSpacing="0" Height="100%"  >
-                 <TodayDayStyle ForeColor="White" BackColor="#b5dbee" Font-Size="16px"></TodayDayStyle>
+                OnDayRender="myCalendar_DayRender" CellSpacing="0" Height="100%"  > 
+                 <TodayDayStyle ForeColor="White" BackColor="#337fb2" Font-Size="16px"></TodayDayStyle>
                                 <NextPrevStyle Font-Size="16px"  ForeColor="#333333"></NextPrevStyle>
                                 <DayHeaderStyle Font-Size="10px" ></DayHeaderStyle>
-                                <TitleStyle Font-Size="17px"  BorderWidth="0px" ForeColor="#ffffff">
+                                <TitleStyle Font-Size="17px"  BorderWidth="0px" ForeColor="#337fb2" BackColor="#b8dcee">
                                 </TitleStyle>
-                                <OtherMonthDayStyle BackColor="LightGray"></OtherMonthDayStyle></asp:Calendar>
-            <%--<asp:Calendar ID="myCalendar" runat="server" 
-                BackColor="#ffffff" Width="100%" Font-Names="Arial"
-                                BorderWidth="0" BorderColor="#000000" 
-                OnDayRender="myCalendar_DayRender" CellSpacing="0" Height="100%" 
-                PrevMonthText="&lt;" SelectMonthText="" SelectWeekText="">
-                                <TodayDayStyle ForeColor="White" BackColor="#b5dbee" Font-Size="16px"></TodayDayStyle>
-                                <NextPrevStyle Font-Size="6px"  ForeColor="#333333"></NextPrevStyle>
-                                <DayHeaderStyle Font-Size="10px" ></DayHeaderStyle>
-                                <TitleStyle Font-Size="10px"  BorderWidth="0px" ForeColor="#ffffff">
-                                </TitleStyle>
-                                <OtherMonthDayStyle BackColor="LightGray"></OtherMonthDayStyle>
-                            </asp:Calendar>--%></td> 
+                                <OtherMonthDayStyle BackColor="#b8dcee"></OtherMonthDayStyle></asp:Calendar>
+          </td> 
         </tr> 
       </table> 
         <table width="190" border="0" align="center" cellpadding="0" cellspacing="0"> 
           <tr> 
-            <td class="tit1">快捷流程</td> 
+            <td class="tit1"><a href="DocumentFlow/FlowTemplate.aspx" target="_self"><font color="#006699" ><b>快捷流程</b></font></a></td> 
             <td align="right" class="tit4">&nbsp;</td> 
           </tr> 
            <asp:Repeater ID="rptQuickFlow" runat="server">

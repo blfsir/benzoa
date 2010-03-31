@@ -3,7 +3,7 @@
 
 <FONT face="ËÎÌו">
  <div class="img">
-	<iewc:treeview id="TreeView1" HoverStyle="color:#e8f4ff" DefaultStyle="background:#f0f5fb;"
+	<iewc:treeview id="TreeView1" HoverStyle="color:#e8f4ff" DefaultStyle="background:#e8f4ff;"
 		SelectedStyle="color:#e8f4ff" runat="server" Width="100%" Height="100%" BorderColor="White"
 		SystemImagesPath="/webctrl_client/1_0/treeimages/" SelectExpands="True" BorderWidth="0px" ></iewc:treeview>
 		</div>

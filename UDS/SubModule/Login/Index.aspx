@@ -178,7 +178,7 @@ End function
     <td width="223"><img src="../../Images/oa_02.jpg" width="223" height="238" alt="" /></td>
     <td width="550" valign="top" background="../../Images/oa_03.jpg"><table width="200" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td height="100">&nbsp;</td>
+        <td height="130">&nbsp;</td>
       </tr>
     </table>
       <table width="500" border="0" align="center" cellpadding="0" cellspacing="0">

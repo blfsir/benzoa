@@ -107,12 +107,12 @@
 
 </head>
 <body style="background-position: right 50%; background-attachment: fixed; background-repeat: no-repeat"
-    leftmargin="0" background="../../Images/lefttreebg.gif" topmargin="0" bgcolor="#f0f5fb"
+    leftmargin="0" background="../../Images/lefttreebg.gif" topmargin="0" bgcolor="#e8f4ff"
     onload="SetStatus()">
     <form id="Projecttreeview" method="post" runat="server">
     <table height="100%" cellspacing="0" cellpadding="0" width="100%" border="0">
         <tr>
-            <td valign="center" height="30" bgcolor="#f0f5fb">
+            <td valign="center" height="30" bgcolor="#e8f4ff">
                 <font face="ËÎÌו">
                     <table id="Table1" height="30" cellspacing="0" cellpadding="0" width="100%" border="0">
                         <tr>
@@ -128,8 +128,8 @@
                 </font>
             </td>
         </tr>
-        <tr valign="top" bgcolor="#f0f5fb">
-            <td  bgcolor="#f0f5fb">
+        <tr valign="top" bgcolor="#e8f4ff">
+            <td  bgcolor="#e8f4ff">
                 <uc1:ControlProjectTreeView ID="ControlProjectTreeView1" runat="server"></uc1:ControlProjectTreeView>
             </td>
         </tr>
