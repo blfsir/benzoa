@@ -4,7 +4,7 @@
  
  <%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
  
 <html>
 <head>
@@ -75,7 +75,7 @@
 <body leftmargin="0" topmargin="0">
     <form id="NewNote" method="post" runat="server">
     <center>
-        <table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
+        <%--<table id="Table2" bordercolor="#111111" height="1" cellspacing="0" cellpadding="0"
             width="100%" border="0">
             <tr height="30">
                 <td class="GbText" width="50%" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6" align="left">
@@ -86,21 +86,30 @@
                 <td class="GbText" align="right" background="../../Images/treetopbg.jpg" bgcolor="#c0d9e6">
                 </td>
             </tr>
-        </table>
+        </table>--%>
+        <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
+            </td>
+            <td width="60" height="30" align="center" background="../../../Images/treetopbg.jpg"
+                bgcolor="#e8f4ff" class="GbText">
+                <font color="#006699">新增日记</font>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                <font face="宋体">
+                  &nbsp;</font>
+            </td>
+        </tr>
+    </table>
+    
+    
         <table class="gbtext" id="AutoNumber1" style="border-collapse: collapse" bordercolor="#93bee2"
             cellspacing="0" cellpadding="0" width="100%" border="1" runat="server">
-           <%-- <tr bgcolor="#e8f4ff">
-                <td style="height: 34px" align="right" width="20%" height="34">
-                    用户姓名:
-                </td>
-                <td style="height: 34px" height="34">
-                    &nbsp;<asp:TextBox ID="txtStaffName" CssClass="InputCss" runat="server" Columns="70"
-                        Width="382"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1"
-                            runat="server" ErrorMessage="请输入姓名" ControlToValidate="txtStaffName" Font-Size="X-Small"></asp:RequiredFieldValidator><asp:Literal
-                                ID="message" runat="server" EnableViewState="False"></asp:Literal>
-                </td>--%>
-            </tr>
-            
+           
+          
             <tr>
                 <td align="right" width="20%" height="30" colspan="2">
                 

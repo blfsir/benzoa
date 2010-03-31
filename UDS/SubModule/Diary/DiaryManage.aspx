@@ -131,7 +131,7 @@ return true;
 <body ms_positioning="GridLayout" leftmargin="0" topmargin="0">
     <form id="ManageStaff" method="post" runat="server">
     <font face="宋体">
-    <table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%" style="table-layout:fixed"
+    <%--<table bordercolor="#111111" height="1" cellspacing="0" cellpadding="0" width="100%" style="table-layout:fixed"
                         border="0">
                         
                             <tr>
@@ -146,7 +146,25 @@ return true;
                                 </td>
                             </tr>
                          
-                    </table>
+                    </table>--%>
+                    <table width="100%" height="1" border="0" align="center" cellpadding="0" cellspacing="0"
+        bordercolor="#111111">
+        <tr>
+            <td class="GbText" width="20" background="../../../Images/treetopbg.jpg" bgcolor="#c0d9e6"
+                align="right">
+                <img height="16" src="../../../DataImages/myDoc2.gif" width="16">
+            </td>
+            <td width="60" height="30" align="center" background="../../../Images/treetopbg.jpg"  id="td_title" runat="server"
+                bgcolor="#e8f4ff" class="GbText">
+                <font color="#006699">新增日记</font>
+            </td>
+            <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
+                <font face="宋体">
+                  &nbsp;</font>
+            </td>
+        </tr>
+    </table>
+    
       </font>
     <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
