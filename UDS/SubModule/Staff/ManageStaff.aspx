@@ -371,10 +371,7 @@
             </td>
             <td class="GbText" background="../../../Images/treetopbg.jpg" bgcolor="#e8f4ff" align="right">
                 <font face="宋体">
-                    <input class="redButtonCss" onclick="selectAll()" type="button" value="全部选择">
-                    <input type="button" onclick="unSelectAll()" value="全部取消" class="redButtonCss">
-                    <asp:Button ID="btnThowAwayDocument" runat="server" Text="丢弃文档" CssClass="redButtonCss">
-                    </asp:Button>&nbsp;</font>
+                     &nbsp;</font>
             </td>
         </tr>
     </table>
@@ -454,7 +451,10 @@
                                 <ItemStyle Wrap="false" />
                             </asp:BoundColumn>
                             <asp:BoundColumn Visible="True" DataField="staff_dept" SortExpression="staff_dept"
-                                HeaderText="部门"></asp:BoundColumn>
+                                HeaderText="部门">
+                                 <HeaderStyle Wrap="false"></HeaderStyle>
+                                <ItemStyle Wrap="false" />
+                                </asp:BoundColumn>
                             <asp:BoundColumn Visible="True" DataField="Address" SortExpression="Address" HeaderText="现住址">
                                 <HeaderStyle Wrap="false"></HeaderStyle>
                                 <ItemStyle Wrap="false" />
